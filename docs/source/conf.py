@@ -54,11 +54,11 @@ latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
 }
 
-source_suffix = ['.rst', '.md']
 
-extensions = ['recommonmark']
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
+html_theme = 'sphinx_rtd_theme'
+
+latex_engine = 'lualatex'
+latex_elements = {
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
 }
+epub_show_urls = 'footnote'
