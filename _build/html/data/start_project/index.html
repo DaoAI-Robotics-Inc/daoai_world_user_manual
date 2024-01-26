@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开始一个项目 &mdash; DaoAI_World_EN_DOCS 0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> DaoAI_World_EN_DOCS
+          </a>
+              <div class="version">
+                0.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduce/quick_start/index_md.html">Getting Started with DaoAI_World</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DATASETS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start_project_md/index.html">Create a project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start_project_md/index.html#upload-data">UpLoad Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start_project_md/index.html#manage-batches">Manage Batches</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ANNOTATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../annotate/annotation_tools/index.html">Annotation Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DaoAI_World_EN_DOCS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">开始一个项目</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/data/start_project/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>开始一个项目<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<blockquote>
+<div></div></blockquote>
+<section id="daoai-world">
+<h2>DaoAI World<a class="headerlink" href="#daoai-world" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>一个项目理应包含需要被标注的图片。并且所有同类型的标注图片只存在同个项目内。图像被标注完成后，可以用它们可以生成一个包含时间和标注内容的训练集，并可以用你选择的配置进行扩充和处理。项目具有名称、类型(例如:对象检测)和标注组,有关更多信息,请查看创建项目</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>创建项目<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>首先,进入到DaoAi World首页,然后,点击”创建新项目”:</p>
+<blockquote>
+<div><img alt="../../_images/createproject.png" src="../../_images/createproject.png" />
+</div></blockquote>
+<p>您将被要求填写:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>项目类型</strong>。以下是各种类型的概要。</dt><dd><ol class="arabic simple">
+<li><p>实例分割:在像素的等级中查找图像中实例的位置</p></li>
+<li><p>标注关键点:查找实例及其关键点在图像中的位置,通常用于确定物体的姿态</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p><strong>项目名称</strong>:项目的名字</p></li>
+<li><p><strong>待检测的物体名称</strong>:汇总检测物体的标签</p></li>
+</ol>
+<p>填写完成后点击”<strong>创建项目</strong>”以建立一个项目</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id3">
+<h1>上传数据<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h1>
+<blockquote>
+<div><p>您可以上传待标注或已标注过的图像,用于实例分割与标注关键点</p>
+</div></blockquote>
+<section id="id4">
+<h2>如何添加数据<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>您可以通过使用**web页面**的上传方式向DaoAI World账户中添加图片数据(建议单次小于1000张)</p>
+<p>请在上传数据前确认已经创建一个项目。在首次创建项目时，系统会要求你上传图像素材</p>
+</div></blockquote>
+<img alt="../../_images/uploadimg.png" src="../../_images/uploadimg.png" />
+<p>如果您已经创建了项目,请点击栏目中的**选择文件**或选择文件夹以上传图片</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, welinkirt.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
