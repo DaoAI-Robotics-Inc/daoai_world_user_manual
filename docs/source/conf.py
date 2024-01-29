@@ -43,7 +43,7 @@ html_static_path = ['_static']
 language = 'zh_CN'
 html_search_language = 'zh'
 
-html_theme = 'sphinx_book_theme'
+html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

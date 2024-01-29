@@ -61,6 +61,33 @@
             :width: 600
             :align: center
         
+    .. tab:: 预处理方法
+        为训练模型准备数据的图像预处理步骤。
+
+    
+    .. tab:: 数据增强方法
+
+    .. tab:: 导出数据集
+
+        从 DaoAI_World 中导出数据。
+
+        您可以随时从 DaoAI_World 导出数据。您可以使用 DaoAI_World Web 界面导出数据。
+
+        要导出数据集，首先要点击DaoAI_World项目界面的侧栏中的"数据集"，在数据集界面中点击"导出数据集"按钮导出数据。
+
+        .. image:: Images/export_data.png
+            :width: 800
+            :align: center
+        
+        在"导出数据集"界面 可以选择将数据下载为文件.zip或使用curl从命令行中下载。
+
+        .. image:: Images/export_data_select.png
+            :width: 600
+            :align: center      
+
+
+        
+    
 
 
 
