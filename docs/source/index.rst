@@ -18,6 +18,8 @@ DAOAI WORLD
 
    data/start_project/index.rst
 
+   data/manage/start.rst
+
 .. toctree::
    :maxdepth: 2
    :caption: 标注

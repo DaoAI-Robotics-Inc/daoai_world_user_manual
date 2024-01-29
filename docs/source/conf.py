@@ -43,7 +43,7 @@ html_static_path = ['_static']
 language = 'zh_CN'
 html_search_language = 'zh'
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
@@ -52,13 +52,4 @@ epub_show_urls = 'footnote'
 latex_engine = 'lualatex'
 latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
-}
-
-source_suffix = ['.rst', '.md']
-
-extensions = ['recommonmark']
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
 }
