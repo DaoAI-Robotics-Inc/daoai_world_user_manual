@@ -28,6 +28,8 @@ DAOAI WORLD
 
    annotation/annotate/start.rst
 
+   annotation/annotate/key_point.rst
+
 
 .. toctree::
    :maxdepth: 2
