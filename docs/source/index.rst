@@ -26,7 +26,7 @@ DAOAI WORLD
 
    annotation/annotation_tools/index.rst
 
-
+   annotation/annotate/start.rst
 
 
 .. toctree::
