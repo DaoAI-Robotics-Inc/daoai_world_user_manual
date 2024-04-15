@@ -8,7 +8,7 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 介绍
 
-   introduce/quick_start/index.rst
+   introduce/quick_start/index
    
 
 
@@ -16,7 +16,7 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 数据
 
-   data/start_project/index.rst
+   data/start_project/index
 
    data/manage/start.rst
 
