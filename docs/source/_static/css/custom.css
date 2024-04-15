@@ -1,8 +1,9 @@
 .wy-nav-content {
-    max-width: 80%;
+    max-width: none;
 }
 
 body {
+    max-width: 60%;
     /* font-family: Luminari, fantasy, sans-serif;
     color: darkred;
     text-shadow: 1px 1px black; */
