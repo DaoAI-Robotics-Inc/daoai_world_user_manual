@@ -18,12 +18,17 @@ DAOAI WORLD
 
    data/start_project/index.rst
 
+   data/manage/start.rst
+
 .. toctree::
    :maxdepth: 2
    :caption: 标注
 
    annotation/annotation_tools/index.rst
 
+   annotation/annotate/start.rst
+
+   annotation/annotate/key_point.rst
 
 
 .. toctree::
