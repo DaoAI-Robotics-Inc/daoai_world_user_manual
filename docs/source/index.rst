@@ -18,7 +18,19 @@ DAOAI WORLD
 
    data/start_project/index
 
-   data/manage/start.rst
+   data/manage/start
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 模型
+
+   model/seg/index
+   model/kp/index
+   model/ano/index
+   model/class/index
+   model/obj/index
+
+
 
 .. toctree::
    :maxdepth: 2
