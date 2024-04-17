@@ -24,33 +24,18 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 模型
 
-   model/seg/index
-   model/kp/index
-   model/ano/index
-   model/class/index
-   model/obj/index
+   model/model
 
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 标注
-
-   annotation/annotation_tools/index.rst
-
-   annotation/annotate/start.rst
-
-   annotation/annotate/key_point.rst
-
-
-.. toctree::
-   :maxdepth: 2
+   :maxdepth: 0
    :caption: 训练
 
    train/train_model/index.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 部署
 
    deploy/deploy_device/index.rst
