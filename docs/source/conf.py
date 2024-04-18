@@ -6,8 +6,8 @@ project = 'DaoAI World用户手册'
 copyright = '2021-2023 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
-release = '0.1'
-version = '0.1.0'
+release = '2024.3'
+version = '2024.3.0'
 
 # -- General configuration
 
