@@ -44,5 +44,4 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 支持
 
-   support/report-a-bug/index
    support/help-center/index
