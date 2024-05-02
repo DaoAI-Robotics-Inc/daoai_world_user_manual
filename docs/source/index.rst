@@ -1,7 +1,7 @@
 DAOAI WORLD
 ==============================
 
-   
+
 
 
 .. toctree::
@@ -10,23 +10,19 @@ DAOAI WORLD
 
    introduce/quick_start/index
    
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: 数据
-
-   data/start_project/index
-
-   data/manage/start
-
 .. toctree::
    :maxdepth: 2
    :caption: 模型
 
    model/model
 
+.. toctree::
+   :maxdepth: 2
+   :caption: 数据
 
+   data/start_project/index
+   data/manage/start
+   data/annotate_models/models
 
 .. toctree::
    :maxdepth: 0
