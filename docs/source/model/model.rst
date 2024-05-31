@@ -9,4 +9,8 @@
     ano/index
     class/index
     obj/index
+    rot_obj/index
+    semantic/index
+    ocr/index
+    playground/index
     good_model

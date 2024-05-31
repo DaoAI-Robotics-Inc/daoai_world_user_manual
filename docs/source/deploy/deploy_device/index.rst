@@ -21,4 +21,8 @@
 
 模型训练结束后，您可以将训练的模型导出到本地，然后在其他应用中使用。
 
+.. image:: Images/export_model.png
+    :width: 800
+    :align: center
+
 目前DaoAI Wold的模型可以在DaoAI平台的其他软件中使用，如 **DaoAI InspecTRA**， 和 **DaiAI VisionPilot**。

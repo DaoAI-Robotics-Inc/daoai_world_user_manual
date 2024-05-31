@@ -2,8 +2,6 @@ DAOAI WORLD
 ==============================
 
 
-
-
 .. toctree::
    :maxdepth: 2
    :caption: 介绍
@@ -20,6 +18,7 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 数据
 
+   data/workspace/index
    data/start_project/index
    data/manage/start
    data/annotate_models/models
@@ -36,8 +35,3 @@ DAOAI WORLD
 
    deploy/deploy_device/index.rst
 
-.. toctree::
-   :maxdepth: 2
-   :caption: 支持
-
-   support/help-center/index
