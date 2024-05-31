@@ -3,7 +3,7 @@
 
 **分类检测** 应用于对不同场景的分类识别。需要注意的时，它并非用于对同一场景内的不同物体的区分。
 
-    .. image:: images/class.png
+    .. image:: Images/class.png
         :scale: 100%
 
 模型选择情景
@@ -16,12 +16,12 @@
 -------------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 选择一个类，然后完成标注，一个图片只能拥有一个类别。
 
-    .. image:: images/classAnno0.png
+    .. image:: Images/classAnno0.png
         :scale: 100%
 
 注意事项

@@ -3,7 +3,7 @@
 
 在 **关键点检测** 中，模型通过学习物体的外轮廓及其关键点的位置信息，来识别物体的类别，并定位物体的方向、位置等信息。
 
-    .. image:: images/kp.png
+    .. image:: Images/kp.png
         :scale: 100%
 
 
@@ -19,22 +19,22 @@
 
 关键点模型需要首先定义组成的外轮廓掩膜名称，以及组成的关键点结构。
 
-    .. image:: images/kpAnno0.png
+    .. image:: Images/kpAnno0.png
         :scale: 100%
 
 使用多边形，或者智能多边形标注物体的外轮廓。
 
-    .. image:: images/kpAnno2.png
+    .. image:: Images/kpAnno2.png
         :scale: 100%
 
 外轮廓标注完成后，会自动进入关键点标注模式，需要依次点击关键点的位置进行标注。
 
-    .. image:: images/kpAnno5.png
+    .. image:: Images/kpAnno5.png
         :scale: 100%
 
 重复标注场景内所有的物体，如果场景内没有物体，请标注为空。
 
-    .. image:: images/kpAnno6.png
+    .. image:: Images/kpAnno6.png
         :scale: 100%
 
 标注时需要注意，关键点的位置以及顺序需要相对固定以获取最佳的模型效果。

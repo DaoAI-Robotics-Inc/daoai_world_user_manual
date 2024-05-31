@@ -3,7 +3,7 @@
 
 物体检测可以用来识别场景中物体的种类时数量。不同于分割实例模型，物体检测不会准确识别物体的边框和精确位置。
 
-    .. image:: images/obj.png
+    .. image:: Images/obj.png
         :scale: 100%
 
 
@@ -18,12 +18,12 @@
 ----------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 使用矩形标注工具，或者智能标注，对物体进行边界框标注。
 
-    .. image:: images/objAnno1.png
+    .. image:: Images/objAnno1.png
         :scale: 100%
 
 重复标注场景内所有的物体。如果场景内没有物体，请标注为空。

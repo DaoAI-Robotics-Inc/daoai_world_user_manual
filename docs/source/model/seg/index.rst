@@ -3,7 +3,7 @@
 
 在 **分割实例** 检测中，模型会定位图像中的对象并生成精准的定位边界。在现实应用中， **分割实例** 常用作识别不规则外形的物体。
 
-    .. image:: images/insseg.png
+    .. image:: Images/insseg.png
         :scale: 100%
 
 模型选择情景
@@ -18,12 +18,12 @@
 ------------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 使用多边形工具，或者智能多边形工具，标注物体的外轮廓。
 
-    .. image:: images/segAnno4.png
+    .. image:: Images/segAnno4.png
         :scale: 100%
 
 重复标注场景内的所有物体，如果场景内没有物体，请标注为空。
@@ -40,5 +40,5 @@
 
 4. 在标注多边形时，应标注图像中实际的边界，而不是使用虚拟边界标注对象。如果对象的一部分被其他对象遮挡，请标注可见的部分，而不要标注被遮挡的部分。
 
-.. image:: images/example1.png
+.. image:: Images/example1.png
     :scale: 100%

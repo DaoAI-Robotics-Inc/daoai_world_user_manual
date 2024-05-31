@@ -3,7 +3,7 @@
 
 **旋转目标检测** 和目标检测类似，但是可以检测到目标的旋转状态。
 
-    .. image:: images/rot_obj.png
+    .. image:: Images/rot_obj.png
         :scale: 100%
 
 
@@ -18,11 +18,11 @@
 ----------------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 80%
 
 首先使用矩形标注工具标出边界框，然后移动鼠标旋转框。
-    .. image:: images/rot_objAnno0.png
+    .. image:: Images/rot_objAnno0.png
         :scale: 80%
 
 

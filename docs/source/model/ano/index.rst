@@ -3,7 +3,7 @@
 
 **异常检测** 可以识别物体是否处在异常状态，如有破损，变形等。
 
-    .. image:: images/ano.png
+    .. image:: Images/ano.png
         :scale: 100%
 
 
@@ -18,17 +18,17 @@
 ----------------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 如果物体没有缺陷，请标注为正常
 
-    .. image:: images/anoAnno2.png
+    .. image:: Images/anoAnno2.png
         :scale: 100%
 
 如果物体存在缺陷，请标注为异常。使用多边形工具，或者智能多边形，标注出异常区域的外轮廓。
 
-    .. image:: images/anoAnno1.png
+    .. image:: Images/anoAnno1.png
         :scale: 100%
 
 注意事项

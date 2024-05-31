@@ -3,7 +3,7 @@ OCR
 
 **OCR** 应用于对图片中文字的提取。
 
-    .. image:: images/ocr.png
+    .. image:: Images/ocr.png
         :scale: 100%
 
 模型选择情景
@@ -15,18 +15,18 @@ OCR
 
 OCR预训练模型可以在上方的模型体验里找到并下载。
 
-    .. image:: images/ocr_download.png
+    .. image:: Images/ocr_download.png
         :scale: 60%
 
 标注方法
 -------------
 
 可以使用预训练OCR模型，来辅助标注，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 标注时，使用矩形标注工具，或者智能多边形工具，框选处标注的文字。然后输入对应的文字作为标签名称。
-    .. image:: images/ocr_anno.png
+    .. image:: Images/ocr_anno.png
         :scale: 60%
 
 重复标注场景内所有的物体。如果场景内没有物体，请标注为空。

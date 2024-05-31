@@ -3,7 +3,7 @@
 
 **语义分割** 可以识别物体是否处在异常状态，如有破损，变形等。与异常检测不同，语义检测支持检测多种异常类型。
 
-    .. image:: images/sem.png
+    .. image:: Images/sem.png
         :scale: 100%
 
 
@@ -18,17 +18,17 @@
 ----------------
 
 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: images/suppor_anno.png
+    .. image:: Images/suppor_anno.png
         :scale: 100%
 
 如果物体没有缺陷，请标注为正常
 
-    .. image:: images/sem_anno0.png
+    .. image:: Images/sem_anno0.png
         :scale: 80%
 
 如果物体存在缺陷，请标注为异常。使用多边形工具，或者智能多边形，标注出异常区域的外轮廓，并选择缺陷类型。
 
-    .. image:: images/sem_anno1.png
+    .. image:: Images/sem_anno1.png
         :scale: 80%
 
 注意事项
