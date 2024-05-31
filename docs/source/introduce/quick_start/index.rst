@@ -11,7 +11,7 @@
 
     <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
         <video width="80%" height="auto" controls>
-            <source src="https://docs.daoai.ca/static/videos/daoaiworld_intro_zh.mp4" type="video/mp4">
+            <source src="https://docs.daoai.ca/static/videos/daoaiworld_intro.mp4" type="video/mp4">
         </video>
     </div>
 
