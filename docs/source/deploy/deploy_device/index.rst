@@ -25,4 +25,4 @@
     :width: 800
     :align: center
 
-目前DaoAI Wold的模型可以在DaoAI平台的其他软件中使用，如 **DaoAI InspecTRA**， 和 **DaiAI VisionPilot**。
+目前DaoAI Wold的模型可以在DaoAI平台的其他软件中使用，如 **DaoAI InspecTRA 2.24.3 **， 和 **DaiAI VisionPilot 2.24.4**。
