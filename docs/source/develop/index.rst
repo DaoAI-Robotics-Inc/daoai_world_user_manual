@@ -3,7 +3,9 @@
 
 本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
 
-在安装目录下有SDK的示例项目。
+首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
+
+解压后在解压目录下包含有SDK以及SDK的示例项目。
 
     .. image:: images/install_folder.png
         :scale: 100%
@@ -36,9 +38,9 @@ C++项目不需要额外进行环境配置。
 C# 环境配置
 ------------
 
-首先需要将 DLSDK 安装目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
+首先需要将 DLSDK 解压目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
 
-如下图，安装目录为 C:\\Users\\daoai\\Downloads\\DLSDK, 那么就需要将一下两个目录添加到path系统变量中。
+如下图，解压目录为 C:\\Users\\daoai\\Downloads\\DLSDK, 那么就需要将一下两个目录添加到path系统变量中。
 
 C:\\Users\\daoai\\Downloads\\DLSDK\\3rdparty， <DLSDK 目录>\\3rdparty
 C:\\Users\\daoai\\Downloads\\DLSDK\\bin， <DLSDK 目录>\\bin
@@ -55,7 +57,7 @@ C:\\Users\\daoai\\Downloads\\DLSDK\\bin， <DLSDK 目录>\\bin
     .. image:: images/add_ref.png
         :scale: 100%
 
-点击浏览，然后浏览安装目录下的bin文件夹内的 ``dl_sdk_net.dll`` 文件，勾选后，点击OK。
+点击浏览，然后浏览解压目录下的bin文件夹内的 ``dl_sdk_net.dll`` 文件，勾选后，点击OK。
     .. image:: images/browse_dll.png
         :scale: 100%
 
