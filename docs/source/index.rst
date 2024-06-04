@@ -16,6 +16,13 @@ DAOAI WORLD
 
 .. toctree::
    :maxdepth: 2
+   :caption: 开发
+
+   develop/index
+
+
+.. toctree::
+   :maxdepth: 2
    :caption: 数据
 
    data/workspace/index
@@ -34,4 +41,12 @@ DAOAI WORLD
    :caption: 部署
 
    deploy/deploy_device/index.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 支持
+
+   support/FAQ/index.rst
+
+
 
