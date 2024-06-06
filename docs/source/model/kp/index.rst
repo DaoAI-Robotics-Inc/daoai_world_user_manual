@@ -6,13 +6,22 @@
     .. image:: Images/kp.png
         :scale: 100%
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="https://docs.daoai.ca/static/videos/daoaiworld_kp.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
 
 模型选择情景
 ---------------------------------
 
 **关键点检测** 模型可以用以检测图像中的一个或多个不同物体的数量及位置，并精确定位。
 
-与 **分割实例** 模型相似, **关键点检测** 模型可以对一个或多个物体进行分割和定位。与 **分割实例** 模型不同的是， **关键点检测** 通过关键点可以更精确的定位物体，从而获得物体的准确位置，旋转姿态等信息。
+与 **实例分割** 模型相似, **关键点检测** 模型可以对一个或多个物体进行分割和定位。与 **实例分割** 模型不同的是， **关键点检测** 通过关键点可以更精确的定位物体，从而获得物体的准确位置，旋转姿态等信息。
 
 标注方法
 -------------
@@ -52,3 +61,11 @@
 4. 不要标注关键点被其他对象遮挡的对象，因为在标签-关键点组合中中缺少对应的关键点将导致训练崩溃。
 
 5. 与分割类似，在每个图像中仅标注顶层关键点-标签集，并避免标注被其他对象遮挡的对象。
+
+
+练习
+--------
+
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 keypoint_detection.zip
+
+解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。

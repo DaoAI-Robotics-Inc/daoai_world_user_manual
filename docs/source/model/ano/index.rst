@@ -6,6 +6,15 @@
     .. image:: Images/ano.png
         :scale: 100%
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="https://docs.daoai.ca/static/videos/daoaiworld_ano.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
 
 模型选择场景
 ------------------------------------------
@@ -45,3 +54,10 @@
     1. 异常检测 项目在训练时，需要确保分配的训练集中所包含的图片数量小于等于该数据集中全部无损图片的数量，否则可能会导致训练失败。 同时，数据集中所包含的损坏图片的数量过少也会导致训练结果不理想。
     
     2. 异常检测 于其他项目不同，默认不添加任何数据增强选项。
+
+练习
+--------
+
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 anomaly_detection.zip
+
+解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。

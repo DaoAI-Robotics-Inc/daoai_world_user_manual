@@ -6,6 +6,16 @@
     .. image:: Images/sem.png
         :scale: 100%
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="https://docs.daoai.ca/static/videos/daoaiworld_sem.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
 
 模型选择场景
 ------------------------------------------
@@ -39,3 +49,10 @@
 
 1. **标注正常** 的物体不应含有损害区域标签，否则可能会导致训练结果不理想，或训练失败。
 
+
+练习
+--------
+
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 semantic_segmentation.zip
+
+解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。

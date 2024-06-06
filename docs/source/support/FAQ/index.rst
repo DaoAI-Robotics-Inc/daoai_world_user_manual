@@ -4,10 +4,29 @@
 .. contents::
     :local:
 
-DLSDK显示License Check Fail
+DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    如果在运行DL SDK项目时遇到以下的报错，这说明软件的licensemanager_cli.exe 没有在正确的位置    
+
+    .. image:: images/licensemanager_notfound.png
+        :align: center
+
+
+    需要打开vs的项目设置，找到Debugging设置中的 Working Directory 路径，默认为项目文件的文件夹。然后需要将licensemanger_cli.exe 同license文件复制到该位置。
+
+    .. image:: images/working_dir.png
+        :align: center
+
+    .. image:: images/move.png
+        :align: center
+
+    重新运行项目即可解决。如果没有有效的license文件，请见下一条
+
+DLSDK显示License Check Fail 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    如果在尝试使用软件时，弹窗提醒 **License Check Failed. Contact Administrator** 的提醒，这说明了软件在该电脑没有有效的license，无法使用软件。
+    如果在运行DL SDK时遇到以下的报错，这说明了软件在该电脑没有有效的license，无法使用软件。
 
     .. image:: images/failed.png
         :align: center

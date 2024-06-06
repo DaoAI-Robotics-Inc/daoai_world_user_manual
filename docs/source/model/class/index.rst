@@ -6,6 +6,16 @@
     .. image:: Images/class.png
         :scale: 100%
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="https://docs.daoai.ca/static/videos/daoaiworld_class.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
 模型选择情景
 ----------------------------------
 
@@ -32,3 +42,10 @@
 2. **分类检测** 的数据集中，每张图片应只包含目标物体，以减少其他物体的影响。
 
 3. 可以通过预处理中划定感兴趣区域来减少图片中的其他物体对模型的影响。
+
+练习
+--------
+
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 image_classification.zip
+
+解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。

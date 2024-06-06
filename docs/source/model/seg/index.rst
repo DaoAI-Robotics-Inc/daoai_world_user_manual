@@ -1,17 +1,28 @@
-分割实例检测
+实例分割
 ==============================
 
-在 **分割实例** 检测中，模型会定位图像中的对象并生成精准的定位边界。在现实应用中， **分割实例** 常用作识别不规则外形的物体。
+在 **实例分割** 检测中，模型会定位图像中的对象并生成精准的定位边界。在现实应用中， **实例分割** 常用作识别不规则外形的物体。
 
     .. image:: Images/insseg.png
         :scale: 100%
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="https://docs.daoai.ca/static/videos/daoaiworld_insseg.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
+
 模型选择情景
 ------------------------------
 
-**分割实例** 可以用以检测图像中一个或多个不同物体的数量及位置。模型适合在需要对物体进行简单的分割，分类，定位处理时使用。
+**实例分割** 可以用以检测图像中一个或多个不同物体的数量及位置。模型适合在需要对物体进行简单的分割，分类，定位处理时使用。
 
-在 **分割实例** 中，可以通过只建立一个物体标签来进行单一种类物品的识别，如：在大量混合物体中寻找并分离处某一特定种类的物体。
+在 **实例分割** 中，可以通过只建立一个物体标签来进行单一种类物品的识别，如：在大量混合物体中寻找并分离处某一特定种类的物体。
 也可以同时建立并学习多种物体的标签，从而达到将多种物体分割识别的效果。
 
 标注方法
@@ -42,3 +53,10 @@
 
 .. image:: Images/example1.png
     :scale: 100%
+
+练习
+--------
+
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 Instance_segmentation.zip
+
+解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。

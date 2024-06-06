@@ -31,7 +31,10 @@
         .. image:: images/run_1.png
             :scale: 60%
 
+    使用DLSDK需要将有效的许可证管理器移动至项目路径，详情请见 :ref:`DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command`
+
     使用DLSDK需要有效的使用许可证，详情请见 :ref:`DLSDK显示License Check Fail`
+
 
 C++ 环境配置
 ------------
