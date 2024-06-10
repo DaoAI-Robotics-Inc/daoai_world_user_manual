@@ -103,4 +103,13 @@ SDK
 
 `C# SDK 文档 <../_static/doc_Cs/index.html>`_
 
+代码示例
+-------------
 
+代码示例有C++和C#两个示例项目：
+
+.. toctree::
+    :maxdepth: 1
+    
+    cpp_eg
+    cs_eg
