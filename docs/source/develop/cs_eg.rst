@@ -1,4 +1,4 @@
-C++C# 代码示例
+C# 代码示例
 ===============
 
 本章会详细介绍DaoAI World SDK中包含的C#代码示例。
@@ -8,7 +8,7 @@ C++C# 代码示例
 
 在C#示例中，我们引入了以下几个库，其中 ``DaoAI.DeepLearningCLI`` 是用于引入DaoAI World SDK的库。
 
-.. code-block:: C++
+.. code-block:: C#
 
     using System;
     using System.Collections.Generic;
@@ -24,7 +24,7 @@ C++C# 代码示例
 
 DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D array）。以下是从文件中读取图片的代码部分：
 
-.. code-block:: C++
+.. code-block:: C#
 
     // Test image
     String root_directory = System.IO.Directory.GetCurrentDirectory();
@@ -48,7 +48,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 这里做了一个图片的深度拷贝,然后用 `DaoAI.DeepLearningCLI.Image` 函数初始化图像对象以便后续使用：
 
-.. code-block:: C++
+.. code-block:: C#
 
     DaoAI.DeepLearningCLI.Image img = new DaoAI.DeepLearningCLI.Image(image.Height, image.Width, DaoAI.DeepLearningCLI.Image.Type.RGB, pixels);
     DaoAI.DeepLearningCLI.Image img_copy = img.clone();
@@ -74,7 +74,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 首先需要加载模型。DaoAI World 输出的深度学习模型通常是 zip 格式。我们需要创建一个 `DaoAI.DeepLearningCLI.Model` 对象，然后调用 `loadNestedZip` 方法来读取 DaoAI World 输出的深度学习模型 zip 文件。
 
-.. code-block:: C++
+.. code-block:: C#
 
         DaoAI.DeepLearningCLI.Application.initialize();
         DaoAI.DeepLearningCLI.Model model = new DaoAI.DeepLearningCLI.Model();
@@ -91,7 +91,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 调用 `DaoAI.DeepLearningCLI.Model` 的 `inferenceJSON()` 方法可以对一个图像对象进行深度学习预测。该方法会返回一组 JSON 格式的预测结果。
 
-.. code-block:: C++
+.. code-block:: C#
 
 		Console.WriteLine(model.inferenceJson(img));
 
