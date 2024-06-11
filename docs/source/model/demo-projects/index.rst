@@ -102,10 +102,10 @@
 
 由于这里我们不需要区分缺陷的类型，所以缺陷检测可以满足我们的需求。
 
-    .. image:: images/meter_bad.png
+    .. image:: images/lens_bad.png
         :scale: 70%
 
-    .. image:: images/meter_good.png
+    .. image:: images/lens_good.png
         :scale: 80%
         
 使用多边形标注出缺陷区域，或者标注为正常。
