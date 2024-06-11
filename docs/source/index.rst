@@ -13,6 +13,8 @@ DAOAI WORLD
    :caption: 模型
 
    model/model
+   model/demo-projects/index
+
 
 .. toctree::
    :maxdepth: 2
