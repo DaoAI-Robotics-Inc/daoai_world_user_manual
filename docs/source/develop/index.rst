@@ -18,7 +18,7 @@
         .. image:: images/vs.png
             :scale: 60%
 
-    项目分为C++项目，和C#项目，邮件点击properties, 然后选择启动项目，来选择运行C++或者C#项目。
+    项目分为C++项目，和C#项目，右键点击properties, 然后选择启动项目，来选择运行C++或者C#项目。
 
         .. image:: images/start_up.png
             :scale: 70%
