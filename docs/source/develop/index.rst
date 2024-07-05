@@ -113,3 +113,13 @@ SDK
     
     cpp_eg
     cs_eg
+
+桌面应用程序
+-------------
+
+桌面应用程序使用C++，基于DaoAI World SDK开发，主要功能是实现深度学习的推理，并输出推理结果及可视化，供客户参考。
+
+.. toctree::
+    :maxdepth: 1
+
+    cpp_demo
