@@ -68,3 +68,45 @@ DLSDK显示License Check Fail
     请把上方的机器码提供给你的支持工程师或者客服，他们会帮助你获取权限。
 
     |
+
+
+图片上传后，在标注页面打开是全黑的图片
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    .. image:: images/invalid_images.png
+        :align: center
+
+    上传图片时，DaoAI World 会对上传的数据进行检查和验证，部分图片可能会出现上传失败(如上图)。这是因为图片可能出现了损坏，建议重新采集图片。或者使用以下的方式尝试：
+
+方法1：尝试修复损坏数据
+-----------------------
+
+    使用 **XnView MP** 图片工具， `下载连接 <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EWlgNZq_aBNFuomgwXGDx_QBzG2SBuqYFRd724qvd1TJXw?e=33ebHp>`_ 
+
+    解压文件后，找到 **XnView MP** 图片工具的执行程序，双击运行。
+
+    .. image:: images/xnviewmp_exe.png
+        :align: center
+        :scale: 75%
+
+    左上角 `文件` ， `打开` 选取损坏的图片。
+
+    .. image:: images/xnviewmp_open_file.png
+        :align: center
+        :scale: 75%
+    
+    左上角 `文件` ， `另存为` 保存图片到另外的路径下。
+
+    .. image:: images/xnviewmp_save_as.png
+        :align: center
+        :scale: 75%
+
+    将保存好的图片重新上传。
+
+    .. image:: images/xnviewmp_upload_success.png
+        :align: center
+        :scale: 75%
+
+    
+
+    
