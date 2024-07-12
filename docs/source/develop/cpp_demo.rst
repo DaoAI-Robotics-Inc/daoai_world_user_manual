@@ -13,18 +13,15 @@ C++ 桌面应用程序
         :width: 600px
         :scale: 30%
         :align: left
-        :target: https://bitbucket.org/daoairobotics/daoai_world_example/src/master/
 
 |
 
 | DaoAI World Example 项目是一个基于Qt的C++应用程序，用于加载、处理和推理图像数据，并将结果可视化。
 | 该应用程序使用OpenCV库进行图像处理，使用nlohmann::json库解析和操作JSON数据，并通过DaoAI深度学习SDK进行模型推理。
 
-| :strong:`克隆项目：`
+| :strong:`项目下载请点击：` `DaoAI World Example`_
 
-.. code-block:: shell
-
-        git clone https://ysf1@bitbucket.org/daoairobotics/daoai_world_example.git
+.. _DaoAI World Example: https://daoairoboticsinc.sharepoint.com/:u:/s/WeLinkirt-2/ES0pzxMxs3pLpqcIMY8g8bUBGUx2t3yqtk_YX7EyHJaQJw?e=5HaFaT
 
 |
 |
@@ -90,9 +87,46 @@ C++ 桌面应用程序
 **************************
 
 | :strong:`1.` 安装Qt和Visual Studio 2019(或更高版本)。
+|              下载 `Qt6`_ 和 `Visual Studio 2019`_ ，勾选必要组件，依次进行安装。
+.. _Qt6: https://www.qt.io/download-qt-installer-oss?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4
+.. _Visual Studio 2019: https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/
+
+.. image:: images/Qt_install.png
+        :height: 700px
+        :width: 900px
+        :scale: 55%
+        :align: left
+
+.. image:: images/VS_install.png
+        :height: 700px
+        :width: 900px
+        :scale: 55%
+        :align: left
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.. _OpenCV–4.10.0: https://opencv.org/releases/
 | :strong:`2.` 安装OpenCV库。
+|              下载 `OpenCV–4.10.0`_ ，解压到C盘根目录，例：C:\\OpenCV\\.
 | :strong:`3.` 安装nlohmann/json库。
+|              nlohmann/json 已配置在项目根目录下，目标路径：$(SolutionDir)\\Json.
 | :strong:`4.` 安装DaoAI SDK。
+|              DaoAI SDK 相关文件已配置在项目根目录下，目标路径：$(SolutionDir)\\3rdparty；$(SolutionDir)\\bin；$(SolutionDir)\\include.
 
 **************************
 编译和运行
@@ -100,8 +134,47 @@ C++ 桌面应用程序
 
 | :strong:`1.` 打开Visual Studio 2019并加载项目文件。
 | :strong:`2.` 配置项目，确保所有依赖库已正确链接。
-| :strong:`3.` X64 release 编译项目。
-| :strong:`4.` 运行项目。
+* |            打开项目属性，配置Debugging，“Inherit from parent or project defaults“ 取消勾选，Environment 目标路径包含：$(SolutionDir)\\bin;$(SolutionDir)\\3rdparty;C:\\OpenCV\\opencv\\build\\x64\\vc16\\bin;C:\\Qt\\6.6.1\\msvc2019_64\\bin。
+
+.. image:: images/Debugging.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
+
+* |            配置VC++ Directories，Include Directories 目标路径包含：C:\\OpenCV\\opencv\\build\\include\\opencv2;C:\\OpenCV\\opencv\\build\\include。Library Directories 目标路径包含：C:\\OpenCV\\opencv\\build\\x64\\vc16\lib。
+
+.. image:: images/VC++.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
+
+* |            配置C/C++ General，Additional Include Directories 目标路径包含：$(SolutionDir)\Json\include\include;$(SolutionDir)\include。
+
+.. image:: images/C++.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
+
+* |            配置Linker General，Additional Library Directories 目标路径包含：$(SolutionDir)\bin。
+
+.. image:: images/Linker.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
+
+* |            配置Linker General，Additional Dependencies 目标路径包含：daoai_dl_sdk.lib;opencv_world4100.lib。
+
+.. image:: images/input.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
+
+| :strong:`3.` X64 release 编译，运行项目。
+
+.. image:: images/run.png
+        :height: 600px
+        :width: 1200px
+        :scale: 80%
 
 |
 
@@ -770,6 +843,14 @@ daoai_world_example.cpp/推理相关函数
 | :strong:`3.` 点击“加载模型”按钮选择模型文件。
 | :strong:`4.` 点击“推理”按钮执行推理，结果将显示在UI上。
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <video width="80%" height="80%" controls>
+            <source src="http://docs.welinkirt.com/static/videos/DW.mp4" type="video/mp4">
+        </video>
+    </div>
+
 |
 
 --------------------------
@@ -785,3 +866,4 @@ daoai_world_example.cpp/推理相关函数
 --------------------------
 
 * 此项目遵循MIT许可证。详见LICENSE文件。
+* 此项目所引用的DaoAI深度学习SDK需要授权，请联系我们获取授权文件。
