@@ -163,7 +163,7 @@ Python SDK wheel 目前只支持linux环境，如果您使用的是Windows系统
     python3 --version
 
 
-根据您的Python版本 下载 `python 310 wheel <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EX5WYClZ4CVPuDdMfh7pY-QB_Glua37OAUcPLACuLg7KTw?e=TE4VgS>`_ 文件或者 `Python 311 wheel  <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EX5WYClZ4CVPuDdMfh7pY-QB_Glua37OAUcPLACuLg7KTw?e=CcIBWq>`_ 文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载python 310 wheel文件或者Python 311 wheel文件
 
 使用以下命令安装wheel文件
 
@@ -181,6 +181,12 @@ Python 3.11:
     pip install ultralytics-8.2.15-cp311-cp311-linux_x86_64.whl 
 
 然后您的DaoAI Python SDK 模组就安装完毕了
+
+您可以使用import daoai_vision 来导入模组。 
+
+.. code-block:: python
+
+    import daoai_vision as dv
 
 
 SDK
