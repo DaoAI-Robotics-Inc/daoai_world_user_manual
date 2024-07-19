@@ -74,7 +74,9 @@ DaoAI World拥有用户管理功能，每个用户的工作区都是独立的，
 
 **上传数据**
 
-DaoAI World支持上传单张图片，也支持上传一整个文件夹图片。这里我们点击 **选择文件夹** 来批量上传我们的数据集。
+DaoAI World支持上传单张图片(png, jpg, jpeg, bmp)、或者上传一整个文件夹中的所有图片。也可以连带图片的标注数据(.json)文件一起上传，或者直接导入其它创建好的项目中的数据。
+
+这里我们点击 **选择文件夹** 来批量上传我们的数据集。
 
     .. image:: images/upload_folder.png
         :width: 800
@@ -190,11 +192,21 @@ DaoAI World支持上传单张图片，也支持上传一整个文件夹图片。
     .. image:: images/training.png
         :width: 800
         :align: center
+    
+    训练开始后，您可以查看实时的模型训练。需要的训练时间也显示在图表上方。
+    .. image:: images/training_2.png
+        :width: 800
+        :align: center
 
-
-    在DaoAI World自动进行模型训练的过程中您也可以通过查看训练数据，查看模型训练情况。等待DaoAI World将模型训练好后最终就会如下图所示，您可以选择导出模型
-    也可以点击左侧导航栏的部署/测试，手动检测模型结果精确度。
+    在DaoAI World自动进行模型训练的过程中您也可以通过查看实时训练图表查看模型的训练情况。等待DaoAI World将模型训练好后最终就会如下图所示，您可以选择导出模型。导出的模型可以使用 `DaoAI Vision Pilot <http://docs.welinkirt.com/daoai-vision-system-user-manual/chinese-2.24.4.0/index.html>`_ 或者 `DaoAI InspecTRA <http://docs.welinkirt.com/daoai-inspectra-user-manual/chinese-2.24.3.0/index.html>`_ 或者 DaoAI World SDK 详情请见 :ref:`开发功能`
 
     .. image:: images/training_over.png
         :width: 800
         :align: center
+
+    也可以点击左侧导航栏的部署/测试，手动检测模型结果精确度。
+
+    .. image:: images/deploy_test.png
+        :width: 800
+        :align: center
+

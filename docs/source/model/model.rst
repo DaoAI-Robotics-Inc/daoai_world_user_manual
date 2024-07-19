@@ -10,6 +10,7 @@
     ano/index
     class/index
     obj/index
+    rot_obj/index
     semantic/index
     ocr/index
     demo-projects/index

@@ -7,13 +7,7 @@ DAOAI WORLD
    :caption: 介绍
 
    introduce/quick_start/index
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: 开发
-
-   develop/index
-
+   introduce/quick_start/release-notes
 
 .. toctree::
    :maxdepth: 2
@@ -26,6 +20,12 @@ DAOAI WORLD
    data/annotate_models/models
    train/train_model/index.rst
    deploy/deploy_device/index.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 开发
+
+   develop/index
 
 .. toctree::
    :maxdepth: 1

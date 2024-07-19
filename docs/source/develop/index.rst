@@ -39,6 +39,20 @@
 C++ 环境配置
 ------------
 
+    
+    首先需要将 DLSDK 解压目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
+
+    如下图，解压目录为 C:\\Users\\daoai\\Downloads\\DLSDK, 那么就需要将一下两个目录添加到path系统变量中。
+
+    C:\\Users\\daoai\\Downloads\\DLSDK\\3rdparty， <DLSDK 目录>\\3rdparty
+    C:\\Users\\daoai\\Downloads\\DLSDK\\bin， <DLSDK 目录>\\bin
+
+        .. image:: images/path_icon.png
+            :scale: 70%
+
+        .. image:: images/path_step.png
+            :scale: 100%
+
 
     C++的示例项目中以下的步骤已经配置好了，如果您需要创建一个自定义项目，则需要进行以下的配置。
 
@@ -94,6 +108,81 @@ C# 环境配置
         .. image:: images/browse_assembly.png
             :scale: 100%
 
+Python 环境配置
+---------------
+
+Python 只支持在linux系统中使用，如果您的操作系统是Windows， 那么请参考 :ref:`1. 使用Docker Image` 配置Docker 虚拟环境并使用DaoAI World Python SDK
+
+1. 使用Docker Image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+需要先安装Docker。
+
+安装完成后, 运行Docker 然后打开命令栏, 输入并运行以下命令 来下载Docker Container。注意 这一步需要预留约60G的磁盘空间。
+
+.. code-block::
+
+    docker pull daoairobotics/daoai_vision 
+
+.. image:: images/pull_docker.png
+    :scale: 100%
+        
+下载完毕后，运行以下命令运行Docker Image 并进入虚拟映像的linux环境
+
+.. code-block::
+
+    docker run -it --gpus=all -v <本地路径>:/home/appuser/workdir -e ACTIVATION_PATH_LICENSE='/home/appuser/workdir/license.lic' -e ACTIVATION_PATH_MACHINE='/home/appuser/workdir/machine.lic' -e ACTIVATION_FINGERPRINT='857f67d5-f6a2-4bb0-9af4-90dc72d58e73' daoairobotics/daoai_vision
+
+其中
+
+1. <本地路径> 是您本地的路径，请替换为您实际的路径。
+2. /home/appuser/workdir 是Docker容器内的虚拟路径，该路径会包含第一步中指定路径的文件和文件夹。
+3. -e ACTIVATION_PATH_LICENSE='/home/appuser/workdir/license.lic' 是DaoAI的许可证文件路径，该文件应放置在第一步设置的本地路径中，并且可以在虚拟路径中访问。如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
+4. -e ACTIVATION_PATH_MACHINE='/home/appuser/workdir/machine.lic' 是DaoAI的机器码文件路径，该文件应放置在第一步设置的本地路径中，并且可以在虚拟路径中访问。如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
+5. -e ACTIVATION_FINGERPRINT='857f67d5-f6a2-4bb0-9af4-90dc72d58e73' 是您机器的机器码。如果您不知道您的机器码是什么，请参考 :ref:`DLSDK显示License Check Fail`
+6. daoairobotics/daoai_vision 是Docker镜像的名称。
+
+输入命令后，如下图，您将以appuser登入Docker虚拟映像
+
+    .. image:: images/pscmd.png
+        :scale: 100%
+
+
+2. 安装DaoAI Python SDK wheel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Python SDK wheel 目前只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
+
+需要首先安装 **Python 3.10** 或者 **Python 3.11**
+
+如果您已经安装了Python, 您可以使用以下命令来确认您的版本
+
+.. code-block::
+
+    python3 --version
+
+
+根据您的Python版本 下载 `python 310 wheel <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EX5WYClZ4CVPuDdMfh7pY-QB_Glua37OAUcPLACuLg7KTw?e=TE4VgS>`_ 文件或者 `Python 311 wheel  <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EX5WYClZ4CVPuDdMfh7pY-QB_Glua37OAUcPLACuLg7KTw?e=CcIBWq>`_ 文件
+
+使用以下命令安装wheel文件
+
+Python 3.10:
+
+.. code-block::
+
+    pip install ultralytics-8.2.15-cp310-cp310-linux_x86_64.whl 
+
+
+Python 3.11:
+
+.. code-block::
+
+    pip install ultralytics-8.2.15-cp311-cp311-linux_x86_64.whl 
+
+然后您的DaoAI Python SDK 模组就安装完毕了
+
+
 SDK
 ------
 
@@ -113,6 +202,7 @@ SDK
     
     cpp_eg
     cs_eg
+    python_eg
 
 桌面应用程序
 -------------
