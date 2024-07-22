@@ -154,7 +154,7 @@ Python 只支持在linux系统中使用，如果您的操作系统是Windows， 
 
 Python SDK wheel 目前只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
 
-需要首先安装 **Python 3.10** 或者 **Python 3.11**
+需要首先安装 **Python 3.10**
 
 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
 
@@ -163,22 +163,15 @@ Python SDK wheel 目前只支持linux环境，如果您使用的是Windows系统
     python3 --version
 
 
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载python 310 wheel文件或者Python 311 wheel文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载python 310 wheel文件
 
 使用以下命令安装wheel文件
 
-Python 3.10:
-
 .. code-block::
 
-    pip install ultralytics-8.2.15-cp310-cp310-linux_x86_64.whl 
+    pip install daoai_vision-0.0.1-py3-none-any.whl 
+    pip install dezip-0.0.0-cp310-cp310-linux_x86_64.whl 
 
-
-Python 3.11:
-
-.. code-block::
-
-    pip install ultralytics-8.2.15-cp311-cp311-linux_x86_64.whl 
 
 然后您的DaoAI Python SDK 模组就安装完毕了
 
@@ -188,6 +181,19 @@ Python 3.11:
 
     import daoai_vision as dv
 
+.. note::
+    如果您使用的是无界面应用，或者看到以下报错：
+
+    .. code-block::
+
+        ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+
+    请运行以下命令 安装 opencv-python-headless
+    
+    .. code-block::
+
+        pip install opencv-python-headless
+ 
 
 SDK
 ------
