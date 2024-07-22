@@ -108,10 +108,17 @@ C# 环境配置
         .. image:: images/browse_assembly.png
             :scale: 100%
 
-Python 环境配置
----------------
+Python Windows 环境配置
+---------------------------------
 
-Python 只支持在linux系统中使用，如果您的操作系统是Windows， 那么请参考 :ref:`1. 使用Docker Image` 配置Docker 虚拟环境并使用DaoAI World Python SDK
+<待更新>
+
+Python Linux/Jetson 环境配置
+---------------------------------
+
+Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Windows环境中使用， 那么请参考 :ref:`1. 使用Docker Image` 配置Docker 虚拟环境。
+
+如果您使用的是linux环境，可以跳过 1. 并参考 :ref:`2. 安装DaoAI Python Linux/Jetson API Wheel` 来直接使用
 
 1. 使用Docker Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,13 +155,12 @@ Python 只支持在linux系统中使用，如果您的操作系统是Windows， 
         :scale: 100%
 
 
-2. 安装DaoAI Python SDK wheel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2. 安装DaoAI Python Linux/Jetson API Wheel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Python SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
 
-Python SDK wheel 目前只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
-
-需要首先安装 **Python 3.10**
+需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
 
 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
 
