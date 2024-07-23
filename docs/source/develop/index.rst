@@ -272,6 +272,7 @@ SDK
     
     cpp_eg
     cs_eg
+    python_win_eg
     python_eg
 
 桌面应用程序
