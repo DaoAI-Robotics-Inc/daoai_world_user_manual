@@ -7,19 +7,21 @@
 DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    如果在运行DL SDK项目时遇到以下的报错，这说明软件的licensemanager_cli.exe 没有在正确的位置    
+    如果在运行DL SDK项目时遇到以下的报错，这说明软件的licensemanager_cli.exe 和 machine.lic 没有在正确的位置    
 
     .. image:: images/licensemanager_notfound.png
         :align: center
 
 
-    需要打开vs的项目设置，找到Debugging设置中的 Working Directory 路径，默认为项目文件的文件夹。然后需要将licensemanger_cli.exe 同license文件复制到该位置。
+    需要打开vs的项目设置，找到Debugging设置中的 Working Directory 路径，默认为项目文件的文件夹。然后需要将licensemanger_cli.exe 同license.lic文件复制到该位置。
 
     .. image:: images/working_dir.png
         :align: center
 
     .. image:: images/move.png
         :align: center
+
+    如果使用的是Build后的exe, 则需要将licensemanger_cli.exe 同license.lic文件放置于exe的同目录内。
 
     重新运行项目即可解决。如果没有有效的license文件，请见下一条
 
