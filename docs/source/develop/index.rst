@@ -203,6 +203,45 @@ Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Window
 
 Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
 
+Python Linux/Jetson SDK 支持的模型有：
+
+.. list-table::
+   :header-rows: 1
+
+   * - 模型类型
+     - 快速模式
+     - 准确模式
+     - 旋转准确模式
+   * - 实例分割检测
+     - √  
+     - √  
+     - x 
+   * - 关键点检测
+     - √  
+     - √  
+     - x  
+   * - 异常检测
+     - x
+     - x  
+     - 
+   * - 分类检测
+     - x  
+     - x  
+     - 
+   * - 目标检测
+     - √  
+     - √  
+     - 
+   * - 语义分割
+     - x  
+     -  
+     - 
+   * - OCR
+     - x  
+     - 
+     - 
+
+
 需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
 
 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
