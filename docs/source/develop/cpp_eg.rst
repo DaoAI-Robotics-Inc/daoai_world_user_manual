@@ -76,7 +76,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         
         std::cout << "Loading Model" << "\n";
         // load model
-        model.loadNestedZip(model_zip_path);
+        model.load(model_zip_path);
         std::cout << "Model Loaded" << "\n";
 
 

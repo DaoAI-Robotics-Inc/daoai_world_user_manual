@@ -83,7 +83,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         // init model
         Console.WriteLine(DaoAI.DeepLearningCLI.Application.checkDaoAIModelValidity(model_path));
         // load model
-        model.loadNestedZip(model_path, DaoAI.DeepLearningCLI.Device_Type.GPU, -1);
+        model.load(model_path, DaoAI.DeepLearningCLI.Device_Type.GPU, -1);
 
 
 使用深度学习模型进行预测

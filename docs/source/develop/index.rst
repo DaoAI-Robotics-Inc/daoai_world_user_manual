@@ -3,7 +3,7 @@
 
     本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
 
-    首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
+    首先需要下载 `DaoAI World SDK （ DLSDK_2.24.5_28.zip） <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
 
     解压后在解压目录下包含有SDK以及SDK的示例项目。
 
@@ -34,6 +34,19 @@
     使用DLSDK需要将有效的许可证管理器移动至项目路径，详情请见 :ref:`DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command`
 
     使用DLSDK需要有效的使用许可证，详情请见 :ref:`DLSDK显示License Check Fail`
+
+硬件需求
+-----------
+
+DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用DaoAI World 深度学习模型使用CPU进行预测。
+
+当使用GPU模式时，模型的运行时间会显著快于CPU模式。
+
+使用GPU模式的最低需求为:
+
+- 显卡: **Nvidia 1050Ti 显卡, 4GB 显存**
+
+- 显卡驱动： **GeForce Game Ready Driver 驱动版本：552.22， 发布于 2024年 4月16日**
 
 
 C++ 环境配置
