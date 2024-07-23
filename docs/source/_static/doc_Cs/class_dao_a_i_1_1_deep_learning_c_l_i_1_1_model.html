@@ -112,12 +112,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70fb7b36123a2232fb400fadd8262f56" id="r_a70fb7b36123a2232fb400fadd8262f56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70fb7b36123a2232fb400fadd8262f56">load</a> (String^ model_directory, Device_Type device, int device_idx)</td></tr>
 <tr class="memdesc:a70fb7b36123a2232fb400fadd8262f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Load the model specified by its configuration and weight files from the model directory onto the designated device.  <br /></td></tr>
 <tr class="separator:a70fb7b36123a2232fb400fadd8262f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0365de372171aae24167894fa13ed7c" id="r_af0365de372171aae24167894fa13ed7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0365de372171aae24167894fa13ed7c">loadZip</a> (String^ model_zip_path, Device_Type device, int device_idx)</td></tr>
-<tr class="memdesc:af0365de372171aae24167894fa13ed7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the zip model onto the designated device.  <br /></td></tr>
-<tr class="separator:af0365de372171aae24167894fa13ed7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ee652062217f65272c4e0a5c5549608" id="r_a7ee652062217f65272c4e0a5c5549608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ee652062217f65272c4e0a5c5549608">loadNestedZip</a> (String^ model_zip_path, Device_Type device, int device_idx)</td></tr>
-<tr class="memdesc:a7ee652062217f65272c4e0a5c5549608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the zip model onto the designated device.  <br /></td></tr>
-<tr class="separator:a7ee652062217f65272c4e0a5c5549608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1a407a3f9765c2184cd188571bf290b" id="r_ae1a407a3f9765c2184cd188571bf290b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1a407a3f9765c2184cd188571bf290b">unload</a> ()</td></tr>
 <tr class="separator:ae1a407a3f9765c2184cd188571bf290b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4613dd57a3225ca934042b2fa4aa3977" id="r_a4613dd57a3225ca934042b2fa4aa3977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html">Prediction</a> ^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4613dd57a3225ca934042b2fa4aa3977">inference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image)</td></tr>
@@ -273,78 +267,6 @@ DaoAI::DeepLearning::Model *&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
-<a id="a7ee652062217f65272c4e0a5c5549608" name="a7ee652062217f65272c4e0a5c5549608"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ee652062217f65272c4e0a5c5549608">&#9670;&#160;</a></span>loadNestedZip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DaoAI::DeepLearningCLI::Model::loadNestedZip </td>
-          <td>(</td>
-          <td class="paramtype">String^</td>          <td class="paramname"><span class="paramname"><em>model_zip_path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Device_Type</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device_idx</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Load the zip model onto the designated device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">model_zip_path</td><td>The absolute or relative path to the zip archive containing model config and model weights files. </td></tr>
-    <tr><td class="paramname">device</td><td>Either Device_Type::GPU or Device_Type::CPU, which device to load model into. </td></tr>
-    <tr><td class="paramname">gpu_index</td><td>-1 to use all the GPU available, else can be the index of a specific GPU. This will be ignored if the device type is not GPU. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af0365de372171aae24167894fa13ed7c" name="af0365de372171aae24167894fa13ed7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0365de372171aae24167894fa13ed7c">&#9670;&#160;</a></span>loadZip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DaoAI::DeepLearningCLI::Model::loadZip </td>
-          <td>(</td>
-          <td class="paramtype">String^</td>          <td class="paramname"><span class="paramname"><em>model_zip_path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Device_Type</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device_idx</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Load the zip model onto the designated device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">model_zip_path</td><td>The absolute or relative path to the zip archive containing model config and model weights files. </td></tr>
-    <tr><td class="paramname">device</td><td>Either Device_Type::GPU or Device_Type::CPU, which device to load model into. </td></tr>
-    <tr><td class="paramname">gpu_index</td><td>-1 to use all the GPU available, else can be the index of a specific GPU. This will be ignored if the device type is not GPU. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ae1a407a3f9765c2184cd188571bf290b" name="ae1a407a3f9765c2184cd188571bf290b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1a407a3f9765c2184cd188571bf290b">&#9670;&#160;</a></span>unload()</h2>
 
@@ -363,6 +285,10 @@ DaoAI::DeepLearning::Model *&#160;</td><td class="memItemRight" valign="bottom">
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>C:/daoai_system_master/apps/daoai_dl_sdk/dl_sdk_net/<a class="el" href="model_8h_source.html">model.h</a></li>
+<li>C:/daoai_system_master/apps/daoai_dl_sdk/dl_sdk_net/<b>model.cpp</b></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
