@@ -1,5 +1,5 @@
-Python 代码示例
----------------------
+Python Linux/Jetson 代码示例
+-----------------------------------
 
 您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/Ed6ajuVWvRRNu12zuP8Ha18BHTPYznA4P6bO8xtlBuEb4w?e=rGTCF7>`_ 里面包含了图片的读取，模型的读取，以及模型的预测 和输出绘制。
 

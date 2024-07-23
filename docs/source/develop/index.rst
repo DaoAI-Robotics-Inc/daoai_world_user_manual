@@ -3,9 +3,13 @@
 
     本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
 
-    首先需要下载 `DaoAI World SDK （ DLSDK_2.24.5_28.zip） <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
+    首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
 
-    解压后在解压目录下包含有SDK以及SDK的示例项目。
+    **C++** 和 **C#** : DaoAI_World_C++_C#_SDK_2.24.5.0_28.zip
+    **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 / dlsdk-1.0.1-cp310-cp310-win_amd64.whl
+    **Python Linux/Jetson** : DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/
+
+    **C++** 和 **C#** 的SDK解压后在解压目录下包含有SDK以及SDK的示例项目。
 
         .. image:: images/install_folder.png
             :scale: 100%
@@ -124,7 +128,33 @@ C# 环境配置
 Python Windows 环境配置
 ---------------------------------
 
-<待更新>
+Python Windows SDK wheel 只支持Windows环境
+
+需要首先安装 **Python 3.10** 
+
+如果您已经安装了Python, 您可以使用以下命令来确认您的版本
+
+.. code-block::
+
+    python3 --version
+
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载  **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 目录下的.whl文件
+
+使用以下命令安装wheel文件
+
+.. code-block::
+
+    pip install dlsdk-1.0.1-cp310-cp310-win_amd64.whl
+
+然后您的DaoAI Python Windows SDK 模组就安装完毕了
+
+您可以使用以下命令来导入模组。 
+
+.. code-block:: python
+
+    import dlsdk.dlsdk as dlsdk
+
+您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
 
 Python Linux/Jetson 环境配置
 ---------------------------------
@@ -168,10 +198,10 @@ Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Window
         :scale: 100%
 
 
-2. 安装DaoAI Python Linux/Jetson API Wheel
+2. 安装DaoAI Python Linux/Jetson SDK Wheel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
+Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
 
 需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
 
@@ -182,7 +212,7 @@ Python SDK wheel 只支持linux环境，如果您使用的是Windows系统，那
     python3 --version
 
 
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载python 310 wheel文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载 DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/ 下的 .whl 文件
 
 使用以下命令安装wheel文件
 
@@ -192,13 +222,22 @@ Python SDK wheel 只支持linux环境，如果您使用的是Windows系统，那
     pip install dezip-0.0.0-cp310-cp310-linux_x86_64.whl 
 
 
-然后您的DaoAI Python SDK 模组就安装完毕了
+然后您的DaoAI Python Linux/Jetson SDK 模组就安装完毕了
+
+接下来您需要在终端中运行以下命令来激活您的许可证，如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
+
+.. code-block:: 
+
+    daoai_vision activate --machine /path/to/machinefile  --license /path/to/licensefile
+
+该命令会验证您的许可证文件，并缓存30天，之后需要重新运行命令。
 
 您可以使用import daoai_vision 来导入模组。 
 
 .. code-block:: python
 
     import daoai_vision as dv
+
 
 .. note::
     如果您使用的是无界面应用，或者看到以下报错：
