@@ -2,12 +2,25 @@
 =============
 
     本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
+    
+    **培训内容大纲**： `培训ppt <https://daoairoboticsinc-my.sharepoint.com/:p:/g/personal/nrd_daoai_com/EXFpNfjd9wRCpWU3kq6JZjcBsVtqmMk9jGsAm4f0DgmtlA?e=ygTSQ2>`_
+
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+            <video width="60%" height="auto" controls>
+                <source src="http://docs.welinkirt.com/static/videos/dw_sdk_train.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    |
+
 
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
 
-    **C++** 和 **C#** : DaoAI_World_C++_C#_SDK_2.24.5.0_28.zip
-    **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 / dlsdk-1.0.1-cp310-cp310-win_amd64.whl
-    **Python Linux/Jetson** : DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/
+    - **C++** 和 **C#** : DaoAI_World_C++_C#_SDK_2.24.5.0_28.zip
+    - **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 / dlsdk-1.0.1-cp310-cp310-win_amd64.whl
+    - **Python Linux/Jetson** : DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/
 
     **C++** 和 **C#** 的SDK解压后在解压目录下包含有SDK以及SDK的示例项目。
 
