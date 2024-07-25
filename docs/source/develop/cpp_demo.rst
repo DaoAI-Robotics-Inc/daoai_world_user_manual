@@ -490,7 +490,7 @@ inference.cpp/主窗口类
                 example->appendLog("Initialized deeplearning model");
 
                 // load model
-                model.loadNestedZip(modelPath, DaoAI::DeepLearning::Device_Type::GPU, -1);
+                model.load(modelPath, DaoAI::DeepLearning::Device_Type::GPU, -1);
                 example->appendLog("Loaded deeplearning model");
 
                 DaoAI::DeepLearning::Image daoai_image(image_height, image_width, DaoAI::DeepLearning::Image::Type::BGR, &image_buffer[0]);
