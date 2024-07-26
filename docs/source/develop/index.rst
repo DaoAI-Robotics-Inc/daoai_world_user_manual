@@ -167,7 +167,7 @@ Python Windows SDK wheel 只支持Windows环境
 
     import dlsdk.dlsdk as dlsdk
 
-您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
+您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考 :ref:`DLSDK显示License Check Fail`
 
 Python Linux/Jetson 环境配置
 ---------------------------------
