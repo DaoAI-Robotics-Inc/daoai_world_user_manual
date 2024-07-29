@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'DaoAI机器人视觉认知系统用户手册'
-copyright = '2021-2023 DaoAI Robotics Inc.'
+project = 'DaoAI World用户手册'
+copyright = '2021-2024 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
-release = '0.1'
-version = '0.1.0'
+release = '2024.5'
+version = '2024.5.0'
 
 # -- General configuration
 
@@ -21,7 +21,7 @@ extensions = [
     'sphinxcontrib.video',
     'sphinx.ext.autosectionlabel',
     'sphinxemoji.sphinxemoji',
-
+    "sphinx_multiversion",
 ]
 
 html_static_path = ['_static']
@@ -62,3 +62,8 @@ latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
 }
 epub_show_urls = 'footnote'
+
+
+# sphinx-multiversion
+# All branches except 'master'
+smv_branch_whitelist = r'^(?!chinese).*$'
