@@ -63,6 +63,9 @@ latex_elements = {
 }
 epub_show_urls = 'footnote'
 
+templates_path = [
+    "_templates",
+]
 
 # sphinx-multiversion
 # All branches except 'master'
