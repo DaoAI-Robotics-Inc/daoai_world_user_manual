@@ -6,8 +6,8 @@ project = 'DaoAI World用户手册'
 copyright = '2021-2024 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
-release = '2024.5'
-version = '2024.5.0'
+release = '2024.1'
+version = '2024.1.0'
 
 # -- General configuration
 
@@ -63,6 +63,9 @@ latex_elements = {
 }
 epub_show_urls = 'footnote'
 
+templates_path = [
+    "_templates",
+]
 
 # sphinx-multiversion
 # All branches except 'master'
