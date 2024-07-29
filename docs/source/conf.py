@@ -66,4 +66,4 @@ epub_show_urls = 'footnote'
 
 # sphinx-multiversion
 # All branches except 'master'
-smv_branch_whitelist = r'^(?!master).*$'
+smv_branch_whitelist = r'^(?!chinese).*$'
