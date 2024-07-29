@@ -21,7 +21,7 @@ extensions = [
     'sphinxcontrib.video',
     'sphinx.ext.autosectionlabel',
     'sphinxemoji.sphinxemoji',
-
+    "sphinx_multiversion",
 ]
 
 html_static_path = ['_static']
@@ -62,3 +62,8 @@ latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
 }
 epub_show_urls = 'footnote'
+
+
+# sphinx-multiversion
+# All branches except 'master'
+smv_branch_whitelist = r'^(?!master).*$'
