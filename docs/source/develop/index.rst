@@ -172,7 +172,9 @@ Python Windows SDK wheel 只支持Windows环境
 Python Linux/Jetson 环境配置
 ---------------------------------
 
-Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Windows环境中使用， 那么请参考 :ref:`1. 使用Docker Image` 配置Docker 虚拟环境。
+Python Linux/Jetson API 只支持在linux系统中使用，并分为 linux 机器，和Jetson 机器两种。
+
+如果您想在Windows环境中使用， 那么请参考 :ref:`1. 使用Docker Image` 配置Docker 虚拟环境。
 
 如果您使用的是linux环境，可以跳过 1. 并参考 :ref:`2. 安装DaoAI Python Linux/Jetson API Wheel` 来直接使用
 
@@ -183,9 +185,17 @@ Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Window
 
 安装完成后, 运行Docker 然后打开命令栏, 输入并运行以下命令 来下载Docker Container。注意 这一步需要预留约60G的磁盘空间。
 
+Linux 机器的Docker环境映像 可以使用以下命令
+
 .. code-block::
 
     docker pull daoairobotics/daoai_vision 
+
+或者，如果您是Jetson 机器，可以使用以下命令来下载 Jetson机器的 Docker环境映像 
+
+.. code-block::
+
+    docker pull daoairobotics/daoai_vision:jetson
 
 .. image:: images/pull_docker.png
     :scale: 100%
@@ -194,27 +204,31 @@ Python Linux/Jetson API 只支持在linux系统中使用，如果您想在Window
 
 .. code-block::
 
-    docker run -it --gpus=all -v <本地路径>:/home/appuser/workdir -e ACTIVATION_PATH_LICENSE='/home/appuser/workdir/license.lic' -e ACTIVATION_PATH_MACHINE='/home/appuser/workdir/machine.lic' -e ACTIVATION_FINGERPRINT='857f67d5-f6a2-4bb0-9af4-90dc72d58e73' daoairobotics/daoai_vision
+    docker run -it --gpus=all -v <本地路径>:/home/appuser/workdir daoairobotics/daoai_vision
 
 其中
 
 1. <本地路径> 是您本地的路径，请替换为您实际的路径。
 2. /home/appuser/workdir 是Docker容器内的虚拟路径，该路径会包含第一步中指定路径的文件和文件夹。
-3. -e ACTIVATION_PATH_LICENSE='/home/appuser/workdir/license.lic' 是DaoAI的许可证文件路径，该文件应放置在第一步设置的本地路径中，并且可以在虚拟路径中访问。如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
-4. -e ACTIVATION_PATH_MACHINE='/home/appuser/workdir/machine.lic' 是DaoAI的机器码文件路径，该文件应放置在第一步设置的本地路径中，并且可以在虚拟路径中访问。如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
-5. -e ACTIVATION_FINGERPRINT='857f67d5-f6a2-4bb0-9af4-90dc72d58e73' 是您机器的机器码。如果您不知道您的机器码是什么，请参考 :ref:`DLSDK显示License Check Fail`
-6. daoairobotics/daoai_vision 是Docker镜像的名称。
+3. daoairobotics/daoai_vision 是Docker镜像的名称。
 
 输入命令后，如下图，您将以appuser登入Docker虚拟映像
 
     .. image:: images/pscmd.png
         :scale: 100%
 
+接下来请参考 :ref:`3. 激活您的Linux/Jetson SDK`
 
 2. 安装DaoAI Python Linux/Jetson SDK Wheel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image
+根据您的机器从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EtFChpJljz1IsfPtLNd5ZfIBTNKN-mIivt9nfd1aw-TkuA?e=oiqWoS>`_ 下载  
+
+- 如果您使用的是 **Linux 机器**: 请下载 ``Linux_wheels`` 目录下的所有.whl文件, 或
+
+- 如果您使用的是 **Jetson 机器**: 请下载 ``Jetson_wheels`` 目录下的所有.whl文件
+
+Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image。
 
 Python Linux/Jetson SDK 支持的模型有：
 
@@ -238,15 +252,15 @@ Python Linux/Jetson SDK 支持的模型有：
      - x  
      - 
    * - 分类检测
-     - x  
-     - x  
+     - √   
+     - √  
      - 
    * - 目标检测
      - √  
      - √  
      - 
    * - 语义分割
-     - x  
+     - √   
      -  
      - 
    * - OCR
@@ -255,7 +269,10 @@ Python Linux/Jetson SDK 支持的模型有：
      - 
 
 
-需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
+2.a Linux 安装
+^^^^^^^^^^^^^^^^^^^
+
+Linux 需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
 
 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
 
@@ -263,47 +280,88 @@ Python Linux/Jetson SDK 支持的模型有：
 
     python3 --version
 
-
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载 DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/ 下的 .whl 文件
-
-使用以下命令安装wheel文件
+使用以下命令安装wheel文件，使用时确保terminal的当前路径下包含whl文件
 
 .. code-block::
 
-    pip install daoai_vision-0.0.1-py3-none-any.whl 
-    pip install dezip-0.0.0-cp310-cp310-linux_x86_64.whl 
+    pip install *.whl
+    pip install tritonclient-2.35.0-py3-none-any.whl[http]
+
+然后您的DaoAI Python Linux/Jetson SDK 模组就安装完毕了
+
+接下来请参考 :ref:`3. 激活您的Linux/Jetson SDK` 
+
+2.b Jetson 安装
+^^^^^^^^^^^^^^^^^^^
+
+Linux 需要首先安装 **Python 3.8** 并且使用 venv 虚拟环境来运行
+
+如果您已经安装了Python, 您可以使用以下命令来确认您的版本
+
+.. code-block::
+
+    python3 --version
+
+在工作路径下，使用以下命令来创建一个 venv 虚拟环境
+
+.. code-block::
+
+    python3 -m venv <虚拟环境名称>
+    source <虚拟环境名称>/bin/activate
+
+
+然后使用以下命令安装wheel文件，使用时确保terminal的当前路径下包含whl文件。
+
+.. code-block::
+
+    pip install *.whl
+    pip install tritonclient-2.35.0-py3-none-any.whl[http]
+
+
+请注意您需要遵循官方的网址下载正确版本的 torchvision https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048 
+
+也可以参考以下命令，以下命令安装的是 torchvision 0.16.1
+
+.. code-block::
+
+    sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libopenblas-dev libavcodec-dev libavformat-dev libswscale-dev
+    git clone --branch v0.16.1 https://github.com/pytorch/vision torchvision
+
+    cd torchvision
+    export BUILD_VERSION=0.16.1
+    python3 setup.py install
+    cd ../ 
 
 
 然后您的DaoAI Python Linux/Jetson SDK 模组就安装完毕了
 
-接下来您需要在终端中运行以下命令来激活您的许可证，如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail`
+接下来请参考 :ref:`3. 激活您的Linux/Jetson SDK` 
 
-.. code-block:: 
+3. 激活您的Linux/Jetson SDK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    daoai_vision activate --machine /path/to/machinefile  --license /path/to/licensefile
+接下来您需要在终端中运行以下命令来激活您的许可证，如果您没有激活码 和机器许可证文件，请参考 :ref:`DLSDK显示License Check Fail`
+
+.. code-block::
+
+    daoai_vision activate --license ABCDEF-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XX --machine <machine-file-path>
 
 该命令会验证您的许可证文件，并缓存30天，之后需要重新运行命令。
 
-您可以使用import daoai_vision 来导入模组。 
+.. note::
+
+    重新运行时，需要添加 -r flag 来清除之前的许可证缓存，如果您使用了无效的许可证，再次尝试激活时 也需要使用 -r flag
+
+    .. code-block::
+        daoai_vision activate -r --license ABCDEF-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XX --machine <machine-file-path>
+
+
+激活成功后您就可以正常使用Python SDK了， 您可以使用import daoai_vision 语句来导入模组。 
 
 .. code-block:: python
 
     import daoai_vision as dv
 
-
-.. note::
-    如果您使用的是无界面应用，或者看到以下报错：
-
-    .. code-block::
-
-        ImportError: libGL.so.1: cannot open shared object file: No such file or directory
-
-    请运行以下命令 安装 opencv-python-headless
-    
-    .. code-block::
-
-        pip install opencv-python-headless
- 
 
 SDK
 ------

@@ -15,7 +15,7 @@ Python Linux/Jetson 代码示例
 
 .. code-block:: python
 
-    MODEL_ZIP = 'kp2.zip'
+    MODEL_ZIP = 'kp1.zip'
     IMG_PATH = 'kp.png'
 
 您也可以从一个新的python文件开始，那么首先需要导入 daoai_vision 库，也就是我们的DaoAI World Python SDK
@@ -59,6 +59,7 @@ Python Linux/Jetson 代码示例
     scores    = results.scores    # [N] 预测的置信度
     masks     = results.masks     # [N][H][W] 模型的掩膜像素
     keypoints = results.keypoints # [N][x, y, score] 模型的关键点
+    sem_masks = results.sem_seg   # 像素掩码
 
 之后您可以按照需要使用这些结果。
 
@@ -67,8 +68,9 @@ Python Linux/Jetson 代码示例
 .. code-block:: python
 
     # 绘制 bounding boxes
-    for box in boxes:
-        cv2.rectangle(img, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (0, 255, 0), 2)
+    if(boxes is not None):
+        for box in boxes:
+            cv2.rectangle(img, (int(box[0]), int(box[1])), (int(box[2]), int(box[3])), (0, 255, 0), 2)
 
 绘制keypoints
 

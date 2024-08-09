@@ -4,6 +4,40 @@
 .. contents::
     :local:
 
+Python Linux/Jetson SDK 运行时报错 ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    如果您使用的是无界面应用，可能会看到以下报错：
+
+    .. code-block::
+
+        ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+
+    请运行以下命令 安装 opencv-python-headless
+    
+    .. code-block::
+
+        pip install opencv-python-headless
+
+
+Python Linux/Jetson SDK 运行时报错 ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    如果您看到以下报错
+
+    .. code-block::
+
+        ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
+
+    请运行以下命令 安装 libglib2.0-0
+    
+    .. code-block::
+
+        sudo apt update
+        sudo apt install libglib2.0-0
+
+
+
 DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
