@@ -23,6 +23,6 @@
 
 细节信息可以通过我们网页右上角的更新日志查看
 
-.. image:: images/signin_screen.png
+.. image:: images/changelog.png
     :width: 800
     :align: center
