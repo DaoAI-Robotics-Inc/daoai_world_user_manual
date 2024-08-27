@@ -11,6 +11,12 @@ DAOAI WORLD
 
 .. toctree::
    :maxdepth: 2
+   :caption: 模型
+
+   model/model2
+    
+.. toctree::
+   :maxdepth: 2
    :caption: 使用
 
    data/workspace/index
@@ -26,6 +32,13 @@ DAOAI WORLD
    :caption: 开发
 
    develop/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 案例分析
+
+   case_study/index
+
 
 .. toctree::
    :maxdepth: 1

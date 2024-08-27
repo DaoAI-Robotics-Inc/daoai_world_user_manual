@@ -123,25 +123,25 @@ DLSDK显示License Check Fail
 
     .. image:: images/xnviewmp_exe.png
         :align: center
-        :scale: 75%
+        :scale: 50%
 
     左上角 `文件` ， `打开` 选取损坏的图片。
 
     .. image:: images/xnviewmp_open_file.png
         :align: center
-        :scale: 75%
+        :scale: 50%
     
     左上角 `文件` ， `另存为` 保存图片到另外的路径下。
 
     .. image:: images/xnviewmp_save_as.png
         :align: center
-        :scale: 75%
+        :scale: 50%
 
     将保存好的图片重新上传。
 
     .. image:: images/xnviewmp_upload_success.png
         :align: center
-        :scale: 75%
+        :scale: 50%
 
     
 
