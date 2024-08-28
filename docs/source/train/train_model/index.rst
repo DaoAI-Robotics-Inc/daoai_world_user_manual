@@ -5,7 +5,7 @@
 
     <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <video width="50%" height="auto" controls>
-            <source src="http://docs.welinkirt.com/static/videos/dw_data_and_train.mp4" type="video/mp4">
+            <source src="http://docs.welinkirt.com/static/videos/dw_deploy-v6.mp4" type="video/mp4">
         </video>
     </div>
 

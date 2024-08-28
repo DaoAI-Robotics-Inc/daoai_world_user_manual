@@ -10,7 +10,7 @@
 
         <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
             <video width="80%" height="auto" controls>
-                <source src="http://docs.welinkirt.com/static/videos/daoaiworld_class.mp4" type="video/mp4">
+                <source src="http://docs.welinkirt.com/static/videos/dw_class-v6.mp4" type="video/mp4">
             </video>
         </div>
 
