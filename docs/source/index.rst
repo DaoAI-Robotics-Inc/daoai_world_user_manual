@@ -19,6 +19,7 @@ DAOAI WORLD
    :maxdepth: 2
    :caption: 使用
 
+   introduce/quick_start/offline_setup
    data/workspace/index
    data/start_project/index
    model/model
