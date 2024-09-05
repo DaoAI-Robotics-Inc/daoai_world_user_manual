@@ -86,10 +86,15 @@ C++ 环境配置
 
     C++的示例项目中以下的步骤已经配置好了，如果您需要创建一个自定义项目，则需要进行以下的配置。
 
-    打开项目后，右键点击c++的项目，然后打开属性。
+    右键点击c++的项目，然后打开属性。
         
         .. image:: images/cpp_env1.png
             :scale: 70%
+
+    在属性中选择使用C++17 
+
+        .. image:: images/cpp17.png
+            :scale: 80%
 
     打开C++, 在General菜单里的Additional Include Directories中添加 DLSDK 根目录下的 include 文件夹路径。
 
@@ -122,8 +127,7 @@ C# 环境配置
         .. image:: images/path_step.png
             :scale: 100%
 
-
-    第一步，点击C#项目中的添加reference
+    点击C#项目中的添加reference
         
         .. image:: images/add_ref.png
             :scale: 100%
@@ -280,12 +284,23 @@ Linux 需要首先安装 **Python 3.10** 并且安装 **Nvidia Cuda Toolkit**
 
     python3 --version
 
-使用以下命令安装wheel文件，使用时确保terminal的当前路径下包含whl文件
 
-.. code-block::
+- **默认安装方式** ：daoai_vision 提供了二进制的安装包（.whl 文件），方便用户在自己的环境中进行安装。安装时，.whl 文件会自动安装运行库所需的依赖，但并不会自动安装深度学习框架（如 PyTorch、ONNX、OpenVINO），这样用户可以选择自己需要的版本。
 
-    pip install *.whl
-    pip install tritonclient-2.35.0-py3-none-any.whl[http]
+    .. code-block::
+
+        pip install <Wheel-File>.whl
+
+    在此安装方式下，所有支持包都会被安装，用户可以直接运行本地推理。如果需要特定版本的重要依赖库，例如 PyTorch 或 ONNX，建议在安装后自行安装这些库。
+
+- **深度学习库安装** ：如果需要使用本地 Python 进行推理，并希望安装所有必要的深度学习库，请使用以下命令：
+
+    .. code-block::
+
+        pip install <Wheel-File>.whl[dl]
+
+    该命令会同时安装推理所需的深度学习库。
+
 
 然后您的DaoAI Python Linux/Jetson SDK 模组就安装完毕了
 
@@ -312,10 +327,21 @@ Linux 需要首先安装 **Python 3.8** 并且使用 venv 虚拟环境来运行
 
 然后使用以下命令安装wheel文件，使用时确保terminal的当前路径下包含whl文件。
 
-.. code-block::
+- **默认安装方式** ：daoai_vision 提供了二进制的安装包（.whl 文件），方便用户在自己的环境中进行安装。安装时，.whl 文件会自动安装运行库所需的依赖，但并不会自动安装深度学习框架（如 PyTorch、ONNX、OpenVINO），这样用户可以选择自己需要的版本。
 
-    pip install *.whl
-    pip install tritonclient-2.35.0-py3-none-any.whl[http]
+    .. code-block::
+
+        pip install <Wheel-File>.whl
+
+    在此安装方式下，所有支持包都会被安装，用户可以直接运行本地推理。如果需要特定版本的重要依赖库，例如 PyTorch 或 ONNX，建议在安装后自行安装这些库。
+
+- **深度学习库安装** ：如果需要使用本地 Python 进行推理，并希望安装所有必要的深度学习库，请使用以下命令：
+
+    .. code-block::
+
+        pip install <Wheel-File>.whl[dl]
+
+    该命令会同时安装推理所需的深度学习库。
 
 
 请注意您需要遵循官方的网址下载正确版本的 torchvision https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048 
@@ -362,7 +388,83 @@ Linux 需要首先安装 **Python 3.8** 并且使用 venv 虚拟环境来运行
 
     import daoai_vision as dv
 
+4. Python Linux/Jetson SDK 的使用
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+daoai_vision 支持多种推理部署方式，包括本地部署和远程托管部署。根据不同的需求，可以选择适合的部署方式来运行模型推理。主要有三种部署方式：
+
+1. 自托管部署
+    自托管部署是在用户自己的硬件上运行模型推理，主要有两种方式： **原生Python部署** 和 **Docker 服务器部署** 。
+
+    **原生 Python 部署**
+
+    使用原生 Python 在本地硬件上运行推理。可以通过以下代码加载模型并进行推理：
+
+    .. code-block:: python
+        
+        import daoai_vision as dv
+        MODEL_ZIP = 'path/to/downloaded/zip'  # 模型文件 (.zip / .dwm)
+        DEVICE = 'gpu'                        # 可选设备: cpu / gpu 
+        IMG_PATH = 'path/to/image'            # 待推理的图像路径
+
+        model = dv.get_model(model_zip=MODEL_ZIP, device=DEVICE)
+        results = model.infer(IMG_PATH)
+
+    也可以通过命令行工具运行推理，使用如下命令：
+
+    .. code-block::
+
+        daoai_vision infer -i /path/to/image.png -m /path/to/model.zip --native-python
+
+    该命令会在终端打印推理结果的概要，并将结果保存为 JSON 文件，输出到与输入图像相同的目录。
+
+
+    **Docker 服务器部署**
+
+    使用 Docker 运行推理服务器，服务器可以在后台运行，并接受推理请求。
+
+    1. 启动服务器：
+
+        .. code-block::
+
+            daoai_vision server enable
+
+    2. 运行推理请求：
+        
+        可以通过命令行工具发送推理请求：
+
+        .. code-block::
+
+            daoai_vision infer -i /path/to/image.png -m /path/to/model.zip
+
+        也可以在 Python 中设置 server=True 来发送推理请求：
+
+        .. code-block:: python
+
+            import daoai_vision as dv
+            model = dv.get_model(model_zip=MODEL_ZIP, server=True)
+            results = model.infer(IMG_PATH)
+
+2. 托管部署
+    托管部署允许将推理请求发送到 DaoAI World 的远程推理服务器。此时，需要指定远程服务器的 URL。
+
+    通过命令行发送请求：
+    
+    .. code-block::
+
+        daoai_vision infer -i /path/to/image.jpg -m /path/to/model.zip -url http://remote-server.com:PORT
+
+
+    在 Python 中使用托管推理：
+
+    .. code-block:: python
+
+        import daoai_vision as dv
+        model = dv.get_model(model_zip=MODEL_ZIP, server=True)
+        results = model.infer(IMG_PATH, url='http://remote-server.com:PORT')
+
+
+        
 SDK
 ------
 
