@@ -22,7 +22,7 @@
     - **Python Windows** : Windows Python SDK 下的 2.24.6.0版本的SDK
     - **Python Linux/Jetson** : Linux Jetson Python SDK 下的 2.24.6.0版本的SDK
 
-    **C++** 和 **C#** 的SDK解压后在解压目录下包含有SDK以及SDK的示例项目。
+    **C++** 和 **C#** 的SDK安装包在安装后的安装目录下 包含有SDK以及SDK的示例项目。
 
         .. image:: images/install_folder.png
             :scale: 100%
@@ -66,16 +66,20 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 - 显卡驱动： **GeForce Game Ready Driver 驱动版本：552.22， 发布于 2024年 4月16日**
 
 
+
 C++ 环境配置
 ------------
 
-    
-    首先需要将 DLSDK 解压目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
+    C++的示例项目中的环节已经配置好了，如果您需要创建一个自定义项目，或者从一个空项目开始，则需要进行以下的配置。
 
-    如下图，解压目录为 C:\\Users\\daoai\\Downloads\\DLSDK, 那么就需要将一下两个目录添加到path系统变量中。
+    首先需要将 DLSDK 安装目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
 
-    C:\\Users\\daoai\\Downloads\\DLSDK\\3rdparty， <DLSDK 目录>\\3rdparty
-    C:\\Users\\daoai\\Downloads\\DLSDK\\bin， <DLSDK 目录>\\bin
+    如下图，安装目录为 C:\\Program Files\\DLSDK, 那么就需要将以下两个目录添加到path系统变量中。
+
+    安装包会添加一个DWSDK_PATH 到系统环境变量中，需要正确的使用，还需要添加以下两个路径 到 PATH 变量中
+
+    %DWSDK_PATH%\\3rdparty
+    %DWSDK_PATH%\\bin
 
         .. image:: images/path_icon.png
             :scale: 70%
@@ -83,8 +87,6 @@ C++ 环境配置
         .. image:: images/path_step.png
             :scale: 100%
 
-
-    C++的示例项目中以下的步骤已经配置好了，如果您需要创建一个自定义项目，则需要进行以下的配置。
 
     右键点击c++的项目，然后打开属性。
         
@@ -114,12 +116,14 @@ C++ 环境配置
 C# 环境配置
 ------------
 
-    首先需要将 DLSDK 解压目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
+    首先需要将 DLSDK 安装目录下的bin目录和3rdparty目录添加到系统环境变量path下面。
 
-    如下图，解压目录为 C:\\Users\\daoai\\Downloads\\DLSDK, 那么就需要将一下两个目录添加到path系统变量中。
+    如下图，安装目录为 C:\\Program Files\\DLSDK, 那么就需要将以下两个目录添加到path系统变量中。
 
-    C:\\Users\\daoai\\Downloads\\DLSDK\\3rdparty， <DLSDK 目录>\\3rdparty
-    C:\\Users\\daoai\\Downloads\\DLSDK\\bin， <DLSDK 目录>\\bin
+    安装包会添加一个DWSDK_PATH 到系统环境变量中，需要正确的使用，还需要添加以下两个路径 到 PATH 变量中
+
+    %DWSDK_PATH%\\3rdparty
+    %DWSDK_PATH%\\bin
 
         .. image:: images/path_icon.png
             :scale: 70%
