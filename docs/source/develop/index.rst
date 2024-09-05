@@ -16,11 +16,11 @@
     |
 
 
-    首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
+    首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=tcEhUe>`_
 
-    - **C++** 和 **C#** : DaoAI_World_C++_C#_SDK_2.24.5.0_28.zip
-    - **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 / dlsdk-1.0.1-cp310-cp310-win_amd64.whl
-    - **Python Linux/Jetson** : DaoAI_World_Python_SDK_Linux_Jetson_2.24.5.0/
+    - **C++** 和 **C#** : C++ C# SDK
+    - **Python Windows** : Windows Python SDK
+    - **Python Linux/Jetson** : Linux Jetson Python SDK
 
     **C++** 和 **C#** 的SDK解压后在解压目录下包含有SDK以及SDK的示例项目。
 
@@ -155,7 +155,7 @@ Python Windows SDK wheel 只支持Windows环境
 
     python3 --version
 
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=wVmvlv>`_ 下载  **Python Windows** : DaoAI_World_Python_SDK_Windows_2.24.5.0 目录下的.whl文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的.whl文件
 
 使用以下命令安装wheel文件
 
@@ -226,7 +226,7 @@ Linux 机器的Docker环境映像 可以使用以下命令
 2. 安装DaoAI Python Linux/Jetson SDK Wheel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-根据您的机器从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EtFChpJljz1IsfPtLNd5ZfIBTNKN-mIivt9nfd1aw-TkuA?e=oiqWoS>`_ 下载  
+根据您的机器从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhSzNT1zD61Pv8MbPMr_PM8BLRSiHwbywBsRHAEY5ILSiQ?e=DzrN2M>`_ 下载  
 
 - 如果您使用的是 **Linux 机器**: 请下载 ``Linux_wheels`` 目录下的所有.whl文件, 或
 
@@ -464,7 +464,7 @@ daoai_vision 支持多种推理部署方式，包括本地部署和远程托管�
         results = model.infer(IMG_PATH, url='http://remote-server.com:PORT')
 
 
-        
+
 SDK
 ------
 
