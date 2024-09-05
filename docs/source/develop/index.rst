@@ -18,9 +18,9 @@
 
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=tcEhUe>`_
 
-    - **C++** 和 **C#** : C++ C# SDK
-    - **Python Windows** : Windows Python SDK
-    - **Python Linux/Jetson** : Linux Jetson Python SDK
+    - **C++** 和 **C#** : C++ C# SDK 下的 2.24.6.0版本的SDK
+    - **Python Windows** : Windows Python SDK 下的 2.24.6.0版本的SDK
+    - **Python Linux/Jetson** : Linux Jetson Python SDK 下的 2.24.6.0版本的SDK
 
     **C++** 和 **C#** 的SDK解压后在解压目录下包含有SDK以及SDK的示例项目。
 
@@ -155,7 +155,7 @@ Python Windows SDK wheel 只支持Windows环境
 
     python3 --version
 
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的.whl文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
 
 使用以下命令安装wheel文件
 
@@ -228,9 +228,9 @@ Linux 机器的Docker环境映像 可以使用以下命令
 
 根据您的机器从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhSzNT1zD61Pv8MbPMr_PM8BLRSiHwbywBsRHAEY5ILSiQ?e=DzrN2M>`_ 下载  
 
-- 如果您使用的是 **Linux 机器**: 请下载 ``Linux_wheels`` 目录下的所有.whl文件, 或
+- 如果您使用的是 **Linux 机器**: 请下载 2.24.6.0版本的 ``Linux_wheels`` 目录下的.whl文件, 或
 
-- 如果您使用的是 **Jetson 机器**: 请下载 ``Jetson_wheels`` 目录下的所有.whl文件
+- 如果您使用的是 **Jetson 机器**: 请下载 2.24.6.0版本的 ``Jetson_wheels`` 目录下的.whl文件
 
 Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image。
 
