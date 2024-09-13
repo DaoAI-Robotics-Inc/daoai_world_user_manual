@@ -72,33 +72,56 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 加载深度学习模型
 -------------------
 
-首先需要加载模型。DaoAI World 输出的深度学习模型通常是 zip 格式。我们需要创建一个 `DaoAI.DeepLearningCLI.Model` 对象，然后调用 `loadNestedZip` 方法来读取 DaoAI World 输出的深度学习模型 zip 文件。
+.. code-block:: C#
+
+        String data_path = "..\\..\\..\\..\\Data\\";
+        String model_path = data_path + "model.dwm";
+        // init model
+        DaoAI.DeepLearningCLI.Vision.KeypointDetection model = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
+
+
+注意，这里每一个检测任务都有对应的对象：
 
 .. code-block:: C#
 
-        DaoAI.DeepLearningCLI.Application.initialize();
-        DaoAI.DeepLearningCLI.Model model = new DaoAI.DeepLearningCLI.Model();
-        String data_path = "C:\\Users\\daoai\\Downloads\\DLSDK\\DLSDK Example\\Data\\";
-        String model_path = data_path + "test_sem3.zip";
-        // init model
-        Console.WriteLine(DaoAI.DeepLearningCLI.Application.checkDaoAIModelValidity(model_path));
-        // load model
-        model.load(model_path, DaoAI.DeepLearningCLI.Device_Type.GPU, -1);
+    //实例分割
+    DaoAI.DeepLearningCLI.Vision.InstanceSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.InstanceSegmentation(model_path);
+
+    //关键点检测
+    DaoAI.DeepLearningCLI.Vision.KeypointDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
+    
+    //图像分类
+    DaoAI.DeepLearningCLI.Vision.Classification model(model_path) = new DaoAI.DeepLearningCLI.Vision.Classification(model_path);
+    
+    //目标检测
+    DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
+    
+    //异常检测
+    DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
+    
+    //语义分割
+    DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
+    
+    //OCR
+    DaoAI.DeepLearningCLI.Vision.OCR model(model_path) = new DaoAI.DeepLearningCLI.Vision.OCR(model_path);
 
 
 使用深度学习模型进行预测
 --------------------------
 
-调用 `DaoAI.DeepLearningCLI.Model` 的 `inferenceJSON()` 方法可以对一个图像对象进行深度学习预测。该方法会返回一组 JSON 格式的预测结果。
+这里定义了 置信度阈值(CONFIDENT_THRESHOLD)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
 
 .. code-block:: C#
 
-		Console.WriteLine(model.inferenceJson(img));
+    Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object> post_params = new Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object>();
+    post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENT_THRESHOLD] = 0.5;
+
+    Console.WriteLine(model.inference(img, post_params).toJSONString());
 
 返回结果示例
 ------------------
 
-以下是模型预测后返回的结果示例。主要结果包含在 `shapes` 列表中。
+以下是实例分割模型预测后返回的结果示例。主要结果包含在 `shapes` 列表中。
 
 这个结果展示了预测的多边形点（points）、标签（label）以及群组ID（group_id）。这些信息可以用来进一步处理或分析预测的结果。
 
