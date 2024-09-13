@@ -61,6 +61,56 @@ DLSDK 需要拥有 `DaoAI` 官方授权的软件许可证才能使用，请联�
     .. image:: images/dlsk_installer_copy_id.png
             :scale: 80%  
 
+远程许可证
+~~~~~~~~~~~~
+
+获得许可证后，您可以在界面上直接添加：
+
+    - 点击 ``文件``，打开 ``添加软件许可证``。
+
+    .. image:: images/dlsk_installer_add_online_license.png
+        :scale: 80%  
+
+    - 输入从 `DaoAI` 的工作人员获得的有效许可证，许可证为32位的数字和英文字母组成的激活码，复制粘贴到以下界面中。
+
+    .. image:: images/dlsk_installer_add_online_license_1.png
+        :scale: 80%  
+
+    - 点击 ``查看``，验证许可证信息。
+
+    .. image:: images/dlsk_installer_online_license_check.png
+        :scale: 80%  
+
+    - 管理器与服务器确认许可证已激活，可以正常使用。
+
+    .. image:: images/dlsk_installer_online_license_check_good.png
+        :scale: 80%  
+    
+    .. note::
+        激活许可证需要电脑连接互联网。
+
+离线许可证
+~~~~~~~~~~~~
+
+由于环境限制，部分用户无法将设备联网，`DaoAI` 的工作人员会为您提供离线许可证。获得许可证后，您可以在界面上直接添加：
+
+    - 点击 ``文件``，打开 ``导入离线许可证文件``。
+
+    .. image:: images/dlsk_installer_add_offline_license.png
+        :scale: 80%  
+
+    - 选择 `DaoAI` 的工作人员为您提供的离线许可证文件。
+
+    .. image:: images/dlsk_installer_select_offline_license.png
+        :scale: 80%  
+
+    
+    - 管理器确认许可证已激活，可以正常使用。
+
+    .. image:: images/dlsk_installer_offline_license_check.png
+        :scale: 80%  
+    
+
 系统环境变量
 ------------
 
