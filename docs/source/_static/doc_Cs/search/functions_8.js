@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['pred_5fboxes_0',['pred_boxes',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a9cb4b045861dce729cc5faaf7e54d987',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5fclass_5fnames_1',['pred_class_names',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a8f691fedb318ca7c61c8b4ff9d56cf2b',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5fclasses_2',['pred_classes',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a54035d7e9ddd0d1dcd07fe7d10a1ef6d',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5fflex_5fboxes_3',['pred_flex_boxes',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#aaa7d9db0294b36f594cb6e4f39a5e07c',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5fkeypoints_4',['pred_keypoints',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a0d38bef19f57a82fc2591eee3e3bbe36',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5fmasks_5',['pred_masks',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a18f91b0ca277911f06da504ccfe3ea42',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['pred_5ftexts_6',['pred_texts',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a137471146c2683ccb70d70a860c3d573',1,'DaoAI::DeepLearningCLI::Prediction']]],
-  ['prediction_7',['Prediction',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a0cbdd80ec95199ba7b05113736855f9d',1,'DaoAI::DeepLearningCLI::Prediction::Prediction()'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a220dff9b83da34ebbd68dd5946016c3a',1,'DaoAI::DeepLearningCLI::Prediction::Prediction(Prediction^ prediction)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_prediction.html#a7d5d97cc512a56e45b29b78c3cb8d903',1,'DaoAI::DeepLearningCLI::Prediction::Prediction(DaoAI::DeepLearning::Prediction prediction)']]]
+  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#adbc0dc3d359443419fcbf93c1491435e',1,'DaoAI::DeepLearningCLI::Mask::Mask(Image^ image)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a77a441c83d6b48c4b22fd94cf717198c',1,'DaoAI::DeepLearningCLI::Mask::Mask(DaoAI::DeepLearning::Mask mask)']]],
+  ['merge_1',['merge',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a2eb701c06a40a604f3e753d92782506f',1,'DaoAI::DeepLearningCLI::Mask']]]
 ];

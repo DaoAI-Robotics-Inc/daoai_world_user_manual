@@ -1,0 +1,28 @@
+var hierarchy =
+[
+    [ "DaoAI::DeepLearning::Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html", null ],
+    [ "DaoAI::DeepLearning::Vision::ClassificationResult::Flag", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result_1_1_flag.html", null ],
+    [ "DaoAI::DeepLearning::Image", "class_dao_a_i_1_1_deep_learning_1_1_image.html", null ],
+    [ "DaoAI::DeepLearning::Mask", "class_dao_a_i_1_1_deep_learning_1_1_mask.html", null ],
+    [ "DaoAI::DeepLearning::Model", "class_dao_a_i_1_1_deep_learning_1_1_model.html", [
+      [ "DaoAI::DeepLearning::Vision::AnomalyDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection.html", null ],
+      [ "DaoAI::DeepLearning::Vision::Classification", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification.html", null ],
+      [ "DaoAI::DeepLearning::Vision::InstanceSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation.html", null ],
+      [ "DaoAI::DeepLearning::Vision::KeypointDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html", null ],
+      [ "DaoAI::DeepLearning::Vision::OCR", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html", null ],
+      [ "DaoAI::DeepLearning::Vision::ObjectDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html", null ],
+      [ "DaoAI::DeepLearning::Vision::SemanticSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html", null ]
+    ] ],
+    [ "DaoAI::DeepLearning::ModelInfo", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html", null ],
+    [ "DaoAI::DeepLearning::Point", "class_dao_a_i_1_1_deep_learning_1_1_point.html", null ],
+    [ "DaoAI::DeepLearning::Polygon", "class_dao_a_i_1_1_deep_learning_1_1_polygon.html", null ],
+    [ "DaoAI::DeepLearning::Prediction", "class_dao_a_i_1_1_deep_learning_1_1_prediction.html", [
+      [ "DaoAI::DeepLearning::Vision::AnomalyDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::ClassificationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::InstanceSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::KeypointDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::OCRResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html", null ]
+    ] ]
+];
