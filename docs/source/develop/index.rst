@@ -2,18 +2,16 @@
 =============
 
     本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
-    
-    **培训内容大纲**： `培训ppt <https://daoairoboticsinc-my.sharepoint.com/:p:/g/personal/nrd_daoai_com/EXFpNfjd9wRCpWU3kq6JZjcBsVtqmMk9jGsAm4f0DgmtlA?e=ygTSQ2>`_
 
-    .. raw:: html
+.. **培训内容大纲**： `培训ppt <https://daoairoboticsinc-my.sharepoint.com/:p:/g/personal/nrd_daoai_com/EXFpNfjd9wRCpWU3kq6JZjcBsVtqmMk9jGsAm4f0DgmtlA?e=ygTSQ2>`_
 
-        <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-            <video width="60%" height="auto" controls>
-                <source src="http://docs.welinkirt.com/static/videos/dw_sdk_train.mp4" type="video/mp4">
-            </video>
-        </div>
+.. .. raw:: html
 
-    |
+..     <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+..         <video width="60%" height="auto" controls>
+..             <source src="http://docs.welinkirt.com/static/videos/dw_sdk_train.mp4" type="video/mp4">
+..         </video>
+..     </div>
 
 
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=tcEhUe>`_
@@ -48,9 +46,9 @@
         .. image:: images/run_1.png
             :scale: 60%
 
-    使用DLSDK需要将有效的许可证管理器移动至项目路径，详情请见 :ref:`DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command`
+    使用DW_SDK需要将有效的许可证管理器移动至项目路径，详情请见 :ref:`DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external command`
 
-    使用DLSDK需要有效的使用许可证，详情请见 :ref:`软件许可证`
+    使用DW_SDK需要有效的使用许可证，详情请见 :ref:`软件许可证`
 
 DW_SDK Windows安装包
 -------------------------
@@ -74,7 +72,7 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 
 首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
 
-    - **C++** 和 **C#** : DLSDK_C++_C#_master_66.zip
+    Windows C++ C# SDK 目录下的 2.22.6.0 安装包zip
 
     把下载的zip文件解压后，会看到3个文件，分别是： `dlsdk_2.0_setup.exe`, `dlsdk_2.0_setup-1.bin` 和 `dlsdk_2.0_setup-1.bin` ，双击运行其中的 `dlsdk_2.0_setup.exe` 执行文件开始安装。
 
@@ -82,9 +80,9 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
             :scale: 80%
 
     .. note:: 
-        DLSDK 安装包需要磁盘中存在6.7GB以上的空间。
+        DW_SDK 安装包需要磁盘中存在6.7GB以上的空间。
 
-    - 选择DLSDK文件的安装目录，默认路径为： ``C:\Program Files\DLSDK`` 。
+    - 选择DW_SDK文件的安装目录，默认路径为： ``C:\Program Files\DW_SDK`` 。
 
     .. image:: images/dlsk_installer_path.png
             :scale: 80%   
@@ -107,9 +105,9 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 软件许可证
 ***************
 
-DLSDK 需要拥有 `DaoAI` 官方授权的软件许可证才能使用，请联系您的支持工程师或者客户获取许可证。您需要为 `DaoAI` 的工作人员提供您电脑的信息：
+DW_SDK 需要拥有 `DaoAI` 官方授权的软件许可证才能使用，请联系您的支持工程师或者客户获取许可证。您需要为 `DaoAI` 的工作人员提供您电脑的信息：
 
-    - 双击桌面 ``DLSDK`` 快捷方式，打开许可证管理中心。
+    - 双击桌面 ``DW_SDK`` 快捷方式，打开许可证管理中心。
 
     .. image:: images/dlsk_installer_icon.png
             :scale: 80%   
@@ -181,12 +179,10 @@ DLSDK 需要拥有 `DaoAI` 官方授权的软件许可证才能使用，请联�
 系统环境变量
 ***************
 
-DLSDK 安装包会自动建立 DLSDK 所需的系统环境变量： ``DWSDK_PATH`` 。在使用 DLSDK 时可以直接引用此变量即可。
+DW_SDK 安装包会自动建立 DW_SDK 所需的系统环境变量： ``DWSDK_PATH`` 。在使用 DW_SDK 时可以直接引用此变量即可。
 
     .. image:: images/dlsk_installer_dwsdk_path.png
             :scale: 80%  
-
-
 
 
 C++ 环境配置
@@ -204,12 +200,12 @@ C++ 环境配置
         .. image:: images/cpp17.png
             :scale: 80%
 
-    打开C++, 在General菜单里的Additional Include Directories中添加 DLSDK 根目录下的 include 文件夹路径。
+    打开C++, 在General菜单里的Additional Include Directories中添加 DW_SDK 根目录下的 include 文件夹路径。
 
         .. image:: images/cpp_env2.png
             :scale: 80%
 
-    打开Linker, 在General菜单里的Additional Library Directories中添加 DLSDK 根目录下的 bin 文件夹路径。
+    打开Linker, 在General菜单里的Additional Library Directories中添加 DW_SDK 根目录下的 bin 文件夹路径。
         
         .. image:: images/cpp_env3.png
             :scale: 80%
@@ -218,6 +214,12 @@ C++ 环境配置
 
         .. image:: images/cpp_env4.png
             :scale: 80%
+
+    Debugging的Environment菜单里的Path 添加 DWSDK_PATH\\bin, DWSDK_PATH\\3rdparty;
+
+        .. image:: images/vs_3rdparty.png
+            :scale: 80%
+
 
 C# 环境配置
 ***************

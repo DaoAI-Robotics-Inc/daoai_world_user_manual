@@ -30,7 +30,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     String root_directory = System.IO.Directory.GetCurrentDirectory();
 
     System.Drawing.Bitmap image = new
-        System.Drawing.Bitmap("C:\\Users\\daoai\\Downloads\\DLSDK\\DLSDK Example\\Data\\maskrcnn_data\\daoai_1.png"); //图片文件路径
+        System.Drawing.Bitmap("C:\\Users\\daoai\\Downloads\\DW_SDK\\DW_SDK Example\\Data\\maskrcnn_data\\daoai_1.png"); //图片文件路径
     System.Drawing.Bitmap image_copy = new System.Drawing.Bitmap(image);
     
     byte[] pixels = new byte[image.Width * image.Height * 3];

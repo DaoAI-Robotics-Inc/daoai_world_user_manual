@@ -38,7 +38,7 @@ Python Linux/Jetson SDK 运行时报错 ImportError: libgthread-2.0.so.0: cannot
 
 
 
-DLSDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
+DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
 ----------------------------------------------------------------------------------------------------------------------------
 
     如果在运行DL SDK项目时遇到以下的报错，这说明软件的licensemanager_cli.exe 和 machine.lic 没有在正确的位置    

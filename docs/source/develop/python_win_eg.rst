@@ -88,9 +88,17 @@ Python Windows 代码示例
 
 .. code-block:: python
 
-    assert isinstance(daoai_image, dlsdk.Image) #模型完整性检查
-    prediction = model.inference(daoai_image) #模型预测
+    assert isinstance(daoai_image, dlsdk.Image)
+    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
 
     with open("output.json", "w") as f:
-        f.write(prediction.toJSONString()) # 结果输出
+        f.write(prediction.toJSONString())
 
+您也可以通过其它方法来获取结果信息
+
+
+.. code-block:: python
+
+    print(prediction.boxes)
+    print(prediction.class_ids) 
+    print(prediction.class_labels)
