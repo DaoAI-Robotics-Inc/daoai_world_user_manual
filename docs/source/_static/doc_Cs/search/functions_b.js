@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['unload_0',['unload',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model.html#ae1a407a3f9765c2184cd188571bf290b',1,'DaoAI::DeepLearningCLI::Model']]]
+  ['semanticsegmentation_0',['SemanticSegmentation',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation.html#a1ef5c79507ac2e4417872bdc3027647a',1,'DaoAI::DeepLearningCLI::Vision::SemanticSegmentation::SemanticSegmentation(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation.html#ae3dd2cd4a6c3582c17d91e842e384743',1,'DaoAI::DeepLearningCLI::Vision::SemanticSegmentation::SemanticSegmentation(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['semanticsegmentationresult_3a_3asemanticsegmentationresult_1',['SemanticSegmentationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation_result.html#ae4635b63a3f09494c99d047b00b2d5bb',1,'DaoAI::DeepLearningCLI::Vision::SemanticSegmentationResult']]],
+  ['sliceinference_2',['sliceInference',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html#a2ed14a5b6203999be8a049626189c85d',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetection::sliceInference()'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation.html#ab8757aed2b35906d6a5b745ba2625d09',1,'DaoAI::DeepLearningCLI::Vision::InstanceSegmentation::sliceInference()']]]
 ];

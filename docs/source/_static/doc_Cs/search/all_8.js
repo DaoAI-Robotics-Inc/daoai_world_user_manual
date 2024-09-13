@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['managedobject_0',['ManagedObject',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3abox_20_3e_1',['ManagedObject&lt; DaoAI::DeepLearning::Box &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3aimage_20_3e_2',['ManagedObject&lt; DaoAI::DeepLearning::Image &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3amodel_20_3e_3',['ManagedObject&lt; DaoAI::DeepLearning::Model &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3apoint_20_3e_4',['ManagedObject&lt; DaoAI::DeepLearning::Point &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3apolygon_20_3e_5',['ManagedObject&lt; DaoAI::DeepLearning::Polygon &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['managedobject_3c_20daoai_3a_3adeeplearning_3a_3aprediction_20_3e_6',['ManagedObject&lt; DaoAI::DeepLearning::Prediction &gt;',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html',1,'DaoAI::DeepLearningCLI']]],
-  ['model_7',['Model',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model.html',1,'DaoAI::DeepLearningCLI']]],
-  ['modelinfo_8',['ModelInfo',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html',1,'DaoAI::DeepLearningCLI']]]
+  ['keypoint_5fdetection_0',['Keypoint_Detection',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390a370904a938e581395098283a828f5801',1,'DaoAI::DeepLearningCLI']]],
+  ['keypointdetection_1',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection.html',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetection'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection.html#a83058508dc96ef2370ccd44a409805b0',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetection::KeypointDetection(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection.html#a1537938e5981c6a38d0ac07bc1879edf',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetection::KeypointDetection(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['keypointdetectionresult_2',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result.html',1,'DaoAI::DeepLearningCLI::Vision']]],
+  ['keypointdetectionresult_3a_3akeypointdetectionresult_3',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result.html#ae5b772682198cd1d79c3af9144b5ca2f',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetectionResult']]]
 ];

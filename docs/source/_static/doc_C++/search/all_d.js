@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a4ffbc0f4b1a3ad8379deaa0f7e838d63',1,'DaoAI::DeepLearning::Box']]],
-  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#aa6882333c7692d15bbd73bd2aaa55447',1,'DaoAI::DeepLearning::Box']]]
+  ['parameters_0',['Parameters',['../namespace_dao_a_i_1_1_deep_learning.html#a49ab275c6e617b79af150029f1ad0f88',1,'DaoAI::DeepLearning']]],
+  ['parametertype_1',['ParameterType',['../namespace_dao_a_i_1_1_deep_learning.html#a4893dffdaa2d5a117558ebe35bae9d5c',1,'DaoAI::DeepLearning']]],
+  ['point_2',['Point',['../class_dao_a_i_1_1_deep_learning_1_1_point.html',1,'DaoAI::DeepLearning::Point'],['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a8fdd1bdbf227a467fec8d567a8b1bc41',1,'DaoAI::DeepLearning::Point::Point(const float &amp;x, const float &amp;y, const float &amp;confidence=0)'],['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a6718e134678bfdd56f842aab4712728b',1,'DaoAI::DeepLearning::Point::Point()']]],
+  ['points_3',['points',['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html#aa112faaf9f5c6b6178b3259818be27ca',1,'DaoAI::DeepLearning::Polygon']]],
+  ['polygon_4',['Polygon',['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html',1,'DaoAI::DeepLearning::Polygon'],['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html#a443aaa1ad86c1c3e4c8031ef4b19a5af',1,'DaoAI::DeepLearning::Polygon::Polygon(const std::vector&lt; Point &gt; &amp;points)'],['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html#a4def829dac6267e284310d8fdf144b33',1,'DaoAI::DeepLearning::Polygon::Polygon()']]],
+  ['postprocesstype_5',['PostProcessType',['../namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3be',1,'DaoAI::DeepLearning']]],
+  ['prediction_6',['Prediction',['../class_dao_a_i_1_1_deep_learning_1_1_prediction.html',1,'DaoAI::DeepLearning']]],
+  ['prediction_2eh_7',['prediction.h',['../prediction_8h.html',1,'']]]
 ];
