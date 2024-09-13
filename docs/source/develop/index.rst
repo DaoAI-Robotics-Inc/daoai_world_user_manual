@@ -3,17 +3,6 @@
 
     本章将详细介绍 DaoAI World 软件开发包 (SDK) 的配置和使用。DaoAI World SDK 提供了一套全面的工具，用于调用深度学习模型、处理输出及执行各种通用功能，以满足软件开发的需求。
 
-.. **培训内容大纲**： `培训ppt <https://daoairoboticsinc-my.sharepoint.com/:p:/g/personal/nrd_daoai_com/EXFpNfjd9wRCpWU3kq6JZjcBsVtqmMk9jGsAm4f0DgmtlA?e=ygTSQ2>`_
-
-.. .. raw:: html
-
-..     <div style="position: relative; padding-bottom: 1%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-..         <video width="60%" height="auto" controls>
-..             <source src="http://docs.welinkirt.com/static/videos/dw_sdk_train.mp4" type="video/mp4">
-..         </video>
-..     </div>
-
-
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=tcEhUe>`_
 
     - **C++** 和 **C#** : C++ C# SDK 下的 2.24.6.0版本的SDK
@@ -45,8 +34,6 @@
             
         .. image:: images/run_1.png
             :scale: 60%
-
-    使用DW_SDK需要将有效的许可证管理器移动至项目路径，详情请见 :ref:`DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external command`
 
     使用DW_SDK需要有效的使用许可证，详情请见 :ref:`软件许可证`
 
