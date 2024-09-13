@@ -380,7 +380,6 @@ SDK
 .. toctree::
     :maxdepth: 1
     
-    install
     cpp_eg
     cs_eg
     python_win_eg
