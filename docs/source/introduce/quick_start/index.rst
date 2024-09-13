@@ -1,9 +1,12 @@
-快速开始
+Quick Start
 =================
 
 .. tabs::
-    DaoAI World能够充分满足您将图像转化为信息的需求，我们提供了全流程的计算机视觉工具，能让您实现端到端从数据标注到模型训练再到模型部署的一站式服务，
-    即使您不是一个机器学习专家，您也能快速上手并掌握。(如果您是这方面的专家，DaoAI World也能更好的帮助您完成工作)
+    DaoAI World is designed to seamlessly interpret images into valuable information, offering a comprehensive suite of computer vision tools. |br|
+    From data annotation to model training and deployment, 
+    our platform provides an end-to-end solution that enables you to accomplish your goals efficiently. |br|
+    Whether you're new to machine learning or an experienced professional, 
+    DaoAI World makes it easy to get started, ensuring you can quickly master the platform. 
 
 |
 
@@ -18,25 +21,28 @@
 |
 
 
-在本指南中我们将训练一个关键点检测模型来识别门把手的外轮廓以及他们的正反和相应的关键点。您可以使用本节的教程快速上手DaoAI World并通过此项目学习到
-的知识应用与其他项目上。
+In this guide, we will train a keypoint detection model to identify the outer contour of door handles, their orientation (front or back), and corresponding keypoints. 
+This tutorial will help you quickly get started with DaoAI World, and the knowledge gained from this project can also be applied to other tasks.
 
 
-选择语言
-----------------
+Select Language
+---------------------
 
-打开DaoAI World主页后，在右上角可以选择语言，支持中文和英文。
+After opening the DaoAI World homepage, you can select your preferred language from the top-right corner, with options available in both Chinese and English.
 
     .. image:: images/signin_screen.png
         :width: 800
         :align: center
 
 
-注册和登录
+Login/Register
 ---------------------
 
-DaoAI World拥有用户管理功能，每个用户的工作区都是独立的，这样在保证用户数据安全的前提下还能防止项目混乱。如果您还没有DaoAI World账户可以点击“注册”
-选项，注册一个新的账户。如果您已经有了DaoAI World账户，请忽略“注册”选项直接选择“登录”选项，登录您所要登录的账户。
+DaoAI World includes a user management feature, where each user has their own independent workspace. 
+This ensures data security and prevents project mix-ups. 
+
+If you don’t have a DaoAI World account yet, you can click the "Create one" option to create a new one. 
+If you already have an account, simply select "Login" to access your workspace.
 
 
     .. image:: images/signin_screen.png
@@ -44,15 +50,18 @@ DaoAI World拥有用户管理功能，每个用户的工作区都是独立的，
         :align: center
 
 
-创建项目
+Create a Project
 ---------------------
 
-当我们登录账户后，就可以看到我们的项目管理界面。每次当我们有一个计算机视觉任务的时候就可以通过创建项目去建立一个新的任务，每个项目之间是相互独立互不干扰
-的，同时还可以对每个项目进行重命名等操作，接下来让我们创建第一个项目吧。
+After logging into your account, you will see the project management page. 
+You can create a new task by setting up a new project. Each project operates independently, and you can rename each project as needed. 
 
     .. image:: images/create_project.png
         :width: 800
         :align: center
+
+Now, let's create our first project.
+
 
 在 **项目类型** 中选择想要创建的项目类型，这里我们以关键点检测项目为例，选择 **关键点检测** ,并添加项目名称，随后，点击 **创建项目** 。
 
@@ -210,3 +219,6 @@ DaoAI World支持上传单张图片(png, jpg, jpeg, bmp)、或者上传一整个
         :width: 800
         :align: center
 
+.. |br| raw:: html
+
+      <br>

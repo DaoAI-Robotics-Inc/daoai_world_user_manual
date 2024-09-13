@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'DaoAI World用户手册'
+project = 'DaoAI World User Manual'
 copyright = '2021-2024 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
@@ -40,8 +40,8 @@ templates_path = ['_templates']
 html_static_path = ['_static']
 
 # -- Options for HTML output
-language = 'zh_CN'
-html_search_language = 'zh'
+language = 'EN'
+html_search_language = 'en'
 
 html_theme = 'sphinx_rtd_theme'
 

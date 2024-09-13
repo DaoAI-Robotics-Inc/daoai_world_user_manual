@@ -1,23 +1,23 @@
-DAOAI WORLD 用户手册
+DAOAI WORLD USER MANUAL
 ==============================
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: 介绍
+   :caption: Introduction
 
    introduce/quick_start/index
    introduce/quick_start/release-notes
 
 .. toctree::
    :maxdepth: 2
-   :caption: 模型
+   :caption: Model
 
    model/model2
     
 .. toctree::
    :maxdepth: 2
-   :caption: 使用
+   :caption: Application
 
    introduce/quick_start/offline_setup
    data/workspace/index
@@ -30,20 +30,20 @@ DAOAI WORLD 用户手册
 
 .. toctree::
    :maxdepth: 2
-   :caption: 开发
+   :caption: Develop
 
    develop/index
 
 .. toctree::
    :maxdepth: 2
-   :caption: 案例分析
+   :caption: Case Study
 
    case_study/index
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: 支持
+   :caption: Support
 
    support/FAQ/index.rst
 
