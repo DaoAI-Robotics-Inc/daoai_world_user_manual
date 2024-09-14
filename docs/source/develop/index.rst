@@ -245,7 +245,7 @@ Python Windows SDK wheel 只支持Windows环境
 
 .. code-block::
 
-    pip install dlsdk-1.0.1-cp310-cp310-win_amd64.whl
+    pip install {wheel_file}.whl
 
 然后您的DaoAI Python Windows SDK 模组就安装完毕了
 

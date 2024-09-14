@@ -3,9 +3,7 @@ Python Windows 代码示例
 
 您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ 里面包含了图片的读取，模型的读取，以及模型的预测和输出。
 
-您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考:ref:`软件许可证` 。
-
-您需要将您的licensemanger_cli.exe 同license.lic文件放在python脚本同目录下。
+您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考 :ref:`软件许可证` 。
 
 然后运行以下命令就可以运行python脚本
 
@@ -20,14 +18,12 @@ Python Windows 代码示例
     model_path = "./model.dwm"
     image_path = "./image.png"
 
-您也可以从一个新的python文件开始，那么首先需要导入 相关的dll, 然后导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
+您也可以从一个新的python文件开始，那么首先需要导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
 
 .. code-block:: python
 
     import os
     import sys
-    systemDir = sys.prefix # System enviornment variable should point to DaoAISystem path.
-    os.add_dll_directory(systemDir)
     import dlsdk.dlsdk as dlsdk
 
 以下的库可能也会对您有帮助
