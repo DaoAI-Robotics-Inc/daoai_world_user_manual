@@ -1,0 +1,12 @@
+var prediction_8h =
+[
+    [ "DaoAI::DeepLearning::Prediction", "class_dao_a_i_1_1_deep_learning_1_1_prediction.html", "class_dao_a_i_1_1_deep_learning_1_1_prediction" ],
+    [ "DaoAI::DeepLearning::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result" ],
+    [ "DaoAI::DeepLearning::Vision::InstanceSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation_result" ],
+    [ "DaoAI::DeepLearning::Vision::KeypointDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result" ],
+    [ "DaoAI::DeepLearning::Vision::SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result" ],
+    [ "DaoAI::DeepLearning::Vision::OCRResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result" ],
+    [ "DaoAI::DeepLearning::Vision::AnomalyDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection_result" ],
+    [ "DaoAI::DeepLearning::Vision::ClassificationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result" ],
+    [ "DaoAI::DeepLearning::Vision::ClassificationResult::Flag", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result_1_1_flag.html", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result_1_1_flag" ]
+];

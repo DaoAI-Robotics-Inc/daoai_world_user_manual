@@ -3,9 +3,7 @@ Python Windows 代码示例
 
 您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ 里面包含了图片的读取，模型的读取，以及模型的预测和输出。
 
-您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考:ref:`DLSDK显示License Check Fail` 。
-
-您需要将您的licensemanger_cli.exe 同license.lic文件放在python脚本同目录下。
+您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考 :ref:`软件许可证` 。
 
 然后运行以下命令就可以运行python脚本
 
@@ -17,17 +15,15 @@ Python Windows 代码示例
 
 .. code-block:: python
 
-    model_path = "./kp1.zip"
-    image_path = "./kp1.png"
+    model_path = "./model.dwm"
+    image_path = "./image.png"
 
-您也可以从一个新的python文件开始，那么首先需要导入 相关的dll, 然后导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
+您也可以从一个新的python文件开始，那么首先需要导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
 
 .. code-block:: python
 
     import os
     import sys
-    systemDir = sys.prefix # System enviornment variable should point to DaoAISystem path.
-    os.add_dll_directory(systemDir)
     import dlsdk.dlsdk as dlsdk
 
 以下的库可能也会对您有帮助
@@ -45,11 +41,35 @@ Python Windows 代码示例
 
     #初始化模型
     dlsdk.initialize()
-    model = dlsdk.Model()
+    model_path = "./model.dwm"
+    model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
 
-    model_path = "./kp1.zip"
-    #读取模型
-    model.load(model_path, device=dlsdk.DeviceType.GPU)
+
+注意，这里每一个检测任务都有对应的对象：
+
+.. code-block:: python
+
+    #实例分割
+    model = dlsdk.InstanceSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+
+    #关键点检测
+    model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
+    
+    #图像分类
+    model = dlsdk.Classification(model_path, device=dlsdk.DeviceType.GPU)
+    
+    #目标检测
+    model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
+    
+    #异常检测
+    model = dlsdk.AnomalyDetection(model_path, device=dlsdk.DeviceType.GPU)
+    
+    #语义分割
+    model = dlsdk.SemanticSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+    
+    #OCR
+    model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
+
 
 读取图片，这一步可以使用 opencv 来读取， 如果您没有 安装，您可以运行 ``pip install python-opencv`` 来进行安装
 
@@ -64,9 +84,17 @@ Python Windows 代码示例
 
 .. code-block:: python
 
-    assert isinstance(daoai_image, dlsdk.Image) #模型完整性检查
-    prediction = model.inference(daoai_image) #模型预测
+    assert isinstance(daoai_image, dlsdk.Image)
+    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
 
     with open("output.json", "w") as f:
-        f.write(prediction.toJSONString()) # 结果输出
+        f.write(prediction.toJSONString())
 
+您也可以通过其它方法来获取结果信息
+
+
+.. code-block:: python
+
+    print(prediction.boxes)
+    print(prediction.class_ids) 
+    print(prediction.class_labels)

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../class_dao_a_i_1_1_deep_learning_1_1_prediction.html#a48240965c53991291d790b95d779b9bc',1,'DaoAI::DeepLearning::Prediction']]],
-  ['operator_5b_5d_1',['operator[]',['../class_dao_a_i_1_1_deep_learning_1_1_prediction.html#aa01e5dd142f284edd95f7ff7ed0e879a',1,'DaoAI::DeepLearning::Prediction']]]
+  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#aca20ca37cb612b509f71c67b7db5d3e6',1,'DaoAI::DeepLearning::Mask::Mask()'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#a0c0a5096a5c244c0b9ca9a829a28d149',1,'DaoAI::DeepLearning::Mask::Mask(const Image &amp;image)'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#a21dad539ecfda17e40a6f138d42b62ee',1,'DaoAI::DeepLearning::Mask::Mask(const Image &amp;image, const Box &amp;location, const int &amp;image_height, const int &amp;image_width)']]],
+  ['merge_1',['merge',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ab32a60b2aaff03f4659f9a915a7c5c59',1,'DaoAI::DeepLearning::Box::merge()'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#a34160ad9cc1468dd159a6ca36eeb5023',1,'DaoAI::DeepLearning::Mask::merge()']]],
+  ['model_2',['Model',['../class_dao_a_i_1_1_deep_learning_1_1_model.html#ab724a452833c6ce2d4efb85d1b6cb7d9',1,'DaoAI::DeepLearning::Model::Model(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DaoAI::DeepLearning::DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_model.html#afe2c87542d85c131daa8c4a8f7dde157',1,'DaoAI::DeepLearning::Model::Model(const std::filesystem::path &amp;model_path, const DaoAI::DeepLearning::DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]]
 ];

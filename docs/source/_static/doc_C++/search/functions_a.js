@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tojsonstring_0',['toJSONString',['../class_dao_a_i_1_1_deep_learning_1_1_prediction.html#a95ee19687535b3fb7037289d45a87dfb',1,'DaoAI::DeepLearning::Prediction']]],
-  ['topolygon_1',['toPolygon',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a0a599bcb311f5b911d65013efb069d4d',1,'DaoAI::DeepLearning::Box']]],
-  ['totype_2',['toType',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a75bddb98c56e9da11a627e56c5a2e239',1,'DaoAI::DeepLearning::Box']]]
+  ['semanticsegmentation_0',['SemanticSegmentation',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html#ae62aaa7c842e8c7b2131f359e0340b03',1,'DaoAI::DeepLearning::Vision::SemanticSegmentation::SemanticSegmentation(const std::filesystem::path &amp;model_file, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html#a2362f9f8822b03686adb3b9711eb9425',1,'DaoAI::DeepLearning::Vision::SemanticSegmentation::SemanticSegmentation(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]],
+  ['sliceinference_1',['sliceInference',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html#aef1474a4e754c63e0592738e32050e54',1,'DaoAI::DeepLearning::Vision::ObjectDetection::sliceInference()'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation.html#ab8050eb304251a56de337343b971c1d1',1,'DaoAI::DeepLearning::Vision::InstanceSegmentation::sliceInference()']]]
 ];

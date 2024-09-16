@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['image_0',['Image',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html',1,'DaoAI::DeepLearningCLI']]],
-  ['instance_1',['Instance',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_instance.html',1,'DaoAI::DeepLearningCLI']]]
+  ['classification_0',['Classification',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification.html',1,'DaoAI::DeepLearningCLI::Vision']]],
+  ['classificationresult_1',['ClassificationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification_result.html',1,'DaoAI::DeepLearningCLI::Vision']]]
 ];
