@@ -1,7 +1,7 @@
-OCR
+OCR 
 ==================================
 
-**OCR** 应用于对图片中文字的提取。
+**OCR** (Optical Character Recognition) is used for extracting text from images.
 
     .. image:: Images/ocr.png
         :scale: 100%
@@ -16,38 +16,43 @@ OCR
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择情景
+
+Use Case Scenarios
 ----------------------------------
 
-**OCR** 可以识别并提取图片中的文字。
+**OCR** can recognize and extract text from images.
 
-比如产品编号，日期，名称，等信息，都可以通过OCR模型，快速提取。
+For example, product numbers, dates, names, and other information can be quickly extracted using an **OCR** model.
 
-通常情况下，用户不需要自己训练，只用下载预训练的模型就可以在大部分场景中使用，如果有表现不佳的地方，再考虑增加训练。
+In most cases, users do not need to train the model themselves; they can simply download the pre-trained model from :ref:`playground` and use it for most scenarios. 
+Additional training should only be considered if the performance is not satisfactory.
 
-OCR预训练模型可以在上方的模型体验里找到并下载。
+Pre-trained OCR models can be found and downloaded from the model experience section.
 
     .. image:: Images/ocr_download.png
         :scale: 60%
 
-标注方法
--------------
+Annotation Methods
+---------------------------------
 
-可以使用预训练OCR模型，来辅助标注，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
+You can use a pre-trained OCR model to assist with annotation, allowing the deep learning model to help you annotate, and then manually check and correct the annotations
+
     .. image:: Images/suppor_anno.png
         :scale: 100%
 
-标注时，使用矩形标注工具，或者智能多边形工具，框选处标注的文字。然后输入对应的文字作为标签名称。
+When annotating, use the rectangle annotation tool or smart polygon tool to outline the text area. Then enter the corresponding text as the label name
+
     .. image:: Images/ocr_anno.png
         :scale: 60%
 
-重复标注场景内所有的物体。如果场景内没有物体，请标注为空。
+Repeat the annotation for all text in the scene. If there is no text in the scene, annotate it as empty.
 
-练习
+
+Practice
 --------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 ocr.zip
+Download the `practice dat <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ with ocr.zip
 
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After extracting, you will find 11 images and annotation (.json) files. Please upload only the images to DaoAI World for annotation practice. Afterward, you can upload both images and annotation files to compare results.

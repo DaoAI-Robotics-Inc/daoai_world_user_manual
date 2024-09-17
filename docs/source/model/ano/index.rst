@@ -1,7 +1,7 @@
-异常检测
+Anomaly Detection
 ==========================================
 
-**异常检测** 可以识别物体是否处在异常状态，如有破损，变形等。
+**Anomaly Detection** can identify whether an object is in an abnormal state, such as damage or deformation.
 
     .. image:: Images/ano.png
         :scale: 100%
@@ -16,50 +16,49 @@
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择场景
+Use Case Scenarios
 ------------------------------------------
 
-**异常检测** 作用于单一物体，即数据集中只包含一种物体，并且物体的位置需要保持相对固定，该物体分为正常和异常两种状态。
+**Anomaly Detection** works on a single object. That is, the dataset should contain only one type of object, and the object's position must remain relatively fixed. The object will be classified as either normal or abnormal.
 
-**异常检测** 会学习并判断物体是否处在异常状态，并使用多边形标注出物体的异常区域。
+**Anomaly Detection** will learn to identify whether an object is in an abnormal state, using polygon annotations to mark the abnormal regions.
 
-标注方法
-----------------
+Annotation Method
+------------------------
 
-如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
+If a pre-trained model exists, you can use the assisted annotation tool, allowing the deep learning model to help with annotations. You can then verify and correct the annotations as needed.
+    
     .. image:: Images/suppor_anno.png
         :scale: 100%
 
-如果物体没有缺陷，请标注为正常
+If the object has no defects, label it as good.
 
     .. image:: Images/anoAnno2.png
         :scale: 100%
 
-如果物体存在缺陷，请标注为异常。使用多边形工具，或者智能多边形，标注出异常区域的外轮廓。
+If the object has defects, mark it as abnormal. Use the polygon tool or smart polygon to annotate the outline of the defect area.
 
     .. image:: Images/anoAnno1.png
         :scale: 100%
 
-注意事项
+Notes
 ------------
 
-1. **异常检测** 项目中只能存在一个标签，用以标注物体出现异常的区域。
+1. In an **Anomaly Detection** project, there should only be **one label** used to annotate the abnormal areas on an object.
 
-2. **标注正常** 的物体不应含有损害区域标签，否则可能会导致训练结果不理想，或训练失败。
-
-3. 一个物体可以同时有多个损坏标签用来标注多个损坏区域。
+2. Objects annotated as **good** should not include any defect region labels. Otherwise, it may lead to unsatisfactory training results or even training failure.
 
 .. note::
 
-    1. 异常检测 项目在训练时，需要确保分配的训练集中所包含的图片数量小于等于该数据集中全部无损图片的数量，否则可能会导致训练失败。 同时，数据集中所包含的损坏图片的数量过少也会导致训练结果不理想。
+    1. During the training process of an Anomaly Detection project, ensure that the number of images assigned to the training set is less than or equal to the total number of defect-free images in the dataset. Otherwise, training may fail. Also, having too few defect images in the dataset may result in poor training outcomes.
     
-    2. 异常检测 于其他项目不同，默认不添加任何数据增强选项。
+    2. Unlike other projects, Anomaly Detection does not apply any data augmentation options by default.
 
-练习
---------
+Practice
+----------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 anomaly_detection.zip
+Download  `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ with anomaly_detection.zip.
 
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After unzipping, you will get 11 images and annotation (.json) files. Upload only the images to DaoAI World for annotation practice. Later, you can upload both images and annotation files to compare the results.

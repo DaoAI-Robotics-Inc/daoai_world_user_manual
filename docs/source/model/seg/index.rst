@@ -1,7 +1,8 @@
-实例分割
+Instance Segmentation
 ==============================
 
-在 **实例分割** 检测中，模型会定位图像中的对象并生成精准的定位边界。在现实应用中， **实例分割** 常用作识别不规则外形的物体。
+In **Instance Segmentation** , the model locates objects within an image and generates precise boundary delineations. 
+In real-world applications, **Instance Segmentation** is commonly used for recognizing objects with irregular shapes.
 
     .. image:: Images/insseg.png
         :scale: 100%
@@ -16,48 +17,51 @@
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择情景
+
+Use Case Scenarios
 ------------------------------
 
-**实例分割** 可以用以检测图像中一个或多个不同物体的数量及位置。模型适合在需要对物体进行简单的分割，分类，定位处理时使用。
+**Instance Segmentation** can be used to detect the number and location of one or more different objects in an image. The model is suitable for tasks that require simple object segmentation, classification, and localization.
 
-在 **实例分割** 中，可以通过只建立一个物体标签来进行单一种类物品的识别，如：在大量混合物体中寻找并分离处某一特定种类的物体。
-也可以同时建立并学习多种物体的标签，从而达到将多种物体分割识别的效果。
+In **Instance Segmentation**, you can either create a single object label for identifying one type of object, 
+such as finding and separating a specific type of object among many mixed objects, 
+or you can create and learn multiple object labels to achieve segmentation and recognition of 
+various objects simultaneously.
 
-标注方法
-------------
+Annotation Methods
+------------------------
 
-如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
+If you have a pre-trained model, you can use annotation tools to assist with labeling, then review and correct the annotations.
+
     .. image:: Images/suppor_anno.png
         :scale: 100%
 
-使用多边形工具，或者智能多边形工具，标注物体的外轮廓。
+Use the polygon tool or smart polygon tool to annotate the outer contours of the objects.
 
     .. image:: Images/segAnno4.png
         :scale: 100%
 
-重复标注场景内的所有物体，如果场景内没有物体，请标注为空。
+Repeat the annotation for all objects in the scene. If there are no objects in the scene, mark it as empty.
 
-
-注意事项
+Notes
 ------------------
 
-1. 标签命名时，使用描述性的标签。使用描述性的标签能够大幅度减小标记错误的概率，同时方便后续模型的实际应用。非描述性的标间因为与被标注物体之间关联性小，容易出现标注错误，同时在使用训练好的模型时，也难以快速分辨模型预测结果是否准确。
+1. When naming labels, use descriptive tags. Descriptive tags significantly reduce the likelihood of annotation errors and facilitate the practical application of the model. Non-descriptive tags are more likely to cause annotation mistakes due to their weak correlation with the annotated objects, making it difficult to quickly assess the accuracy of the model's predictions.
 
-2. 如果只有一种要检测的对象（即只有一个标签），则可以对部分被遮挡的对象进行标注（通常不超过30%）。但请注意，在标注多边形时，避免将那些重要几何特征被其他对象遮挡的对象包括在内。
+2. If there is only one object to detect (i.e., only one label), you can annotate partially occluded objects (typically no more than 30%). However, avoid including objects where important geometric features are obscured by other objects.
 
-3. 如果有多种要检测的对象（包括同一对象的不同侧面），请标注未被其他对象遮挡或仅位于顶层的对象，并尽量保持对象的完整性。
+3. If there are multiple objects to detect (including different sides of the same object), annotate objects that are not obscured by other objects or are only on top, and try to maintain the integrity of the objects.
 
-4. 在标注多边形时，应标注图像中实际的边界，而不是使用虚拟边界标注对象。如果对象的一部分被其他对象遮挡，请标注可见的部分，而不要标注被遮挡的部分。
+4. When annotating polygons, annotate the actual boundaries in the image, not virtual boundaries. If part of the object is obscured by other objects, annotate the visible parts and avoid annotating the occluded parts.
 
 .. image:: Images/example1.png
     :scale: 100%
 
-练习
---------
+Practice
+------------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 Instance_segmentation.zip
+Download  `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ to obtain Instance_segmentation.zip
 
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After extracting, you will get 11 images and annotation (.json) files. Please upload only the images to DaoAI World for annotation practice. Afterward, you can upload both images and annotation files to compare the results.

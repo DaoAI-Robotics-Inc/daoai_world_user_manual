@@ -1,55 +1,53 @@
-DaoAI World 离线服务器设置说明
-====================================
+DaoAI World Offline Server Setup Instructions
+==================================================================
 
-本章旨在帮助用户通过局域网访问 DaoAI World 离线版服务。通过修改客户端的 ``hosts`` 文件，即可直接在浏览器中访问 DaoAI World 服务
+This section is designed to help users access the DaoAI World offline version via a local area network (LAN). By modifying the client's ``hosts`` file, you can directly access DaoAI World services through a browser.
 
-准备工作
-----------
+Preparations
+------------------
 
-在开始之前，请确保：
+Before starting, ensure that:
 
-- DaoAI World 服务器已启动并连接至局域网
+- The DaoAI World server is up and connected to the LAN.
 
-- 客户端设备与服务器处于同一局域网网段
+- The client device is on the same LAN subnet as the server.
 
-- 您有权限在客户端设备上修改 hosts 文件
+- You have permission to modify the hosts file on the client device.
 
-服务器设置
+Server Setup
 --------------
 
-DaoAI World 离线服务器配备双网口，支持两种方式访问：
+The DaoAI World offline server comes with dual network ports and supports two access methods:
 
-1. **DHCP 自动获取 IP 地址** ： 服务器可以通过网络自动获取 IP 地址。您可以向网络管理员咨询
-服务器当前的 IP 地址 , 并使用该 IP 进行访问
+1. **DHCP Auto-Assigned IP Address** : The server can obtain an IP address automatically via the network. You can consult with the network administrator to find out the server's current IP address and use it to access the server.
 
-2. **静态 IP 地址** ： 服务器也设置了固定 IP 地址 ``192.168.1.10`` 。您可以直接使用该 IP 进行访
-问。
+2. **Static IP Address**: The server also has a fixed IP address of 192.168.1.10. You can directly use this IP for access.
 
-客户端设置
+Client Setup
 --------------
 
-为了在客户端设备上通过域名访问 DaoAI World 服务，您需要修改本地的 ``hosts`` 文件，将特定域名指向服务器的 IP 地址
+To access DaoAI World services via a domain name on the client device, you need to modify the local ``hosts`` file to map a specific domain name to the server's IP address.
 
 .. warning::
-    DHCP 访问：您需要了解局域网中 DaoAI World 服务器分配的 IP 地址 |br|
-    教学以在局域网中 IP 为 ``192.168.10.61`` 的 DaoAI World 离线版服务器举例 |br|
-    静态 IP 访问：您可以直接在以下教学中将 IP 替换为 ``192.168.1.10`` |br|
 
-修改 ``hosts`` 文件 (Windows)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    DHCP Access: You need to know the IP address assigned to the DaoAI World server on the LAN. |br|
+    Example Setup: The following instructions use a DaoAI World offline server with IP ``192.168.10.61`` as an example. |br|
+    Static IP Access: You can replace the IP address in the following instructions with ``192.168.1.10`` |br|
 
-1. 用管理员权限打开记事本：
-    - 点击 开始菜单，搜索 ``记事本`` 或 ``Notepad``
-    - 右键点击 ``记事本`` ，选择 **“以管理员身份运行”**
+Modifying the ``hosts`` file (Windows)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2. 打开 ``hosts`` 文件：
-    - 在 ``记事本`` 中，点击 **“文件”** -> **“打开”**
-    - 导航到路径 ``C:\Windows\System32\drivers\etc\hosts``
-    - 确保文件类型选择为 **“所有文件”** ，然后选择 ``hosts`` 文件并打开
+1. Open Notepad with administrator privileges:
+    - Click the Start menu and search for "Notepad"
+    - Right-click "Notepad" and select **"Run as administrator"**
 
+2. Open the ``hosts`` file:
+    - In Notepad, click **"File"** -> **"Open"** .
+    - Navigate to ``C:\Windows\System32\drivers\etc\hosts`` .
+    - Ensure the file type is set to **"All Files"** , then select the ``hosts`` file and open it.
 
-3. 添加域名映射：
-    - 在文件末尾添加以下几行：
+3. Add domain mapping:
+    - At the end of the file, add the following lines:
 
     .. code-block::
 
@@ -59,29 +57,27 @@ DaoAI World 离线服务器配备双网口，支持两种方式访问：
         4 192.168.10.61 s3.offline.we.link
         5 192.168.10.61 admin.offline.we.link
 
-4. 保存并关闭文件：
+4. Save and close the file:
+    - Click **"File"** -> **"Save"**, then close Notepad.
 
-    - 点击 **“文件”** -> **“保存”**，然后关闭 ``记事本``
+Modifying the ``hosts`` file (Linux/MacOS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+1. Open the terminal:
+    - On MacOS, use "Spotlight" to search for "Terminal."
+    - On Linux, press ``Ctrl+Alt+T`` to open the terminal.
 
-修改 ``hosts`` 文件 (Linux/MacOS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. 打开终端：
-    - 在 MacOS 上，使用 ``Spotlight`` 搜索 ``终端`` 或 ``Terminal``
-    - 在 Linux 上，按 ``Ctrl+Alt+T`` 打开终端
-
-2.编辑 ``hosts`` 文件：
-    - 输入以下命令以使用 ``nano`` 编辑器打开 ``hosts`` 文件：
+2. Edit the ``hosts`` file:
+    - Enter the following command to open the ``hosts`` file using the ``nano`` editor:
 
     .. code-block::
 
         sudo nano /etc/hosts
 
-    - 输入系统密码（如果需要）
+    - Enter the system password if prompted.
 
-3. 添加域名映射：
-    - 在文件末尾添加以下内容：
+3. Add domain mapping:
+    - At the end of the file, add the following content:
 
     .. code-block::
 
@@ -91,39 +87,37 @@ DaoAI World 离线服务器配备双网口，支持两种方式访问：
         192.168.10.61 s3.offline.we.link
         192.168.10.61 admin.offline.we.link
 
-4. 保存并关闭文件：
-    - 按 ``Ctrl+X`` 关闭 ``nano`` 编辑器
-    - 按 ``Y`` 确认保存更改
-    - 按 ``Enter`` 返回到终端
+4. Save and close the file:
+    - Press ``Ctrl+X`` to close the nano editor.
+    - Press ``Y`` to confirm saving the changes.
+    - Press ``Enter`` to return to the terminal.
 
 
+Accessing DaoAI World Services
+---------------------------------------
 
-访问 DaoAI World 服务
-------------------------
-
-完成配置后，您可以在浏览器中输入以下 URL 访问 DaoAI World 服务：
+After completing the configuration, you can access DaoAI World services by entering the following URL in your browser:
 
     - `<http://dw.offline.we.link>`_
 
-故障排查
-------------
+Troubleshooting
+----------------------
 
 
-如果无法访问 DaoAI World 服务，请检查以下内容：
+If you cannot access DaoAI World services, check the following:
 
-1. **网络连接** ： 确保服务器和客户端都已连接到同一局域网。
-2. **IP 地址** ： 确保服务器的 IP 地址和 ``hosts`` 文件中配置的 IP 地址一致。
-3. **域名解析** ： 使用 ``ping`` 命令检查域名是否正确解析到服务器的 IP 地址。例如：
+1. **Network Connection** : Ensure both the server and the client are connected to the same LAN.
+2. **IP Address** : Ensure the server's IP address matches the one configured in the ``hosts`` file.
+3. **Domain Resolution** : Use the ``ping`` command to check if the domain is correctly resolving to the server's IP address. For example:
 
 .. code-block::
 
     ping dw.offline.we.link
 
-4. **缓存问题** ： 如果域名解析不正确，尝试清除浏览器缓存或重启设备
+4. **Cache Issues** : If domain resolution is incorrect, try clearing your browser cache or restarting the device.
 
 
-如果仍有问题，请联系 DaoAI 技术支持团队以获得帮助。
-
+If you continue to experience issues, please contact DaoAI technical support for assistance.
 
 .. |br| raw:: html
 

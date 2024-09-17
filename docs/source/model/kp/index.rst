@@ -1,8 +1,8 @@
-关键点检测
+Keypoint Detection
 =================================
 
-在 **关键点检测** 中，模型通过学习物体的外轮廓及其关键点的位置信息，来识别物体的类别，并定位物体的方向、位置等信息。
-
+In **Keypoint Detection** , the model learns the object's masks and keypoint positions to identify the object's category and its orientation and position.
+    
     .. image:: Images/kp.png
         :scale: 100%
 
@@ -16,58 +16,64 @@
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择情景
+
+Use Case Scenarios
 ---------------------------------
 
-**关键点检测** 模型可以用以检测图像中的一个或多个不同物体的数量及位置，并精确定位。
+**Keypoint Detection** models can be used to detect and precisely locate one or more objects in an image.
 
-与 **实例分割** 模型相似, **关键点检测** 模型可以对一个或多个物体进行分割和定位。与 **实例分割** 模型不同的是， **关键点检测** 通过关键点可以更精确的定位物体，从而获得物体的准确位置，旋转姿态等信息。
+Similar to **Instance Segmentation** models, Keypoint Detection models can segment and locate one or more objects. 
+However, unlike Instance Segmentation, Keypoint Detection uses keypoints for more precise localization, providing accurate information about the object’s position, orientation, and rotation.
 
-标注方法
--------------
+Annotation Method
+---------------------------
 
-关键点模型需要首先定义组成的外轮廓掩膜名称，以及组成的关键点结构。
+If you have a pre-trained model, you can use the assisted annotation tool, allowing the deep learning model to help with annotations. You can then verify and correct the annotations as needed.
+    
+    .. image:: Images/suppor_anno.png
+        :scale: 100%
+
+Keypoint models require the definition of an outer contour mask and the keypoint structure.
 
     .. image:: Images/kpAnno0.png
         :scale: 100%
 
-使用多边形，或者智能多边形标注物体的外轮廓。
+Use polygons or intelligent polygons to annotate the object's outer contour.
 
     .. image:: Images/kpAnno2.png
         :scale: 100%
 
-外轮廓标注完成后，会自动进入关键点标注模式，需要依次点击关键点的位置进行标注。
+After completing the contour annotation, the system will automatically switch to keypoint annotation mode. You need to click on each keypoint’s location to annotate them.
 
     .. image:: Images/kpAnno5.png
         :scale: 100%
 
-重复标注场景内所有的物体，如果场景内没有物体，请标注为空。
+Repeat this process for all objects in the scene. If no objects are present in the scene, annotate it as empty.
 
     .. image:: Images/kpAnno6.png
         :scale: 100%
 
-标注时需要注意，关键点的位置以及顺序需要相对固定以获取最佳的模型效果。
-
+While annotating, ensure that the keypoints' positions and order are relatively fixed for optimal model performance.
 
 注意事项
 ------------------
 
-1. 标签命名时，使用描述性的标签。使用描述性的标签能够大幅度减小标记错误的概率，同时方便后续模型的实际应用。非描述性的标间因为与被标注物体之间关联性小，容易出现标注错误，同时在使用训练好的模型时，也难以快速分辨模型预测结果是否准确。
+1. Use descriptive labels when naming the tags. Descriptive labels significantly reduce the likelihood of annotation errors and facilitate the practical application of the model. Non-descriptive labels are loosely connected to the annotated object, increasing the chance of mistakes and making it harder to quickly determine the accuracy of model predictions.
 
-2. 关键点检测任务中的每一个标间组都包含一个多边形和一个或多个关键点。若标签组中无关键点，可能导致训练任务失败。
+2. Each tag group in keypoint detection must include a polygon and one or more keypoints. If there are no keypoints in a tag group, the training task may fail.
 
-3. 对于每个标注的多边形，应至少有3个与该标签相关联的关键点。在选择关键点时，应选择代表对象且易于识别的关键点。例如，几何特征如圆形、角点或对象的中心是很好的选择。一般来说，寻找几何特征、纹理特征或任何其他形状和模式特征。避免使用没有特殊特征的平面点，或者与多边形边界过于接近的特征点。还要避免使用形成直线的关键点，因为这会降低倾斜角度的识别能力。
+3. For each annotated polygon, there should be at least 3 keypoints associated with that label. When choosing keypoints, select ones that are representative of the object and easy to identify. Geometric features like circular points, corners, or the center of an object are ideal choices. In general, look for geometric or texture features, or any other shape or pattern characteristics. Avoid selecting flat points with no special features or feature points that are too close to the polygon’s edges. Also, avoid using keypoints that form a straight line, as this can reduce the ability to recognize tilt angles.
 
-4. 不要标注关键点被其他对象遮挡的对象，因为在标签-关键点组合中中缺少对应的关键点将导致训练崩溃。
+4. Do not annotate objects whose keypoints are obscured by other objects, as the missing keypoints in the tag-keypoint combination will cause the training to crash.
 
-5. 与分割类似，在每个图像中仅标注顶层关键点-标签集，并避免标注被其他对象遮挡的对象。
+5. Similar to segmentation, only annotate the top-layer keypoint-tag set in each image and avoid annotating objects that are obscured by other objects.
 
 
-练习
+Practice
 --------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 keypoint_detection.zip
+Download the `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ with keypoint_detection.zip.
 
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After unzipping, you will get 11 images and annotation (.json) files. Please upload only the images to DaoAI World for annotation practice. Later, you can upload both images and annotation files to compare the results.

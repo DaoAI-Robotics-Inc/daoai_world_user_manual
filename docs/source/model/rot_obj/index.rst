@@ -1,7 +1,7 @@
-旋转目标检测
+Rotated Object Detection
 ==========================================
 
-**旋转目标检测** 和目标检测类似，但是可以检测到目标的旋转状态。
+**Rotated Object Detection** is similar to object detection but can also detect the rotation state of the objects.
 
     .. image:: Images/rot_obj.png
         :scale: 100%
@@ -16,41 +16,40 @@
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择场景
+Use Case Scenarios
 ------------------------------------------
 
-**旋转目标检测** 适用于判断某物体是否出现在场景中，或者判断某物体出现的次数, 以及物体的旋转姿态。
+**Rotated Object Detection** is suitable for determining whether an object appears in a scene, the number of times the object appears, and the object's rotation state.
 
-**物体检测** 可以用于识别场景中某一个或多个物体出现的次数和大概位置。物体识别可以同时识别多种物体。但是物体识别不会返回物体的精确位置。 如果需要精确位置，可以使用 **实例分割** 模型，或者 **关键点检测** 模型。
+Object Detection can be used to identify the number of occurrences and approximate locations of one or more objects in a scene. While object detection can identify multiple objects simultaneously, it does not provide precise locations. For precise locations, you may use Instance Segmentation or Keypoint Detection models.
 
-标注方法
-----------------
+Annotation Methods
+----------------------
 
-如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
+If you have a pre-trained model, you can use annotation tools to assist with labeling, then review and correct the annotations
+
     .. image:: Images/suppor_anno.png
         :scale: 80%
 
-首先使用矩形标注工具标出边界框，然后移动鼠标旋转框。
+First, use the rectangle annotation tool to mark the bounding box, then move the mouse to rotate the box. 
+
     .. image:: Images/rot_objAnno0.png
         :scale: 80%
 
+Repeat the annotation for all objects in the scene. If there are no objects in the scene, mark it as empty.
 
-重复标注场景内所有的物体。如果场景内没有物体，请标注为空。
-
-注意事项
+Notes
 --------------
 
-1. **物体检测** 模型仅支持方形标注，因此，在物体检测模型标注中，标注区域可以轻微重合，但不可完全重合。
+1. **Rotated Object Detection** models only support rectangular annotations, so the annotated areas can slightly overlap but should not be completely overlapping.
 
-2. **物体检测** 模型标注中，标注区域不可超出图片边界。
+2. Similar to other annotation models, avoid annotating objects that are largely covered by other objects. Choose the most visible or topmost objects for annotation.
 
-3. 于其他标注模型类似，在标注时，应当避免标注被大面积覆盖的物体，选择最顶层或最明显的物体进行标注。
+Practice
+----------------
 
-练习
---------
+Download  `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ to obtain rotated_object.zip
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 rotated_object.zip
-
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After extracting, you will get 11 images and annotation (.json) files. Please upload only the images to DaoAI World for annotation practice. Afterward, you can upload both images and annotation files to compare the results.

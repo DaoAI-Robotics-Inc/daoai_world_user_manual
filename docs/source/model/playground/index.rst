@@ -1,20 +1,21 @@
-模型体验
----------------
+Model Experience
+---------------------
 
-在这里，您可以尝试DaoAI 为您预训练的模型。
+Here, you can try out the pre-trained models provided by DaoAI.
 
 .. image:: images/playg.png
     :scale: 60%
     :align: center
 
-选择预训练模型，目前只支持OCR。
+Select a pre-trained model; currently, OCR is supported.
 
-然后上传图片，或者使用DaoAI数据集里的图片进行模型预测。
+Then, upload an image or use an image from the DaoAI dataset for model prediction.
 
 .. image:: images/ocr.png
     :scale: 70%
     :align: center
 
-然后您就可以得到模型预测后的效果。
+You will then see the results of the model's predictions.
 
-如果您对模型的效果满意，您可以点击下载此模型，并在本地，或者 **DaoAI InspecTRA 2.24.3.0** 以及 **DaoAI VisionPilot 2.24.4.0** 中使用。
+If you are satisfied with the model's performance, you can click to download the model and use it locally, 
+or in **DaoAI InspecTRA 2.24.5.0** and **DaoAI VisionPilot 2.24.4.0** .

@@ -1,7 +1,7 @@
-语义分割
+Semantic Segmentation
 ==========================================
 
-**语义分割** 可以识别物体是否处在异常状态，如有破损，变形等。与异常检测不同，语义检测支持检测多种异常类型。
+**Semantic Segmentation** can identify whether an object is in an abnormal state, such as damage or deformation. Unlike anomaly detection, semantic segmentation supports detecting multiple types of anomalies.
 
     .. image:: Images/sem.png
         :scale: 100%
@@ -16,44 +16,42 @@
 
 |
 
-完成模型标注后，可以参考 :ref:`训练` 章节下的视频，创建数据集版本并训练部署。
+After completing the model annotations, refer to the video in the :ref:`Training` section to create dataset versions and train/deploy the model.
 
-模型选择场景
+
+Use Case Scenarios
 ------------------------------------------
 
-**语义分割** 作用于单一物体，即数据集中只包含一种物体，并且物体的位置需要保持相对固定，该物体分为正常和异常两种状态。
+**Semantic Segmentation** focuses on a single object, where the dataset contains only one type of object, and its position needs to remain relatively fixed. This object is classified into normal and abnormal states.
 
-**语义分割** 的使用场景主要分为以下两点：
+The primary use cases for **Semantic Segmentation** are:
 
-1. **分割特定区域**  判断特定区域的变化情况。例如消防通道的识别，如果有侵占，消防通道的分割区域就会发生变化
-2. **分割异常区域**  不同与异常检测模型，异常检测只使用正常数据去训练识别异常，训练判断正常和异常。语义分割模型在异常图像数量较多的情况下，可以更细致的识别分割异常区域和种类。
+    1. **Segment Specific Areas** : Identify changes in specific areas. For example, detecting fire lanes; if there is encroachment, the segmented area of the fire lane will change.
+    2. **Segment Abnormal Areas** : Unlike anomaly detection models, which train using only normal data to identify anomalies and distinguish between normal and abnormal states, semantic segmentation models can more precisely identify and segment abnormal areas and types when there are a large number of abnormal images.
 
-标注方法
-----------------
 
-如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: Images/suppor_anno.png
-        :scale: 100%
+Annotation Methods
+------------------------
 
-如果物体没有缺陷，请标注为正常
+If the object has no defects, label it as good.
 
     .. image:: Images/sem_anno0.png
         :scale: 80%
 
-如果物体存在缺陷，请标注为异常。使用多边形工具，或者智能多边形，标注出异常区域的外轮廓，并选择缺陷类型。
+If the object has defects, label it as abnormal. Use the polygon tool or intelligent polygon tool to outline the abnormal area and select the type of defect.
 
     .. image:: Images/sem_anno1.png
         :scale: 80%
 
-注意事项
+Notes
 ------------
 
-1. **标注正常** 的物体不应含有损害区域标签，否则可能会导致训练结果不理想，或训练失败。
+1. Images annotated as "Good" should not contain damage area annotations, as this may lead to poor training results or training failures.
 
 
-练习
---------
+Practice
+-------------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 semantic_segmentation.zip
+Download  `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ to obtain semantic_segmentation.zip
 
-解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
+After extracting, you will get 11 images and annotation (.json) files. Please upload only the images to DaoAI World for annotation practice. Afterward, you can upload both images and annotation files to compare the results.

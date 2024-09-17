@@ -1,34 +1,34 @@
-工作空间
+Workspace
 =============
 
-您可以使用工作空间来更好的管理和分类您的项目。如果没有创建新的工作空间，则会使用默认的工作空间。
+You can use the workspace to better manage and categorize your projects. If no new workspace is created, the default workspace will be used.
 
     .. image:: Images/create_workspace.png
         :scale: 60%
 
-您可以点击左上角的重命名，或者删除选项对工作空间进行编辑。
+You can click on the rename or delete options in the upper left corner to edit the workspace.
 
     .. image:: Images/workspace.png
         :scale: 60%
 
-邀请用户
------------
+Invite Users to Workspace
+-------------------------------
 
-点击右上角的邀请，进入邀请用户界面。
+Click on the "Invite" button in the top right corner to access the user invitation interface.
 
     .. image:: Images/workspace.png
         :scale: 60%
 
-在这里，您可以邀请您的伙伴进入工作空间，和您一起工作。
+Here, you can invite your colleagues to the workspace to collaborate with you.
 
     .. image:: Images/user_setting.png
         :scale: 60%
 
 
-每个工作空间都有DaoAI Support账户，但是默认是没有访问权限的，如果您需要支持，您可以启用授予访问权限，并联系我们。
+Each workspace has a DaoAI Support account, but it does not have access by default. If you need support, you can enable access permissions and contact us.
 
-用户工作空间权限分为 **标注者** ，和 **管理员** 。
+User permissions in the workspace are divided into **Annotator** and ***Administrator***.
 
-标注者仅可以标注数据，而管理员可以获得工作空间的全部权限，包括重命名，新建项目，创建版本，训练模型，删除等操作。
+Annotators can only annotate data, while Administrators have full workspace permissions, including renaming, creating new projects, creating versions, training models, deleting, and more.
 
 

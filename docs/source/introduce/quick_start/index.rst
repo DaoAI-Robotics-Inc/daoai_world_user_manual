@@ -21,7 +21,7 @@ Quick Start
 |
 
 
-In this guide, we will train a keypoint detection model to identify the outer contour of door handles, their orientation (front or back), and corresponding keypoints. 
+In this guide, we will train a keypoint detection model to identify the outer contour of door handles, their orientation (front or back), and corresponding keypoints.  |br|
 This tutorial will help you quickly get started with DaoAI World, and the knowledge gained from this project can also be applied to other tasks.
 
 
@@ -38,10 +38,10 @@ After opening the DaoAI World homepage, you can select your preferred language f
 Login/Register
 ---------------------
 
-DaoAI World includes a user management feature, where each user has their own independent workspace. 
+DaoAI World includes a user management feature, where each user has their own independent workspace.  |br|
 This ensures data security and prevents project mix-ups. 
 
-If you don’t have a DaoAI World account yet, you can click the "Create one" option to create a new one. 
+If you don’t have a DaoAI World account yet, you can click the "Create one" option to create a new one.  |br|
 If you already have an account, simply select "Login" to access your workspace.
 
 
@@ -53,7 +53,7 @@ If you already have an account, simply select "Login" to access your workspace.
 Create a Project
 ---------------------
 
-After logging into your account, you will see the project management page. 
+After logging into your account, you will see the project management page.  |br|
 You can create a new task by setting up a new project. Each project operates independently, and you can rename each project as needed. 
 
     .. image:: images/create_project.png
@@ -68,7 +68,7 @@ Under **Project Type** , select the type of project you want to create. In this 
         :width: 800
         :align: center
 
-For more detailed information about the features of each model, please refer to the :ref:`Model` section.
+For more detailed information about the features of each model, please refer to the :ref:`Select a Model` section.
 
 Next, we need to configure the label information for the data. If the data you are going to add are already annotated, you can select **Skip and Create Empty Project** ;
 
@@ -107,8 +107,8 @@ Data Annotation
 
     + **Polygon Annotation**
 
-        The image below shows an unannotated picture from the protractor dataset. You will use the polygon tool to outline the protractor's outer contour. 
-        The information you annotate serves as the ground truth answer the computer vision model will learn from. The more images we have and the more annotations we create, 
+        The image below shows an unannotated picture from the protractor dataset. You will use the polygon tool to outline the protractor's outer contour.  |br|
+        The information you annotate serves as the ground truth answer the computer vision model will learn from. The more images we have and the more annotations we create,  |br|
         the more information the model will have to learn the characteristics of each class. 
 
         Follow the polygon tool instructions to annotate the unmarked protractor in the image below.
@@ -119,20 +119,20 @@ Data Annotation
 
         Use the **Smart Polygon Tool** to mark the object's outer contour. 
         
-        Select the **Smart Polygon Tool** , then move the cursor over the object you want to label. 
-        Observe the tool's suggested boundary around the object. If you're satisfied with the current boundary, click the left mouse button to confirm the polygon outline. 
+        Select the **Smart Polygon Tool** , then move the cursor over the object you want to label.  |br|
+        Observe the tool's suggested boundary around the object. If you're satisfied with the current boundary, click the left mouse button to confirm the polygon outline.  |br|
         You can also use the right mouse button to select the parts where you want to exclude from the boundary.
             .. image:: images/annotated.png
                 :width: 800
                 :align: center
 
-        We have just added an "mask" annotation to the image. This indicates that we have outlined the object of interest. 
-        Adding an outer contour is a common technique in computer vision, frequently used for segmentation tasks. 
+        We have just added an "mask" annotation to the image. This indicates that we have outlined the object of interest.  |br|
+        Adding an outer contour is a common technique in computer vision, frequently used for segmentation tasks.  |br|
         The polygon tool helps you accurately trace the precise outline of the object of interest.
 
     + **Keypoint Annotation**
 
-        Since our current project type is keypoint annotations, in addition to annotating the object's mask, we also need to add keypoint data. 
+        Since our current project type is keypoint annotations, in addition to annotating the object's mask, we also need to add keypoint data.  |br|
         This will enable the computer vision model to recognize the precise position and rotation information, making it easier for robots to perform high precision tasks such as grasping or other operations.
 
         Once we have completed the outer contour annotation of an object, the system will prompt us to annotate the keypoints for the current object. Click **Start Keypoint Annotation** to begin annotating the keypoints.
@@ -155,7 +155,7 @@ Data Annotation
 
 + **Add Annotated Data to Dataset**
 
-    Once you have annotated all your images, you need to add the annotated data to your dataset for model training. 
+    Once you have annotated all your images, you need to add the annotated data to your dataset for model training.  |br|
     Go to the annotation interface and click on **Add Annotated Images to Dataset** in the top right corner to add your annotated data to the dataset for training.
 
     .. image:: images/add2dataset.png
@@ -170,14 +170,14 @@ Data Annotation
         :width: 800
         :align: center
     
-    Before creating the training dataset, we need to use the built-in dataset health check tool to confirm whether there are any annotation issues in the dataset that might cause training failures. 
+    Before creating the training dataset, we need to use the built-in dataset health check tool to confirm whether there are any annotation issues in the dataset that might cause training failures.  |br|
     Click **Run Health Check** and wait for the dataset report to be generated.
 
     .. image:: images/healthcheck.png
         :width: 800
         :align: center
 
-    You can also choose functions such as preprocessing and data augmentation. 
+    You can also choose functions such as preprocessing and data augmentation.  |br|
     For convenience, preprocessing and data augmentation have not been added here (it’s important to note that more preprocessing and data augmentation do not necessarily lead to better model; only the appropriate methods are beneficial). 
 
     After making your choices, click Create to complete the creation of a dataset version.
@@ -195,8 +195,8 @@ Training
 
     After completing the above steps, we arrive at the final step: the training phase. 
     
-    DaoAI World offers various training modes to meet different model application needs. 
-    For keypoint detection projects, DaoAI World provides three training modes: **Fast** , **Accurate** , and **Rotation Accurate** . 
+    DaoAI World offers various training modes to meet different model application needs.  |br|
+    For keypoint detection projects, DaoAI World provides three training modes: **Fast** , **Accurate** , and **Rotation Accurate** .  |br|
     You can choose the training mode that best suits your needs.
 
     .. image:: images/training_mod.png
@@ -221,7 +221,7 @@ Training
         :width: 800
         :align: center
 
-    During the model training process in DaoAI World, you can monitor the training status by viewing the real-time training charts. 
+    During the model training process in DaoAI World, you can monitor the training status by viewing the real-time training charts.  |br|
     Once DaoAI World has completed the model training, it will look like the image below. 
     
     You can then choose to export the model. The exported model can be used with `DaoAI Vision Pilot <http://docs.welinkirt.com/daoai-vision-system-user-manual/chinese-2.24.4.0/index.html>`_ , `DaoAI InspecTRA <http://docs.welinkirt.com/daoai-inspectra-user-manual/chinese-2.24.4.0/index.html>`_ , 

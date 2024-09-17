@@ -1,27 +1,29 @@
-发布说明
-============
+Release Notes
+===================
 
 .. contents:: 
     :local:
 
-2.24.6.0 版本更新说明：
---------------------------
+Version 2.24.6.0 Updates:
+------------------------------------
 
-- 新增了DWM模型类型
-- 新增了自定义训练标签功能，可以一键去掉不想要训练的标签
-- 新增了训练剩余时间显示，可以帮助您更好的掌握训练所需的时间
-- 新增了数据集的搜索和筛选功能，可以根据文件名进行搜索，或者训练集，测试集，验证集进行筛选
-- 新增了自定义标签颜色，现在可以随意更改标签以及标注轮廓的颜色显示
-- 新增了自动/手动数据集管理方式，可以选择任意图片加入训练，测试或者验证集，也可以自动分配
-- 新增了通过2D工业相机收集图像的功能，需要下载DaoAI Preview软件，并通过局域网连接，即可实时采集相机的数据，用于标注或者推理
-- 新增了智能标注的三种边缘模式，简单，正常，和复制。对应不同的边缘细节
-- 新增了标签选择器的拖拽功能，以往该窗口可能会阻挡标注区域，现在可以自由拖拽，避免标注时的遮挡
-- 新增了高分辨率图像切片标注功能，可以将图片的切割后再标注，这样能更好的标注图片中的细节
-- 新增了高分辨率图像切片预处理，可以将图片的切割代替压缩，在训练时保留完整的图像细节
-- 新增了标注快捷键的提示，帮助用户快速的了解标注快捷键
-- 新增了推理工作区的置信度调节，再查看验证集时可以更好的查看模型的在不同置信度的表现
+- Added DWM model type.
+- Added custom training label feature, allowing you to remove unwanted training labels with one click.
+- Added display of remaining training time to help you better manage the time required for training.
+- Added search and filter functions for datasets, allowing you to search by file name or filter by training set, test set, or validation set.
+- Added custom label color options, enabling you to change the color display of labels and annotation outlines.
+- Added automatic/manual dataset management options, allowing you to choose any image for training, testing, or validation sets, or let it be automatically assigned.
+- Added functionality to collect images through a 2D industrial camera. Download the DaoAI Preview software and connect via LAN to collect camera data in real-time for annotation or inference.
+- Added three edge modes for smart annotation: Simple, Normal, and Copy, each corresponding to different edge details.
+- Added drag-and-drop functionality for label selectors. Previously, this window might obstruct the annotation area; now it can be freely dragged to avoid blocking during annotation.
+- Added high-resolution image slicing annotation feature, allowing you to annotate after slicing images, which helps in annotating finer details.
+- Added high-resolution image slicing preprocessing, which slices images instead of compressing them, preserving complete image details during training.
+- Added shortcut key hints for annotation, helping users quickly learn the annotation shortcuts.
+- Added confidence adjustment in the dataset prediction page, allowing for better evaluation of model performance at different confidence levels during validation.
 
-细节信息可以通过我们网页右上角的更新日志查看
+Detailed information can be viewed in the update log at the top right corner of our website.
+
+
 
 .. image:: images/changelog.png
     :width: 800

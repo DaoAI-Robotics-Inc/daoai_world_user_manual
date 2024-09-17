@@ -1,4 +1,4 @@
-选择模型
+Select a Model
 =============================
 
 .. toctree::
@@ -16,56 +16,56 @@
     playground/index
 
 
-DaoAI World 支持的模型有：
+DaoAI World supports the following models:
 
-    - :ref:`实例分割`
-    - :ref:`关键点检测`
-    - :ref:`异常检测`
-    - :ref:`分类检测`
-    - :ref:`目标检测`
-    - :ref:`语义分割`
+    - :ref:`Instance Segmentation`
+    - :ref:`Keypoint Detection`
+    - :ref:`Anomaly Detection`
+    - :ref:`Image Classification`
+    - :ref:`Object Detection`
+    - :ref:`Semantic Segmentation`
     - :ref:`OCR`
 
-**该如何选择模型？** 不同的模型有它们各自的特点和优势场景，您可以参考以下几点来选择合适的模型
+**How to Choose a Model?** Different models have their own unique features and best-use cases. Here are some points to help you select the right model:
 
-- 检测图像中的物体：
+- Detecting objects in an image:
 
-    - :ref:`目标检测` : 检测物体的 **类型** 和 **边界框** , 当您只需要检测图片中有无目标物体，就可以使用该模型。适用的场景有：检测道路上车辆的数量，检测工件上的螺丝是否安装或缺失，检测工人是否佩戴头盔。
+    - :ref:`Object Detection` : Detects the **type** and **bounding box** of an object. Use this model when you need to detect the presence of objects in an image. Example scenarios: detecting the number of vehicles on the road, checking if screws are installed or missing in a part, detecting whether workers are wearing helmets.
         
         .. image:: images/obj.png
             :scale: 100%
 
-    - :ref:`实例分割`: 检测物体的 **类型** 和 **外轮廓** , 当您需要检测图片中有无目标物体，和物体的外轮廓时，就可以使用该模型。适用的场景有：检测包裹的位置和面积，检测并定位箱内的工件，分类同一张图片中不同型号的螺丝。
+    - :ref:`Instance Segmentation` : Detects the **type** and **mask** of an object. Use this model when you need to detect the presence of objects and their masks. Example scenarios: identifying the position and area of a package, locating parts inside a box, or classifying different types of screws in one image.
         
         .. image:: images/insseg.png
             :scale: 100%
             
-    - :ref:`关键点检测` : 检测物体的 **类型** ， **外轮廓** 和 **姿态（关键点）** ， 当您需要实例分割的功能，外加物体上的关键点检测时，就可以使用该模型。适用的场景有：检测运动员的身体姿态，定位物体当前的位置以及旋转角度，
+    - :ref:`Keypoint Detection` : Detects the **type** , **mask** , and **keypoints/pose** of an object. Use this model when you need instance segmentation with additional keypoint detection. Example scenarios: detecting the posture of athletes, determining the current position and rotation of an object.
         
         .. image:: images/kp.png
             :scale: 100%
             
-- 图像分类    
-    - :ref:`分类检测` : 检测图片的 **类别** ， 当您需要将图片分类时，就可以使用该模型。适用的场景有：分类产品的型号，检测特定螺丝孔是否正确安装，x光片的疾病类型检测。
+- Image Classification:    
+    - :ref:`Classification Detection` : Detects the **category** of an image. Use this model when you need to classify images. Example scenarios: classifying product models, checking if specific screw holes are installed correctly, diagnosing diseases from X-rays.
         
         .. image:: images/class.png
             :scale: 100%
 
-- 检测物体异常状态、物体表面缺陷
+- Detecting anomalies or surface defects on objects:
     
-    - :ref:`异常检测` : 检测图片中的异常区域的 **外轮廓** 当您需要检测图片中的异常区域时，就可以使用该模型。适用的场景有：工件表面缺陷检测，焊锡缺陷检测，锂电池表面划痕检测。
+    - :ref:`Anomaly Detection` : Detects the **mask** of abnormal areas in an image. Use this model when you need to detect abnormal regions in an image. Example scenarios: detecting surface defects on parts, soldering defects, scratches on lithium batteries.
         
         .. image:: images/ano.png
             :scale: 100%
 
-    - :ref:`语义分割` : 检测图片中的异常区域的 **类型** 和 **外轮廓**  当您需要检测图片中的异常区域时，并且需要分类异常类型，就可以使用该模型。适用的场景有：工件表面多种异常检测，芯片上的元器件是否正确安装。
+    - :ref:`Semantic Segmentation` : Detects the **type** and **mask** of abnormal areas in an image. Use this model when you need to detect and classify abnormal areas in an image. Example scenarios: detecting multiple types of anomalies on part surfaces, ensuring components on a chip are installed correctly.
         
         .. image:: images/sem.png
             :scale: 100%
 
-- 检测图片中的文字
+- Detecting text in images:
 
-    - :ref:`OCR` : 检测图片中的 **文字** 当您需要提取出图片中的文字，字母，符号时，就可以适用该模型。
+    - :ref:`OCR` : Detects **text** in images. Use this model when you need to extract text, letters, or symbols from an image.
         
         .. image:: images/ocr.png
             :scale: 100%

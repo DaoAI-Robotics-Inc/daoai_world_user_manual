@@ -1,35 +1,41 @@
-开始一个项目
+Create a Project
 ==============================
 
 
-在 **DaoAI World** 中一个项目理应包含需要被标注的图片。并且所有同类型的标注图片只存在同个项目内。图像被标注完成后，可以用它们可以生成一个包含时间和标注内容的训练集，并可以用你选择的配置进行扩充和处理。
+In **DaoAI World**, a project should include images that need to be annotated. |br|
+All images requiring the same type of annotation should be grouped within the same project. |br|
+Once images have been annotated, they can be used to create a training set that includes time and annotation content. |br|
+This set can then be expanded and processed using your chosen configurations. |br|
 
 
+Creating a Project
+---------------------
 
-创建项目
------------------
-
-    首先,进入到DaoAi World首页,然后,点击"创建新项目":
+    First, go to the DaoAI World homepage, then click "Create New Project":
 
         .. image:: images/create_project.png
             :width: 800
             :align: center
 
-    在弹出的窗口中填写项目的相关信息：
+    In the pop-up window, fill in the relevant project information:
 
-    1. 选择项目类型，更多请见 :ref:`模型`
-    2. 添加项目名称，此名称应具有唯一性，同一个账户中不应出现相同命名的项目
-    3. 点击创建项目
+    1. Select the project type. For more details, see :ref:`Select a Model` . 
+    2. Add a project name. This name must be unique, and no two projects within the same account should have the same name.
+    3. Click "Create Project".
 
-    在新的窗口中设定项目的类别标签信息：
+    In the new window, set the project's category label information:
         .. image:: images/create_project1.png
             :width: 800
             :align: center
 
-    在这里，根据所拥有的数据集不同，可以选择添加数据的类别标签信息，或点击 **跳过并创建空项目** 以使用已有类别标签的数据集，或随后再添加类别标签信息。
-    
-    完成类别信息添加后，点击 **创建项目** 以完成项目的创建。
+    Here, depending on the dataset you have, you can choose to add category label information for the data,  |br|
+    or click Skip and Create an Empty Project to use a dataset with existing category labels,  |br|
+    or add category label information later. 
 
 
+    After completing the category information setup, click **Create Project** to finalize the project creation.
 
 
+.. |br| raw:: html
+
+      <br>
