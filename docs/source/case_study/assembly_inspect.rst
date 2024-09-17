@@ -1,21 +1,20 @@
-组装检测
--------------
+Assembly Detection
+-------------------
 
-在这个项目中 我们需要检测以下工件是否正确的组装：是否有全部的螺丝：4个
-
+In this project, we need to verify whether the assembly of the following parts is correct by checking if all required screws are present. Specifically, we need to detect if there are 4 screws in total.
     .. image:: images/shanghengliang.png
         :scale: 100%
 
 
-分析图片后 我们可以知道：
+After analyzing the images, we can determine that:
 
-1. 图像中有若干螺丝孔，有些没有安装螺丝，需要检测安装螺丝的有无或者数量
+1. There are several screw holes in the image, some of which are missing screws. We need to detect both the presence of screws and their quantity.
 
-对象检测模型可以满足我们的需求。
+An object detection model can fulfill our requirements. 
 
     .. image:: images/shanghengliang_label.png
         :scale: 70%
         
-使用边界框框出没有安装螺丝的孔。
+By using bounding boxes to highlight the holes without screws, we can effectively identify missing screws.
 
-训练并部署后，我们就可以轻松识别是否有为安装的孔，以及有几个螺丝未安装。
+Once trained and deployed, the model will allow us to easily recognize which holes are missing screws and determine how many screws are not installed.

@@ -1,22 +1,24 @@
-仪表监测
+Meter Reading
 -------------
 
-在这个项目中，需要从不同角度检测图片中的仪表的读数。
+In this project, the task is to detect the readings of a meter from images captured from different angles.
 
     .. image:: images/meter.png
         :scale: 100%
 
 
-分析图片后 我们可以知道：
+After analyzing the images, we can determine that:
 
-1. 需要读取指针在图表中的精确位置：需要可以提供精确位置的模型： 实例分割 或 关键点检测
-2. 仅需要判断指针的位置，不存在正反面等特殊姿态：只需要一个标签
+1. To accurately read the pointer’s position on the meter, you’ll need a model that provides precise location data, such as instance segmentation or keypoint detection.
+2. Since only the pointer’s position needs to be determined and there are no special orientations (e.g., front/back), a single label is sufficient for this task.
 
-由于关键点检测的标注更复杂一些，所以使用实例分割模型。
+
+Since keypoint detection involves more complex annotations, we will use an instance segmentation model for this task.
 
     .. image:: images/meter_label.png
         :scale: 60%
 
-这里使用多边形标注出指针的位置
 
-训练并部署后，我们就可以轻松识别场景中的指针位置，并使用其它检测算法，判断指针的角度和读数。
+Since keypoint detection involves more complex annotations, we will use an instance segmentation model for this task.
+
+After training and deployment, we will be able to easily identify the pointer's position in the scene. We can then use other detection algorithms to determine the pointer’s angle and reading.

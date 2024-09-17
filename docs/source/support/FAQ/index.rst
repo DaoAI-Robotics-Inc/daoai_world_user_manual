@@ -1,35 +1,35 @@
-常见问题 
-===========
+Frequently Asked Questions
+============================
 
 .. contents::
     :local:
 
-Python Linux/Jetson SDK 运行时报错 ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+Python Linux/Jetson SDK Runtime Error ImportError: libGL.so.1: cannot open shared object file: No such file or directory
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-    如果您使用的是无界面应用，可能会看到以下报错：
+    If you're using headless application, you might encounter the following error:
 
     .. code-block::
 
         ImportError: libGL.so.1: cannot open shared object file: No such file or directory
 
-    请运行以下命令 安装 opencv-python-headless
+    To resolve this, run the following command to install ``opencv-python-headless``
     
     .. code-block::
 
         pip install opencv-python-headless
 
 
-Python Linux/Jetson SDK 运行时报错 ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
+Python Linux/Jetson SDK Runtime Error ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-    如果您看到以下报错
+    If you see the following error:
 
     .. code-block::
 
         ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
 
-    请运行以下命令 安装 libglib2.0-0
+    Run the following commands to install ``libglib2.0-0``
     
     .. code-block::
 
@@ -38,15 +38,15 @@ Python Linux/Jetson SDK 运行时报错 ImportError: libgthread-2.0.so.0: cannot
 
 
 
-DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external command
+DW_SDK Error licensemanger_cli.exe is not rcognized as an internal or external command
 ----------------------------------------------------------------------------------------------------------------------------
 
-    如果在运行DL SDK项目时遇到以下的报错，这说明软件的licensemanager_cli.exe 和 machine.lic 没有在正确的位置    
+    If you encounter the following error when running a DL SDK project, it means that ``licensemanager_cli.exe`` and ``machine.lic`` are not in the correct location:
 
     .. image:: images/licensemanager_notfound.png
         :align: center
 
-    需要打开vs的项目设置，找到Debugging设置中的 Working Directory 路径，默认为项目文件的文件夹。然后需要将licensemanger_cli.exe 同license.lic文件复制到该位置。
+    You need to open the project's settings in Visual Studio, navigate to the Debugging settings, and check the ``Working Directory`` path, which defaults to the project's folder. Copy ``licensemanger_cli.exe`` and ``license.lic`` file to this directory.
 
     .. image:: images/working_dir.png
         :align: center
@@ -54,43 +54,43 @@ DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external c
     .. image:: images/move.png
         :align: center
 
-    如果使用的是Build后的exe, 则需要将licensemanger_cli.exe 同license.lic文件放置于exe的同目录内。
+    If you're using the built exe, place both ``licensemanger_cli.exe`` and ``license.lic`` in the same directory as the executable.
 
-    重新运行项目即可解决。如果没有有效的license文件，请见下一条
+    Re-running the project should resolve the issue. If you don't have a valid license file, please see the next section.
 
 
-图片上传后，在标注页面打开是全黑的图片
---------------------------------------------------
+Uploaded images appear completely black in the annotation page
+---------------------------------------------------------------
 
     .. image:: images/invalid_images.png
         :align: center
 
-    上传图片时，DaoAI World 会对上传的数据进行检查和验证，部分图片可能会出现上传失败(如上图)。这是因为图片可能出现了损坏，建议重新采集图片。或者使用以下的方式尝试：
+    When uploading images, DaoAI World checks and validates the data. Some images may fail to upload (as shown above). This might be due to corrupted images. You are advised to re-capture the images or try the following:
 
-方法1：尝试修复损坏数据
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Attempt to repair the corrupted data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    使用 **XnView MP** 图片工具， `下载连接 <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EWlgNZq_aBNFuomgwXGDx_QBzG2SBuqYFRd724qvd1TJXw?e=33ebHp>`_ 
+    Use the **XnView MP**  image tool, which you can download from the following link: `XnView MP <https://daoairoboticsinc-my.sharepoint.com/:u:/g/personal/nrd_daoai_com/EWlgNZq_aBNFuomgwXGDx_QBzG2SBuqYFRd724qvd1TJXw?e=33ebHp>`_ 
 
-    解压文件后，找到 **XnView MP** 图片工具的执行程序，双击运行。
+    Extract the files, find the **XnView MP**  executable, and double-click to run it.
 
     .. image:: images/xnviewmp_exe.png
         :align: center
         :scale: 50%
 
-    左上角 `文件` ， `打开` 选取损坏的图片。
+    Go to ``File`` -> ``Open`` to select the corrupted image.
 
     .. image:: images/xnviewmp_open_file.png
         :align: center
         :scale: 50%
     
-    左上角 `文件` ， `另存为` 保存图片到另外的路径下。
+    Go to ``File`` -> ``Save As`` and save the image to a new location.
 
     .. image:: images/xnviewmp_save_as.png
         :align: center
         :scale: 50%
 
-    将保存好的图片重新上传。
+    Upload the saved image again.
 
     .. image:: images/xnviewmp_upload_success.png
         :align: center
@@ -98,52 +98,50 @@ DW_SDK显示 licensemanger_cli.exe is not rcognized as an internal or external c
 
     
     
-部署后，物体在边缘时 模型推理失败
---------------------------------------------------
+Model inference fails when the object is at the edge
+----------------------------------------------------
     
-    当你发现物体在边缘时，模型无法匹配，报错时。
+    If you find that the model fails to match the object and produces an error when the object is at the edge:
 
     .. image:: images/roi_fail.png
         :align: center
         :scale: 50%
 
 
-    那么请检查以下模型训练时的预处理步骤是否有ROI设置，并且物体出现在了ROI区域以外
+    Check whether the ROI (Region of Interest) setting was applied during model training and if the object appears outside the ROI.
 
     .. image:: images/roi_fail_setting.png
         :align: center
         :scale: 70%
 
     
-    由于感兴趣的区域（ROI）预处理会裁剪掉周围的背景区域，只保留中间的感兴趣的区域; 那么当物体出现在ROI范围之外时，会被当做背景的区域被裁剪掉，也就不会有预测结果了。
+    Since the ROI preprocessing trims background areas and keeps only the area of interest, when an object is outside the ROI, it is considered part of the background and gets trimmed, resulting in no prediction.
 
-    如果您遇到了这种问题，那么您可以考虑：
+    To resolve this issue, consider:
 
-    1. 更新ROI区域，通过重新定义ROI的区域，正确的预留物体可能出现的区域，确保物体只会出现在ROI区域, 并重新训练模型
-    2. 删除ROI预处理设置，并重新训练模型
+    1. Updating the ROI area by redefining the ROI to ensure it covers the area where the object may appear. Then, retrain the model.
+    2. Removing the ROI preprocessing and retraining the model.
 
-    然后您就可以正常的预测在图像边缘的物体了
+    This will allow you to correctly predict objects at the image's edge.
 
     .. image:: images/roi_fail_result.png
         :align: center
         :scale: 50%
 
-模型推理失败 （图片分辨率不同）
---------------------------------------------------
+Model inference fails due to different image resolutions
+------------------------------------------------------------
     
-    当您尝试模型推理时 报错无法推理时，请检查使用时的模型分辨率 是否和训练数据中的分辨率一致。
+    If the model fails during inference, check whether the resolution used during inference matches the resolution of the training data.
 
-    通常来说，模型对分辨率的变化是有一定的适应能力的
+    In general, models can tolerate some changes in resolution. However, if an ROI preprocessing step is involved, the ROI will be based on the original image resolution.
 
-    可是如果增加了ROI预处理步骤，ROI会根据原始图片的分辨率进行切割
+    If you use a much lower resolution image for inference than the one used during training, the entire image may be cropped by the ROI, leading to inference failure.
 
-    如果这时，使用了比训练图片分辨率小很多的图片进行推理，那么整张图片都会被ROI的部分切割, 就会导致图片推理失败。
-
-    **例如** , 训练集中的图片宽8000像素，ROI预处理步骤切割了左右两边各1000像素的背景区域。当您使用一个1000分辨率或以下的图片进行推理时，如下图左上角，预处理步骤将会按照原图的背景进行切割，也就时会把1000点像素删掉，那么这样就会完全将推理的图片删除，导致模型推理失败。
+    For example, if the training images have a width of 8000 pixels and the ROI preprocessing crops 1000 pixels off each side, using a 1000-pixel wide image for inference will result in the ROI cropping out the entire image, causing inference to fail.
 
     .. image:: images/res_fail.JPG
         :align: center
         :scale: 50%
 
 
-    所以请您在使用时 用和训练集图片分辨率一致的图片进行测试和推理
+    Ensure you use images with the same resolution as the training set when testing and inferring.

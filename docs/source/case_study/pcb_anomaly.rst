@@ -1,37 +1,35 @@
-
-
-异常检测：PCB板的焊点异常检测
-----------------------------
+Anomaly Detection: PCB Solder Joint Inspection
+--------------------------------------------------------
 
 .. image:: images/handian.png
     :scale: 30%
 
-在这个项目中 我们需要检测以下PCB板上的点焊是否正确，并且分析工件上是否存在连焊(两个焊点连接)和多焊(锡量太大)两种异常。
+In this project, we need to inspect the solder joints on PCB boards to determine if they are correctly applied. Additionally, we need to analyze the presence of two types of anomalies:
 
-- 首先，根据上方案例 :ref:`异常检测：PCB零件损坏/缺失` 我们可以排除掉异常检测模型，因为图像中含有大量的干扰点，异常检测模型不太适合。
+- Based on the previous example :ref:`Anomaly Detection: PCB Component Damage/Missing` we can exclude the use of anomaly detection models. This is because the images contain numerous interference points, making anomaly detection models less suitable for this task.
 
-- 然后，我们也可以排除掉目标检测模型，因为异常成不规则的区域，无法很好地使用目标检测。
+- Additionally, we can exclude object detection models because anomalies in solder joints often appear as irregular regions, which are not well-suited for traditional object detection methods.
 
-- 那么问题来了，语义模型是否是唯一选择？
+- So the question is, is a semantic segmentation model the only option?
 
-使用语义模型可以很好的分辨是否存在异常，异常出现的时候也能很好识别异常的种类：
+Using a semantic segmentation model can effectively distinguish whether anomalies are present and can also accurately identify the types of anomalies when they occur.
 
 .. image:: images/semantic_seg_training_handian.png
 
-语义分割模型添加了调整图像大小预处理，没有数据加强。一共75张图像，52图像作为训练集。
+The semantic segmentation model includes a preprocessing step for resizing images, but no data augmentation was applied. A total of 75 images were used, with 52 images allocated for the training set.
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/semantic_seg_handian_result.png
 
-语义分割模型的结果相当不错。可是，我们可以看看有没有更好的模型选择？比如：实例分割模型。我们可以把不同的异常标注为不同类别的分割区域，使用实例分割模型去识别。
+The results from the semantic segmentation model are quite good. However, we could explore if there are better model options, such as instance segmentation models. We can label different types of anomalies as separate categories of segmentation regions and use an instance segmentation model to identify them.
 
 .. image:: images/instance_seg_training_handian.png
 
-实例分割模型添加了调整图像大小预处理，没有数据加强。一共32张图像，22图像作为训练集。
+The instance segmentation model includes a preprocessing step for resizing images, but no data augmentation was applied. A total of 32 images were used, with 22 images allocated for the training set.
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/instance_seg_handian_result.png
 
-实例分割模型的结果也是相当不错，相对于语义分割模型来说，实例分割模型只用了更少的数据，训练出相似的效果。由于语义模型是逐像素检测，需要较多的无异常数据进行训练，所以实例分割模型在这能占优。
+The instance segmentation model also performs quite well. Compared to the semantic segmentation model, it achieved similar results with less data. Since semantic segmentation models require more non-anomalous data for pixel-level detection, the instance segmentation model has an advantage in this scenario.

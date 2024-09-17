@@ -1,27 +1,28 @@
-饮料分拣
------------
+Beverage Sorting
+-----------------
 
-在这个项目中，有各种饮料，分布在4个箱子里，我们需要分类饮料的种类以及抓取他们，只要知道一个物体的大致位置，吸嘴夹具就可以抓起物体。
 
+In this project, there are various beverages distributed across 4 boxes. We need to classify the types of beverages and locate them. As long as we know the approximate location of each object, a suction gripper can be used to pick up the items.
+    
     .. image:: images/snacks.png
         :scale: 100%
 
-分析图片后 我们可以知道：
+After analyzing the images, we can see the following:
 
-1. 总共有5种饮料，不需要区分正反等特殊状态： 则我们需要5种标签
-2. 抓取时不需要区分方向，正反等：不需要使用关键点模型或者方向判断的模型。
+1. There are a total of 5 types of beverages, and there is no need to differentiate between special conditions such as orientation (front/back). Therefore, we need 5 distinct labels for classification.
+2. During the picking process, there is no need to distinguish between orientations or directions (front/back). Therefore, there is no need to use keypoint models or models for directional judgment.
 
-所以简单的实例分割就可以满足我们的需求。
+So, a simple instance segmentation model will be sufficient to meet our needs.
 
     .. image:: images/snack_label.png
         :scale: 60%
 
-这里分别使用了5个标签，分别对应5种饮料，然后使用多边形标注了饮料朝上的一个面，只标注了能够抓取，不被遮挡的物体。
+Here, we use 5 different labels, each corresponding to one of the 5 types of beverages. We annotate the visible, non-occluded surface of the beverage that is facing up using polygons. This approach focuses on annotating the parts of the objects that are accessible for picking.
 
 .. note::
     
-    由于物体侧边在用3d相机拍摄时，点云部分的形状不固定，并且容易出现噪声，从而影响检测的质量。
+    Due to the variable shape of the point cloud data on the object's sides when captured with a 3D camera, and the potential for noise, the quality of detection can be affected.
 
-    只标注上面的一个面就可以在匹配时只处理上方的点云，不用去处理侧边容易出现噪声的部分。
+    By annotating only the top surface of the object, we can focus on processing only the top point cloud during matching, avoiding the noisy side areas.
 
-训练并部署后，我们就可以轻松识别所有可以抓取的饮料。
+After training and deployment, we will be able to easily identify all the beverages that can be picked up.

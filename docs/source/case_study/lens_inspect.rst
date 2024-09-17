@@ -1,17 +1,17 @@
-镜头检测
--------------
+Lenses Quality Control
+-----------------------
 
-在这个项目中 检测镜头的状态，质量是否合格。是否存在缺陷。
+In this project, our goal is to detect the condition of the lenses, assess their quality, and identify any defects.
 
     .. image:: images/lens.png
         :scale: 100%
 
 
-分析图片后 我们可以知道：
+After analyzing the images, we can determine that:
 
-1. 镜片位置一致，存在部分缺陷图片：可以使用缺陷检测或者语义分割模型
+1. The lens positions are consistent, but some images may show defects. For this, we can use anomaly detection or semantic segmentation models to identify and analyze the defects.
 
-由于这里我们不需要区分缺陷的类型，所以缺陷检测可以满足我们的需求。
+Since we don't need to differentiate between types of defects, a defect detection model will meet our needs effectively.
 
     .. image:: images/lens_bad.png
         :scale: 70%
@@ -19,9 +19,10 @@
     .. image:: images/lens_good.png
         :scale: 80%
         
-使用多边形标注出缺陷区域，或者标注为正常。
+Annotate the defect regions using polygons, or label the image as "no defect".
 
 .. note::
-    缺陷检测是使用正常图片进行训练的，需要确保数据集中有半数以上的图片都属于正常标签。
+    
+Anomaly detection models are trained using images of normal conditions. Therefore, it's essential to ensure that more than half of the images in the dataset are labeled as "no defect". This helps the model learn a clear baseline of what constitutes a "no defect" lens and effectively identify deviations.
 
-训练并部署后，我们就可以轻松识别镜片的状态，质量是否合格，缺陷位置等等。
+After training and deployment, we will be able to easily identify the lens condition, assess whether the quality meets standards, locate any defects, and more.

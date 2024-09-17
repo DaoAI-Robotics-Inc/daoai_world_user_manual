@@ -1,96 +1,98 @@
+Anomaly Detection: PCB Component Damage/Missing
+----------------------------------------------------
 
-异常检测：PCB零件损坏/缺失
---------------------------
-
-在这个项目中 我们需要检测以下工件是否正确的组装：PCB板上是否有安装2个电容。
+In this project, we need to verify whether the PCB board has been correctly assembled by checking if 2 capacitors are installed.
 
 .. image:: images/pcb_board.png
         :scale: 25%
 
 
-分析图片后，我们第一反应可能会想要使用异常检测模型：因为我们的应用是寻找PCB板上的异常、缺陷。
+After analyzing the images, our initial inclination might be to use an anomaly detection model since our application involves finding anomalies and defects on the PCB board.
 
-这里我们比较三种模型：异常检测模型、语义分割模型和目标检测模型。
+Here, we compare three types of models: anomaly detection models, semantic segmentation models, and object detection models.
 
 .. hint::
-   目标检测模型也是可以用作检测缺陷和异常的，异常部分就是目标检测模型的 **"目标"** 。
+   Object detection models can also be used to detect defects and anomalies, with the anomalies being treated as the **objects** that the model needs to identify.
 
-1. 异常检测模型，通常用于检测物体的异常和缺陷。
+1. Anomaly detection models are typically used to identify abnormalities and defects in objects.
 
 .. image:: images/anomaly_v1_pcb_version.png
 
+- **v1** : For the anomaly detection model, the first version did not use any preprocessing or data augmentation. A total of 124 images were used, with 78 images allocated for the training set.
 
-- **v1** : 对于异常检测模型，我们第一个版本的模型没有使用任何预处理和数据加强。一共124张图像，78图像作为训练集。
-
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/anomaly_v1_pcb_result.png
 
-异常检测模型过多的把物体表面的区域识别成缺陷，造成这个结果的原因是：PCB板的背景和其他零部件造成了不少的干预。相对于正常的工件，模型检测出很多区域，跟没有缺陷的图像有区别，所以定义该区域为缺陷。
+
+The anomaly detection model identified too many surface areas of the objects as defects. This issue arises because the background of the PCB board and other components introduce significant interference. Compared to normal objects, the model detected many areas that differ from defect-free images, resulting in these regions being classified as defects.
 
 .. image:: images/anomaly_v2_pcb_version.png
 
-- **v2** : 第二版本的模型添加了ROI预处理，把大部分的背景去除掉，只留下PCB板本体，没有数据加强。同样的124张图像，78图像作为训练集。
+- **v2** : The second version of the model included ROI preprocessing, which removed most of the background and left only the PCB board itself. No data augmentation was applied. The same 124 images were used, with 78 images allocated for the training set.
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/anomaly_v2_pcb_result.png
 
-异常检测模型仍然把PCB板表面和电容相似的区域识别成缺陷，造成这个结果的原因是：PCB板上的轮廓和图像比较复杂。相对于正常的工件，模型检测出很多区域，跟没有缺陷的图像有区别，所以定义该区域为缺陷。
+The anomaly detection model still identified areas on the PCB board surface and regions similar to capacitors as defects. This result is due to the complexity of the PCB board's contours and images. Compared to normal objects, the model detected many regions that differed from defect-free images, leading these areas to be classified as defects.
 
 .. image:: images/anomaly_v3_pcb_version.png
 
-- **v3** : 第三版本的模型添加了ROI预处理，并且图像只扣出电容部分，没有数据加强。一共124张图像，78图像作为训练集。
+- **v3** : The third version of the model included ROI preprocessing and focused only on the capacitor portions of the images. No data augmentation was applied. A total of 124 images were used, with 78 images allocated for the training set.
 
-训练图像如下：
+
+The training images are as follows:
 
 .. image:: images/anomaly_v3_pcb_training.png
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/anomaly_v3_pcb_result.png
 
-v3 模型的识别效果总体来说会比前面的 v1 和 v2 好，但是还是能看到异常检测的局限性。同样是容易受到背景的影响，和PCB板上其他部件的影响。
+The performance of the v3 model is generally better than the previous v1 and v2 models, but the limitations of anomaly detection are still evident. It remains susceptible to background interference and the influence of other components on the PCB board.
 
-**异常检测的局限性**
+**Limitations of Anomaly Detection**
 
-- 对于异常检测模型的应用，此模型适合于检测单个目标的表观缺陷，尽量只包含要检测的目标，避免其他目标的变化造成干扰，也会被检测为异常。并且模型会在后台将所有数据缩小到256 x 256,在原始异常缺陷比较小的情况下，进一步缩小，模型更加检测不出来。
+- For anomaly detection models, this approach is suitable for detecting surface defects on single targets. It is important to ensure that only the target of interest is included, avoiding interference from other objects, which could also be detected as anomalies. Additionally, the model reduces all data to 256 x 256 pixels in the background. When the original anomalies are relatively small, further downscaling can make it even more challenging for the model to detect them.
 
-2. 语义分割模型，通常用于检测物体多种类别的缺陷和分割。语义模型是否能够克服异常检测模型的不足？
+2. Semantic segmentation models are typically used for detecting various types of defects and segmenting objects into different categories. Can semantic segmentation overcome the limitations of anomaly detection models?
 
 .. hint::
-    语义分割模型是逐像素预测，意味着模型对于背景或者其他目标的干扰会比较少。
+    Semantic segmentation models perform pixel-level prediction, which means the model is less affected by background or interference from other objects.
 
 .. image:: images/semantic_seg_training.png
 
-- **v4** : 第四版本为语义分割模型添加了调整图像大小预处理，没有数据加强。一共124张图像，86图像作为训练集。
+- **v4** : The fourth version of the model uses semantic segmentation with image resizing preprocessing and no data augmentation. A total of 124 images were used, with 86 images allocated for the training set.
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/semantic_v4_pcb_result.png
 
-语义分割模型很好的找出异常区域，成功克服了背景和PCB板上的干扰，达成了我们的需求。
 
-3. 目标检测模型，可以把异常标注为我们需要的目标，从而让模型寻找是否存在异常，并且能够统计异常的数量。
+The semantic segmentation model effectively identifies anomaly areas, successfully overcoming background and PCB board interference, and meets our requirements.
+
+3. Object detection models can label anomalies as the targets of interest, allowing the model to identify whether anomalies are present and also count the number of anomalies.
 
 .. warning::
-    使用目标检测模型来用于异常检测，通常异常的形状比较规则(方形或者像本案例：圆形)，不需要识别出分割的区域，否则还是需要使用语义分割模型。
+    Using object detection models for anomaly detection is typically effective when the anomalies have regular shapes (e.g., square or, as in this case, circular). This approach doesn't require identifying segmented regions. If precise segmentation of the anomalies is needed, semantic segmentation models would still be necessary.
 
-对于此案例，目标检测模型相对于语义分割模型的优点在于： 
 
-a. 目标相对简单，不需要识别异常的分割形状； 
-b. 目标检测不是逐像素检测，可以使用更少的数据获得相似的效果。
+For this case, the advantages of using an object detection model compared to a semantic segmentation model are:
+
+a. The targets are relatively simple and do not require identifying segmented shapes of anomalies.
+b. Object detection is not pixel-level detection, so it can achieve similar results with less data.
 
 .. image:: images/obj_detection_training.png
 
-- **v5** : 第四版本为目标检测模型添加了调整图像大小预处理，没有数据加强。一共22张图像，15图像作为训练集。
+- **v5** : The v4 of the model includes resizing preprocessing for the object detection model, with no data augmentation applied. A total of 22 images were used, with 15 images allocated for the training set.
 
-测试结果如下：
+The test results are as follows:
 
 .. image:: images/obj_detection_v5_pcb_result.png
 
-目标检测模型很好的找出异常区域，成功克服了背景和PCB板上的干扰，达成了我们的需求。更关键的是，只需要语义分割模型的1/5的数据，却能跟语义分割模型的效果媲美。
+The object detection model effectively identifies anomaly areas, successfully overcoming background and PCB board interference, and meets our requirements. More importantly, it achieves comparable results to the semantic segmentation model with only 1/5 of the data.
 
-**总结**
+**Conclusion**
 
-- 由此可以给出结论：在不增加额外需求的前提下，这个项目应用上，目标检测是最适合这个应用的模型。但是，如果在项目持续发展的时间线下，此PCB板上将来会有新的检测需求，而且新的检测目标为不规则的分割区域：那么选择语义分割模型的话能够更好的兼容将来可能出现的需求。最后，异常检测模型在这种干扰较多的物体上，并不能获得很好的检测结果。
+- From this, the conclusion can be drawn: In this project, under the current requirements, the object detection model is the most suitable choice. However, if future developments in the project involve new detection needs on the PCB board, and these new targets require irregular segmented regions, then a semantic segmentation model would be better suited to accommodate these future requirements. Finally, anomaly detection models are not effective for achieving good results in cases with significant interference from other objects.

@@ -1,26 +1,24 @@
+Smoke Detector Picking
+----------------------
 
-
-烟感器抓取
------------
-
-在这个项目中，需要抓取烟感器并且正面和反面需要使用对应的抓取动作才可以成功抓起，而且需要和物体对应旋转夹具才可以成功抓起。
+In this project, it is necessary to pick up smoke detectors, where the front and back require specific actions to successfully pick them up. Additionally, a rotating fixture corresponding to the object is needed for successful handling.
 
     .. image:: images/smoke.png
         :scale: 100%
 
-分析图片后 我们可以知道：
+After analyzing the images, we can determine:
 
-1. 烟感器需要区分正反：需要2个标签，用于区分正面和反面
-2. 抓取时需要区分旋转：则需要使用关键点，并添加至少2个点，来区分物体旋转姿态。
+1. Smoke detectors need to distinguish between the front and back: Two labels are required to differentiate the front and back.
+2. Picking requires differentiating rotation: Key points are needed, with at least two points to determine the object's rotational orientation.
 
-使用关键点模型就可以满足我们的需求。
+Using a key point model can meet our requirements.
 
     .. image:: images/smoke_label.png
         :scale: 100%
 
-标注时，使用了2个标签，区分正反，然后找到了2处相对独特的特征来标注关键点，并且只标注可以抓取的物体。
+For annoating, two labels were used to distinguish between the front and back. Additionally, two relatively unique features were identified for marking key points, and only the pickable objects were annotated.
 
 .. note::
-    关键点如果标注在特征重复的区域，或者没有特征的区域，则预测效果不佳。
+    If key points are annotated in areas with repeated features or in regions without distinctive features, the prediction results may be poor.
 
-训练并部署后，我们就可以轻松识别所有可以抓取的烟感器，其正反面，和旋转姿态。
+After training and deployment, we can easily identify all pickable smoke detectors, including their front and back, as well as their rotational orientation.

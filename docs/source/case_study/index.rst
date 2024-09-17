@@ -1,7 +1,7 @@
-案例分析
+Case Study
 ==============
 
-本章将通过展示实际项目示例，帮助您了解在真实场景中如何选择模型及标注方法。
+This chapter will showcase real project examples to help you understand how to choose models and annotation methods in real-world scenarios.
 
 .. toctree::
    :maxdepth: 1
@@ -11,6 +11,6 @@
    drink-pick
    lens_inspect
    meter_reading
-   pcb_anomaly
    pcb_inspect
+   pcb_anomaly
    smoke_detector

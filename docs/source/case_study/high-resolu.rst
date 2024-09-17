@@ -1,44 +1,47 @@
-高分辨率图像中的物体分割
-----------------------------
+Instance Segmentation in High-Resolution Images
+--------------------------------------------------------
 
-在这个项目中，我们的目标是检测无人机航拍图片中的牛羊。
+In this project, our goal is to detect cattle and sheep in aerial drone images.
 
     .. image:: images/sheep.png
         :scale: 60%
 
-由于航拍图片通常具有极高的分辨率，例如本例中的图片尺寸为 8192x5460 像素，这样的大图片在模型标注和训练时会带来挑战。
+Since aerial images usually have extremely high resolution—such as the image in this case, which has a resolution of 8192x5460 pixels—such large images pose challenges during model annotation and training.Since aerial images usually have extremely high resolution—such as the image in this case, which has a resolution of 8192x5460 pixels—such large images pose challenges during model annotation and training.
 
-标注高分辨率图像
-~~~~~~~~~~~~~~~~~~~~~~~~~
 
-为了解决这个问题，我们推出了 :ref:`高分辨率图像切分标注` ， 帮助您在大分辨率的图片中完成更精细的标注。
+Annotating High-Resolution Images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To address this issue, we have introduced the :ref:`Large Image Tile Annotation Mode` method, which helps you perform more precise annotations in high-resolution images.
 
     .. image:: images/cut_label2.png
         :scale: 60%
 
-只需要在标注界面点击右上角的 ``···`` ，然后在弹出菜单中 选择切分模式，就可以进入切分模式标注。
 
-训练高分辨率图像
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Simply click on the "···" in the top right corner of the annotation interface, and then select the ``Large Image Tile Annotation Mode`` from the dropdown menu to enter the tiling mode for annotation. This will allow you to efficiently divide and annotate large images.
 
-在训练时可以使用我们的 :ref:`预处理方法` 中的 ``高分辨率图像切片功能`` ，将大分辨率的图片切割成若干小分辨率的图像。这种方法可以保留图像的全部信息，不需要对图片进行压缩，从而在训练中完整地利用图片数据。
+Training High-Resolution Images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+During training, you can use the ``高分辨率图像切片功能`` in :ref:`Preprocessing` . This feature slices large high-resolution images into smaller, lower-resolution sections. This approach preserves all the image's information without requiring compression, allowing the model to fully leverage the image data during training.
     
     .. image:: images/sheep_cut.png
         :scale: 100%
 
-然而，当切割图片时，如果标注出现在切割边缘，可能会导致标注被分割，从而引发一些问题。为了解决这一问题，可以适当增加“叠加比例”参数，通过增加切片之间的重叠区域，确保标注的完整性。
 
-    - 重叠图片区域示例：
+However, when slicing images, annotations that appear at the edges of the slices may get split, leading to potential issues. To address this, you can adjust the "Overlay Ratio" parameter. By increasing the overlap between slices, you can ensure the integrity of the annotations and avoid splitting important objects across slices.
+
+    - Example of Overlay Image Regions:
         .. image:: images/sheep_overlap1.png
             :scale: 80%
 
-    - 切分后的重叠部分 (仅展示了左右重叠)：
+    - Overlay in sliced images (showing left-right overlap only):
         .. image:: images/sheep_overlap2.png
             :scale: 80%
 
-通过这个预处理步骤，我们就可以轻松训练高分辨图像数据，并最终使模型在高分辨率的图片中也可以有最佳的表现。
+This preprocessing step allows us to easily train high-resolution image data, ensuring that the model performs optimally even on high-resolution images.
 
-模型预测图
+Model Prediction Example:
 
     .. image:: images/sheep_result.png
         :scale: 100%
