@@ -1,24 +1,24 @@
-Python Windows 代码示例
+Python Windows Code Example
 -----------------------------------
 
-您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ 里面包含了图片的读取，模型的读取，以及模型的预测和输出。
+You can use the provided `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ which includes image reading, model loading, prediction, and output.
 
-您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考 :ref:`软件许可证` 。
+To run the script, you'll need a valid DaoAI license. If you don't have one, please refer to :ref:`DW SDK License` 
 
-然后运行以下命令就可以运行python脚本
+To execute the Python script, use the following command:
 
 .. code-block:: python
 
     python example.py
 
-您可以通过更改example.py中的文件读取路径来使用不同的图片和深度学习模型。
+You can adjust the file paths in ``example.py`` to use different images and deep learning models.
 
 .. code-block:: python
 
     model_path = "./model.dwm"
     image_path = "./image.png"
 
-您也可以从一个新的python文件开始，那么首先需要导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
+Start by importing the DaoAI World Python Windows SDK 
 
 .. code-block:: python
 
@@ -26,7 +26,7 @@ Python Windows 代码示例
     import sys
     import dlsdk.dlsdk as dlsdk
 
-以下的库可能也会对您有帮助
+and other useful libraries:
 
 .. code-block:: python
 
@@ -35,52 +35,52 @@ Python Windows 代码示例
     import matplotlib.pyplot as plt
 
 
-初始化，读取模型
+Initialize and Load the Model
 
 .. code-block:: python
 
-    #初始化模型
+    # Initialize and Load the Model
     dlsdk.initialize()
     model_path = "./model.dwm"
     model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
 
 
-注意，这里每一个检测任务都有对应的对象：
+Model Objects for Different Tasks
 
 .. code-block:: python
 
-    #实例分割
+    #instance segmentation
     model = dlsdk.InstanceSegmentation(model_path, device=dlsdk.DeviceType.GPU)
 
-    #关键点检测
+    #keypoint detection
     model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
     
-    #图像分类
+    #image classification
     model = dlsdk.Classification(model_path, device=dlsdk.DeviceType.GPU)
     
-    #目标检测
+    #object detection
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
     
-    #异常检测
+    #anomaly detection
     model = dlsdk.AnomalyDetection(model_path, device=dlsdk.DeviceType.GPU)
     
-    #语义分割
+    #semantic segmentation
     model = dlsdk.SemanticSegmentation(model_path, device=dlsdk.DeviceType.GPU)
     
     #OCR
     model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
 
 
-读取图片，这一步可以使用 opencv 来读取， 如果您没有 安装，您可以运行 ``pip install python-opencv`` 来进行安装
+You can use OpenCV to read the image. If OpenCV is not installed, you can install it using ``pip install python-opencv``
 
 .. code-block:: python
 
-    image_path = "./kp1.png" #读取的图片路径
+    image_path = "./kp1.png" # Path to your image file
     img = cv2.imread(image_path)
 
-    daoai_image = dlsdk.Image.from_numpy(img, dlsdk.Image.Type.BGR) #创建 DaoAI Image 
+    daoai_image = dlsdk.Image.from_numpy(img, dlsdk.Image.Type.BGR) # Create DaoAI Image
 
-模型预测，并输出结果为Json文件
+Making Predictions and Outputting Results
 
 .. code-block:: python
 
@@ -90,8 +90,7 @@ Python Windows 代码示例
     with open("output.json", "w") as f:
         f.write(prediction.toJSONString())
 
-您也可以通过其它方法来获取结果信息
-
+Accessing Prediction Results
 
 .. code-block:: python
 

@@ -1,12 +1,12 @@
-C# 代码示例
-===============
+C# Code Examples
+======================
 
-本章会详细介绍DaoAI World SDK中包含的C#代码示例。
+This chapter provides detailed examples of C# code included in the DaoAI World SDK.
 
-引入库
---------------
+Including Libraries
+-----------------------
 
-在C#示例中，我们引入了以下几个库，其中 ``DaoAI.DeepLearningCLI`` 是用于引入DaoAI World SDK的库。
+In the C# example, we include the following libraries, with ``DaoAI.DeepLearningCLI`` being the library for the DaoAI World SDK.
 
 .. code-block:: C#
 
@@ -19,10 +19,10 @@ C# 代码示例
     using DaoAI.DeepLearningCLI;
 
 
-读取图片
------------
+Reading Images
+-----------------
 
-DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D array）。以下是从文件中读取图片的代码部分：
+The model prediction function in the DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Below is the code to read an image from a file:
 
 .. code-block:: C#
 
@@ -46,7 +46,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     }
     
 
-这里做了一个图片的深度拷贝,然后用 `DaoAI.DeepLearningCLI.Image` 函数初始化图像对象以便后续使用：
+Here, we make a deep copy of the image and then use the ``DaoAI.DeepLearningCLI.Image`` function to initialize the image object for later use:
 
 .. code-block:: C#
 
@@ -69,8 +69,8 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         }
     }
 
-加载深度学习模型
--------------------
+Loading Deep Learning Models
+-------------------------------
 
 .. code-block:: C#
 
@@ -80,36 +80,36 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         DaoAI.DeepLearningCLI.Vision.KeypointDetection model = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
 
 
-注意，这里每一个检测任务都有对应的对象：
+Note that each detection task has a corresponding object:
 
 .. code-block:: C#
 
-    //实例分割
+    //Instance Segmentation
     DaoAI.DeepLearningCLI.Vision.InstanceSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.InstanceSegmentation(model_path);
 
-    //关键点检测
+    //Keypoint Detection
     DaoAI.DeepLearningCLI.Vision.KeypointDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
     
-    //图像分类
+    //Image Classification
     DaoAI.DeepLearningCLI.Vision.Classification model(model_path) = new DaoAI.DeepLearningCLI.Vision.Classification(model_path);
     
-    //目标检测
+    //Object Detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
     
-    //异常检测
+    //Anomaly Detection
     DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
-    //语义分割
+    //Semantic Segmentation
     DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
     
     //OCR
     DaoAI.DeepLearningCLI.Vision.OCR model(model_path) = new DaoAI.DeepLearningCLI.Vision.OCR(model_path);
 
 
-使用深度学习模型进行预测
---------------------------
+Using Deep Learning Models for Prediction
+----------------------------------------------
 
-这里定义了 置信度阈值(CONFIDENT_THRESHOLD)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
+Here, we define a confidence threshold (CONFIDENT_THRESHOLD) of 0.5 and call the model.inference() function to perform inference with the model, then use the .toJSONString() method to print the result as JSON.
 
 .. code-block:: C#
 
@@ -118,12 +118,12 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
     Console.WriteLine(model.inference(img, post_params).toJSONString());
 
-返回结果示例
-------------------
+Example of Returned Results
+----------------------------------
 
-以下是实例分割模型预测后返回的结果示例。主要结果包含在 `shapes` 列表中。
+Below is an example of the results returned by the instance segmentation model. The main results are included in the shapes list.
 
-这个结果展示了预测的多边形点（points）、标签（label）以及群组ID（group_id）。这些信息可以用来进一步处理或分析预测的结果。
+This result shows the predicted polygon points, labels, and group IDs. This information can be used for further processing or analysis of the prediction results.
 
 .. code-block:: json
 

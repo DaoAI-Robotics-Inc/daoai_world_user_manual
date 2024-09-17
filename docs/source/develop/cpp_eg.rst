@@ -1,12 +1,13 @@
-C++ 代码示例
-===============
+C++ Code Examples
+=========================
 
-本章会详细介绍DaoAI World SDK中包含的C++代码示例。
+This chapter will provide detailed examples of C++ code included in the DaoAI World SDK.
 
-引入库
---------------
 
-在C++示例中，我们使用了以下三个头文件，其中 ``dlsdk/model.h`` 是用于引入DaoAI World SDK的库。
+Including Libraries
+--------------------------
+
+In the C++ example, we use the following three header files, with ``dlsdk/model.h`` being used to include the DaoAI World SDK library.
 
 .. code-block:: C++
 
@@ -15,12 +16,12 @@ C++ 代码示例
     #include <fstream>
 
 
-读取图片
------------
+Reading Images
+---------------------
 
-DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D array）。以下是从文件中读取图片的函数：
+The model prediction function in the DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Below is a function to read an image from a file:
 
-首先定义文件路径，然后调用函数读取。可以调用daoai_image()方法读取图片。
+First, define the file path, and then call the function to read the image. You can use the daoai_image() method to read the image.
 
 .. code-block:: C++
 
@@ -32,10 +33,11 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 		DaoAI::DeepLearning::Image daoai_image(image_path);
 
 
-加载深度学习模型
--------------------
+Loading Deep Learning Models
+-------------------------------------
 
-首先需要加载模型。DaoAI World 输出的深度学习模型通常是 zip 格式。我们需要创建一个 DaoAI::DeepLearning::Model 对象，然后调用 loadNestedZip 方法来读取 DaoAI World 输出的深度学习模型 zip 文件。
+First, you need to load the model. The deep learning models output by DaoAI World are typically in zip format. 
+You need to create a ``DaoAI::DeepLearning::Model`` object to read the deep learning model zip file output by DaoAI World.
 
 .. code-block:: C++
 
@@ -45,35 +47,36 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         // init model
 		DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
 
-注意，这里每一个检测任务都有对应的对象：
+Note that each detection task has a corresponding object:
+
 
 .. code-block:: C++
 
-    //实例分割
-    DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
+    //Instance Segmentation
+    DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
-    //关键点检测
-    DaoAI::DeepLearning::Vision::KeypointDetection model(model_path);
+    //Keypoint Detection
+    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
     
-    //图像分类
-    DaoAI::DeepLearning::Vision::Classification model(model_path);
+    //Image Classification
+    DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
     
-    //目标检测
-    DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
+    //Object Detection
+    DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //异常检测
-    DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
+    //Anomaly Detection
+    DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //语义分割
-    DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
+    //Semantic Segmentation
+    DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
     //OCR
-    DaoAI::DeepLearning::Vision::OCR model(model_path);
+    DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
-如果尝试加载非对应的模型对象，那么会报错，报错信息中会提示您应该用的模型类型。
+If you attempt to load a model object that does not match, an error will be reported, indicating the correct model type you should use.
 
-使用深度学习模型进行预测
---------------------------
+Using Deep Learning Models for Prediction
+--------------------------------------------------------
 
 .. code-block:: C++
 
@@ -87,37 +90,38 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 		fout << json_string << "\n";
 		fout.close();
 
-注意，这里每一个检测任务返回的结果都有对应的对象：
+Note that each detection task returns results with corresponding objects:
+
 
 .. code-block:: C++
 
-    //实例分割
+    //Instance Segmentation
     DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
-    //关键点检测
+    //Keypoint Detection
     DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
     
-    //图像分类
+    //Image Classification
     DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
     
-    //目标检测
+    //Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //异常检测
+    //Anomaly Detection
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //语义分割
+    //Semantic Segmentation
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
     //OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
-返回结果示例
-------------------
+Example of Returned Results
+------------------------------
 
-以下是实例分割模型预测后返回的结果示例。主要结果包含在 `shapes` 列表中。
+Below is an example of the results returned by the instance segmentation model. The main results are included in the ``shapes`` list.
 
-这个结果展示了预测的多边形点（points）、标签（label）以及群组ID（group_id）。这些信息可以用来进一步处理或分析预测的结果。
+This result shows the predicted polygon points, labels, and group IDs. This information can be used for further processing or analysis of the prediction results.
 
 .. code-block:: json
 
@@ -161,9 +165,9 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     "imageHeight": 1200
     }
 
-``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` 对象 还可以使用 .masks[i].toPolygons() 方法来获取多边形对象。
+The ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` object also provides the .masks[i].toPolygons() method to obtain polygon objects.
 
-或者使用 .masks[i].toImage() 方法 来获取多边形掩膜的图像，您可以使用 openCV 来讲图片写出。
+Alternatively, you can use the ``.masks[i].toImage()`` method to get the image of the polygon mask, which you can then write out using OpenCV.
 
 .. code-block:: C++
 
