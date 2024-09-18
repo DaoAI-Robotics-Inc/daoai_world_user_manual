@@ -1,59 +1,59 @@
-数据集
+Dataset
 ==========
 
-上传数据
+Upload Data
 -----------------
 
-    在项目创建成功之后，可以通过 **选择文件** 或 **选择文件夹** 或 **从其他项目导入** 的方式上传图片数据。上传的图片数据将会被添加到项目中，以供后续的标注工作。
+    After the project is successfully created, you can upload image data by **Select Files** or **Select Folder** or **Import from other project**. The uploaded image data will be added to the project for subsequent annotation work.
 
         .. image:: Images/upload_folder.png
             :width: 800
             :align: center
 
-    数据集支持.jpeg、.jpg、.png 和 .bmp 格式的图片文件, 以及.json格式的标注文件。如果上传的数据中包含.json格式的标注文件，系统会自动读取标注文件中的标注信息，并将其显示在标注信息中。您可以在此查看被识别到的标注信息是否正确，用以确保图片的标注没有出现错误。
+    The dataset supports image files in ``.jpeg``, ``.jpg``, ``.png``, and ``.bmp`` formats, as well as annotation files in .json format. If the uploaded data includes annotation files in .json format, the system will automatically read the annotation information from the files and display it in the annotation section. You can review the recognized annotations to ensure that there are no errors in the image annotations.
     
         .. image:: Images/label_recog.png
             :width: 800
             :align: center
 
         .. warning:: 
-            请注意，由于系统限制，图片大小不能超过50MB。且单次上传图片建议小于1000张，单次上传图片数量过多可能会导致上传失败。
+            Please note that due to system limitations, image file sizes cannot exceed 50MB. It is also recommended to upload fewer than 1000 images at a time, as uploading too many images in a single batch may result in upload failure.
             
 
-标签管理
-~~~~~~~~~~~~~~
+Label Management
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    您可以在类别页面管理项目中的标签
+    You can manage the labels within your project on the **Classes** page.
 
             .. image:: Images/label.png
                 :scale: 60%
                 :align: center
 
-    点击右上角的 ``修改类别`` 可以打开标签编辑窗口，您可以新增或删除标签。
+    Click on the ``Modify Classes`` button in the upper right corner to open the label editing window, where you can add or remove labels.
 
             .. image:: Images/edit_label.png
                 :scale: 80%
                 :align: center
 
-    您可以点击标签边的颜色，来更改标签在项目中的 标签，和外轮廓的显示颜色。
+    You can click on the color next to the label to change the label's display color and the outline color within the project.
 
             .. image:: Images/change_label_color.png
                 :scale: 80%
                 :align: center
 
 
-使用2D相机采集数据
-~~~~~~~~~~~~~~~~~~~~~~~
+Capture images via DaoAI Preview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    如果您的工作场景中已经有架设好的2D相机，您也可以使用DaoAI Preview工具来使用2D相机现场采集数据上传，或者实时拍照测试已训练好的模型。
+    If your work environment already has a set up 2D camera, you can also use the **DaoAI Preview** tool to collect data on-site using the 2D camera for upload, or to take real-time photos to test the already trained model.
 
-    在上传页面，可以点击 DaoAI Preview 的立即下载，然后下载DaoAI Preview
+    On the upload page, you can click "Download Now" under DaoAI Preview to download the DaoAI Preview tool.
 
             .. image:: Images/daoai_preview.png
                 :scale: 60%
                 :align: center
 
-    下载完成后，解压文件，然后打开 DaoAI Preview.exe 
+    After downloading, unzip the file and then open **DaoAI Preview.exe**.
 
             .. image:: Images/daoai_preview2.png
                 :scale: 70%
@@ -63,35 +63,35 @@
                 :scale: 60%
                 :align: center
 
-    然后您可以看到软件界面，此时您还无法找到相机，需要使用 文件夹内附带的 zadig.exe 软件更改相机的驱动。
+    Then, you can see the software interface. At this point, you won’t find the camera yet. You need to use the **zadig.exe** software included in the folder to change the camera driver.
 
-    **使用Zadig更改相机驱动**
+    **Replace camera driver using Zadig**
 
-    打开zadig.exe, 首先点击 options, 勾选 List All Devices
+    Execute **zadig.exe**, click **options**, check the box for **List All Devices**.
 
             .. image:: Images/zadig.png
                 :scale: 80%
                 :align: center
 
-    选择您的相机的设备，然后安装 WinUSB (v6.1.7600) 驱动即可
+    Select your camera device from the list, install the **WinUSB (v6.1.7600)** driver.
 
             .. image:: Images/zadig_2.png
                 :scale: 60%
                 :align: center
 
-    成功更改驱动后，相机即可被DaoAI Preview发现并连接相机，点击刷新，设备列表会自动更新，选择您要连接的相机，并点击 Connect
+    After successfully changing the driver, DaoAI Preview will detect the camera. Click Refresh to update the device list, select your camera, and then click Connect.
 
             .. image:: Images/daoai_preview_ui.png
                 :scale: 80%
                 :align: center
 
-    调整相机的焦距，曝光，增益等，点击采集，即可看到画面。
+    Adjust the camera's focus, exposure, gain, etc., and click **Capture** to view the image.
 
             .. image:: Images/daoai_preview_cap.png
                 :scale: 60%
                 :align: center
 
-    启用远程采集，点击复制网址, 回到DaoAI World, 点击立即连接并复制网址到主机信息栏。
+    Enable remote capture, click **Copy URL**, return to DaoAI World, click Connect Now, and paste the URL into the host information field.
 
             .. image:: Images/daoai_preview_net.png
                 :scale: 70%
@@ -101,134 +101,135 @@
                 :scale: 60%
                 :align: center
 
-    连接成功后，点击 ``通过相机拍摄图像`` 即可采集图像到上传列表。
+    After a successful connection, click ``Capture Image via DaoAI Preview`` to collect images to the upload list.
 
             .. image:: Images/daoai_preview_capture.png
                 :scale: 70%
                 :align: center
 
-    继续点击通过相机拍摄图像 来继续采集，当采集完成后，点击保存并继续，即可上传到项目中。
+    Continue to click ``Capture Image via DaoAI Preview`` to keep collecting images. Once the collection is complete, click ``Save and Continue`` to upload the images to the project.
 
             .. image:: Images/daoai_preview_caped.png
                 :scale: 80%
                 :align: center
 
-标注工具
-------------
+Annotation Tool
+------------------
 
-        在DaoAI World中，您可以使用标注工具对图像进行标注。按照训练项目费雷的不同，您可以使用不同的工具对图像进行标注。
+        In DaoAI World, you can use annotation tools to label images. Depending on the type of training project, you can use different tools to annotate the images.
 
             .. image:: Images/annoTool0.png
                 :scale: 100%
                 :align: center
 
-            #. **拖动工具**
-                * 快捷键：空格
-                * 平移图像或选择/重新定位注释。
-                * 使用方法：单击并拖动图像。
+            #. **Drag Tool**
+                * Shortcut: ``Spacebar``
+                * Pan the image or select/reposition annotations.
+                * How to use: Click and drag the image.
 
-            #. **多边形工具**
-                * 快捷键：P
-                * 自由绘制注释，以获得更精确的形状。
-                * 使用方法：单击以添加点，多边形将按照被添加的点的顺序包围框选区域，点击第一个点封闭多边形以完成多边形添加，或点击完成，最后一个被添加的点会自动与第一个点相连，封闭多边形区域。
+            #. **Polygon Tool**
+                * Shortcut: ``P``
+                * Freehand draw annotations to achieve more precise shapes.
+                * How to use: Click to add points. The polygon will enclose the selected area in the order the points are added. Click the first point to close the polygon or click "Finish" to automatically connect the last point with the first point, closing the polygon.
 
-            #. **智能多边形工具**
-                * 快捷键：S
-                * 使用智能助手绘制多边形。点击对象的中心，然后继续点击以添加或减去区域。
-                * 使用方法：将鼠标移动到对象的中心后，将生成一个淡蓝色的区域框选当前多边形区域，移动鼠标以更改框选区域。点击左键确定多边形区域，继续单击左键将更多区域划分进多边形区域，右键单击将部分区域从多边形中剔除，完成多边形区域框选后，点击保存完成多边形区域标注。
+            #. **Smart Polygon Tool**
+                * Shortcut: ``S``
+                * Smart Polygon Tool assists drawing polygon. Click on the center of the object, then continue clicking to add or subtract areas.
+                * How to use: Move the mouse to the center of the object to generate a light blue area outlining the current polygon region. Move the mouse to adjust the selected area. Click the left mouse button to confirm the polygon area. Continue clicking the left mouse button to add more areas to the polygon region, or right-click to exclude some areas from the polygon. After finishing the polygon area selection, click "Save" to complete the polygon annotation.
 
-            #. **用已有模型辅助标注**
-                * 快捷键：Ctrl+B
-                * 使用训练过的模型对当前数据集进行标注（根据模型的完成度，辅助标注可能会存在标注错误, 标注后需要手动检查标注是否正确）
+            #. **Label Assist Tool**
+                * Shortcut: ``Ctrl+B``
+                * Use the trained model to annotate the current dataset (depending on the model's accuracy, the assisted annotation may contain errors. After annotation, it is necessary to manually check if the annotations are correct).
 
-            #. **重复上一个**
-                * 快捷键：Ctrl+Y
-                * 应用上一个图像上的所有注释（对于视频帧很有用）。
+            #. **Repeat Previous Tool**
+                * Shortcut: ``Ctrl+Y``
+                * Apply all annotations from the previous image (useful for video frames).
 
-            #. **撤销**
-                * 快捷键：Ctrl+Z 
-                * 撤销上一个操作。
+            #. **Undo**
+                * Shortcut: ``Ctrl+Z``
+                * Undo the last action.
 
-            #. **重做**
-                * 快捷键：Ctrl+Shift+Z 
-                * 重做上一个操作
+            #. **Redo**
+                * Shortcut: ``Ctrl+Shift+Z ``
+                * Redo the last action.
                 
-            #. **标记为空**
-                * 快捷键：Ctrl+M 
-                * 当前图像中没有可标注物体。空图像是没有感兴趣的对象的图像。未注释的图像正在等待人工标注。
+            #. **Mark Null**
+                * Shortcut: ``Ctrl+M``
+                * There are no annotatable objects in the current image. An empty image is one without any objects of interest. Unannotated images are awaiting manual annotation.
 
-            您也可以在标注界面的右下角找到 键盘图标 展开快捷键列表
+            
+You can also find the keyboard icon in the lower right corner of the annotation interface to expand the list of keyboard shortcuts.
                 
                 .. image:: Images/hot_key.png
                     :width: 80%
                     :align: center
         
-        在 **异常检测** 中，除了以上标记工具，还提供了 **无损标记** 功能：
+        In **Anomaly Detection**, in addition to the aforementioned annotation tools, a **Mark No Defect** feature is also provided:
             
-            **无损标记**
-                * 将当前图片标注为无损图像，即当前图片中没有异常物体。
+            **Mark No Defect**
+                * Annotate the current image as a lossless image, indicating that there are no anomalous objects in the current image.
     
                 .. image:: Images/annoTool7.png
                     :width: 400
                     :align: center
 
-        在 **物体检测** 中，我们使用 **边界框工具** 替换了 **多边形工具**：
+        In **Object Detection**, we have replaced the **Polygon Tool** with the **Bounding Box Tool**:
 
-            **边界框工具**
-                * 快捷键：B
-                * 用于标注物体的边界框。
-                * 使用方法：单击左键以选择边界框的一角，移动鼠标框选物体，再次单击左键完成物体框选。
+            **Bounding Box Tool**
+                * Shortcut: ``B``
+                * Used to annotate the object's bounding box.
+                * How to use: Click the left mouse button to select one corner of the bounding box, move the mouse to outline the object, and click the left mouse button again to complete the object selection.
 
                 .. image:: Images/annoTool8.png
                     :width: 400
                     :align: center
         
-        在 **分类检测** 中，由于项目对整张图片进行分类，所以在 **分类检测** 中未提供标注工具，直接将标签分配给整张图片即可。
+        In **Classification Detection**, since the project classifies the entire image, no annotation tools are provided. You can directly assign a label to the whole image.
                 
                 .. image:: Images/class_label.png
                     :scale: 100%
                     :align: center
 
-        在 **智能标注** 时，可以选择 简单，平滑，和复制三种智能标注风格, 并且标注时这个页面可以被鼠标拖动，如果标注时被这个窗口挡住，则可以通过移动该窗口来避免阻挡。
+        In **Smart Annotation**, you can choose from three annotation styles: Simple, Smooth, and Copy. Additionally, the annotation window can be dragged with the mouse during the annotation process. If the window obstructs the view while annotating, you can move the window to avoid blocking.
 
                 .. image:: Images/sam_options.png
                     :scale: 100%
                     :align: center
                 
-            - **简单** ：边缘尽可能使用更少的点来绘制简单的掩膜。
+            - **Simple**: Uses as few points as possible to draw a simple mask along the edges.
 
                 .. image:: Images/simple.png
                     :scale: 60%
                     :align: center
                 
-            - **平滑** ：使用合适的点数来绘制边缘，使其尽可能的贴合物体表面并边缘平滑
+            - **Smooth**: Uses an appropriate number of points to trace the edges, making the mask fit the object's surface with smooth edges.
                 .. image:: Images/normal.png
                     :scale: 60%
                     :align: center
             
-            - **复杂** ：使用尽可能多的点数来绘制边缘，使其最大程度贴合物体的表面并保留任何边缘中的细节
+            - **Complex**: Uses as many points as possible to trace the edges, maximizing the mask's fit to the object's surface and preserving any fine details along the edges.
                 .. image:: Images/complex.png
                     :scale: 60%
                     :align: center                    
 
-        各个模型的具体标注方法可参考 :ref:`模型`。
+        The specific annotation methods for each model can be referenced in :ref:`Select a Model`。
 
-高分辨率图像切分标注
-~~~~~~~~~~~~~~~~~~~~~~~~
+Large Image Tile Annotation Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        对于高分辨率图片，智能标注工具有时无法准确贴合物体的边缘。这是因为深度学习模型在推理时通常需要固定的图像分辨率，图像分辨率越大，处理时的压缩越多，从而影响标注的精度。
+        For high-resolution images, the smart annotation tool may sometimes fail to accurately fit the object's edges. This is because deep learning models typically require a fixed image resolution during inference, and the higher the image resolution, the more compression is applied during processing, which affects the annotation accuracy.
 
-        通过高分辨率图像切分标注，图像被切分为更小的区域，从而降低每个区域的分辨率。这使得智能标注工具能够更精确地标注目标物体，提升标注效果。
+        By splitting high-resolution images into smaller regions for annotation, the resolution of each region is reduced. This allows the smart annotation tool to more accurately annotate target objects, improving the overall annotation quality.
 
-        分割标注会将图片先分割，然后在每个小图中标注目标物体，标注完成后，算法会将标注数据整合到原始图片上，实现更精准的大分辨率图片中的物体标注。
+        Segmentation annotation involves first dividing the image into smaller sections, then annotating the target objects within each smaller image. After annotation is complete, the algorithm integrates the annotation data back into the original image, enabling more precise object annotation in high-resolution images.
 
             .. image:: Images/cut_label.png
                 :scale: 60%
                 :align: center
 
-        标注时，可以在右上角选择切分图像的大小以及切分重叠。当物体切分切割到物体部分的时候，就可以通过切分重叠来使相邻的两张图片的其中一张可以完整的看到该物体，然后另一张看不到完整物体的图片就不做标注。
+        During annotation, you can select the size of the image slices and the overlap in the top-right corner. If an object is partially cut by the slicing process, the overlap feature allows one of the adjacent slices to fully capture the object, while the other slice that doesn't contain the full object can be left unannotated.
 
-        左下角可以看到大图分割后的缩略图，并且当前标注的区域有高亮显示，标注完一个区域后，只需要点击下一个区域就可以继续标注。全部标注完成后，就可以正常切换下一张图片继续标注了。
+        In the lower-left corner, you can view a thumbnail of the large image after segmentation, with the currently annotated area highlighted. After completing the annotation for one area, simply click on the next area to continue annotating. Once all annotations are finished, you can proceed to the next image for annotation.
 
             .. image:: Images/cut_label2.png
                 :scale: 60%
@@ -237,27 +238,26 @@
 
 
 
-标注数据管理批次
---------------------
+Annotation Data Management Batches
+--------------------------------------
 
-        当您将一批数据上传到DaoAI World上后，您上传的这批数据会被整合成一个批次。他们是一组图像，您可以在DaoAI World的标注界面中查看，您可以在 **标注中** 
-        列表对每个批次单独进行标注和管理，同时把已经标注完成的批次添加到数据集
+        When you upload a batch of data to DaoAI World, the uploaded data will be organized into a batch. This batch consists of a group of images that you can view in the annotation interface of DaoAI World. In the Annotations list, you can annotate and manage each batch individually and add completed batches to the dataset.
 
         .. image:: Images/manage_unanno.png
             :width: 800
             :align: center
         
-        **批次管理**
+        **Batch Management**
 
-        * 上传未标注的图像后，它们将被分配到"标注中列表中。
-        * 您可以对一批数据进行多次标注，标注完成后，可以点击 ``将已标注的图像添加到数据集`` 把标注好的数据添加到数据集中，批次中任何剩余的未标注的数据将被划分为一个新的批次。
+        * After uploading unannotated images, they will be assigned to the "Annotating" list.
+        * You can annotate a batch of data multiple times. Once the annotation is complete, you can click **Add Annotated into Dataset** to add the annotated data to the dataset. Any remaining unannotated data in the batch will be assigned to a new batch.
 
-        **删除批次**
+        **Delete Batch**
 
         .. warning::
-            请注意，删除是永久性且不可逆转的。您需要确保此操作不会对您接下来的项目造成影响才可以进行删除操作。
+            Please note that deletion is permanent and irreversible. You should ensure that this action will not impact your upcoming projects before proceeding with the deletion.
         
-        您可以通过单击批次右上角的三个点并点击“删除数据集”来删除批次。
+        You can delete a batch by clicking the three dots in the upper right corner of the batch and selecting "Delete Dataset."
 
         .. image:: Images/delete.png
             :width: 600
@@ -265,75 +265,75 @@
 
 
         .. warning::
-            再次提示，删除是永久性且不可逆转的。您需要确保此操作不会对您接下来的项目造成影响才可以进行删除操作。
+            Again, please note that deletion is permanent and irreversible. You must ensure that this action will not impact your upcoming projects before proceeding with the deletion.
 
 
-数据集管理
-----------------
+Dataset Management
+---------------------
 
-搜索数据
-~~~~~~~~~~~
+Search Data
+~~~~~~~~~~~~
 
-    您可以通过上方的搜索栏按名称搜索图片
+    You can search for images by name using the search bar at the top.
 
             .. image:: Images/search.png
                 :width: 800
                 :align: center
 
-    也可以按照训练，验证，测试集来过滤搜索的结果
+    You can also filter the search results by training, validation, or test sets.
 
             .. image:: Images/search_filter.png
                 :width: 800
                 :align: center
 
 
-更改图片为训练集，验证集，测试集
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Change Image to Training, Validation, or Test Set
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    图片的左下方会有图标显示该图片是在训练集，验证集，或者测试集。
+    The lower-left corner of the image will display an icon indicating whether the image is in the training, validation, or test set.
 
-    您可以选中任何图片，并选择将它们添加到训练集，验证集，或者测试集。
+    You can select any image and choose to add it to the training set, validation set, or test set.
 
             .. image:: Images/change_set.png
                 :width: 800
                 :align: center
 
-删除数据
+Remove Data
 ~~~~~~~~~~~~~~~~~~
 
-        在DaoAI World中，您可以删除已经上传的图片。删除图片是一个不可逆的操作，删除后的图片将无法恢复。请谨慎操作。
+        In DaoAI World, you can remove uploaded images. Removing images is an irreversible action, and the removed images cannot be restored. Please proceed with caution.
 
-        您可以在数据集中进行单张或多张图片删除的操作。
+        You can remove single or multiple images from the dataset.
 
-        在数据集页面中，将鼠标移至想要删除的图片上，点击图片右上角以选择图片：
+        On the dataset page, hover over the image you want to remove and click the upper-right corner of the image to select it:
 
             .. image:: Images/deletepng0.png
                 :width: 800
                 :align: center
         
-        然后点击右上角的按钮，在下拉菜单中选择“从项目中移除”，即可移除选择的图片：
+        Then click the button in the upper-right corner and select "Remove from Project" from the dropdown menu to remove the selected images:
 
             .. image:: Images/deletepng1.png
                 :width: 800
                 :align: center
         
-        如果您想要删除多张图片，可以通过同时选择多张图片，然后同时删除它们。
+        If you want to delete multiple images, you can select several images at once and delete them simultaneously.
 
 
-导出数据集
+Export Dataset
 ---------------
 
-        从 DaoAI World 中导出数据。
+        Export Data from DaoAI World.
 
-        您可以随时从 DaoAI World 导出数据。您可以使用 DaoAI World Web 界面导出数据。
+        You can export data from DaoAI World at any time. You can use the DaoAI World web interface to perform the export.
 
-        要导出数据集，首先要点击DaoAI World项目界面的侧栏中的 **数据集**，在数据集界面中点击 **导出数据集** 按钮导出数据。
+        To export a dataset, first click **Images** in the sidebar of the DaoAI World project interface. In the dataset page, click the **Export Dataset** button to export the data.
 
         .. image:: Images/export_data.png
             :width: 800
             :align: center
         
-        在"导出数据集"界面 可以选择将数据下载为文件.zip或使用curl从命令行中下载。
+        In the **Export Dataset** interface, you can choose to download the data as a .zip file or use curl to download it from the command line.
 
         .. image:: Images/export_data_select.png
             :width: 600
