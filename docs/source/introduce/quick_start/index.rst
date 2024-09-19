@@ -206,9 +206,13 @@ Training
     After making your selection, click Continue and Select the label and checkpoint for this training. 
 
     .. image:: images/training.png
-        :width: 800
+        :scale: 70%
         :align: center
     
+    .. image:: images/train_checkpoint.png
+        :scale: 70%
+        :align: center
+
     Then select the **Max Augmentation Size** , then click **Generate and Start Training** to start training.
     
     .. image:: images/training_max_size.png
@@ -227,8 +231,6 @@ Training
     You can then choose to export the model. The exported model can be used with `DaoAI Vision Pilot <http://docs.welinkirt.com/daoai-vision-system-user-manual/chinese-2.24.4.0/index.html>`_ , `DaoAI InspecTRA <http://docs.welinkirt.com/daoai-inspectra-user-manual/chinese-2.24.4.0/index.html>`_ , 
     or the DaoAI World SDK. 
     
-    For details, see :ref:`Development` .
-
     .. image:: images/training_over.png
         :width: 800
         :align: center
