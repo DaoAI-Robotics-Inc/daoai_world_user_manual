@@ -23,7 +23,7 @@ Simply click on the "···" in the top right corner of the annotation interface
 Training High-Resolution Images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-During training, you can use the ``高分辨率图像切片功能`` in :ref:`Preprocessing` . This feature slices large high-resolution images into smaller, lower-resolution sections. This approach preserves all the image's information without requiring compression, allowing the model to fully leverage the image data during training.
+During training, you can use the ``High Resolution Image Slicing`` in :ref:`Preprocessing` . This feature slices large high-resolution images into smaller, lower-resolution sections. This approach preserves all the image's information without requiring compression, allowing the model to fully leverage the image data during training.
     
     .. image:: images/sheep_cut.png
         :scale: 100%

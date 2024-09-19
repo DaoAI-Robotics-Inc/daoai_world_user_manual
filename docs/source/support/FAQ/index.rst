@@ -64,6 +64,7 @@ Uploaded images appear completely black in the annotation page
 
     .. image:: images/invalid_images.png
         :align: center
+        :scale: 50%
 
     When uploading images, DaoAI World checks and validates the data. Some images may fail to upload (as shown above). This might be due to corrupted images. You are advised to re-capture the images or try the following:
 
