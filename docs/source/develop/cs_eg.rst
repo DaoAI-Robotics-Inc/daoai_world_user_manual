@@ -96,10 +96,10 @@ Note that each detection task has a corresponding object:
     //Object Detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
     
-    //Anomaly Detection
+    //Unsupervised Defect Segmentation
     DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
-    //Semantic Segmentation
+    //Supervised Defect Segmentation
     DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
     
     //OCR

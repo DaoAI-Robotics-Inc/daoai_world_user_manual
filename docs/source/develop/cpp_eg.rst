@@ -64,10 +64,10 @@ Note that each detection task has a corresponding object:
     //Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //Anomaly Detection
+    //Unsupervised Defect Segmentation
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //Semantic Segmentation
+    //Supervised Defect Segmentation
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
     //OCR
@@ -107,10 +107,10 @@ Note that each detection task returns results with corresponding objects:
     //Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //Anomaly Detection
+    //Unsupervised Defect Segmentation
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //Semantic Segmentation
+    //Supervised Defect Segmentation
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
     //OCR

@@ -1,4 +1,4 @@
-Anomaly Detection: PCB Solder Joint Inspection
+Unsupervised Defect Segmentation: PCB Solder Joint Inspection
 --------------------------------------------------------
 
 .. image:: images/handian.png
@@ -6,7 +6,7 @@ Anomaly Detection: PCB Solder Joint Inspection
 
 In this project, we need to inspect the solder joints on PCB boards to determine if they are correctly applied. Additionally, we need to analyze the presence of two types of anomalies:
 
-- Based on the previous example :ref:`Anomaly Detection: PCB Component Damage/Missing` we can exclude the use of anomaly detection models. This is because the images contain numerous interference points, making anomaly detection models less suitable for this task.
+- Based on the previous example :ref:`Unsupervised Defect Segmentation: PCB Component Damage/Missing` we can exclude the use of anomaly detection models. This is because the images contain numerous interference points, making anomaly detection models less suitable for this task.
 
 - Additionally, we can exclude object detection models because anomalies in solder joints often appear as irregular regions, which are not well-suited for traditional object detection methods.
 

@@ -1,4 +1,4 @@
-Anomaly Detection: PCB Component Damage/Missing
+Unsupervised Defect Segmentation: PCB Component Damage/Missing
 ----------------------------------------------------
 
 In this project, we need to verify whether the PCB board has been correctly assembled by checking if 2 capacitors are installed.
@@ -52,7 +52,7 @@ The test results are as follows:
 
 The performance of the v3 model is generally better than the previous v1 and v2 models, but the limitations of anomaly detection are still evident. It remains susceptible to background interference and the influence of other components on the PCB board.
 
-**Limitations of Anomaly Detection**
+**Limitations of Unsupervised Defect Segmentation**
 
 - For anomaly detection models, this approach is suitable for detecting surface defects on single targets. It is important to ensure that only the target of interest is included, avoiding interference from other objects, which could also be detected as anomalies. Additionally, the model reduces all data to 256 x 256 pixels in the background. When the original anomalies are relatively small, further downscaling can make it even more challenging for the model to detect them.
 

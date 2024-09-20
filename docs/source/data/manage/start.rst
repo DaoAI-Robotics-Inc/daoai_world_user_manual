@@ -164,7 +164,7 @@ You can also find the keyboard icon in the lower right corner of the annotation 
                     :width: 80%
                     :align: center
         
-        In **Anomaly Detection**, in addition to the aforementioned annotation tools, a **Mark No Defect** feature is also provided:
+        In **Unsupervised Defect Segmentation**, in addition to the aforementioned annotation tools, a **Mark No Defect** feature is also provided:
             
             **Mark No Defect**
                 * Annotate the current image as a lossless image, indicating that there are no anomalous objects in the current image.
