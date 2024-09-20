@@ -304,7 +304,7 @@ available Training modes by model
      - √  
      - √  
      - √
-   * - Semantic Segmentation
+   * - Supervised Defect Segmentation
      - √  
      -  
      - 
@@ -347,11 +347,11 @@ Deep learning is very powerful, but each model has its strengths and specializat
 
 #. If you need to recognize **multiple objects** and require **precise locations** for all objects, but do not need precise object orientation, you are likely looking for: :ref:`Instance Segmentation`.
 #. If you need to recognize **multiple objects**, require **precise locations** for all objects, and the **orientation information** of the objects is very important, you are likely looking for: :ref:`Keypoint Detection`.
-#. If you only need to check the state of a **single type** of object to detect anomalies, without needing precise location and orientation information, you are likely looking for: :ref:`Anomaly Detection`.
+#. If you only need to check the state of a **single type** of object to detect anomalies, without needing precise location and orientation information, you are likely looking for: :ref:`Unsupervised Defect Segmentation`.
 #. If you need to **identify the type** of the current object without needing precise location and orientation information, you likely need :ref:`Image Classification`.
 #. If you need to identify **multiple objects** and their quantities without requiring precise location and orientation information for each object, you likely need :ref:`Object Detection`.
 #. If you need to identify **multiple objects** and their **quantities**, and object **orientation information** is very important, you likely need :ref:`Rotated Object Detection`.
-#. If you only need to check the **status of a single type of object**, identify if it is defective, and need to know the **type of defect**, you likely need :ref:`Semantic Segmentation`.
+#. If you only need to check the **status of a single type of object**, identify if it is defective, and need to know the **type of defect**, you likely need :ref:`Supervised Defect Segmentation`.
 #. If you need to extract text from images, then you are likely to need :ref:`OCR` 。
 
 How to annotate?

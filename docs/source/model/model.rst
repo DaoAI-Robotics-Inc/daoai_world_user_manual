@@ -10,7 +10,6 @@ Select a Model
     ano/index
     class/index
     obj/index
-    rot_obj/index
     semantic/index
     ocr/index
     playground/index
@@ -20,10 +19,10 @@ DaoAI World supports the following models:
 
     - :ref:`Instance Segmentation`
     - :ref:`Keypoint Detection`
-    - :ref:`Anomaly Detection`
+    - :ref:`Unsupervised Defect Segmentation`
     - :ref:`Image Classification`
     - :ref:`Object Detection`
-    - :ref:`Semantic Segmentation`
+    - :ref:`Supervised Defect Segmentation`
     - :ref:`OCR`
 
 **How to Choose a Model?** Different models have their own unique features and best-use cases. Here are some points to help you select the right model:
@@ -53,12 +52,12 @@ DaoAI World supports the following models:
 
 - Detecting anomalies or surface defects on objects:
     
-    - :ref:`Anomaly Detection` : Detects the **mask** of abnormal areas in an image. Use this model when you need to detect abnormal regions in an image. Example scenarios: detecting surface defects on parts, soldering defects, scratches on lithium batteries.
+    - :ref:`Unsupervised Defect Segmentation` : Detects the **mask** of abnormal areas in an image. Use this model when you need to detect abnormal regions in an image. Example scenarios: detecting surface defects on parts, soldering defects, scratches on lithium batteries.
         
         .. image:: images/ano.png
             :scale: 100%
 
-    - :ref:`Semantic Segmentation` : Detects the **type** and **mask** of abnormal areas in an image. Use this model when you need to detect and classify abnormal areas in an image. Example scenarios: detecting multiple types of anomalies on part surfaces, ensuring components on a chip are installed correctly.
+    - :ref:`Supervised Defect Segmentation` : Detects the **type** and **mask** of abnormal areas in an image. Use this model when you need to detect and classify abnormal areas in an image. Example scenarios: detecting multiple types of anomalies on part surfaces, ensuring components on a chip are installed correctly.
         
         .. image:: images/sem.png
             :scale: 100%

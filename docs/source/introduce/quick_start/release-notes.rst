@@ -21,7 +21,7 @@ Version 2.24.6.0 Updates:
 - Added shortcut key hints for annotation, helping users quickly learn the annotation shortcuts.
 - Added confidence adjustment in the dataset prediction page, allowing for better evaluation of model performance at different confidence levels during validation.
 
-Detailed information can be viewed in the update log at the top right corner of our website.
+Detailed information can be viewed in the Change Log at the top right corner of our website.
 
 
 

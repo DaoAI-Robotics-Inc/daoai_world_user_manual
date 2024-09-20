@@ -342,7 +342,7 @@ The Python Linux/Jetson SDK supports the following models:
      - √  
      - √  
      - x  
-   * - Anomaly Detection	
+   * - Unsupervised Defect Segmentation	
      - x
      - x  
      - 
@@ -354,7 +354,7 @@ The Python Linux/Jetson SDK supports the following models:
      - √  
      - √  
      - 
-   * - Semantic Segmentation
+   * - Supervised Defect Segmentation
      - √   
      -  
      - 
