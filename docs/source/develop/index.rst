@@ -562,9 +562,9 @@ SDK
 
 For more detailed information about the SDK, function interfaces, data structures, etc., please refer to the SDK documentation:
 
-`C++ SDK 文档 <../_static/doc_C++/index.html>`_
+`C++ SDK Doc <../_static/doc_C++/index.html>`_
 
-`C# SDK 文档 <../_static/doc_Cs/index.html>`_
+`C# SDK Doc <../_static/doc_Cs/index.html>`_
 
 Code Examples
 ------------------
