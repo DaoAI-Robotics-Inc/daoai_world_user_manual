@@ -11,6 +11,8 @@ var hierarchy =
       [ "DaoAI::DeepLearningCLI::Vision::AnomalyDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_anomaly_detection_result.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::Classification", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::ClassificationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification_result.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::DefectDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_defect_detection.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::DefectDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_defect_detection_result.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::Flag", "struct_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_flag.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::InstanceSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::InstanceSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html", null ],
@@ -20,8 +22,16 @@ var hierarchy =
       [ "DaoAI::DeepLearningCLI::Vision::OCRResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r_result.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::ObjectDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection_result.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::Positioning", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_positioning.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::PositioningResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_positioning_result.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking_result.html", null ],
       [ "DaoAI::DeepLearningCLI::Vision::SemanticSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation.html", null ],
-      [ "DaoAI::DeepLearningCLI::Vision::SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation_result.html", null ]
+      [ "DaoAI::DeepLearningCLI::Vision::SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation_result.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation_result.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html", null ],
+      [ "DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", null ]
     ] ],
     [ "DaoAI::DeepLearningCLI::ModelInfo", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html", null ]
 ];
