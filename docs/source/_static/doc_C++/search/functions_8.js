@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['objectdetection_0',['ObjectDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html#a43dbd056e5a7b40ff1aef3f1b502b77d',1,'DaoAI::DeepLearning::Vision::ObjectDetection::ObjectDetection(const std::filesystem::path &amp;model_file, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html#ad2b8315cf3ecee587754a5da77b8feb5',1,'DaoAI::DeepLearning::Vision::ObjectDetection::ObjectDetection(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]],
-  ['ocr_1',['OCR',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html#a24e2f165ed2482b2c258fee7e18d3d20',1,'DaoAI::DeepLearning::Vision::OCR::OCR(const std::filesystem::path &amp;model_file, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html#a6cd40189ac064ee88176dde18921ec5b',1,'DaoAI::DeepLearning::Vision::OCR::OCR(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]],
-  ['operator_2b_2',['operator+',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a66b4fd4eb8c395850042eb74ab76184f',1,'DaoAI::DeepLearning::Point']]],
-  ['operator_2d_3',['operator-',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a1a83546e7887230ed495b9cd483570de',1,'DaoAI::DeepLearning::Point']]]
+  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a4ffbc0f4b1a3ad8379deaa0f7e838d63',1,'DaoAI::DeepLearning::Box']]],
+  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#aa6882333c7692d15bbd73bd2aaa55447',1,'DaoAI::DeepLearning::Box']]]
 ];

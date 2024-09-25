@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['keypoint_5fdetection_0',['Keypoint_Detection',['../namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada370904a938e581395098283a828f5801',1,'DaoAI::DeepLearning']]],
-  ['keypointdetection_1',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html',1,'DaoAI::DeepLearning::Vision::KeypointDetection'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html#ac2db1a3210bc5124ed33da01e749e065',1,'DaoAI::DeepLearning::Vision::KeypointDetection::KeypointDetection(const std::filesystem::path &amp;model_file, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html#a55633d6dcfb05efb10ce632bd14f914b',1,'DaoAI::DeepLearning::Vision::KeypointDetection::KeypointDetection(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]],
-  ['keypointdetectionresult_2',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html',1,'DaoAI::DeepLearning::Vision']]],
-  ['keypoints_3',['keypoints',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html#af32dc0ed643ae981e34ec4043fa1c7f9',1,'DaoAI::DeepLearning::Vision::KeypointDetectionResult']]]
+  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_1_1_mask.html',1,'DaoAI::DeepLearning']]],
+  ['merge_1',['merge',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ab32a60b2aaff03f4659f9a915a7c5c59',1,'DaoAI::DeepLearning::Box']]],
+  ['model_2',['Model',['../class_dao_a_i_1_1_deep_learning_1_1_model.html',1,'DaoAI::DeepLearning']]],
+  ['modelinfo_3',['ModelInfo',['../struct_dao_a_i_1_1_deep_learning_1_1_model_info.html',1,'DaoAI::DeepLearning']]]
 ];

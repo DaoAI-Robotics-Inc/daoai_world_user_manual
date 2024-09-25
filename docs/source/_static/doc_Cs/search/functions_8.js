@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#adbc0dc3d359443419fcbf93c1491435e',1,'DaoAI::DeepLearningCLI::Mask::Mask(Image^ image)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a77a441c83d6b48c4b22fd94cf717198c',1,'DaoAI::DeepLearningCLI::Mask::Mask(DaoAI::DeepLearning::Mask mask)']]],
-  ['merge_1',['merge',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a2eb701c06a40a604f3e753d92782506f',1,'DaoAI::DeepLearningCLI::Mask']]]
+  ['objectdetection_0',['ObjectDetection',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html#a7a9aeeb8a1b871c1e2f4ed295faf0a13',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetection::ObjectDetection(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html#ab079bb78f83d377d6eabab1461236ed8',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetection::ObjectDetection(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['ocr_1',['OCR',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ab4b386128343a1b2de012ae0b0f58093',1,'DaoAI::DeepLearningCLI::Vision::OCR::OCR(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ae4f07f1d762a483f3e38b2d6e1b5ce3b',1,'DaoAI::DeepLearningCLI::Vision::OCR::OCR(String^ model_file_path, DeviceType device, int device_idx)']]]
 ];

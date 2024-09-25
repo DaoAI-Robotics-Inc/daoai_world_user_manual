@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['semantic_5fsegmentation_0',['Semantic_Segmentation',['../namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b',1,'DaoAI::DeepLearning']]],
-  ['semanticsegmentation_1',['SemanticSegmentation',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html',1,'DaoAI::DeepLearning::Vision::SemanticSegmentation'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html#ae62aaa7c842e8c7b2131f359e0340b03',1,'DaoAI::DeepLearning::Vision::SemanticSegmentation::SemanticSegmentation(const std::filesystem::path &amp;model_file, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html#a2362f9f8822b03686adb3b9711eb9425',1,'DaoAI::DeepLearning::Vision::SemanticSegmentation::SemanticSegmentation(const std::filesystem::path &amp;model_config_path, const std::filesystem::path &amp;model_weights_path, const DeviceType &amp;device=DeviceType::GPU, const int &amp;device_idx=-1)']]],
-  ['semanticsegmentationresult_2',['SemanticSegmentationResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html',1,'DaoAI::DeepLearning::Vision']]],
-  ['sensitivity_5fthreshold_3',['SENSITIVITY_THRESHOLD',['../namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3bea038f452f272c046433d7a25e51e678b8',1,'DaoAI::DeepLearning']]],
-  ['sliceinference_4',['sliceInference',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html#aef1474a4e754c63e0592738e32050e54',1,'DaoAI::DeepLearning::Vision::ObjectDetection::sliceInference()'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation.html#ab8050eb304251a56de337343b971c1d1',1,'DaoAI::DeepLearning::Vision::InstanceSegmentation::sliceInference()']]]
+  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a4ffbc0f4b1a3ad8379deaa0f7e838d63',1,'DaoAI::DeepLearning::Box']]],
+  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#aa6882333c7692d15bbd73bd2aaa55447',1,'DaoAI::DeepLearning::Box']]]
 ];
