@@ -16,9 +16,15 @@
             :width: 800
             :align: center
 
+        .. tip::
+            **从其他项目导入** 的方式现在支持导入多边形标注，自动转化成边界框。
+
+
         .. warning:: 
             请注意，由于系统限制，图片大小不能超过50MB。且单次上传图片建议小于1000张，单次上传图片数量过多可能会导致上传失败。
             
+
+
 
 标签管理
 ~~~~~~~~~~~~~~
@@ -117,6 +123,18 @@
 ------------
 
         在DaoAI World中，您可以使用标注工具对图像进行标注。按照训练项目费雷的不同，您可以使用不同的工具对图像进行标注。
+
+        标注时，可以使用右下角的 **图像显示设置** ，调整图像的显示，让标注更方便。
+
+        .. image:: Images/image_display_setting.png
+                :scale: 100%
+                :align: center
+
+        .. image:: Images/image_display_setting_adjust.png
+                :scale: 100%
+                :align: center
+        
+        常用的标注工具有：
 
             .. image:: Images/annoTool0.png
                 :scale: 100%
