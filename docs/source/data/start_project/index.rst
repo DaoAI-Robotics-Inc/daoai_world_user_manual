@@ -37,3 +37,76 @@
     在这里，根据项目的具体需求，选择OCR模型识别的语言，或者输入特殊字符，用于特殊语言或者文本的识别支持。
 
 
+演示项目
+-----------------
+
+演示项目是从过去的一些DaoAI World项目中精选出来的，可以用于演示或者训练等目的。
+
+.. image:: images/demo_project.png
+    :align: center
+
+|
+
+点击选择想要演示或者是复制的项目，此处我们选择定位模型的 ``Transformer Positioning`` 项目。点击进入后，可以看到项目的详情介绍、图片数量等。
+
+.. image:: images/demo_description.png
+    :align: center
+
+|
+
+点击 ``图像`` 打开图像界面后，可以查看全部数据集，标注详情等。
+
+.. image:: images/demo_image.png
+    :align: center
+
+|
+
+点击 ``健康检查`` 打开数据集健康检查界面，可以查看全部数据的健康检查结果。
+
+.. image:: images/demo_health_check.png
+    :align: center
+
+|
+
+点击 ``模型`` 可以查看模型的训练图表，训练是添加的预处理和数据增强等选项。
+
+.. image:: images/demo_models.png
+    :align: center
+
+|
+
+点击 ``可视化测试`` 可以查看模型的推理结果，上传图片查看推理结果，调整置信度等。
+
+.. image:: images/demo_visualize.png
+    :align: center
+
+|
+
+点击 ``类别``、 ``上传``、 ``标注`` 或者 ``生成``，可以复制该演示项目到自己账户的默认工作空间中。
+
+.. image:: images/demo_copy.png
+    :align: center
+
+|
+
+耐心等待空间复制和设置。
+
+.. image:: images/demo_copy_confirm.png
+    :align: center
+
+|
+
+可以到账户的默认工作空间查看新导入的项目。
+
+.. image:: images/demo_copy_done.png
+    :align: center
+
+|
+
+可以把演示项目中已标注好的数据加入到数据集，或者修改等。
+
+.. image:: images/demo_copied.png
+    :align: center
+
+|
+

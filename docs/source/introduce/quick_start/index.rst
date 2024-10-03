@@ -72,6 +72,25 @@ DaoAI World拥有用户管理功能，每个用户的工作区都是独立的，
         :width: 800
         :align: center
 
+**演示项目**
+
+    .. image:: images/demo_project.png
+        :width: 800
+        :align: center
+
+DaoAI World上演示项目的数据可以用作指导或者拷贝项目数据用于练习。
+
+    .. image:: images/demo_copy.png
+        :width: 800
+        :align: center
+
+点击您想选择的项目后，能看到项目的简介，可以“复制”到自己的工作空间中使用。
+
+    .. image:: images/demo_copied.png
+        :width: 800
+        :align: center
+
+
 **上传数据**
 
 DaoAI World支持上传单张图片(png, jpg, jpeg, bmp)、或者上传一整个文件夹中的所有图片。也可以连带图片的标注数据(.json)文件一起上传，或者直接导入其它创建好的项目中的数据。
