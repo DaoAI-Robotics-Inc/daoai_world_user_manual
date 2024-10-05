@@ -10,6 +10,14 @@
 在验证集里测试模型效果
 ~~~~~~~~~~~~~~~~~~~~~~
 
+    您可以查看到当前图像的推理时间和模型训练的GPU幸好信息。
+
+    .. image:: Images/inference_time_gpu.png
+        :scale: 80%
+        :align: center
+
+|
+
     选择您要测试的模型，然后点击查看测试集。
 
     .. image:: Images/test_set.png
@@ -39,7 +47,6 @@
     .. image:: Images/test_label.png
         :scale: 60%
         :align: center
-
 
 
 上传图片测试模型效果
