@@ -78,6 +78,26 @@ If the data is not already annotated, you can add label information here. Once t
         :width: 800
         :align: center
 
+**Demo Project**
+
+    .. image:: images/demo_project.png
+        :scale: 80%
+        :align: center
+
+DaoAI World can use demo project's data as guidance or for copying into your own projects for practice.
+
+    .. image:: images/demo_copy.png
+        :scale: 80%
+        :align: center
+
+Click on the project you wish to select, you will see an introduction to the project. You can then ``duplicate this project`` it to your own workspace for use.
+
+    .. image:: images/demo_copied.png
+        :scale: 80%
+        :align: center
+
+|
+
 **Upload Data**
 
 DaoAI World supports uploading single images (png, jpg, jpeg, bmp) or uploading all images from a folder. You can also upload annotated data files (.json) together with the images, or directly import data from other pre-existing projects.

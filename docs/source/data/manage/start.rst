@@ -16,6 +16,9 @@ Upload Data
             :width: 800
             :align: center
 
+        .. tip::
+            **Import from other project** supports importing polygon annotations, which are automatically converted into bounding boxes.
+
         .. warning:: 
             Please note that due to system limitations, image file sizes cannot exceed 50MB. It is also recommended to upload fewer than 1000 images at a time, as uploading too many images in a single batch may result in upload failure.
             

@@ -6,9 +6,16 @@ Deploying and Testing the Model in DaoAI World
 
     Once the model training is complete, you can test your model in DaoAI World.
 
-
 Testing the Model on the Validation Set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    You can check the inform of inference time and GPU mode.
+
+    .. image:: Images/inference_time_gpu.png
+            :scale: 100%
+            :align: center
+
+|
 
     Select the model you want to test, then click the ``view test set``.
 
@@ -54,6 +61,23 @@ Upload an image to test the model
     After uploading, the model will perform inference on the uploaded image. Once completed, you can view the model's recognition results in the window. The top right corner will display information such as the number of objects and keypoints detected in the current image.
 
     Additionally, you can adjust the **Confidence Threshold** on the right to filter out recognition results with low confidence levels.
+
+
+View annotations and detection results at the same time
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Click the ``Display both Ground Truth and Model Predictions`` button on top-left corner, user can switch to different display: Ground Truth and Model Predictions.
+
+    .. image:: Images/compare_annotate.png
+        :width: 800
+        :align: center
+
+Click the ``Change Label Style`` button, after changing color user can simultaneously compare the annotation results with the model's predictions.
+
+    .. image:: Images/change_color.png
+        :width: 800
+        :align: center
+
 
 Deploying Models in Other Applications
 ---------------------------------------------

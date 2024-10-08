@@ -88,7 +88,7 @@ preprocessing
         * **High Resolution Image Slicing**
             For ultra-high-resolution images, traditional training methods typically require compressing the images, which can lead to a loss of detail. The **High Resolution Image Slicing** addresses this by cutting the image into smaller chunks instead of compressing it. This approach preserves the complete image information while effectively handling large image data, thereby improving detection accuracy for large images.
 
-            .. image:: images/img_cut.png
+            .. image:: images/img_cut.gif
                 :width: 600
                 :align: center     
 
@@ -266,11 +266,52 @@ After selecting the mode, click **Continue** to proceed to the next step.
         .. image:: images/train_label.png
             :scale: 100%
 
+- Train from Previous Checkpoint：
+    Before starting the training, user can choose to start from one of your previous training runs to speed up training and improve accuracy. If you already successfully trained a model on this project, ``Train from Previous Checkpoint`` is the best option. If you are training a model for the first time or if you want to start from scratch, ``Train from Base Model`` is the best option.
+    
+        .. image:: images/train_checkpoint.png
+            :scale: 100%
 
-Then click **Generate and Start Training** to begin the training process.
+
+Decision Criteria
+-----------------
+
+Some models support decision criteria, which are used to determine whether an image meets a certain standard. Only **Supervised Defect Segmentation** , **Unsupervised Defect Segmentation** , **Object Detection** , **Positioning** , and **Presence Detection** models support this feature. These models can output a **Not Good** or **NG** result for images.
+
+.. image:: images/decision_criteria.png
+    :align: center
+
+The decision criteria interface is as follows: on the left side, you can see the categories, where you can add new categories, delete, or edit existing ones; on the right side, you can find the conditions for the selected category, where you can add, delete, or modify the current conditions.
+
+.. image:: images/decision_ui.png
+    :align: center
+
+
+- ``NG`` standard:
+    For most quality inspections, it is required that the system outputs a determination of whether an object meets the standards. The ``NG/Not Good`` criteria are widely used in quality control. Here, you can set the specific conditions for ``NG`` , including **combined overall movement**, **combined movement along X direction** , **combined movement along Y direction** , **angle of rotation** , and so on.
+        .. image:: images/ng_condition.png
+            :scale: 100%
+            
+    On the left side, click ``+ More Category`` to add a category (green), and click the ``-`` next to the category to delete it(red). On the right side, click ``+ Condition`` to add a condition (green), and click the ``-`` next to the condition to delete it(red).
+        .. image:: images/ng_add_delete.png
+            :scale: 100%
+    
+    As shown in the image below, these are the ``NG`` conditions that can be added for the positioning model.
+        .. image:: images/ng_condition_detailed.png
+            :scale: 100%
+
+    Different models have various conditions that can be set according to their specific requirements.
+        .. image:: images/ng_other_condition.png
+            :scale: 100%
+
+
+Generate
+-----------------
+
+You can select the **Max Argumentation Size** , ranging from ``2X ~ 5X`` , you can adjust the number of times the image is argumented.
 
 .. image:: images/start_train.png
-  :scale: 70%
+  :scale: 80%
 
 
 available Training modes by model
@@ -281,41 +322,56 @@ available Training modes by model
    :header-rows: 1
 
    * - Model Type
-     - Fast Mode
-     - Accurate Mode
-     - Rotated Accurate Mode
-   * - Instance Segmentation
+     - Super Fast
+     - Fast
+     - Accurate
+     - Rotated accurate
+   * - Supervised Defect Segmentation
+     -  
      - √  
-     - √  
-     - √  
-   * - Keypoint
-     - √  
-     - √  
-     - √  
-   * - Anomaly
-     - √  
-     - √  
+     - √ 
+     -  
+   * - Unsupervised Defect Segmentation
+     -   
      - 
-   * - Classification
      - √  
-     - √  
-     - 
+     -     
    * - Object Detection
      - √  
      - √  
+     - √  
+     - √  
+   * - Positioning
+     -   
+     - √  
+     - √  
+     - √  
+   * - Presence Checking
+     - 
      - √
-   * - Supervised Defect Segmentation
-     - √  
-     -  
+     - √
      - 
+   * - Classification
+     -   
+     - √
+     - √
+     -       
    * - OCR
-     - √  
+     -  
+     -  
+     - √
      - 
-     - 
-..    * - 旋转目标检测
-..      - √  
-..      - √  
-..      - 
+   * - Instance Segmentation
+     - √
+     - √
+     - √
+     - √
+   * - Keypoint
+     - √
+     - √
+     - √
+     - √
+
 
 
 Live Training Graphs
@@ -328,6 +384,15 @@ During the training process, you can view the real-time training result graphs o
     :align: center
 
 You can view the estimated remaining training time and the real-time training accuracy.
+
+View Decision Criteria
+------------------------
+
+After training is completed, you can still modify the model's decision criteria.
+
+.. image:: images/decision_change.png
+    :scale: 80%
+    :align: center
 
 
 How to train a good model?
