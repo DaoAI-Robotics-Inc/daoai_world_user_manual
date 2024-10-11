@@ -219,36 +219,36 @@ C# 项目配置
         .. image:: images/browse_assembly.png
             :scale: 100%
 
-.. Python Windows 环境配置
-.. *********************************************
+Python Windows 环境配置
+*********************************************
 
-.. Python Windows SDK wheel 只支持Windows环境
+Python Windows SDK wheel 只支持Windows环境
 
-.. 需要首先安装 **Python 3.10** 
+需要首先安装 **Python 3.10** 
 
-.. 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
+如果您已经安装了Python, 您可以使用以下命令来确认您的版本
 
-.. .. code-block::
+.. code-block::
 
-..     python3 --version
+    python3 --version
 
-.. 根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
 
-.. 或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
+或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
 
-.. 使用以下命令安装wheel文件
+使用以下命令安装wheel文件
 
-.. .. code-block::
+.. code-block::
 
-..     pip install {wheel_file}.whl
+    pip install {wheel_file}.whl
 
-.. 然后您的DaoAI Python Windows SDK 模组就安装完毕了
+然后您的DaoAI Python Windows SDK 模组就安装完毕了
 
-.. 您可以使用以下命令来导入模组。 
+您可以使用以下命令来导入模组。 
 
-.. .. code-block:: python
+.. code-block:: python
 
-..     import dlsdk.dlsdk as dlsdk
+    import dlsdk.dlsdk as dlsdk
 
 .. 您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考 :ref:`软件许可证`
 
