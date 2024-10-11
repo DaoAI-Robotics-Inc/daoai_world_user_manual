@@ -5,24 +5,28 @@ Select a Model
     :maxdepth: 1
     :hidden:
 
+    semantic/index
+    ano/index
+    position/index
+    presence/index
     seg/index
     kp/index
-    ano/index
     class/index
     obj/index
-    semantic/index
     ocr/index
     playground/index
 
 
 DaoAI World supports the following models:
 
+    - :ref:`Supervised Defect Segmentation`
+    - :ref:`Unsupervised Defect Segmentation`
+    - :ref:`Positioning`
+    - :ref:`Presence Detection`
     - :ref:`Instance Segmentation`
     - :ref:`Keypoint Detection`
-    - :ref:`Unsupervised Defect Segmentation`
     - :ref:`Image Classification`
     - :ref:`Object Detection`
-    - :ref:`Supervised Defect Segmentation`
     - :ref:`OCR`
 
 **How to Choose a Model?** Different models have their own unique features and best-use cases. Here are some points to help you select the right model:

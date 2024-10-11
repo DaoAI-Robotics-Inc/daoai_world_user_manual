@@ -57,14 +57,14 @@ Repeat this process for all objects in the scene. If no objects are present in t
 
 While annotating, ensure that the keypoints' positions and order are relatively fixed for optimal model performance.
 
-注意事项
+Notes
 ------------------
 
 1. Use descriptive labels when naming the tags. Descriptive labels significantly reduce the likelihood of annotation errors and facilitate the practical application of the model. Non-descriptive labels are loosely connected to the annotated object, increasing the chance of mistakes and making it harder to quickly determine the accuracy of model predictions.
 
 2. Each tag group in keypoint detection must include a polygon and one or more keypoints. If there are no keypoints in a tag group, the training task may fail.
 
-3. For each annotated polygon, there should be at least 3 keypoints associated with that label. When choosing keypoints, select ones that are representative of the object and easy to identify. Geometric features like circular points, corners, or the center of an object are ideal choices. In general, look for geometric or texture features, or any other shape or pattern characteristics. Avoid selecting flat points with no special features or feature points that are too close to the polygon’s edges. Also, avoid using keypoints that form a straight line, as this can reduce the ability to recognize tilt angles.
+3. For each annotated polygon, there should be at least 3 keypoints associated with that label. When choosing keypoints, select ones that are representative of the object and easy to identify. Geometric features like circular points, corners, or the center of an object are ideal choices. In general, look for geometric or texture features, or any other shape or pattern characteristics. Avoid selecting flat points with no special features or feature points that are too close to the polygon's edges. Also, avoid using keypoints that form a straight line, as this can reduce the ability to recognize tilt angles.
 
 4. Do not annotate objects whose keypoints are obscured by other objects, as the missing keypoints in the tag-keypoint combination will cause the training to crash.
 

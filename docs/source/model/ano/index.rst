@@ -1,7 +1,7 @@
 Unsupervised Defect Segmentation
 ==========================================
 
-**Unsupervised Defect Segmentation** can identify whether an object is in an abnormal state, such as damage or deformation.
+**Unsupervised Defect Segmentation** can identify whether an object is in an abnormal state(NG), such as damage or deformation.
 
     .. image:: Images/ano.png
         :scale: 100%

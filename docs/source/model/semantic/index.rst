@@ -1,7 +1,7 @@
 Supervised Defect Segmentation
 ==========================================
 
-**Supervised Defect Segmentation** can identify whether an object is in an abnormal state, such as damage or deformation. Unlike anomaly detection, semantic segmentation supports detecting multiple types of anomalies.
+**Supervised Defect Segmentation** can identify whether an object is in an abnormal state(NG), such as damage or deformation. Unlike Unsupervised Defect Segmentation, Supervised Defect Segmentation supports detecting multiple types of anomalies.
 
     .. image:: Images/sem.png
         :scale: 100%
@@ -27,7 +27,7 @@ Use Case Scenarios
 The primary use cases for **Supervised Defect Segmentation** are:
 
     1. **Segment Specific Areas** : Identify changes in specific areas. For example, detecting fire lanes; if there is encroachment, the segmented area of the fire lane will change.
-    2. **Segment Abnormal Areas** : Unlike anomaly detection models, which train using only normal data to identify anomalies and distinguish between normal and abnormal states, semantic segmentation models can more precisely identify and segment abnormal areas and types when there are a large number of abnormal images.
+    2. **Segment Abnormal Areas** : Unlike Unsupervised Defect Segmentation models, which train using only normal data to identify anomalies and distinguish between normal and abnormal states, Supervised Defect Segmentation models can more precisely identify and segment abnormal areas and types when there are a large number of abnormal images.
 
 
 Annotation Methods

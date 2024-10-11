@@ -52,8 +52,8 @@ Notes
 3. As with other annotation models, avoid annotating objects that are heavily obscured. Instead, focus on annotating the topmost or most visible objects.
 
 
-练习
---------
+Practice
+----------
 
 Download the `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ with object_detection.zip.
 
