@@ -281,6 +281,74 @@ You can import the module using the following command:
 
 You will need a valid DaoAI license to use it properly. If you don't have a license, please refer to :ref:`DW SDK License`
 
+Local Inference Service
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Local Inference Service allows you to perform model inference and obtain results via local HTTP requests.
+
+    .. image:: images/inf_service.png
+        :scale: 100%
+
+In the installation directory, you will find ``inference_service.exe`` and ``inference_service_gui.exe``.
+
+Double-click ``inference_service.exe`` to launch the inference service in the background. You can find it in the task icons in the bottom-right corner. The ``inference_service_gui.exe`` will open the graphical interface for the service (you need to first run ``inference_service.exe``).
+
+Using the Graphical Interface
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can register and remove your models through the graphical interface.
+
+    .. image:: images/inf_gui.png
+        :scale: 100%
+
+Click **Add Model** to register a model, enter the model name, choose the model path, and select the model type. Click **OK** to register the model.
+
+To remove a model, select a model and click **Delete Model** to remove it.
+
+Using HTTP Requests
+^^^^^^^^^^^^^^^^^^^
+
+You can manage your models and perform model inference via HTTP requests sent to ``localhost:5000``.
+
+There are four available requests, demonstrated here using Postman.
+
+1. **Register a Model:**
+
+    **POST** ``localhost:5000/register``
+
+    .. image:: images/inf_register.png
+        :scale: 100%
+
+    This command registers a local model to the inference service for later use.
+
+2. **List Models:**
+
+    **GET** ``localhost:5000/list``
+
+    .. image:: images/inf_list.png
+        :scale: 100%
+
+    This command lists all registered models.
+
+3. **Model Inference:**
+
+    **POST** ``localhost:5000/inference``
+
+    .. image:: images/inf_inf.png
+        :scale: 100%
+
+    This command specifies a model and a local image path, then retrieves the inference result for the specified image.
+
+4. **Delete a Model:**
+
+    **DELETE** ``localhost:5000/delete``
+
+    .. image:: images/inf_del.png
+        :scale: 100%
+
+    This command removes the specified model from the inference service (it does not delete the local model file).
+
+
 .. Python Linux/Jetson Configuration
 .. -----------------------------------
 

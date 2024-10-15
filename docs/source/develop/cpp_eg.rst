@@ -54,26 +54,26 @@ Note that each detection task has a corresponding object:
 .. code-block:: C++
 
     //Instance Segmentation
-    DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
+    DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
 
     //Keypoint Detection
-    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
-    
-    //Image Classification
-    DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
-    
-    //Object Detection
-    DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
-    
-    //Unsupervised Defect Segmentation
-    DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
-    
-    //Supervised Defect Segmentation
-    DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
-    
-    //OCR
-    DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
+    DaoAI::DeepLearning::Vision::KeypointDetection model(model_path);
 
+    //Image Classification
+    DaoAI::DeepLearning::Vision::Classification model(model_path);
+
+    //Object Detection
+    DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
+
+    //Unsupervised Defect Segmentation
+    DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
+
+    //Supervised Defect Segmentation
+    DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
+
+    //OCR
+    DaoAI::DeepLearning::Vision::OCR model(model_path);
+    
     //Positioning (Only Available in Industrial Version)
     DaoAI::DeepLearning::Vision::Positioning model(model_path);
 
