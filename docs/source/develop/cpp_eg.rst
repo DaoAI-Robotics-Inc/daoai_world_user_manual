@@ -85,7 +85,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 .. code-block:: C++
 
 		// get inference
-		DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
+		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
 		//std::vector<DaoAI::DeepLearning::Polygon> polygons = prediction.masks[1].toPolygons();
 		std::string json_string = prediction.toJSONString(); // 标准输出的Json

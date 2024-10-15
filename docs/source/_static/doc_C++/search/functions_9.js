@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['y1_0',['y1',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ade7b9dfd8525342d6d9c3ca753ea6b72',1,'DaoAI::DeepLearning::Box']]],
-  ['y2_1',['y2',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ac4dcc803022a9184cc87e7b492e5a640',1,'DaoAI::DeepLearning::Box']]]
+  ['point_0',['Point',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a8fdd1bdbf227a467fec8d567a8b1bc41',1,'DaoAI::DeepLearning::Point::Point(const float &amp;x, const float &amp;y, const float &amp;confidence=0)'],['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a6718e134678bfdd56f842aab4712728b',1,'DaoAI::DeepLearning::Point::Point()']]],
+  ['polygon_1',['Polygon',['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html#a443aaa1ad86c1c3e4c8031ef4b19a5af',1,'DaoAI::DeepLearning::Polygon::Polygon(const std::vector&lt; Point &gt; &amp;points)'],['../class_dao_a_i_1_1_deep_learning_1_1_polygon.html#a4def829dac6267e284310d8fdf144b33',1,'DaoAI::DeepLearning::Polygon::Polygon()']]],
+  ['positioningresult_2',['PositioningResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html#af1176c1828f85e3fa4064b68c2651f0f',1,'DaoAI::DeepLearning::Vision::PositioningResult::PositioningResult()'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html#ae104edd7cdf7bc18c318e5bc0666d458',1,'DaoAI::DeepLearning::Vision::PositioningResult::PositioningResult(const KeypointDetectionResult &amp;keypoint_result)']]],
+  ['presencecheckingresult_3',['PresenceCheckingResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html#ae3c034802912396c3a67bc8899a7cfc2',1,'DaoAI::DeepLearning::Vision::PresenceCheckingResult::PresenceCheckingResult()'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html#a6bdc0679d8d686062f0be0804de42414',1,'DaoAI::DeepLearning::Vision::PresenceCheckingResult::PresenceCheckingResult(const ObjectDetectionResult &amp;object_result)']]]
 ];
