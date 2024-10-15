@@ -282,7 +282,7 @@ You can import the module using the following command:
 You will need a valid DaoAI license to use it properly. If you don't have a license, please refer to :ref:`DW SDK License`
 
 Local Inference Service
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Local Inference Service allows you to perform model inference and obtain results via local HTTP requests.
 
@@ -291,10 +291,12 @@ The Local Inference Service allows you to perform model inference and obtain res
 
 In the installation directory, you will find ``inference_service.exe`` and ``inference_service_gui.exe``.
 
-Double-click ``inference_service.exe`` to launch the inference service in the background. You can find it in the task icons in the bottom-right corner. The ``inference_service_gui.exe`` will open the graphical interface for the service (you need to first run ``inference_service.exe``).
+Double-click ``inference_service.exe`` to launch the inference service in the background. You can find it in the task icons in the bottom-right corner. 
+
+The ``inference_service_gui.exe`` will open the graphical interface for the service (you need to first run ``inference_service.exe``).
 
 Using the Graphical Interface
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can register and remove your models through the graphical interface.
 
@@ -306,7 +308,7 @@ Click **Add Model** to register a model, enter the model name, choose the model 
 To remove a model, select a model and click **Delete Model** to remove it.
 
 Using HTTP Requests
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You can manage your models and perform model inference via HTTP requests sent to ``localhost:5000``.
 

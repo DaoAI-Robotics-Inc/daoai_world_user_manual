@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height_0',['height',['../class_dao_a_i_1_1_deep_learning_1_1_image.html#a8cb0bd2fc1e6565221fab29bde444de9',1,'DaoAI::DeepLearning::Image::height'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#a2cba20bd22c59a7c79c2e07bc989c366',1,'DaoAI::DeepLearning::Mask::height']]]
+  ['num_5fkeypoints_0',['num_keypoints',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html#a350ff068d0acbe7eaca3158413755bea',1,'DaoAI::DeepLearningCLI::ModelInfo']]]
 ];

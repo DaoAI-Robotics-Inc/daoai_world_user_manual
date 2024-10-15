@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DaoAI World C# SDK: DaoAI::DeepLearningCLI Namespace Reference</title>
+<title>DaoAI World SDK C#: DaoAI::DeepLearningCLI Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World C# SDK<span id="projectnumber">&#160;2.24.6.0</span>
+   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;Industrial 2.24.7.0</span>
    </div>
   </td>
  </tr>
@@ -125,6 +126,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_polygon.html">Polygon</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_utils.html">Utils</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -137,6 +140,11 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec">Anomaly_Detection</a> = DaoAI::DeepLearning::ModelType::Anomaly_Detection
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b">Semantic_Segmentation</a> = DaoAI::DeepLearning::ModelType::Semantic_Segmentation
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5">OCR</a> = DaoAI::DeepLearning::ModelType::OCR
+, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1">Supervised_Defect_Segmentation</a> = DaoAI::DeepLearning::ModelType::Supervised_Defect_Segmentation
+, <br />
+&#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb">Presence_Checking</a> = DaoAI::DeepLearning::ModelType::Presence_Checking
+, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977">Positioning</a> = DaoAI::DeepLearning::ModelType::Positioning
+, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7">Unsupervised_Defect_Segmentation</a> = DaoAI::DeepLearning::ModelType::Unsupervised_Defect_Segmentation
 <br />
  }</td></tr>
 <tr class="separator:ad531f22ebdafd9782f133a8e83c45390"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +212,10 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec" name="ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec"></a>Anomaly_Detection&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b" name="ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b"></a>Semantic_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5" name="ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5"></a>OCR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1" name="ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1"></a>Supervised_Defect_Segmentation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb" name="ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb"></a>Presence_Checking&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977" name="ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977"></a>Positioning&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7" name="ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7"></a>Unsupervised_Defect_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

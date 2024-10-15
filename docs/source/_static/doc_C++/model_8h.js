@@ -9,6 +9,7 @@ var model_8h =
     [ "DaoAI::DeepLearning::Vision::OCR", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r" ],
     [ "DaoAI::DeepLearning::Vision::AnomalyDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection" ],
     [ "DaoAI::DeepLearning::Vision::Classification", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification" ],
+    [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation" ],
     [ "Parameters", "model_8h.html#a49ab275c6e617b79af150029f1ad0f88", null ],
     [ "ParameterType", "model_8h.html#a4893dffdaa2d5a117558ebe35bae9d5c", null ],
     [ "ModelType", "model_8h.html#aa796b5dd9fd99802b9317668d5522aad", [
@@ -18,7 +19,8 @@ var model_8h =
       [ "Classification", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada5c9335b28e6277ddbe0137f04e5e58a7", null ],
       [ "Anomaly_Detection", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada5a563e0f98eac28aaed38f93538af6ec", null ],
       [ "OCR", "model_8h.html#aa796b5dd9fd99802b9317668d5522aadaf529c51ee65a122778f148485732aee5", null ],
-      [ "Semantic_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ]
+      [ "Semantic_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ],
+      [ "Supervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ]
     ] ],
     [ "PostProcessType", "model_8h.html#a8b7b04378d23cfd27f773b93c265c3be", [
       [ "CONFIDENCE_THRESHOLD", "model_8h.html#a8b7b04378d23cfd27f773b93c265c3beac3a2dfbf113ef3314922cb1f319a08ec", null ],

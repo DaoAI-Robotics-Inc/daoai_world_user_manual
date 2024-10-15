@@ -26,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;2.24.7.0</span>
+   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;Industrial 2.24.7.0</span>
    </div>
   </td>
  </tr>
@@ -102,20 +103,21 @@ $(function(){initNavTree('class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_p
   <div class="headertitle"><div class="title">DaoAI::DeepLearningCLI::Vision::PresenceChecking Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10320665764385431a6bc49aa21226c6" id="r_a10320665764385431a6bc49aa21226c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10320665764385431a6bc49aa21226c6">PresenceChecking</a> (String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)</td></tr>
+<tr class="memitem:a10320665764385431a6bc49aa21226c6" id="r_a10320665764385431a6bc49aa21226c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10320665764385431a6bc49aa21226c6">PresenceChecking</a> (String^ model_config_path, String^ model_weight_path, <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a> device, int device_idx)</td></tr>
 <tr class="memdesc:a10320665764385431a6bc49aa21226c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Construct model specified by its configuration and weight file paths onto the designated device  <br /></td></tr>
 <tr class="separator:a10320665764385431a6bc49aa21226c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97776e6afceac3df9ebf16d53a7c62be" id="r_a97776e6afceac3df9ebf16d53a7c62be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97776e6afceac3df9ebf16d53a7c62be">PresenceChecking</a> (String^ model_file_path, DeviceType device, int device_idx)</td></tr>
+<tr class="memitem:a97776e6afceac3df9ebf16d53a7c62be" id="r_a97776e6afceac3df9ebf16d53a7c62be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97776e6afceac3df9ebf16d53a7c62be">PresenceChecking</a> (String^ model_file_path, <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a> device, int device_idx)</td></tr>
 <tr class="memdesc:a97776e6afceac3df9ebf16d53a7c62be"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Load the model specified by its configuration and weight files from the model directory onto the designated device.  <br /></td></tr>
 <tr class="separator:a97776e6afceac3df9ebf16d53a7c62be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f3b7f4e153294696e0cbbf1914bde7" id="r_a18f3b7f4e153294696e0cbbf1914bde7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking_result.html">PresenceCheckingResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18f3b7f4e153294696e0cbbf1914bde7">inference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image)</td></tr>
 <tr class="memdesc:a18f3b7f4e153294696e0cbbf1914bde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Run inferent on image  <br /></td></tr>
 <tr class="separator:a18f3b7f4e153294696e0cbbf1914bde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd8fc46e06824550f93a0ba4a8192994" id="r_acd8fc46e06824550f93a0ba4a8192994"><td class="memItemLeft" align="right" valign="top"><a id="acd8fc46e06824550f93a0ba4a8192994" name="acd8fc46e06824550f93a0ba4a8192994"></a>
-<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getModelInfo</b> ()</td></tr>
+<tr class="memitem:acd8fc46e06824550f93a0ba4a8192994" id="r_acd8fc46e06824550f93a0ba4a8192994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd8fc46e06824550f93a0ba4a8192994">getModelInfo</a> ()</td></tr>
 <tr class="separator:acd8fc46e06824550f93a0ba4a8192994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -138,7 +140,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">DeviceType</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -152,7 +154,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">model</td><td>config and model weigthts file paths: The absolute or relative path to the model config and model weights. </td></tr>
-    <tr><td class="paramname">device</td><td>either DeviceType::GPU or DeviceType::CPU, which device to load model into </td></tr>
+    <tr><td class="paramname">device</td><td>either <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa52f9ec21735243ad9917cda3ca077d32">DeviceType::GPU</a> or <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d">DeviceType::CPU</a>, which device to load model into </td></tr>
     <tr><td class="paramname">gpu_index</td><td>-1 to use all the gpu available, else can be the index of a specific gpu. This will be ignored if the device type is not GPU </td></tr>
   </table>
   </dd>
@@ -174,7 +176,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">DeviceType</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -188,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">model_directory</td><td>The absolute or relative path to the folder containing model config and model weights files. </td></tr>
-    <tr><td class="paramname">device</td><td>either DeviceType::GPU or DeviceType::CPU, which device to load model into </td></tr>
+    <tr><td class="paramname">device</td><td>either <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa52f9ec21735243ad9917cda3ca077d32">DeviceType::GPU</a> or <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d">DeviceType::CPU</a>, which device to load model into </td></tr>
     <tr><td class="paramname">gpu_index</td><td>-1 to use all the gpu available, else can be the index of a specific gpu. This will be ignored if the device type is not GPU </td></tr>
   </table>
   </dd>
@@ -197,6 +199,23 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd8fc46e06824550f93a0ba4a8192994" name="acd8fc46e06824550f93a0ba4a8192994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd8fc46e06824550f93a0ba4a8192994">&#9670;&#160;</a></span>getModelInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a> DaoAI::DeepLearningCLI::Vision::PresenceChecking::getModelInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a18f3b7f4e153294696e0cbbf1914bde7" name="a18f3b7f4e153294696e0cbbf1914bde7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18f3b7f4e153294696e0cbbf1914bde7">&#9670;&#160;</a></span>inference()</h2>
 
@@ -231,7 +250,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>DaoAI</b></li><li class="navelem"><b>DeepLearningCLI</b></li><li class="navelem"><b>Vision</b></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking.html">PresenceChecking</a></li>
+    <li class="navelem"><a class="el" href="namespace_dao_a_i.html">DaoAI</a></li><li class="navelem"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html">DeepLearningCLI</a></li><li class="navelem"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision.html">Vision</a></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking.html">PresenceChecking</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>

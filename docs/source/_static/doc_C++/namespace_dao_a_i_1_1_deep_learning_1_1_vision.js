@@ -12,6 +12,11 @@ var namespace_dao_a_i_1_1_deep_learning_1_1_vision =
     [ "ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result" ],
     [ "OCR", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r" ],
     [ "OCRResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result" ],
+    [ "PositioningResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result" ],
+    [ "PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result" ],
     [ "SemanticSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation" ],
-    [ "SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result" ]
+    [ "SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result" ],
+    [ "SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation" ],
+    [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result" ],
+    [ "UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result" ]
 ];

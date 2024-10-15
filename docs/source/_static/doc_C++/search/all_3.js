@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['defectdetection_0',['DefectDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_defect_detection.html',1,'DaoAI::DeepLearning::Vision']]],
-  ['defectdetectionresult_1',['DefectDetectionResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_defect_detection_result.html',1,'DaoAI::DeepLearning::Vision']]]
+  ['daoai_0',['DaoAI',['../namespace_dao_a_i.html',1,'']]],
+  ['daoai_3a_3adeeplearning_1',['DeepLearning',['../namespace_dao_a_i_1_1_deep_learning.html',1,'DaoAI']]],
+  ['daoai_3a_3adeeplearning_3a_3autils_2',['Utils',['../namespace_dao_a_i_1_1_deep_learning_1_1_utils.html',1,'DaoAI::DeepLearning']]],
+  ['daoai_3a_3adeeplearning_3a_3avision_3',['Vision',['../namespace_dao_a_i_1_1_deep_learning_1_1_vision.html',1,'DaoAI::DeepLearning']]],
+  ['daoai_5fapi_4',['DAOAI_API',['../_a_p_i___e_x_p_o_r_t_8h.html#a59f837c0dd7bcaca6ae91d0bbc447d12',1,'API_EXPORT.h']]],
+  ['data_5',['data',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a4a2c3fb4c4369433f5dab298ddf9dfea',1,'DaoAI::DeepLearning::Box']]],
+  ['decision_6',['decision',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html#a8e38caf0de92f753a41aa3ca2cfd625f',1,'DaoAI::DeepLearning::Vision::ObjectDetectionResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html#a1dfbee344fd2d95405a9d187cfdfbf5b',1,'DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html#a23b857eaff041ad22af585e5a57b54af',1,'DaoAI::DeepLearning::Vision::PositioningResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#abdb7f5c2c226bef4742b6739a2241d52',1,'DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult::decision']]],
+  ['device_7',['device',['../struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#ac1e2519851af63134cd7ef53a0080fdc',1,'DaoAI::DeepLearning::ModelInfo']]],
+  ['devicetype_8',['DeviceType',['../namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926',1,'DaoAI::DeepLearning']]]
 ];

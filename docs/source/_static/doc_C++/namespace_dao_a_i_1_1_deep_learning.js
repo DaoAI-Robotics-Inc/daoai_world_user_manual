@@ -1,6 +1,18 @@
 var namespace_dao_a_i_1_1_deep_learning =
 [
-    [ "Utils", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html", null ],
+    [ "Utils", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html", [
+      [ "base64Decode", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a82a0e4f9ee590ff354f13bd75aa6af52", null ],
+      [ "base64Encode", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#adec0992a60f8058694faba96f336ca79", null ],
+      [ "base64ImageDecoding", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a879c19b63ec483508d8a12b33c3a77db", null ],
+      [ "base64ImageEncoding", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ac3a4b0541fd1258086ddad523df3bb10", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad37953b81db7e28124d0cbba7467542b", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a1951386ea5dab9b6ba18a80f797e014b", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aeaa36f07bb1714e3c712531a129742a6", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a8e8c92b667ae147f381ce41f3b84e8e0", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aec2b11b39427ea89b06a08c5dd5c1c43", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ae26a5551f17dcbb340d1e1776a039ee2", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ]
+    ] ],
     [ "Vision", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html", "namespace_dao_a_i_1_1_deep_learning_1_1_vision" ],
     [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html", "class_dao_a_i_1_1_deep_learning_1_1_box" ],
     [ "Image", "class_dao_a_i_1_1_deep_learning_1_1_image.html", "class_dao_a_i_1_1_deep_learning_1_1_image" ],
@@ -23,7 +35,8 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "Classification", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada5c9335b28e6277ddbe0137f04e5e58a7", null ],
       [ "Anomaly_Detection", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada5a563e0f98eac28aaed38f93538af6ec", null ],
       [ "OCR", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaf529c51ee65a122778f148485732aee5", null ],
-      [ "Semantic_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ]
+      [ "Semantic_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ],
+      [ "Supervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ]
     ] ],
     [ "PostProcessType", "namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3be", [
       [ "CONFIDENCE_THRESHOLD", "namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3beac3a2dfbf113ef3314922cb1f319a08ec", null ],
