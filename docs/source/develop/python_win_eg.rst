@@ -70,6 +70,11 @@ Model Objects for Different Tasks
     #OCR
     model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
 
+    #Positioning (Only Available in Industrial Version)
+    model = dlsdk.Positioning(model_path, device=dlsdk.DeviceType.GPU)
+
+    #Presence Checking (Only Available in Industrial Version)
+    model = dlsdk.PresenceChecking(model_path, device=dlsdk.DeviceType.GPU)
 
 You can use OpenCV to read the image. If OpenCV is not installed, you can install it using ``pip install python-opencv``
 
@@ -88,7 +93,10 @@ Making Predictions and Outputting Results
     prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
 
     with open("output.json", "w") as f:
-        f.write(prediction.toJSONString())
+        f.write(prediction.toJSONString()) # output regular results in json format
+
+    with open("outputAnnotation.json", "w") as f:
+        f.write(prediction.toAnnotationJSONString()) # output annotation formatted results to JSON string.
 
 Accessing Prediction Results
 

@@ -1,6 +1,17 @@
 Development
 =============
 
+
+SDK Versions
+-----------------
+
+The SDK, like DaoAI World, is available in two editions: **Industrial** and **Enterprise** .
+
+The key difference between the two editions is that the Industrial Edition supports two specific types of models exclusive to it: :ref:`Positioning` and :ref:`Presence Checking` .
+
+In all other aspects, the two editions are identical, with no differences in model usage or performance.
+
+
 DW_SDK Windows Installation Package
 -------------------------------------------
 
@@ -23,7 +34,11 @@ Installation
 
 First, download the `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
 
-    Find the 2.24.6.0 installation package under Windows C++ C# SDK directory as a zip file.
+    Please note that the installation packages are divided into **Enterprise** Edition and **Industrial** Edition. 
+    
+    Please download the SDK corresponding to the version you are using to ensure proper functionality.
+
+    Find the 2.24.7.0 installation package under Windows C++ C# SDK directory as a zip file.
 
     Extract the downloaded zip file, which contains three files: ``dlsdk_2.0_setup.exe`` , ``dlsdk_2.0_setup-1.bin`` , and ``dlsdk_2.0_setup-1.bin`` . Double-click ``dlsdk_2.0_setup.exe`` to begin the installation.
     
@@ -145,9 +160,9 @@ This chapter provides detailed instructions on configuring and using the DaoAI W
 
     First, download the `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=tcEhUe>`_
 
-    - **C++** and **C#** : SDK version 2.24.6.0 under C++ and C# SDK.
-    - **Python Windows** : SDK version 2.24.6.0 under Windows Python SDK.
-    - **Python Linux/Jetson** : SDK version 2.24.6.0 under Linux Jetson Python SDK.
+    - **C++** and **C#** : SDK version 2.24.7.0 under C++ and C# SDK.
+    - **Python Windows** : SDK version 2.24.7.0 under Windows Python SDK.
+    - **Python Linux/Jetson** : SDK version 2.24.7.0 under Linux Jetson Python SDK.
 
     After installing the **C++** and **C#** package, you can find the example projects under the installation path.
 
@@ -244,7 +259,11 @@ If you already have Python installed, use the following command to confirm your 
 
     python3 --version
 
-Based on your Python version, download the 2.24.6.0 wheel file from the  `Download Center <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
+Based on your Python version, download the 2.24.7.0 wheel file from the  `Download Center <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.7.0 版本的 .whl文件
+
+Please note that the installation packages are divided into **Enterprise** Edition and **Industrial** Edition. 
+
+Please download the SDK corresponding to the version you are using to ensure proper functionality.
 
 Install the SDK as follows:
 
@@ -318,9 +337,9 @@ You will need a valid DaoAI license to use it properly. If you don't have a lice
 
 .. Depending on your machine, download the appropriate files from the `Download Center <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhSzNT1zD61Pv8MbPMr_PM8BLRSiHwbywBsRHAEY5ILSiQ?e=DzrN2M>`_  
 
-.. - If you're using a **Linux machine,** download the .whl file from the ``Linux_wheels`` directory for version 2.24.6.0, or
+.. - If you're using a **Linux machine,** download the .whl file from the ``Linux_wheels`` directory for version 2.24.7.0, or
 
-.. - If you're using a **Jetson device,** download the .whl file from the ``Jetson_wheels`` directory for version 2.24.6.0.
+.. - If you're using a **Jetson device,** download the .whl file from the ``Jetson_wheels`` directory for version 2.24.7.0.
 
 .. The Python Linux/Jetson SDK wheel is only supported on Linux environments. If you're using Windows, you'll need to use a Linux virtual machine or Docker Image.
 

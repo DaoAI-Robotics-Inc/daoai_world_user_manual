@@ -7,11 +7,12 @@ This chapter will provide detailed examples of C++ code included in the DaoAI Wo
 Including Libraries
 --------------------------
 
-In the C++ example, we use the following three header files, with ``dlsdk/model.h`` being used to include the DaoAI World SDK library.
+In the C++ example, we use the following header files, with ``dlsdk/model.h`` being used to include the DaoAI World SDK library.
 
 .. code-block:: C++
 
     #include <dlsdk/model.h>
+    #include <dlsdk/prediction.h>
     #include <string>
     #include <fstream>
 
@@ -73,6 +74,12 @@ Note that each detection task has a corresponding object:
     //OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
+    //Positioning (Only Available in Industrial Version)
+    DaoAI::DeepLearning::Vision::Positioning model(model_path);
+
+    //Presence Checking (Only Available in Industrial Version)
+    DaoAI::DeepLearning::Vision::PresenceChecking model(model_path);
+
 If you attempt to load a model object that does not match, an error will be reported, indicating the correct model type you should use.
 
 Using Deep Learning Models for Prediction
@@ -81,7 +88,7 @@ Using Deep Learning Models for Prediction
 .. code-block:: C++
 
 		// get inference
-		DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
+		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
 		//std::vector<DaoAI::DeepLearning::Polygon> polygons = prediction.masks[1].toPolygons();
 		std::string json_string = prediction.toJSONString();
@@ -116,53 +123,51 @@ Note that each detection task returns results with corresponding objects:
     //OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
+    //Positioning (Only Available in Industrial Version)
+    DaoAI::DeepLearning::Vision::PositioningResult prediction = model.inference(daoai_image);
+
+    //Presence Checking (Only Available in Industrial Version)
+    DaoAI::DeepLearning::Vision::PresenceCheckingResult prediction = model.inference(daoai_image);
+
+
 Example of Returned Results
 ------------------------------
 
-Below is an example of the results returned by the instance segmentation model. The main results are included in the ``shapes`` list.
+Below is an example of the results returned by the instance segmentation model.
 
-This result shows the predicted polygon points, labels, and group IDs. This information can be used for further processing or analysis of the prediction results.
+This result shows the predicted results, including number of detections, bounding box, labels, and masks.
+
+This information can be used for further processing or analysis of the prediction results.
 
 .. code-block:: json
 
     {
-    "flags": {},
-    "shapes": [
-        {
-        "label": "back",
-        "points": [
-            [1525.5, 928.5],
-            [1522.5, 931.5],
-            [1528.5, 931.5],
-            [1527.0, 930.0],
-            [1527.0, 928.5]
+        "Number of detecions": 1,
+        "Detections": [
+            {
+                "Label": "zheng",
+                "Confidence": 0.9523001313209534,
+                "Box": [
+                    955.1925659179688, 316.0162048339844, 1064.072021484375,
+                    426.4408264160156
+                ],
+                "Mask": [
+                    [990.0, 316.0],
+                    [988.0, 318.0],
+                    [987.0, 318.0],
+                    [985.0, 320.0],
+                    [982.0, 320.0],
+                    [980.0, 322.0],
+                    [979.0, 322.0],
+                    [974.0, 327.0],
+                    [972.0, 327.0],
+                    [972.0, 328.0],
+                    [1040.0, 316.0]
+                ]
+            }
         ],
-        "group_id": 1,
-        "description": "",
-        "shape_type": "polygon",
-        "flags": {}
-        },
-        {
-        "label": "front",
-        "points": [
-            [1428.0, 798.0],
-            [1429.5, 796.5],
-            [1431.0, 796.5],
-            [1432.5, 798.0],
-            [1432.5, 801.0],
-            [1431.0, 802.5],
-            [1425.0, 802.5],
-            [1423.5, 801.0],
-            [1426.5, 798.0]
-        ],
-        "group_id": 0,
-        "description": "",
-        "shape_type": "polygon",
-        "flags": {}
-        },
-    ],
-    "imageWidth": 1920,
-    "imageHeight": 1200
+        "ImageHeight": 1200,
+        "ImageWidth": 1920
     }
 
 The ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` object also provides the .masks[i].toPolygons() method to obtain polygon objects.
