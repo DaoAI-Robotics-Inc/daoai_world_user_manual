@@ -70,6 +70,12 @@ Python Windows 代码示例
     #OCR
     model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
 
+    #定位模型 (只在工业版支持)
+    model = dlsdk.Positioning(model_path, device=dlsdk.DeviceType.GPU)
+
+    #漏错装检测 (只在工业版支持)
+    model = dlsdk.PresenceChecking(model_path, device=dlsdk.DeviceType.GPU)
+
 
 读取图片，这一步可以使用 opencv 来读取， 如果您没有 安装，您可以运行 ``pip install python-opencv`` 来进行安装
 
@@ -87,11 +93,13 @@ Python Windows 代码示例
     assert isinstance(daoai_image, dlsdk.Image)
     prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
 
-    with open("output.json", "w") as f:
-        f.write(prediction.toJSONString())
+    with open("output.json", "w") as f: 
+        f.write(prediction.toJSONString()) #输出常规json结果
+
+    with open("outputAnnotation.json", "w") as f:
+        f.write(prediction.toAnnotationJSONString()) #输出标注格式的json结果
 
 您也可以通过其它方法来获取结果信息
-
 
 .. code-block:: python
 

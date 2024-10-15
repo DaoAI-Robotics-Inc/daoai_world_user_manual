@@ -4,6 +4,15 @@
 DW_SDK Windows安装包
 -------------------------
 
+SDK版本
+***********
+
+SDK 和 DaoAI World 一样，分为 **工业版** 和 **企业版**。
+
+两个版本的区别在于， **工业版** 可以支持工业版特有的两种类型的模型： :ref:`漏错装检测` 和 :ref:`定位模型` 。
+
+其他方面，两个版本并无不同，在模型的使用和性能上是一样的。
+
 硬件需求
 ***************
 
@@ -22,7 +31,9 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 ***************
 
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
-    Windows C++ C# SDK 目录下的 2.22.6.0 安装包zip
+    Windows C++ C# SDK 目录下的 2.22.7.0 安装包zip
+    
+    请注意，安装包分为 **企业版** 和 **工业版** ，请下载您使用版本对应的SDK，以确保可以正常使用。
 
     或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
 
@@ -166,9 +177,9 @@ DW_SDK 安装包会自动建立 DW_SDK 所需的系统环境变量： ``DWSDK_PA
     使用DW_SDK需要有效的使用许可证，详情请见 :ref:`软件许可证`
 
 C++ 项目配置
-***************
+***********************
 
-    C++的示例项目中的环节已经配置好了，如果您需要创建一个自定义项目，或者从一个空项目开始，则需要进行以下的配置。
+    C++的示例项目中的环节已经配置好了，如果您需要创建一个 **自定义项目** ，或者 **从一个空项目开始** ，则需要进行以下的配置。
 
     右键点击c++的项目，然后打开属性。
         
@@ -219,38 +230,40 @@ C# 项目配置
         .. image:: images/browse_assembly.png
             :scale: 100%
 
-.. Python Windows 环境配置
-.. *********************************************
+Python Windows 环境配置
+*********************************************
 
-.. Python Windows SDK wheel 只支持Windows环境
+Python Windows SDK wheel 只支持Windows环境
 
-.. 需要首先安装 **Python 3.10** 
+需要首先安装 **Python 3.10** 
 
-.. 如果您已经安装了Python, 您可以使用以下命令来确认您的版本
+如果您已经安装了Python, 您可以使用以下命令来确认您的版本
 
-.. .. code-block::
+.. code-block::
 
-..     python3 --version
+    python3 --version
 
-.. 根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.7.0 版本的 .whl文件
 
-.. 或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
+或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
 
-.. 使用以下命令安装wheel文件
+请注意，安装包分为 **企业版** 和 **工业版** ，请下载您使用版本对应的SDK，以确保可以正常使用。
 
-.. .. code-block::
+使用以下命令安装wheel文件
 
-..     pip install {wheel_file}.whl
+.. code-block::
 
-.. 然后您的DaoAI Python Windows SDK 模组就安装完毕了
+    pip install {wheel_file}.whl
 
-.. 您可以使用以下命令来导入模组。 
+然后您的DaoAI Python Windows SDK 模组就安装完毕了
 
-.. .. code-block:: python
+您可以使用以下命令来导入模组。 
 
-..     import dlsdk.dlsdk as dlsdk
+.. code-block:: python
 
-.. 您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考 :ref:`软件许可证`
+    import dlsdk.dlsdk as dlsdk
+
+您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考 :ref:`软件许可证`
 
 .. Python Linux/Jetson 环境配置
 .. ---------------------------------

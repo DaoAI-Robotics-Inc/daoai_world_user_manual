@@ -6,11 +6,12 @@ C++ 代码示例
 引入库
 --------------
 
-在C++示例中，我们使用了以下三个头文件，其中 ``dlsdk/model.h`` 是用于引入DaoAI World SDK的库。
+在C++示例中，我们使用了以下几个头文件，其中 ``dlsdk/model.h`` 是用于引入DaoAI World SDK的库。
 
 .. code-block:: C++
 
     #include <dlsdk/model.h>
+    #include <dlsdk/prediction.h>
     #include <string>
     #include <fstream>
 
@@ -24,12 +25,12 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 .. code-block:: C++
 
-		// get root path to the model and image
-        std::string root = "../"; // change to your own path
-		std::string image_path = root + "image.png";
+    // get root path to the model and image
+    std::string root = "../"; // change to your own path
+    std::string image_path = root + "image.png";
 
-		// load image
-		DaoAI::DeepLearning::Image daoai_image(image_path);
+    // load image
+    DaoAI::DeepLearning::Image daoai_image(image_path);
 
 
 加载深度学习模型
@@ -70,6 +71,12 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //OCR
     DaoAI::DeepLearning::Vision::OCR model(model_path);
 
+    //定位模型 (只在工业版支持)
+    DaoAI::DeepLearning::Vision::Positioning model(model_path);
+
+    //漏错装检测 (只在工业版支持)
+    DaoAI::DeepLearning::Vision::PresenceChecking model(model_path);
+
 如果尝试加载非对应的模型对象，那么会报错，报错信息中会提示您应该用的模型类型。
 
 使用深度学习模型进行预测
@@ -81,7 +88,8 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 		DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
 
 		//std::vector<DaoAI::DeepLearning::Polygon> polygons = prediction.masks[1].toPolygons();
-		std::string json_string = prediction.toJSONString();
+		std::string json_string = prediction.toJSONString(); // 标准输出的Json
+		std::string annotation_json_string = prediction.toAnnotationJSONString(); //按照数据的标注的格式输出Json 
 		// write to json file
 		std::ofstream fout(root + "daoai_1.json");
 		fout << json_string << "\n";
@@ -112,54 +120,51 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
+    //定位模型 (只在工业版支持)
+    DaoAI::DeepLearning::Vision::PositioningResult prediction = model.inference(daoai_image);
+
+    //漏错装检测 (只在工业版支持)
+    DaoAI::DeepLearning::Vision::PresenceCheckingResult prediction = model.inference(daoai_image);
+
+
 返回结果示例
 ------------------
 
-以下是实例分割模型预测后返回的结果示例。主要结果包含在 `shapes` 列表中。
+以下是实例分割模型预测后 调用 toJSONString() 方法所返回的结果示例。
 
-这个结果展示了预测的多边形点（points）、标签（label）以及群组ID（group_id）。这些信息可以用来进一步处理或分析预测的结果。
+这个结果展示了预测的数量，标签名称，置信度，以及预测框，和多边形掩膜。
 
 .. code-block:: json
 
     {
-    "flags": {},
-    "shapes": [
-        {
-        "label": "back",
-        "points": [
-            [1525.5, 928.5],
-            [1522.5, 931.5],
-            [1528.5, 931.5],
-            [1527.0, 930.0],
-            [1527.0, 928.5]
+        "Number of detecions": 1,
+        "Detections": [
+            {
+                "Label": "zheng",
+                "Confidence": 0.9523001313209534,
+                "Box": [
+                    955.1925659179688, 316.0162048339844, 1064.072021484375,
+                    426.4408264160156
+                ],
+                "Mask": [
+                    [990.0, 316.0],
+                    [988.0, 318.0],
+                    [987.0, 318.0],
+                    [985.0, 320.0],
+                    [982.0, 320.0],
+                    [980.0, 322.0],
+                    [979.0, 322.0],
+                    [974.0, 327.0],
+                    [972.0, 327.0],
+                    [972.0, 328.0],
+                    [1040.0, 316.0]
+                ]
+            }
         ],
-        "group_id": 1,
-        "description": "",
-        "shape_type": "polygon",
-        "flags": {}
-        },
-        {
-        "label": "front",
-        "points": [
-            [1428.0, 798.0],
-            [1429.5, 796.5],
-            [1431.0, 796.5],
-            [1432.5, 798.0],
-            [1432.5, 801.0],
-            [1431.0, 802.5],
-            [1425.0, 802.5],
-            [1423.5, 801.0],
-            [1426.5, 798.0]
-        ],
-        "group_id": 0,
-        "description": "",
-        "shape_type": "polygon",
-        "flags": {}
-        },
-    ],
-    "imageWidth": 1920,
-    "imageHeight": 1200
+        "ImageHeight": 1200,
+        "ImageWidth": 1920
     }
+
 
 ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` 对象 还可以使用 .masks[i].toPolygons() 方法来获取多边形对象。
 
@@ -167,6 +172,6 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 .. code-block:: C++
 
-    DaoAI::DeepLearning::Image image = prediction.maskss[0].toImage();
+    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
     cv::imwrite("mask.png", cv::Mat(image.rows,image.cols, CV_8UC1, image.getData()));
 
