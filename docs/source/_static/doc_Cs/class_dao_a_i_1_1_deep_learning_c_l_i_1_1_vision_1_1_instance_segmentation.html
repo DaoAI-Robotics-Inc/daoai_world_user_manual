@@ -26,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;2.24.7.0</span>
+   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;Industrial 2.24.7.0</span>
    </div>
   </td>
  </tr>
@@ -102,23 +103,24 @@ $(function(){initNavTree('class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_i
   <div class="headertitle"><div class="title">DaoAI::DeepLearningCLI::Vision::InstanceSegmentation Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff9584fc68477cbad3f83e5ba64bfee3" id="r_aff9584fc68477cbad3f83e5ba64bfee3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff9584fc68477cbad3f83e5ba64bfee3">InstanceSegmentation</a> (String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)</td></tr>
+<tr class="memitem:aff9584fc68477cbad3f83e5ba64bfee3" id="r_aff9584fc68477cbad3f83e5ba64bfee3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff9584fc68477cbad3f83e5ba64bfee3">InstanceSegmentation</a> (String^ model_config_path, String^ model_weight_path, <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a> device, int device_idx)</td></tr>
 <tr class="memdesc:aff9584fc68477cbad3f83e5ba64bfee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Construct model specified by its configuration and weight file paths onto the designated device  <br /></td></tr>
 <tr class="separator:aff9584fc68477cbad3f83e5ba64bfee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9be12eb48f5298e54eac10c0092be9d" id="r_ac9be12eb48f5298e54eac10c0092be9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9be12eb48f5298e54eac10c0092be9d">InstanceSegmentation</a> (String^ model_file_path, DeviceType device, int device_idx)</td></tr>
+<tr class="memitem:ac9be12eb48f5298e54eac10c0092be9d" id="r_ac9be12eb48f5298e54eac10c0092be9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9be12eb48f5298e54eac10c0092be9d">InstanceSegmentation</a> (String^ model_file_path, <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a> device, int device_idx)</td></tr>
 <tr class="memdesc:ac9be12eb48f5298e54eac10c0092be9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Load the model specified by its configuration and weight files from the model directory onto the designated device.  <br /></td></tr>
 <tr class="separator:ac9be12eb48f5298e54eac10c0092be9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25dc4d4abd0f924a3070379762dee6de" id="r_a25dc4d4abd0f924a3070379762dee6de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html">InstanceSegmentationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25dc4d4abd0f924a3070379762dee6de">inference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image, Dictionary&lt; PostProcessType, Object^&gt;^ post_params)</td></tr>
+<tr class="memitem:a25dc4d4abd0f924a3070379762dee6de" id="r_a25dc4d4abd0f924a3070379762dee6de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html">InstanceSegmentationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25dc4d4abd0f924a3070379762dee6de">inference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image, Dictionary&lt; <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a5e9e3db505401ba56043c29cb62a4605">PostProcessType</a>, Object^&gt;^ post_params)</td></tr>
 <tr class="memdesc:a25dc4d4abd0f924a3070379762dee6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Run inferent on image  <br /></td></tr>
 <tr class="separator:a25dc4d4abd0f924a3070379762dee6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8757aed2b35906d6a5b745ba2625d09" id="r_ab8757aed2b35906d6a5b745ba2625d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html">InstanceSegmentationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8757aed2b35906d6a5b745ba2625d09">sliceInference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image, Dictionary&lt; PostProcessType, Object^&gt;^ post_params, int slice_batch_size)</td></tr>
+<tr class="memitem:ab8757aed2b35906d6a5b745ba2625d09" id="r_ab8757aed2b35906d6a5b745ba2625d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html">InstanceSegmentationResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8757aed2b35906d6a5b745ba2625d09">sliceInference</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a>^ image, Dictionary&lt; <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a5e9e3db505401ba56043c29cb62a4605">PostProcessType</a>, Object^&gt;^ post_params, int slice_batch_size)</td></tr>
 <tr class="memdesc:ab8757aed2b35906d6a5b745ba2625d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Run inferent on image  <br /></td></tr>
 <tr class="separator:ab8757aed2b35906d6a5b745ba2625d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9efc8a227436cae8977fd24351346c47" id="r_a9efc8a227436cae8977fd24351346c47"><td class="memItemLeft" align="right" valign="top"><a id="a9efc8a227436cae8977fd24351346c47" name="a9efc8a227436cae8977fd24351346c47"></a>
-<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getModelInfo</b> ()</td></tr>
+<tr class="memitem:a9efc8a227436cae8977fd24351346c47" id="r_a9efc8a227436cae8977fd24351346c47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9efc8a227436cae8977fd24351346c47">getModelInfo</a> ()</td></tr>
 <tr class="separator:a9efc8a227436cae8977fd24351346c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -141,7 +143,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">DeviceType</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -155,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">model</td><td>config and model weigthts file paths: The absolute or relative path to the model config and model weights. </td></tr>
-    <tr><td class="paramname">device</td><td>either DeviceType::GPU or DeviceType::CPU, which device to load model into </td></tr>
+    <tr><td class="paramname">device</td><td>either <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa52f9ec21735243ad9917cda3ca077d32">DeviceType::GPU</a> or <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d">DeviceType::CPU</a>, which device to load model into </td></tr>
     <tr><td class="paramname">gpu_index</td><td>-1 to use all the gpu available, else can be the index of a specific gpu. This will be ignored if the device type is not GPU </td></tr>
   </table>
   </dd>
@@ -177,7 +179,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">DeviceType</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -191,7 +193,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">model_directory</td><td>The absolute or relative path to the folder containing model config and model weights files. </td></tr>
-    <tr><td class="paramname">device</td><td>either DeviceType::GPU or DeviceType::CPU, which device to load model into </td></tr>
+    <tr><td class="paramname">device</td><td>either <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa52f9ec21735243ad9917cda3ca077d32">DeviceType::GPU</a> or <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d">DeviceType::CPU</a>, which device to load model into </td></tr>
     <tr><td class="paramname">gpu_index</td><td>-1 to use all the gpu available, else can be the index of a specific gpu. This will be ignored if the device type is not GPU </td></tr>
   </table>
   </dd>
@@ -200,6 +202,23 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9efc8a227436cae8977fd24351346c47" name="a9efc8a227436cae8977fd24351346c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efc8a227436cae8977fd24351346c47">&#9670;&#160;</a></span>getModelInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a> DaoAI::DeepLearningCLI::Vision::InstanceSegmentation::getModelInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a25dc4d4abd0f924a3070379762dee6de" name="a25dc4d4abd0f924a3070379762dee6de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25dc4d4abd0f924a3070379762dee6de">&#9670;&#160;</a></span>inference()</h2>
 
@@ -214,7 +233,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Dictionary&lt; PostProcessType, Object^&gt;^</td>          <td class="paramname"><span class="paramname"><em>post_params</em></span>&#160;)</td>
+          <td class="paramtype">Dictionary&lt; <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a5e9e3db505401ba56043c29cb62a4605">PostProcessType</a>, Object^&gt;^</td>          <td class="paramname"><span class="paramname"><em>post_params</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -244,7 +263,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Dictionary&lt; PostProcessType, Object^&gt;^</td>          <td class="paramname"><span class="paramname"><em>post_params</em></span>, </td>
+          <td class="paramtype">Dictionary&lt; <a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a5e9e3db505401ba56043c29cb62a4605">PostProcessType</a>, Object^&gt;^</td>          <td class="paramname"><span class="paramname"><em>post_params</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -273,7 +292,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>DaoAI</b></li><li class="navelem"><b>DeepLearningCLI</b></li><li class="navelem"><b>Vision</b></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation.html">InstanceSegmentation</a></li>
+    <li class="navelem"><a class="el" href="namespace_dao_a_i.html">DaoAI</a></li><li class="navelem"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html">DeepLearningCLI</a></li><li class="navelem"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision.html">Vision</a></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation.html">InstanceSegmentation</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>

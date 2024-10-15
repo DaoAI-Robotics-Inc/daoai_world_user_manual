@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rgb_0',['RGB',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html#ab154514daa7555d02e90c950208052fea889574aebacda6bfd3e534e2b49b8028',1,'DaoAI::DeepLearningCLI::Image']]]
+  ['positioning_0',['Positioning',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977',1,'DaoAI::DeepLearningCLI']]],
+  ['presence_5fchecking_1',['Presence_Checking',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb',1,'DaoAI::DeepLearningCLI']]]
 ];

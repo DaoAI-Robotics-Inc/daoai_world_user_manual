@@ -10,8 +10,11 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aeaa36f07bb1714e3c712531a129742a6", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a8e8c92b667ae147f381ce41f3b84e8e0", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aec2b11b39427ea89b06a08c5dd5c1c43", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aea757b23951f1f6b465a55c62dd6c372", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a9425aa53bac9d692f3d034966ed37860", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ae26a5551f17dcbb340d1e1776a039ee2", null ],
-      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ]
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aca92562e9df1600359d3984b71bd89fe", null ]
     ] ],
     [ "Vision", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html", "namespace_dao_a_i_1_1_deep_learning_1_1_vision" ],
     [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html", "class_dao_a_i_1_1_deep_learning_1_1_box" ],
@@ -36,7 +39,10 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "Anomaly_Detection", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada5a563e0f98eac28aaed38f93538af6ec", null ],
       [ "OCR", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaf529c51ee65a122778f148485732aee5", null ],
       [ "Semantic_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ],
-      [ "Supervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ]
+      [ "Supervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ],
+      [ "Presence_Checking", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb", null ],
+      [ "Positioning", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ],
+      [ "Unsupervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7", null ]
     ] ],
     [ "PostProcessType", "namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3be", [
       [ "CONFIDENCE_THRESHOLD", "namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3beac3a2dfbf113ef3314922cb1f319a08ec", null ],
@@ -44,5 +50,5 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "SENSITIVITY_THRESHOLD", "namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3bea038f452f272c046433d7a25e51e678b8", null ]
     ] ],
     [ "getNumCUDADevices", "namespace_dao_a_i_1_1_deep_learning.html#a896fbfda602c571948b2f709387388f9", null ],
-    [ "initialize", "namespace_dao_a_i_1_1_deep_learning.html#a3aad085b431dcb50949b8959bdb49076", null ]
+    [ "initialize", "namespace_dao_a_i_1_1_deep_learning.html#a3b7981d1df6e41ea226fb7277e5330b2", null ]
 ];

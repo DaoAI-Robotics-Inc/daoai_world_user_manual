@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#ab9f1fcf62b63bcebab8107866be9c1b0',1,'DaoAI::DeepLearningCLI::Box']]],
-  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a1460224b64648c689076d3a6e4635ebb',1,'DaoAI::DeepLearningCLI::Box']]]
+  ['unsupervised_5fdefect_5fsegmentation_0',['Unsupervised_Defect_Segmentation',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7',1,'DaoAI::DeepLearningCLI']]],
+  ['unsuperviseddefectsegmentation_1',['UnsupervisedDefectSegmentation',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#a1ff47f6d755a82fc0e0b58789f27ca7e',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation::UnsupervisedDefectSegmentation(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#a16fb1f1c8f96e2499c07761ac4fe3d51',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation::UnsupervisedDefectSegmentation(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['unsuperviseddefectsegmentationresult_2',['UnsupervisedDefectSegmentationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html',1,'DaoAI::DeepLearningCLI::Vision']]],
+  ['unsuperviseddefectsegmentationresult_3a_3aunsuperviseddefectsegmentationresult_3',['UnsupervisedDefectSegmentationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#aa1e36f57c4a77f5029bfc644bc476723',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentationResult']]],
+  ['utils_4',['Utils',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_utils.html',1,'DaoAI::DeepLearningCLI']]],
+  ['utils_2eh_5',['utils.h',['../utils_8h.html',1,'']]]
 ];

@@ -10,6 +10,9 @@ var model_8h =
     [ "DaoAI::DeepLearning::Vision::AnomalyDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection" ],
     [ "DaoAI::DeepLearning::Vision::Classification", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification" ],
     [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation" ],
+    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation" ],
+    [ "DaoAI::DeepLearning::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking" ],
+    [ "DaoAI::DeepLearning::Vision::Positioning", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning" ],
     [ "Parameters", "model_8h.html#a49ab275c6e617b79af150029f1ad0f88", null ],
     [ "ParameterType", "model_8h.html#a4893dffdaa2d5a117558ebe35bae9d5c", null ],
     [ "ModelType", "model_8h.html#aa796b5dd9fd99802b9317668d5522aad", [
@@ -20,7 +23,10 @@ var model_8h =
       [ "Anomaly_Detection", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada5a563e0f98eac28aaed38f93538af6ec", null ],
       [ "OCR", "model_8h.html#aa796b5dd9fd99802b9317668d5522aadaf529c51ee65a122778f148485732aee5", null ],
       [ "Semantic_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b", null ],
-      [ "Supervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ]
+      [ "Supervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ],
+      [ "Presence_Checking", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb", null ],
+      [ "Positioning", "model_8h.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ],
+      [ "Unsupervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7", null ]
     ] ],
     [ "PostProcessType", "model_8h.html#a8b7b04378d23cfd27f773b93c265c3be", [
       [ "CONFIDENCE_THRESHOLD", "model_8h.html#a8b7b04378d23cfd27f773b93c265c3beac3a2dfbf113ef3314922cb1f319a08ec", null ],
@@ -28,5 +34,5 @@ var model_8h =
       [ "SENSITIVITY_THRESHOLD", "model_8h.html#a8b7b04378d23cfd27f773b93c265c3bea038f452f272c046433d7a25e51e678b8", null ]
     ] ],
     [ "getNumCUDADevices", "model_8h.html#a896fbfda602c571948b2f709387388f9", null ],
-    [ "initialize", "model_8h.html#a3aad085b431dcb50949b8959bdb49076", null ]
+    [ "initialize", "model_8h.html#a3b7981d1df6e41ea226fb7277e5330b2", null ]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['w_0',['w',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a22f8e15ad9bc0fa71dc7a092b4264d68',1,'DaoAI::DeepLearningCLI::Box']]]
+  ['unsuperviseddefectsegmentation_0',['UnsupervisedDefectSegmentation',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#a1ff47f6d755a82fc0e0b58789f27ca7e',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation::UnsupervisedDefectSegmentation(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#a16fb1f1c8f96e2499c07761ac4fe3d51',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation::UnsupervisedDefectSegmentation(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['unsuperviseddefectsegmentationresult_3a_3aunsuperviseddefectsegmentationresult_1',['UnsupervisedDefectSegmentationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#aa1e36f57c4a77f5029bfc644bc476723',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentationResult']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['xywh_0',['XYWH',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a51412c9a48c1e1be95157f555389b3e1af8f448c9a0f9d364d18932c53e8cdc16',1,'DaoAI::DeepLearning::Box']]],
-  ['xyxy_1',['XYXY',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a51412c9a48c1e1be95157f555389b3e1aca89e792ebf5d88964f1cb66ce6ddf61',1,'DaoAI::DeepLearning::Box']]]
+  ['semantic_5fsegmentation_0',['Semantic_Segmentation',['../namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada22f3e26abf5215326c2ba0a72c45216b',1,'DaoAI::DeepLearning']]],
+  ['sensitivity_5fthreshold_1',['SENSITIVITY_THRESHOLD',['../namespace_dao_a_i_1_1_deep_learning.html#a8b7b04378d23cfd27f773b93c265c3bea038f452f272c046433d7a25e51e678b8',1,'DaoAI::DeepLearning']]],
+  ['supervised_5fdefect_5fsegmentation_2',['Supervised_Defect_Segmentation',['../namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1',1,'DaoAI::DeepLearning']]]
 ];

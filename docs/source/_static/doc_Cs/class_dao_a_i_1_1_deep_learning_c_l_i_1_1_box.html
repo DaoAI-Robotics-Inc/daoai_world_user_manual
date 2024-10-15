@@ -26,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;2.24.7.0</span>
+   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;Industrial 2.24.7.0</span>
    </div>
   </td>
  </tr>
@@ -103,11 +104,13 @@ $(function(){initNavTree('class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html',''
   <div class="headertitle"><div class="title">DaoAI::DeepLearningCLI::Box Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aace00626dbe2780e1919423e9a681841" id="r_aace00626dbe2780e1919423e9a681841"><td class="memItemLeft" align="right" valign="top"><a id="aace00626dbe2780e1919423e9a681841" name="aace00626dbe2780e1919423e9a681841"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>XYXY</b>
-, <b>XYWH</b>
+<tr class="memitem:aace00626dbe2780e1919423e9a681841" id="r_aace00626dbe2780e1919423e9a681841"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace00626dbe2780e1919423e9a681841">Type</a> { <a class="el" href="#aace00626dbe2780e1919423e9a681841aca89e792ebf5d88964f1cb66ce6ddf61">XYXY</a>
+, <a class="el" href="#aace00626dbe2780e1919423e9a681841af8f448c9a0f9d364d18932c53e8cdc16">XYWH</a>
  }</td></tr>
 <tr class="separator:aace00626dbe2780e1919423e9a681841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -116,55 +119,72 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abb2701f9f081816bc983c76f089328a8" id="r_abb2701f9f081816bc983c76f089328a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2701f9f081816bc983c76f089328a8">Box</a> (<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point.html">Point</a>^ p1, <a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point.html">Point</a>^ p2, float <a class="el" href="#ae72be76b6140171277c9248601ee3282">angle</a>)</td></tr>
 <tr class="memdesc:abb2701f9f081816bc983c76f089328a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Construct a box given the top-left and right-bottom points  <br /></td></tr>
 <tr class="separator:abb2701f9f081816bc983c76f089328a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49d37d4708bf4e27219571eda91f98e5" id="r_a49d37d4708bf4e27219571eda91f98e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49d37d4708bf4e27219571eda91f98e5">Box</a> (float a1, float a2, float a3, float a4, float <a class="el" href="#ae72be76b6140171277c9248601ee3282">angle</a>, Type type)</td></tr>
+<tr class="memitem:a49d37d4708bf4e27219571eda91f98e5" id="r_a49d37d4708bf4e27219571eda91f98e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49d37d4708bf4e27219571eda91f98e5">Box</a> (float a1, float a2, float a3, float a4, float <a class="el" href="#ae72be76b6140171277c9248601ee3282">angle</a>, <a class="el" href="#aace00626dbe2780e1919423e9a681841">Type</a> type)</td></tr>
 <tr class="memdesc:a49d37d4708bf4e27219571eda91f98e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Construct a box given the coordinates of top-left and bottom-right points  <br /></td></tr>
 <tr class="separator:a49d37d4708bf4e27219571eda91f98e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d6c807e0113081d60fc21de11b2a7a" id="r_a27d6c807e0113081d60fc21de11b2a7a"><td class="memItemLeft" align="right" valign="top"><a id="a27d6c807e0113081d60fc21de11b2a7a" name="a27d6c807e0113081d60fc21de11b2a7a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Box</b> (const DaoAI::DeepLearning::Box &amp;box)</td></tr>
+<tr class="memitem:a27d6c807e0113081d60fc21de11b2a7a" id="r_a27d6c807e0113081d60fc21de11b2a7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d6c807e0113081d60fc21de11b2a7a">Box</a> (const DaoAI::DeepLearning::Box &amp;box)</td></tr>
 <tr class="separator:a27d6c807e0113081d60fc21de11b2a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c607ffdccda401b894022b718d3b65a" id="r_a2c607ffdccda401b894022b718d3b65a"><td class="memItemLeft" align="right" valign="top"><a id="a2c607ffdccda401b894022b718d3b65a" name="a2c607ffdccda401b894022b718d3b65a"></a>
-<a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_polygon.html">Polygon</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toPolygon</b> ()</td></tr>
-<tr class="memdesc:a2c607ffdccda401b894022b718d3b65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Convert to polygon type considering box angle <br /></td></tr>
+<tr class="memitem:a2c607ffdccda401b894022b718d3b65a" id="r_a2c607ffdccda401b894022b718d3b65a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_polygon.html">Polygon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c607ffdccda401b894022b718d3b65a">toPolygon</a> ()</td></tr>
+<tr class="memdesc:a2c607ffdccda401b894022b718d3b65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Convert to polygon type considering box angle  <br /></td></tr>
 <tr class="separator:a2c607ffdccda401b894022b718d3b65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd77b53cc757cfcf59dd25cb945c571" id="r_a3cd77b53cc757cfcf59dd25cb945c571"><td class="memItemLeft" align="right" valign="top"><a id="a3cd77b53cc757cfcf59dd25cb945c571" name="a3cd77b53cc757cfcf59dd25cb945c571"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
-<tr class="memdesc:a3cd77b53cc757cfcf59dd25cb945c571"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Convert to polygon to human readable format <br /></td></tr>
+<tr class="memitem:a3cd77b53cc757cfcf59dd25cb945c571" id="r_a3cd77b53cc757cfcf59dd25cb945c571"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cd77b53cc757cfcf59dd25cb945c571">toString</a> ()</td></tr>
+<tr class="memdesc:a3cd77b53cc757cfcf59dd25cb945c571"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Convert to polygon to human readable format  <br /></td></tr>
 <tr class="separator:a3cd77b53cc757cfcf59dd25cb945c571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43a6c7f6e78a2d0d2a5688ab1a1ab79" id="r_ab43a6c7f6e78a2d0d2a5688ab1a1ab79"><td class="memItemLeft" align="right" valign="top"><a id="ab43a6c7f6e78a2d0d2a5688ab1a1ab79" name="ab43a6c7f6e78a2d0d2a5688ab1a1ab79"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>h</b> ()</td></tr>
-<tr class="memdesc:ab43a6c7f6e78a2d0d2a5688ab1a1ab79"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Bounding box height <br /></td></tr>
+<tr class="memitem:ab43a6c7f6e78a2d0d2a5688ab1a1ab79" id="r_ab43a6c7f6e78a2d0d2a5688ab1a1ab79"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab43a6c7f6e78a2d0d2a5688ab1a1ab79">h</a> ()</td></tr>
+<tr class="memdesc:ab43a6c7f6e78a2d0d2a5688ab1a1ab79"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Bounding box height  <br /></td></tr>
 <tr class="separator:ab43a6c7f6e78a2d0d2a5688ab1a1ab79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22f8e15ad9bc0fa71dc7a092b4264d68" id="r_a22f8e15ad9bc0fa71dc7a092b4264d68"><td class="memItemLeft" align="right" valign="top"><a id="a22f8e15ad9bc0fa71dc7a092b4264d68" name="a22f8e15ad9bc0fa71dc7a092b4264d68"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>w</b> ()</td></tr>
-<tr class="memdesc:a22f8e15ad9bc0fa71dc7a092b4264d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Bounding box width <br /></td></tr>
+<tr class="memitem:a22f8e15ad9bc0fa71dc7a092b4264d68" id="r_a22f8e15ad9bc0fa71dc7a092b4264d68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f8e15ad9bc0fa71dc7a092b4264d68">w</a> ()</td></tr>
+<tr class="memdesc:a22f8e15ad9bc0fa71dc7a092b4264d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Bounding box width  <br /></td></tr>
 <tr class="separator:a22f8e15ad9bc0fa71dc7a092b4264d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9f1fcf62b63bcebab8107866be9c1b0" id="r_ab9f1fcf62b63bcebab8107866be9c1b0"><td class="memItemLeft" align="right" valign="top"><a id="ab9f1fcf62b63bcebab8107866be9c1b0" name="ab9f1fcf62b63bcebab8107866be9c1b0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>x1</b> ()</td></tr>
-<tr class="memdesc:ab9f1fcf62b63bcebab8107866be9c1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The x coordinate of top-left corner <br /></td></tr>
+<tr class="memitem:ab9f1fcf62b63bcebab8107866be9c1b0" id="r_ab9f1fcf62b63bcebab8107866be9c1b0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f1fcf62b63bcebab8107866be9c1b0">x1</a> ()</td></tr>
+<tr class="memdesc:ab9f1fcf62b63bcebab8107866be9c1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The x coordinate of top-left corner  <br /></td></tr>
 <tr class="separator:ab9f1fcf62b63bcebab8107866be9c1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af456102fee5666f35ae21be32995657e" id="r_af456102fee5666f35ae21be32995657e"><td class="memItemLeft" align="right" valign="top"><a id="af456102fee5666f35ae21be32995657e" name="af456102fee5666f35ae21be32995657e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>y1</b> ()</td></tr>
-<tr class="memdesc:af456102fee5666f35ae21be32995657e"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The y coordinate of top-left corner <br /></td></tr>
+<tr class="memitem:af456102fee5666f35ae21be32995657e" id="r_af456102fee5666f35ae21be32995657e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af456102fee5666f35ae21be32995657e">y1</a> ()</td></tr>
+<tr class="memdesc:af456102fee5666f35ae21be32995657e"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The y coordinate of top-left corner  <br /></td></tr>
 <tr class="separator:af456102fee5666f35ae21be32995657e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1460224b64648c689076d3a6e4635ebb" id="r_a1460224b64648c689076d3a6e4635ebb"><td class="memItemLeft" align="right" valign="top"><a id="a1460224b64648c689076d3a6e4635ebb" name="a1460224b64648c689076d3a6e4635ebb"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>x2</b> ()</td></tr>
-<tr class="memdesc:a1460224b64648c689076d3a6e4635ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The x coordinate of bottom-right corner <br /></td></tr>
+<tr class="memitem:a1460224b64648c689076d3a6e4635ebb" id="r_a1460224b64648c689076d3a6e4635ebb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1460224b64648c689076d3a6e4635ebb">x2</a> ()</td></tr>
+<tr class="memdesc:a1460224b64648c689076d3a6e4635ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The x coordinate of bottom-right corner  <br /></td></tr>
 <tr class="separator:a1460224b64648c689076d3a6e4635ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a440d1db05a17d0fadf1ea819e9345" id="r_a80a440d1db05a17d0fadf1ea819e9345"><td class="memItemLeft" align="right" valign="top"><a id="a80a440d1db05a17d0fadf1ea819e9345" name="a80a440d1db05a17d0fadf1ea819e9345"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>y2</b> ()</td></tr>
-<tr class="memdesc:a80a440d1db05a17d0fadf1ea819e9345"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The y coordinate of bottom-right corner <br /></td></tr>
+<tr class="memitem:a80a440d1db05a17d0fadf1ea819e9345" id="r_a80a440d1db05a17d0fadf1ea819e9345"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80a440d1db05a17d0fadf1ea819e9345">y2</a> ()</td></tr>
+<tr class="memdesc:a80a440d1db05a17d0fadf1ea819e9345"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The y coordinate of bottom-right corner  <br /></td></tr>
 <tr class="separator:a80a440d1db05a17d0fadf1ea819e9345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72be76b6140171277c9248601ee3282" id="r_ae72be76b6140171277c9248601ee3282"><td class="memItemLeft" align="right" valign="top"><a id="ae72be76b6140171277c9248601ee3282" name="ae72be76b6140171277c9248601ee3282"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></tr>
-<tr class="memdesc:ae72be76b6140171277c9248601ee3282"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The rotate angle of he bounding box <br /></td></tr>
+<tr class="memitem:ae72be76b6140171277c9248601ee3282" id="r_ae72be76b6140171277c9248601ee3282"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae72be76b6140171277c9248601ee3282">angle</a> ()</td></tr>
+<tr class="memdesc:ae72be76b6140171277c9248601ee3282"><td class="mdescLeft">&#160;</td><td class="mdescRight">: The rotate angle of he bounding box  <br /></td></tr>
 <tr class="separator:ae72be76b6140171277c9248601ee3282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa564cc9d378fc9d445fa97676383c4" id="r_a5fa564cc9d378fc9d445fa97676383c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa564cc9d378fc9d445fa97676383c4">toType</a> (Type type)</td></tr>
+<tr class="memitem:a5fa564cc9d378fc9d445fa97676383c4" id="r_a5fa564cc9d378fc9d445fa97676383c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa564cc9d378fc9d445fa97676383c4">toType</a> (<a class="el" href="#aace00626dbe2780e1919423e9a681841">Type</a> type)</td></tr>
 <tr class="memdesc:a5fa564cc9d378fc9d445fa97676383c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Convert to different box type  <br /></td></tr>
 <tr class="separator:a5fa564cc9d378fc9d445fa97676383c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aace00626dbe2780e1919423e9a681841" name="aace00626dbe2780e1919423e9a681841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace00626dbe2780e1919423e9a681841">&#9670;&#160;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aace00626dbe2780e1919423e9a681841">DaoAI::DeepLearningCLI::Box::Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aace00626dbe2780e1919423e9a681841aca89e792ebf5d88964f1cb66ce6ddf61" name="aace00626dbe2780e1919423e9a681841aca89e792ebf5d88964f1cb66ce6ddf61"></a>XYXY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aace00626dbe2780e1919423e9a681841af8f448c9a0f9d364d18932c53e8cdc16" name="aace00626dbe2780e1919423e9a681841af8f448c9a0f9d364d18932c53e8cdc16"></a>XYWH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb2701f9f081816bc983c76f089328a8" name="abb2701f9f081816bc983c76f089328a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb2701f9f081816bc983c76f089328a8">&#9670;&#160;</a></span>Box() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2701f9f081816bc983c76f089328a8">&#9670;&#160;</a></span>Box() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +219,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
 </div>
 </div>
 <a id="a49d37d4708bf4e27219571eda91f98e5" name="a49d37d4708bf4e27219571eda91f98e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49d37d4708bf4e27219571eda91f98e5">&#9670;&#160;</a></span>Box() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d37d4708bf4e27219571eda91f98e5">&#9670;&#160;</a></span>Box() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +252,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#aace00626dbe2780e1919423e9a681841">Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,7 +270,100 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
 
 </div>
 </div>
+<a id="a27d6c807e0113081d60fc21de11b2a7a" name="a27d6c807e0113081d60fc21de11b2a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d6c807e0113081d60fc21de11b2a7a">&#9670;&#160;</a></span>Box() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DaoAI::DeepLearningCLI::Box::Box </td>
+          <td>(</td>
+          <td class="paramtype">const DaoAI::DeepLearning::Box &amp;</td>          <td class="paramname"><span class="paramname"><em>box</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae72be76b6140171277c9248601ee3282" name="ae72be76b6140171277c9248601ee3282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72be76b6140171277c9248601ee3282">&#9670;&#160;</a></span>angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::angle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: The rotate angle of he bounding box </p>
+
+</div>
+</div>
+<a id="ab43a6c7f6e78a2d0d2a5688ab1a1ab79" name="ab43a6c7f6e78a2d0d2a5688ab1a1ab79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43a6c7f6e78a2d0d2a5688ab1a1ab79">&#9670;&#160;</a></span>h()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::h </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Bounding box height </p>
+
+</div>
+</div>
+<a id="a2c607ffdccda401b894022b718d3b65a" name="a2c607ffdccda401b894022b718d3b65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c607ffdccda401b894022b718d3b65a">&#9670;&#160;</a></span>toPolygon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_polygon.html">Polygon</a> DaoAI::DeepLearningCLI::Box::toPolygon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Convert to polygon type considering box angle </p>
+
+</div>
+</div>
+<a id="a3cd77b53cc757cfcf59dd25cb945c571" name="a3cd77b53cc757cfcf59dd25cb945c571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd77b53cc757cfcf59dd25cb945c571">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String DaoAI::DeepLearningCLI::Box::toString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Convert to polygon to human readable format </p>
+
+</div>
+</div>
 <a id="a5fa564cc9d378fc9d445fa97676383c4" name="a5fa564cc9d378fc9d445fa97676383c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fa564cc9d378fc9d445fa97676383c4">&#9670;&#160;</a></span>toType()</h2>
 
@@ -260,7 +373,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
         <tr>
           <td class="memname"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html">Box</a> DaoAI::DeepLearningCLI::Box::toType </td>
           <td>(</td>
-          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#aace00626dbe2780e1919423e9a681841">Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -276,6 +389,101 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
 
 </div>
 </div>
+<a id="a22f8e15ad9bc0fa71dc7a092b4264d68" name="a22f8e15ad9bc0fa71dc7a092b4264d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f8e15ad9bc0fa71dc7a092b4264d68">&#9670;&#160;</a></span>w()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::w </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Bounding box width </p>
+
+</div>
+</div>
+<a id="ab9f1fcf62b63bcebab8107866be9c1b0" name="ab9f1fcf62b63bcebab8107866be9c1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f1fcf62b63bcebab8107866be9c1b0">&#9670;&#160;</a></span>x1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::x1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: The x coordinate of top-left corner </p>
+
+</div>
+</div>
+<a id="a1460224b64648c689076d3a6e4635ebb" name="a1460224b64648c689076d3a6e4635ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1460224b64648c689076d3a6e4635ebb">&#9670;&#160;</a></span>x2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::x2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: The x coordinate of bottom-right corner </p>
+
+</div>
+</div>
+<a id="af456102fee5666f35ae21be32995657e" name="af456102fee5666f35ae21be32995657e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af456102fee5666f35ae21be32995657e">&#9670;&#160;</a></span>y1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::y1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: The y coordinate of top-left corner </p>
+
+</div>
+</div>
+<a id="a80a440d1db05a17d0fadf1ea819e9345" name="a80a440d1db05a17d0fadf1ea819e9345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a440d1db05a17d0fadf1ea819e9345">&#9670;&#160;</a></span>y2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Box::y2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: The y coordinate of bottom-right corner </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Daoai/Desktop/Khoa/bp/daoai_system/apps/daoai_dl_sdk/dl_sdk_net/export/<a class="el" href="common_8h_source.html">common.h</a></li>
 </ul>
@@ -284,7 +492,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angle</b> ()</td></t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>DaoAI</b></li><li class="navelem"><b>DeepLearningCLI</b></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html">Box</a></li>
+    <li class="navelem"><a class="el" href="namespace_dao_a_i.html">DaoAI</a></li><li class="navelem"><a class="el" href="namespace_dao_a_i_1_1_deep_learning_c_l_i.html">DeepLearningCLI</a></li><li class="navelem"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html">Box</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
