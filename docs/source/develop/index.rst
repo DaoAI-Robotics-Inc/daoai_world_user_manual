@@ -245,7 +245,7 @@ Python Windows SDK wheel 只支持Windows环境
 
 请注意，安装包分为 **企业版** 和 **工业版** ，请下载您使用版本对应的SDK，以确保可以正常使用。
 
-根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.6.0 版本的 .whl文件
+根据您的Python版本 从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhfpGDv2VpZMi5NhkxrFvlwBthrgxdCccubfLp8LefGAQw?e=78ZGUn>`_ 下载 其中的2.24.7.0 版本的 .whl文件
 
 或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
 
@@ -388,9 +388,9 @@ Python Windows SDK wheel 只支持Windows环境
 
 .. 根据您的机器从 `下载中心 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhSzNT1zD61Pv8MbPMr_PM8BLRSiHwbywBsRHAEY5ILSiQ?e=DzrN2M>`_ 下载  
 
-.. - 如果您使用的是 **Linux 机器**: 请下载 2.24.6.0版本的 ``Linux_wheels`` 目录下的.whl文件, 或
+.. - 如果您使用的是 **Linux 机器**: 请下载 2.24.7.0版本的 ``Linux_wheels`` 目录下的.whl文件, 或
 
-.. - 如果您使用的是 **Jetson 机器**: 请下载 2.24.6.0版本的 ``Jetson_wheels`` 目录下的.whl文件
+.. - 如果您使用的是 **Jetson 机器**: 请下载 2.24.7.0版本的 ``Jetson_wheels`` 目录下的.whl文件
 
 .. Python Linux/Jetson SDK wheel 只支持linux环境，如果您使用的是Windows系统，那么请使用linux虚拟机，或者Docker Image。
 
