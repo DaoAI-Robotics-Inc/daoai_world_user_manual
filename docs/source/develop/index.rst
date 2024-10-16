@@ -675,4 +675,5 @@ Code Examples
     cpp_eg
     cs_eg
     python_win_eg
+    cpp_client
     .. python_eg
