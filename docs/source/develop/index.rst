@@ -37,7 +37,7 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 
     或者从百度网盘里下载 https://pan.baidu.com/s/1gE2QuiVTaaMrVMAzVtRo2g?pwd=g4un 提取码: g4un 
 
-    把下载的zip文件解压后，会看到3个文件，分别是： `dlsdk_2.0_setup.exe`, `dlsdk_2.0_setup-1.bin` 和 `dlsdk_2.0_setup-1.bin` ，双击运行其中的 `dlsdk_2.0_setup.exe` 执行文件开始安装。
+    把下载的zip文件解压后，会看到3个文件，分别是： `daoai_world_sdk_2.0_setup.exe`, `daoai_world_sdk_2.0_setup-1.bin` 和 `daoai_world_sdk_2.0_setup-1.bin` ，双击运行其中的 `daoai_world_sdk_2.0_setup.exe` 执行文件开始安装。
 
     .. image:: images/dlsk_installer_unzip.png
             :scale: 80%
