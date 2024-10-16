@@ -40,7 +40,7 @@ First, download the `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com
 
     Find the 2.24.7.0 installation package under Windows C++ C# SDK directory as a zip file.
 
-    Extract the downloaded zip file, which contains three files: ``dlsdk_2.0_setup.exe`` , ``dlsdk_2.0_setup-1.bin`` , and ``dlsdk_2.0_setup-1.bin`` . Double-click ``dlsdk_2.0_setup.exe`` to begin the installation.
+    Extract the downloaded zip file, which contains three files: ``daoai_world_sdk_2.0_setup.exe`` , ``daoai_world_sdk_2.0_setup-1.bin`` , and ``daoai_world_sdk_2.0_setup-1.bin`` . Double-click ``daoai_world_sdk_2.0_setup.exe`` to begin the installation.
     
     .. image:: images/dlsk_installer_unzip.png
             :scale: 80%
@@ -49,11 +49,8 @@ First, download the `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com
         
         The DW_SDK installation package requires more than 6.7GB of free disk space.
 
-    - Choose the installation directory for the DW_SDK package. The default path is: ``C:\Program Files\DW_SDK`` .
+    - Open the installer, the installation path is: ``C:\Program Files\DaoAI World SDK`` .
 
-    .. image:: images/dlsk_installer_path.png
-            :scale: 80%   
-    
     - Select ``Create Desktop Shortcut`` to easily manage the SDK license.
 
     .. image:: images/dlsk_installer_desktop_shortcut.png
