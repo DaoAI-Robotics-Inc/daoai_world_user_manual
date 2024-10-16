@@ -331,6 +331,18 @@ Python Windows SDK wheel 只支持Windows环境
 
     该命令会讲指定的模型从推理服务中移除 (并不会删除本地模型文件)
 
+使用C++ 
+~~~~~~~~~~~~~~~~
+
+C++ Inference Client 通过和 Inference Service 交互， 极简化了环境配置的依赖。
+
+比起 Windows C++ SDK 需要使用许多的dll依赖， C++ Inference Client 只需要1个。避免了在项目想要引入其它依赖时（如 Opencv）的dll版本冲突。
+
+C++ Inference Client 提供了与 Windows C++ SDK 相同的接口，详情请参考 :ref:`SDK接口文档`
+
+您可以在安装目录下的 "C:\\Program Files\\DaoAI World SDK\\InferenceClient\\InferenceClientExample" 中找到 :ref:`C++ Inference Client 示例项目`
+
+
 .. Python Linux/Jetson 环境配置
 .. ---------------------------------
 
@@ -622,13 +634,15 @@ Python Windows SDK wheel 只支持Windows环境
 ..         results = model.infer(IMG_PATH, url='http://remote-server.com:PORT')
 
 SDK接口文档
-------------
+---------------
 
 更详细的SDK，函数接口，数据结构等，请查阅SDK文档：
 
 `C++ SDK 接口文档 <../_static/doc_C++/index.html>`_
 
 `C# SDK 接口文档 <../_static/doc_Cs/index.html>`_
+
+`C++ Inference Client 接口文档 <../_static/doc_C_client/index.html>`_
 
 代码示例
 -------------

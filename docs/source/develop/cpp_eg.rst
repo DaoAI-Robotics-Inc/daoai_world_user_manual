@@ -36,7 +36,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 加载深度学习模型
 -------------------
 
-首先需要加载模型。DaoAI World 输出的深度学习模型通常是 zip 格式。我们需要创建一个 DaoAI::DeepLearning::Model 对象，然后调用 loadNestedZip 方法来读取 DaoAI World 输出的深度学习模型 zip 文件。
+首先需要加载模型。DaoAI World 输出的深度学习模型通常是 dwm 格式。我们需要创建一个 DaoAI::DeepLearning::Vision::InstanceSegmentatio 对象，然后使用constructor方法来读取 DaoAI World 输出的深度学习模型 dwm 文件。
 
 .. code-block:: C++
 
