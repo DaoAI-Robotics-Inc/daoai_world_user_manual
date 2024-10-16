@@ -348,6 +348,19 @@ There are four available requests, demonstrated here using Postman.
     This command removes the specified model from the inference service (it does not delete the local model file).
 
 
+Using C++
+^^^^^^^^^^^^^^^^^^^^^^
+
+The C++ Inference Client greatly simplifies environment configuration by interacting with the Inference Service.
+
+Compared to the Windows C++ SDK, which requires many DLL dependencies, the C++ Inference Client only needs one. This avoids DLL version conflicts when adding other dependencies (such as OpenCV) to your project.
+
+The C++ Inference Client provides the same interfaces as the Windows C++ SDK. For more details, please refer to the :ref:`SDK Interface Documentation`.
+
+You can find the :ref:`C++ Inference Client Example Project` under the installation directory at “C:\Program Files\DaoAI World SDK\InferenceClient\InferenceClientExample”.
+
+
+
 .. Python Linux/Jetson Configuration
 .. -----------------------------------
 
@@ -642,14 +655,16 @@ There are four available requests, demonstrated here using Postman.
 
 
 
-SDK
-------
+SDK Interface Documentation
+------------------------------
 
 For more detailed information about the SDK, function interfaces, data structures, etc., please refer to the SDK documentation:
 
 `C++ SDK Doc <../_static/doc_C++/index.html>`_
 
 `C# SDK Doc <../_static/doc_Cs/index.html>`_
+
+`C++ Inference Client Doc <../_static/doc_C++_client/index.html>`_
 
 Code Examples
 ------------------

@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_1_1_mask.html',1,'DaoAI::DeepLearning::Mask'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#ab9c2dfd7957dfb3901fcf4da0d52308a',1,'DaoAI::DeepLearning::Mask::Mask()'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#ab64ed3c0029979b2403a5e7c56828101',1,'DaoAI::DeepLearning::Mask::Mask(const std::string &amp;base64_image_data)'],['../class_dao_a_i_1_1_deep_learning_1_1_mask.html#a98efec3ec15726ff10aec2c30531492c',1,'DaoAI::DeepLearning::Mask::Mask(const std::vector&lt; Polygon &gt; polygon_data)']]],
+  ['mask_1',['mask',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_anomaly_detection_result.html#a1ff43aa2229f97a2f7e37fd30f7d324c',1,'DaoAI::DeepLearning::Vision::AnomalyDetectionResult']]],
+  ['masks_2',['masks',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation_result.html#a1e7ce56b1b76ce034607f98fedea858b',1,'DaoAI::DeepLearning::Vision::InstanceSegmentationResult::masks'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html#a4bc5adc3309a23a3297f8ecdf2192e01',1,'DaoAI::DeepLearning::Vision::KeypointDetectionResult::masks'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_semantic_segmentation_result.html#ab8ddc789ef81243188881a0a2484e18a',1,'DaoAI::DeepLearning::Vision::SemanticSegmentationResult::masks']]],
+  ['model_3',['Model',['../class_dao_a_i_1_1_deep_learning_1_1_model.html',1,'DaoAI::DeepLearning::Model'],['../class_dao_a_i_1_1_deep_learning_1_1_model.html#af1048a2c5e211e9fa538fad25d36bde3',1,'DaoAI::DeepLearning::Model::Model()']]],
+  ['model_2eh_4',['model.h',['../model_8h.html',1,'']]],
+  ['multilabel_5',['multilabel',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result.html#a6735144ff592b4400956a51db6f5cc4d',1,'DaoAI::DeepLearning::Vision::ClassificationResult']]]
+];
