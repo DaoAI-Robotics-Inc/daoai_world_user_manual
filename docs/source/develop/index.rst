@@ -42,14 +42,12 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
     .. image:: images/dlsk_installer_unzip.png
             :scale: 80%
 
-    .. note:: 
+    .. note::
+
         DW_SDK 安装包需要磁盘中存在6.7GB以上的空间。
 
-    - 选择DW_SDK文件的安装目录，默认路径为： ``C:\Program Files\DW_SDK`` 。
+    - 打开安装程序，安装的路径为： ``C:\Program Files\DaoAI World SDK`` 。
 
-    .. image:: images/dlsk_installer_path.png
-            :scale: 80%   
-    
     - 选择 ``创建桌面快捷方式``，以便直接管理SDK的软件许可证。
 
     .. image:: images/dlsk_installer_desktop_shortcut.png
@@ -148,7 +146,7 @@ DW_SDK 安装包会自动建立 DW_SDK 所需的系统环境变量： ``DWSDK_PA
             :scale: 80%  
 
 
-    **C++** 和 **C#** 的SDK安装包在安装后的安装目录下 包含有SDK以及SDK的示例项目。
+    **C++** 和 **C#** 的SDK安装包在安装后的安装目录下的 DWSDK 文件夹内包含有SDK以及SDK的示例项目。
 
         .. image:: images/install_folder.png
             :scale: 100%
