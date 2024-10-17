@@ -633,6 +633,107 @@ C++ Inference Client 提供了与 Windows C++ SDK 相同的接口，详情请参
 ..         model = dv.get_model(model_zip=MODEL_ZIP, server=True)
 ..         results = model.infer(IMG_PATH, url='http://remote-server.com:PORT')
 
+
+服务器图像推理
+---------------
+
+在能够使用互联网的情况下，可以使用HTTP请求发送到DaoAI World服务器进行推理。以下是实例代码：
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with TRAINED MODEL
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    trained_model_uid="XXXXXXXXXXXXXXXXXXX",
+    )
+
+    # Infer with a PRETRAINED MODEL (Eg, autosegment)
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    pretrained_model_type = 'autosegment'
+    )
+
+
+训练好的模型
+************
+
+您可以使用任意一个您训练好的模型进行推理。您需要引用 ``InferenceHTTPClient`` 库，然后提供您的账户( ``API Key`` )和模型的版本ID( ``trained_model_uid`` )，建立其客户端，再进行推理。
+
+ - 使用您账户中模型的示例代码：
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with TRAINED MODEL
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    trained_model_uid="XXXXXXXXXXXXXXXXXXX",
+    )
+
+您可以在训练好的项目中，点击 :ref:`模型部署` 查看该模型的 ``API Key`` 和 ``trained_model_uid``。
+
+.. note::
+    不同版本的模型拥有不同的 ``trained_model_uid``，请仔细确认。
+
+
+推理返回的结果是一个 **字典**，其中含有：
+ 
+ - **"inference_time"**
+ - **"inference_device"**
+ - **"result"**
+
+返回的结果都是来自 requests 库的 **JSON** 对象，包含相同的常用字段，例如掩码(masks)、边框(boxes)、分数(scores)等。
+
+预训练模型
+************
+
+您也可以使用 DaoAI World 提供的预训练模型，其中包括： ``OCR``和 ``autosegment``模型。
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with a PRETRAINED MODEL (Eg, autosegment)
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    pretrained_model_type = 'autosegment'
+    )
+
+autosegment 模型还会返回图像，其中所有的掩码(Mask)透明地叠加在图像上，可以通过以下方式返回：visualization = result['visualization']。
+
+.. code-block:: python
+
+    # AutoSegment Hosted Interface.
+
+    # By default, automatically creates a grid of prompts to segment all possible masks in an image:
+    result = CLIENT.infer(
+    IMAGE,
+    model_id="auto_segment",
+    points_per_side: int or None = 32,
+    box_nms_thresh: float = 0.7,
+    pred_iou_thresh: float = 0.88,
+    min_mask_region_area: int = 100 # In pixels. 
+    point_grids: list[np.ndarray] or None = None,
+    )
+
 SDK接口文档
 ---------------
 

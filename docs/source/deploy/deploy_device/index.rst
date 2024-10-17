@@ -93,3 +93,33 @@
 
     - ``.dwm`` 格式在 DaoAI World 2.24.6.0 及之后的版本中支持，对应的 DaoAI InspecTRA 版本为 2.24.6.0，DaoAI VisionPilot 版本为 2.24.5.0。
     - ``.zip`` 格式在 DaoAI World 2.24.5.0 及之前的版本中可用，对应的 DaoAI InspecTRA 版本为 2.24.5.0，DaoAI VisionPilot 版本为 2.24.4.3。
+
+
+模型部署
+---------------------------------------------
+
+点击 ``部署``，此页面中可以轻松将您的模型部署到云端、本地或边缘设备。
+
+.. image:: Images/deploy_sdk.png
+    :scale: 80%
+    :align: center
+
+点击官方图像推理中的 ``查看代码``，可以打开训练好模型的推理页面，可以使用其中的示例代码进行推理。
+
+.. image:: Images/click_check_code.png
+    :scale: 80%
+    :align: center
+
+点击 ``切换模型`` 可以切换不同版本的训练模型，它们的 **trained_model_uid** 是不一样的。
+
+.. image:: Images/check_code.png
+    :scale: 80%
+    :align: center
+
+推理返回的结果格式为 **字典**，更详细的信息可以查看 :ref:`服务器图像推理`
+
+点击 ``查看文档`` 可以直接跳转至本文档关于SDK的章节。
+
+.. image:: Images/open_sdk_doc.png
+    :scale: 80%
+    :align: center
