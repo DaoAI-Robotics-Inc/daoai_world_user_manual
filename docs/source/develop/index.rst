@@ -739,7 +739,7 @@ You can also get image inference from pretrained models such as ``OCR`` and ``au
 
 The autosegment model also returns the image with all the masks transparently overlayed on top, which can be returned with: 
 
-.. code-block:: console
+.. code-block:: python
 
     visualization = result['visualization']
 
