@@ -688,6 +688,8 @@ C++ Inference Client 提供了与 Windows C++ SDK 相同的接口，详情请参
 .. note::
     不同版本的模型拥有不同的 ``trained_model_uid``，请仔细确认。
 
+.. warning::
+    API Key 是您账户远程访问 DaoAI World 的凭证。为了您的数据安全，请妥善保管您的 API Key，以免被他人盗用。
 
 推理返回的结果是一个 **字典**，其中含有：
  
@@ -700,7 +702,7 @@ C++ Inference Client 提供了与 Windows C++ SDK 相同的接口，详情请参
 预训练模型
 ************
 
-您也可以使用 DaoAI World 提供的预训练模型，其中包括： ``OCR``和 ``autosegment``模型。
+您也可以使用 DaoAI World 提供的预训练模型，其中包括： ``OCR`` 和 ``autosegment`` 模型。
 
 .. code-block:: python
 
@@ -717,7 +719,12 @@ C++ Inference Client 提供了与 Windows C++ SDK 相同的接口，详情请参
     pretrained_model_type = 'autosegment'
     )
 
-autosegment 模型还会返回图像，其中所有的掩码(Mask)透明地叠加在图像上，可以通过以下方式返回：visualization = result['visualization']。
+autosegment 模型还会返回图像，其中所有的掩码(Mask)透明地叠加在图像上，可以通过以下方式返回：
+
+.. code-block:: python
+
+    visualization = result['visualization']
+
 
 .. code-block:: python
 
