@@ -655,6 +655,109 @@ You can find the :ref:`C++ Inference Client Example Project` under the installat
 
 
 
+Hosted Image Inference
+-----------------------
+
+When the internet is accessible, you can use HTTP requests to send inference tasks to the DaoAI World server. Below is a sample code:
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with TRAINED MODEL
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    trained_model_uid="XXXXXXXXXXXXXXXXXXX",
+    )
+
+    # Infer with a PRETRAINED MODEL (Eg, autosegment)
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    pretrained_model_type = 'autosegment'
+    )
+
+Trained Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use your Trained model for inference. You will need to import InferenceHTTPClient, then provide your api_key and trained_model_uid to initialize a HTTP client for image inference.
+
+- Trained model example code:
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with TRAINED MODEL
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    trained_model_uid="XXXXXXXXXXXXXXXXXXX",
+    )
+
+.. note::
+    Different versions of a model will have different ``trained_model_uid``, please be aware of that.
+
+.. warning::
+    API key is a credential for accessing DaoAI World remotely. For your security, please make sure your API key is kept safe and protected.
+
+The inference returned result is a **dictionary** containing the following fields:
+
+ - **"inference_time"**
+ - **"inference_device"**
+ - **"result"**
+
+Result is a json response object from the requests library, with the same usual fields for the data, like **masks** , **boxes** , **scores** , for example.
+
+Pretrained Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also get image inference from pretrained models such as ``OCR`` and ``autosegment`` models.
+
+.. code-block:: python
+
+    # import the inference-sdk
+    from inference_client import InferenceHTTPClient
+    # initialize the client
+    CLIENT = InferenceHTTPClient(
+    api_endpoint="https://api.dev.daoai.ca",
+    api_key="XXXXXXXXXXXXXXXXXXX"
+    )
+
+    # Infer with a PRETRAINED MODEL (Eg, autosegment)
+    result = CLIENT.infer("YOUR_IMAGE.jpg",
+    pretrained_model_type = 'autosegment'
+    )
+
+The autosegment model also returns the image with all the masks transparently overlayed on top, which can be returned with: 
+
+.. code-block:: console
+
+    visualization = result['visualization']
+
+.. code-block:: python
+
+    # AutoSegment Hosted Interface.
+
+    # By default, automatically creates a grid of prompts to segment all possible masks in an image:
+    result = CLIENT.infer(
+    IMAGE,
+    model_id="auto_segment",
+    points_per_side: int or None = 32,
+    box_nms_thresh: float = 0.7,
+    pred_iou_thresh: float = 0.88,
+    min_mask_region_area: int = 100 # In pixels.
+    point_grids: list[np.ndarray] or None = None,
+    )
+
 SDK Interface Documentation
 ------------------------------
 

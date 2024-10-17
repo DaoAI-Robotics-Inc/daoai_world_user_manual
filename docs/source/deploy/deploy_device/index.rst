@@ -94,3 +94,34 @@ Deploying Models in Other Applications
 
     - ``.dwm`` format is supported in DaoAI World version **2.24.6.0** and later. The corresponding versions for DaoAI InspecTRA and DaoAI VisionPilot are **2.24.6.0** and **2.24.5.0**, respectively.
     - ``.zip`` format is available in DaoAI World version **2.24.5.0** and earlier. The corresponding versions for DaoAI InspecTRA and DaoAI VisionPilot are **2.24.5.0** and **2.24.4.3**, respectively.
+
+
+Model Deploy
+------------------
+
+Click on ``Deploy`` button to the model deploy page. You can easily deploy your model to cloud, locally, or on an edge device.
+
+.. image:: Images/deploy_sdk.png
+    :scale: 80%
+    :align: center
+
+Click on ``View Code`` button on Hosted Image Inference, you can see your trained models in differrent versions. You can use the example code to make inference.
+
+.. image:: Images/click_check_code.png
+    :scale: 80%
+    :align: center
+
+Click on ``Switch Model`` to switch from different versions, different version has different **trained_model_uid**.
+
+.. image:: Images/check_code.png
+    :scale: 80%
+    :align: center
+
+Inference result return as format of **dictionary**, you can read the detailed document from :ref:`Hosted Image Inference`.
+
+Click on ``View Documentation`` will redirect to DWSDK chapter of this document.
+
+.. image:: Images/open_sdk_doc.png
+    :scale: 80%
+    :align: center
+
