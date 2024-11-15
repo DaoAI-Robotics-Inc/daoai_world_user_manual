@@ -61,13 +61,19 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
-    
-    //异常检测
+
+    //异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
     DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
     
-    //语义分割
+    //语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
     DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
     
+    //非监督缺陷检测
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+    
+    //监督缺陷检测
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
+
     //OCR
     DaoAI::DeepLearning::Vision::OCR model(model_path);
 
@@ -111,11 +117,17 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //异常检测
+    //异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //语义分割
+    //语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
+    
+    //非监督缺陷检测
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    
+    //监督缺陷检测
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
     
     //OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
@@ -125,6 +137,27 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
     //漏错装检测 (只在工业版支持)
     DaoAI::DeepLearning::Vision::PresenceCheckingResult prediction = model.inference(daoai_image);
+
+后处理参数
+~~~~~~~~~~~~~~
+
+模型的预测 可以接受后处理参数：
+
+    - DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD:
+
+        置信度阈值，会过滤掉结果中置信度低于设定值的结果
+
+    - DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD:
+
+        IOU阈值，会过滤掉结果中IOU低于设定值的结果
+
+    - DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD:
+    
+        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
+
+.. code-block:: C++
+
+		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image, {{DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD, 0.4}, {DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD, 0.5} });
 
 
 返回结果示例

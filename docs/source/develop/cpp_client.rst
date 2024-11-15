@@ -104,11 +104,17 @@ DaoAI World 输出的深度学习模型通常是 dwm 格式。我们需要创建
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
     
-    //异常检测
+    //异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
     DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
     
-    //语义分割
+    //语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
     DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
+    
+    //非监督缺陷检测
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+    
+    //监督缺陷检测
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
     
     //OCR
     DaoAI::DeepLearning::Vision::OCR model(model_path);

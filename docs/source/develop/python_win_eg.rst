@@ -18,7 +18,12 @@ Python Windows 代码示例
     model_path = "./model.dwm"
     image_path = "./image.png"
 
+
+引入库
+~~~~~~~~~~~~~~~~
+
 您也可以从一个新的python文件开始，那么首先需要导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
+
 
 .. code-block:: python
 
@@ -35,7 +40,8 @@ Python Windows 代码示例
     import matplotlib.pyplot as plt
 
 
-初始化，读取模型
+加载深度学习模型
+~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -61,12 +67,18 @@ Python Windows 代码示例
     #目标检测
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
     
-    #异常检测
+    #异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
     model = dlsdk.AnomalyDetection(model_path, device=dlsdk.DeviceType.GPU)
     
-    #语义分割
+    #语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
     model = dlsdk.SemanticSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+
+    #非监督缺陷检测
+    model = dlsdk.UnsupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
     
+    #监督缺陷检测
+    model = dlsdk.SupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+
     #OCR
     model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
 
@@ -77,6 +89,10 @@ Python Windows 代码示例
     model = dlsdk.PresenceChecking(model_path, device=dlsdk.DeviceType.GPU)
 
 
+读取图片
+~~~~~~~~~~~~~~~~
+
+
 读取图片，这一步可以使用 opencv 来读取， 如果您没有 安装，您可以运行 ``pip install python-opencv`` 来进行安装
 
 .. code-block:: python
@@ -85,6 +101,11 @@ Python Windows 代码示例
     img = cv2.imread(image_path)
 
     daoai_image = dlsdk.Image.from_numpy(img, dlsdk.Image.Type.BGR) #创建 DaoAI Image 
+
+
+使用深度学习模型进行预测
+~~~~~~~~~~~~~~~~
+
 
 模型预测，并输出结果为Json文件
 
@@ -98,6 +119,29 @@ Python Windows 代码示例
 
     with open("outputAnnotation.json", "w") as f:
         f.write(prediction.toAnnotationJSONString()) #输出标注格式的json结果
+
+后处理
+***********************
+
+模型的预测 可以接受后处理参数：
+
+    - dlsdk.PostProcessType.CONFIDENCE_THRESHOLD 
+        
+        置信度阈值，会过滤掉结果中置信度低于设定值的结果
+        
+    - dlsdk.PostProcessType.IOU_THRESHOLD 
+        
+        IOU阈值，会过滤掉结果中IOU低于设定值的结果
+
+    - dlsdk.PostProcessType.SENSITIVITY_THRESHOLD 
+        
+        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95, dlsdk.PostProcessType.IOU_THRESHOLD: 0.5})
+
+
 
 您也可以通过其它方法来获取结果信息
 

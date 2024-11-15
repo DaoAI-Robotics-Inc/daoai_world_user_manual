@@ -95,13 +95,19 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     
     //目标检测
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
-    
-    //异常检测
+
+    //异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
     DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
-    //语义分割
+    //语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
     DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
+
+    //非监督缺陷检测
+    DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
+    //监督缺陷检测
+    DaoAI.DeepLearningCLI.Vision.SupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
+
     //OCR
     DaoAI.DeepLearningCLI.Vision.OCR model(model_path) = new DaoAI.DeepLearningCLI.Vision.OCR(model_path);
 
@@ -123,6 +129,32 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENT_THRESHOLD] = 0.5;
 
     Console.WriteLine(model.inference(img, post_params).toJSONString());
+
+后处理参数
+~~~~~~~~~~~~~~
+
+模型的预测 可以接受后处理参数：
+
+    - DaoAI.DeepLearningCLI.PostProcessType.CONFIDENCE_THRESHOLD:
+    
+        置信度阈值，会过滤掉结果中置信度低于设定值的结果
+    
+    - post_params[DaoAI.DeepLearningCLI.PostProcessType.IOU_THRESHOLD:
+
+        IOU阈值，会过滤掉结果中IOU低于设定值的结果
+   
+    - post_params[DaoAI.DeepLearningCLI.PostProcessType.SENSITIVITY_THRESHOLD:
+
+        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
+
+.. code-block:: C#
+
+    Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object> post_params = new Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object>();
+    post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENCE_THRESHOLD] = 0.5; //置信度阈值，会过滤掉结果中置信度低于设定值的结果
+    post_params[DaoAI.DeepLearningCLI.PostProcessType.IOU_THRESHOLD] = 0.5; //IOU阈值，会过滤掉结果中IOU低于设定值的结果
+
+    Console.WriteLine(model.inference(img, post_params));
+
 
 返回结果示例
 ------------------
