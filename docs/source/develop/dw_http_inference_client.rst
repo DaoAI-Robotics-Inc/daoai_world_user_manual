@@ -164,17 +164,17 @@ auto_mask 模型是DaoAI World服务器提供的 **全局** 智能分割图片�
 mask_predictor
 ******************
 
-auto_mask 模型是DaoAI World服务器提供的 **引导** 智能分割图片的模型，这个比较类似于标注时的智能标注工具，您可以输入引导的点，或者框，模型会返回您指示区域中的掩码。
+mask_predictor 模型是DaoAI World服务器提供的 **引导** 智能分割图片的模型，这个比较类似于标注时的智能标注工具，您可以输入引导的点，或者框，模型会返回您指示区域中的掩码。
 它可以接受一些参数
 
   - point_coords:
-    这个参数表示点提示的坐标。在图像上指定一些点，告诉模型你希望它关注这些区域。这些点可以是图像中你感兴趣的物体的中心、边界点等。通常是一个二维的NumPy数组，每一行代表一个点的坐标 (x, y)。
+    这个参数表示点提示的坐标。在图像上指定一些点，告诉模型你希望它关注这些区域。这些点可以是图像中你感兴趣的物体的中心、边界点等。通常是一个二维的数组，每一行代表一个点的坐标 (x, y)。
     
   - box:
     这个参数表示一个边界框。用一个矩形框来大致框定你感兴趣的区域。这可以帮助模型更快地聚焦到目标区域。通常是一个列表或数组，包含四个元素：[x1, y1, x2, y2]，分别表示框的左上角和右下角的坐标。
 
   - point_labels:
-     这个参数表示点提示的标签。为每个点提示分配一个标签，告诉模型这个点属于哪个类别。这在多类别分割任务中非常有用。通常是一个与 point_coords 形状相同的数组，每个元素表示对应点的标签，告诉模型这个点属于哪个类别。这在多类别分割任务中非常有用。
+     这个参数表示点提示的标签。为每个点提示分配一个标签，告诉模型这个点属于哪个类别。这在多类别分割任务中非常有用。通常是一个与 point_coords 长度相同的数组，每个元素表示对应点的标签，告诉模型这个点属于哪个类别。这在多类别分割任务中非常有用。
 
 .. code-block:: python
 
@@ -200,8 +200,8 @@ auto_mask 模型是DaoAI World服务器提供的 **引导** 智能分割图片�
 .. code-block:: python
 
     # use Point
-    point_coords = np.array([[100, 50], [200, 150]]) #replace with your coordinates
-    point_labels = np.array([0, 1]) #optional give the label of the cooridnates
+    point_coords = [[100, 50], [200, 150]] #replace with your coordinates
+    point_labels = [0, 1] # give the label of the cooridnates 0: background 1: object
     result = CLIENT.infer(file_path, pretrained_model_type="mask_predictor",
       point_coords = point_coords,
       box = None,
