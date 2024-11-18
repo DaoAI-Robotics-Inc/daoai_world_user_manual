@@ -1,14 +1,14 @@
 C++ Inference Client Example Project
 ====================================
 
-This chapter provides a detailed introduction to the C++ Inference Client code example included in the DaoAI World SDK.
+This chapter provides a detailed introduction to the C++ Inference Client code examples included in the DaoAI World SDK.
 
-Library Inclusion
------------------
+Importing Libraries
+--------------------
 
-In the C++ example, we include the following header files:
+In the C++ examples, the following headers are used:
 
-.. code-block:: C++
+.. code-block:: cpp
 
     #include <iostream>
     #include <inference_client/model.h>
@@ -16,14 +16,15 @@ In the C++ example, we include the following header files:
     #include <string>
     #include <fstream>
 
-Reading an Image
-----------------
 
-The model prediction function in the C++ Inference Client requires the image to be represented as a base64-encoded image (`base64_encoded_image`). You can use OpenCV library functions for conversion or use the online tool https://base64.guru/converter/encode/image for this.
+Reading Images
+--------------
 
-First, define the file path. The file format is a text file with the image converted to base64 encoding, which is then read.
+The C++ Inference Client's model inference function requires images to be represented as a 64-bit encoded image (base64_encoded_image). You can use OpenCV library functions for conversion or an online tool like `Base64 Guru <https://base64.guru/converter/encode/image>`_.
 
-.. code-block:: C++
+First, define the file path. The file format is a text file containing the 64-bit encoded image, which can then be read as follows:
+
+.. code-block:: cpp
 
     // Image path in the local file system
     std::string image_path = "C:/Users/daoai/test_vision/kp.txt";
@@ -37,9 +38,9 @@ First, define the file path. The file format is a text file with the image conve
     fin >> base64_encoded_image;
     fin.close();
 
-You can also use the OpenCV library to read the image in base64-encoded format.
+You can also use the OpenCV library to read and encode images into base64 format:
 
-.. code-block:: C++
+.. code-block:: cpp
 
     std::string base64ImageEncoding(const Image& image)
     {
@@ -72,110 +73,124 @@ You can also use the OpenCV library to read the image in base64-encoded format.
         }
     }
 
-Loading the Deep Learning Model
--------------------------------
 
-The deep learning models output by DaoAI World are usually in `dwm` format. We need to create a `DaoAI::DeepLearning::Vision::KeypointDetection` object and use the constructor method to load the deep learning model `dwm` file output by DaoAI World.
+Loading a Deep Learning Model
+------------------------------
 
-.. code-block:: C++
+DaoAI World models are typically in the ``.dwm`` format. Create a ``DaoAI::DeepLearning::Vision::KeypointDetection`` object and use the constructor method to load the model file.
 
-    // Model path in the server file system
-    std::string model_path =  "C:/Users/daoai/test_vision/kp.dwm";
+.. code-block:: cpp
+
+    // Model path in the local file system
+    std::string model_path = "C:/Users/daoai/test_vision/kp.dwm";
 
     DaoAI::DeepLearning::Vision::KeypointDetection model(model_path);
 
-Note that each detection task has a corresponding object:
+Each detection task corresponds to a specific model object:
 
-.. code-block:: C++
+.. code-block:: cpp
 
-    // Instance segmentation
+    // Instance Segmentation
     DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
 
-    // Keypoint detection
+    // Keypoint Detection
     DaoAI::DeepLearning::Vision::KeypointDetection model(model_path);
-    
-    // Image classification
+
+    // Image Classification
     DaoAI::DeepLearning::Vision::Classification model(model_path);
-    
-    // Object detection
+
+    // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
-    
-    // Anomaly detection
+
+    // Anomaly Detection (prior to version 0.7)
     DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
-    
-    // Semantic segmentation
+
+    // Semantic Segmentation (prior to version 0.7)
     DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
-    
+
+    // Unsupervised Defect Detection
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+
+    // Supervised Defect Detection
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
+
     // OCR
     DaoAI::DeepLearning::Vision::OCR model(model_path);
 
-    // Positioning model (supported only in the industrial version)
+    // Positioning Model (Industrial version only)
     DaoAI::DeepLearning::Vision::Positioning model(model_path);
 
-    // Presence checking (supported only in the industrial version)
+    // Presence Checking (Industrial version only)
     DaoAI::DeepLearning::Vision::PresenceChecking model(model_path);
 
-If you try to load an incorrect model type, an error message will be thrown, indicating the correct model type to use.
+Loading an incorrect model type will throw an error, indicating the correct model object to use.
 
-Using the Deep Learning Model for Inference
--------------------------------------------
+Performing Inference
+---------------------
 
-.. code-block:: C++
+.. code-block:: cpp
 
-    // Get inference
+    // Get inference results
     DaoAI::DeepLearning::Vision::KeypointDetectionResult result = model.inference(base64_encoded_image);
 
-Note that each detection task has a corresponding result object:
+Each detection task returns a specific result object:
 
-.. code-block:: C++
+.. code-block:: cpp
 
-    // Instance segmentation
+    // Instance Segmentation
     DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
-    // Keypoint detection
+    // Keypoint Detection
     DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
     
-    // Image classification
+    // Image Classification
     DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
     
-    // Object detection
+    // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    // Anomaly detection
+    // Anomaly Detection (used for version .6 and earlier; renamed to Unsupervised Defect Detection after version .7)
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    // Semantic segmentation
+    // Semantic Segmentation (used for version .6 and earlier; renamed to Supervised Defect Detection after version .7)
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
-    // OCR
+    // Unsupervised Defect Detection
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    
+    // Supervised Defect Detection
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    
+    // OCR (Optical Character Recognition)
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
-    // Positioning model (supported only in the industrial version)
+    // Positioning Model (available only in the industrial version)
     DaoAI::DeepLearning::Vision::PositioningResult prediction = model.inference(daoai_image);
 
-    // Presence checking (supported only in the industrial version)
+    // Presence Checking (available only in the industrial version)
     DaoAI::DeepLearning::Vision::PresenceCheckingResult prediction = model.inference(daoai_image);
 
-Example of Returned Results
----------------------------
 
-Below is an example of the result returned by the keypoint detection model after prediction.
+Example Inference Result
+-------------------------
 
-This result shows the label names, confidence, bounding box, keypoints, and polygon masks.
+The following is an example result from a Keypoint Detection model inference. It displays the label name, confidence, bounding box, keypoints, and polygon masks.
 
-.. code-block:: C++
+.. code-block:: cpp
 
     std::cout << result.num_detections << "\n";
     for (int i = 0; i < result.num_detections; ++i)
     {
         std::cout << "Object " << std::to_string(i + 1) << "\n";
         std::cout << "Class: " << result.class_labels[i] << "\n";
-        std::cout << "Bounding box: " << result.boxes[i].x1() << " " << result.boxes[i].y1() << " " << result.boxes[i].x2() << " " << result.boxes[i].x2() << "\n";
+        std::cout << "Bounding box: " << result.boxes[i].x1() << " " << result.boxes[i].y1() << " "
+                  << result.boxes[i].x2() << " " << result.boxes[i].y2() << "\n";
         std::cout << "Confidence: " << result.confidences[i] << "\n";
         std::cout << "Keypoints: \n";
         for (int j = 0; j < result.keypoints[i].size(); ++j)
         {
-            std::cout << result.keypoints[i][j].x << " " << result.keypoints[i][j].y << " " << result.keypoints[i][j].confidence << "\n";
+            std::cout << result.keypoints[i][j].x << " " << result.keypoints[i][j].y << " "
+                      << result.keypoints[i][j].confidence << "\n";
         }
         std::cout << "\n";
     }

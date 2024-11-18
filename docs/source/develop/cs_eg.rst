@@ -1,12 +1,12 @@
-C# Code Examples
-======================
+C# Code Example
+==================
 
-This chapter provides detailed examples of C# code included in the DaoAI World SDK.
+This chapter provides a detailed explanation of the C# code examples included in the DaoAI World SDK.
 
-Including Libraries
------------------------
+Importing Libraries
+-------------------
 
-In the C# example, we include the following libraries, with ``DaoAI.DeepLearningCLI`` being the library for the DaoAI World SDK.
+In the C# example, the following libraries are imported, with ``DaoAI.DeepLearningCLI`` being the library used to import the DaoAI World SDK.
 
 .. code-block:: C#
 
@@ -19,10 +19,10 @@ In the C# example, we include the following libraries, with ``DaoAI.DeepLearning
     using DaoAI.DeepLearningCLI;
 
 
-Reading Images
------------------
+Reading an Image
+----------------
 
-The model prediction function in the DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Below is the code to read an image from a file:
+The model prediction function in the DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Here is the code for reading an image from a file:
 
 .. code-block:: C#
 
@@ -30,7 +30,7 @@ The model prediction function in the DaoAI World SDK requires the image to be re
     String root_directory = System.IO.Directory.GetCurrentDirectory();
 
     System.Drawing.Bitmap image = new
-        System.Drawing.Bitmap("C:\\Users\\daoai\\Downloads\\DW_SDK\\DW_SDK Example\\Data\\maskrcnn_data\\daoai_1.png"); //图片文件路径
+        System.Drawing.Bitmap("C:\\Users\\daoai\\Downloads\\DW_SDK\\DW_SDK Example\\Data\\maskrcnn_data\\daoai_1.png"); //Image file path
     System.Drawing.Bitmap image_copy = new System.Drawing.Bitmap(image);
     
     byte[] pixels = new byte[image.Width * image.Height * 3];
@@ -46,7 +46,7 @@ The model prediction function in the DaoAI World SDK requires the image to be re
     }
     
 
-Here, we make a deep copy of the image and then use the ``DaoAI.DeepLearningCLI.Image`` function to initialize the image object for later use:
+Here, a deep copy of the image is made, and the image object is initialized using the `DaoAI.DeepLearningCLI.Image` function for further use:
 
 .. code-block:: C#
 
@@ -69,53 +69,58 @@ Here, we make a deep copy of the image and then use the ``DaoAI.DeepLearningCLI.
         }
     }
 
-Loading Deep Learning Models
--------------------------------
+Loading a Deep Learning Model
+-----------------------------
 
 .. code-block:: C#
 
-        String data_path = "..\\..\\..\\..\\Data\\";
-        String model_path = data_path + "model.dwm";
-        // init model
+        String data_path = "..\\..\\..\\..\\Data\\"; 
+        String model_path = data_path + "model.dwm"; 
+        // Initialize model
         DaoAI.DeepLearningCLI.Vision.KeypointDetection model = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
 
-
-Note that each detection task has a corresponding object:
+Note that each detection task corresponds to a specific object:
 
 .. code-block:: C#
 
-    //Instance Segmentation
+    // Instance segmentation
     DaoAI.DeepLearningCLI.Vision.InstanceSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.InstanceSegmentation(model_path);
 
-    //Keypoint Detection
+    // Keypoint detection
     DaoAI.DeepLearningCLI.Vision.KeypointDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.KeypointDetection(model_path);
     
-    //Image Classification
+    // Image classification
     DaoAI.DeepLearningCLI.Vision.Classification model(model_path) = new DaoAI.DeepLearningCLI.Vision.Classification(model_path);
     
-    //Object Detection
+    // Object detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
-    
-    //Unsupervised Defect Segmentation
+
+    // Anomaly detection (used for versions prior to .6, renamed to Unsupervised Defect Detection in .7)
     DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
-    //Supervised Defect Segmentation
+    // Semantic segmentation (used for versions prior to .6, renamed to Supervised Defect Detection in .7)
     DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
+
+    // Unsupervised defect detection
+    DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
-    //OCR
+    // Supervised defect detection
+    DaoAI.DeepLearningCLI.Vision.SupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
+
+    // OCR
     DaoAI.DeepLearningCLI.Vision.OCR model(model_path) = new DaoAI.DeepLearningCLI.Vision.OCR(model_path);
 
-    //Positioning (Only Available in Industrial Version)
+    // Positioning model (available only in the industrial version)
     DaoAI.DeepLearningCLI.Vision.Positioning model(model_path) = new DaoAI.DeepLearningCLI.Vision.Positioning(model_path);
 
-    //Presence Checking (Only Available in Industrial Version)
+    // Error detection (available only in the industrial version)
     DaoAI.DeepLearningCLI.Vision.PresenceChecking model(model_path) = new DaoAI.DeepLearningCLI.Vision.PresenceChecking(model_path);
 
 
-Using Deep Learning Models for Prediction
-----------------------------------------------
+Using a Deep Learning Model for Prediction
+------------------------------------------
 
-Here, we define a confidence threshold (CONFIDENT_THRESHOLD) of 0.5 and call the model.inference() function to perform inference with the model, then use the .toJSONString() method to print the result as JSON.
+Here, the confidence threshold (CONFIDENT_THRESHOLD) is set to 0.5, and the `model.inference()` function is called to perform inference with the model. The results are then printed as a JSON using the `.toJSONString()` method:
 
 .. code-block:: C#
 
@@ -124,19 +129,42 @@ Here, we define a confidence threshold (CONFIDENT_THRESHOLD) of 0.5 and call the
 
     Console.WriteLine(model.inference(img, post_params).toJSONString());
 
+Post-processing Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The model's predictions can accept post-processing parameters:
+
+    - DaoAI.DeepLearningCLI.PostProcessType.CONFIDENCE_THRESHOLD:
+
+        The confidence threshold filters out results with a confidence lower than the specified value.
+    
+    - post_params[DaoAI.DeepLearningCLI.PostProcessType.IOU_THRESHOLD]:
+
+        The IOU threshold filters out results with an IOU lower than the specified value.
+   
+    - post_params[DaoAI.DeepLearningCLI.PostProcessType.SENSITIVITY_THRESHOLD]:
+
+        Used in unsupervised defect segmentation (anomaly detection) models to control the sensitivity to defects. The higher the sensitivity, the more defects the model will detect, but it may result in more false positives.
+
+.. code-block:: C#
+
+    Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object> post_params = new Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object>();
+    post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENCE_THRESHOLD] = 0.5; // Filters out results with confidence lower than the set value
+    post_params[DaoAI.DeepLearningCLI.PostProcessType.IOU_THRESHOLD] = 0.5; // Filters out results with IOU lower than the set value
+
+    Console.WriteLine(model.inference(img, post_params));
+
 Example of Returned Results
-----------------------------------
+----------------------------
 
-Below is an example of the results returned by the instance segmentation model.
+Below is an example of the results returned after running an instance segmentation model prediction.
 
-This result shows the predicted results, including number of detections, bounding box, labels, and masks.
-
-This information can be used for further processing or analysis of the prediction results.
+This result shows the predicted quantity, label names, confidence, bounding boxes, and polygon masks.
 
 .. code-block:: json
 
     {
-        "Number of detecions": 1,
+        "Number of detections": 1,
         "Detections": [
             {
                 "Label": "zheng",

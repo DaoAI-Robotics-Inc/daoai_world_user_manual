@@ -1,148 +1,173 @@
-C++ Code Examples
-=========================
+C++ Code Example
+===================
 
-This chapter will provide detailed examples of C++ code included in the DaoAI World SDK.
+This chapter provides detailed explanations of the C++ code examples included in the DaoAI World SDK.
 
+Importing Libraries
+------------------------
 
-Including Libraries
---------------------------
+In the C++ examples, we use the following headers, with ``dlsdk/model.h`` being used to include the DaoAI World SDK library.
 
-In the C++ example, we use the following header files, with ``dlsdk/model.h`` being used to include the DaoAI World SDK library.
-
-.. code-block:: C++
+.. code-block:: cpp
 
     #include <dlsdk/model.h>
     #include <dlsdk/prediction.h>
     #include <string>
     #include <fstream>
 
-
 Reading Images
----------------------
+-----------------
 
-The model prediction function in the DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Below is a function to read an image from a file:
+The model prediction function in DaoAI World SDK requires the image to be represented as a one-dimensional array (1D array). Below is the function to read an image from a file:
 
-First, define the file path, and then call the function to read the image. You can use the daoai_image() method to read the image.
+First, define the file path and then call the function to read it. You can use the ``daoai_image()`` method to load the image.
 
-.. code-block:: C++
+.. code-block:: cpp
 
-		// get root path to the model and image
-        std::string root = "../"; // change to your own path
-		std::string image_path = root + "image.png";
+    // get root path to the model and image
+    std::string root = "../"; // change to your own path
+    std::string image_path = root + "image.png";
 
-		// load image
-		DaoAI::DeepLearning::Image daoai_image(image_path);
+    // load image
+    DaoAI::DeepLearning::Image daoai_image(image_path);
 
+Loading a Deep Learning Model
+----------------------------------
 
-Loading Deep Learning Models
--------------------------------------
+First, you need to load the model. The deep learning model output by DaoAI World is typically in `.dwm` format. We need to create a ``DaoAI::DeepLearning::Vision::InstanceSegmentation`` object and use the constructor method to load the `.dwm` file output by DaoAI World.
 
-First, you need to load the model. The deep learning models output by DaoAI World are typically in zip format. 
-You need to create a ``DaoAI::DeepLearning::Model`` object to read the deep learning model zip file output by DaoAI World.
+.. code-block:: cpp
 
-.. code-block:: C++
+    std::string root = "../"; // change to your own path
+    std::string model_path = root + "model.dwm";
 
-        std::string root = "../"; // change to your own path
-		std::string model_path = root + "model.dwm";
-
-        // init model
-		DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
+    // init model
+    DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
 
 Note that each detection task has a corresponding object:
 
+.. code-block:: cpp
 
-.. code-block:: C++
-
-    //Instance Segmentation
+    // Instance Segmentation
     DaoAI::DeepLearning::Vision::InstanceSegmentation model(model_path);
 
-    //Keypoint Detection
+    // Keypoint Detection
     DaoAI::DeepLearning::Vision::KeypointDetection model(model_path);
 
-    //Image Classification
+    // Image Classification
     DaoAI::DeepLearning::Vision::Classification model(model_path);
 
-    //Object Detection
+    // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
-    //Unsupervised Defect Segmentation
+    // Anomaly Detection (used for version .6 and earlier, renamed to Unsupervised Defect Detection after version .7)
     DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
 
-    //Supervised Defect Segmentation
+    // Semantic Segmentation (used for version .6 and earlier, renamed to Supervised Defect Detection after version .7)
     DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
 
-    //OCR
+    // Unsupervised Defect Detection
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+
+    // Supervised Defect Detection
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
+
+    // OCR
     DaoAI::DeepLearning::Vision::OCR model(model_path);
-    
-    //Positioning (Only Available in Industrial Version)
+
+    // Positioning Model (available only in the industrial version)
     DaoAI::DeepLearning::Vision::Positioning model(model_path);
 
-    //Presence Checking (Only Available in Industrial Version)
+    // Presence Checking (available only in the industrial version)
     DaoAI::DeepLearning::Vision::PresenceChecking model(model_path);
 
-If you attempt to load a model object that does not match, an error will be reported, indicating the correct model type you should use.
+If you attempt to load a non-corresponding model object, an error will be thrown with a message indicating the correct model type.
 
 Using Deep Learning Models for Prediction
---------------------------------------------------------
+---------------------------------------------
 
-.. code-block:: C++
+.. code-block:: cpp
 
-		// get inference
-		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
-
-		//std::vector<DaoAI::DeepLearning::Polygon> polygons = prediction.masks[1].toPolygons();
-		std::string json_string = prediction.toJSONString();
-		// write to json file
-		std::ofstream fout(root + "daoai_1.json");
-		fout << json_string << "\n";
-		fout.close();
-
-Note that each detection task returns results with corresponding objects:
-
-
-.. code-block:: C++
-
-    //Instance Segmentation
+    // get inference
     DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
 
-    //Keypoint Detection
+    //std::vector<DaoAI::DeepLearning::Polygon> polygons = prediction.masks[1].toPolygons();
+    std::string json_string = prediction.toJSONString(); // Standard output JSON
+    std::string annotation_json_string = prediction.toAnnotationJSONString(); // Output JSON in annotated format
+    // write to json file
+    std::ofstream fout(root + "daoai_1.json");
+    fout << json_string << "\n";
+    fout.close();
+
+Note that each detection task returns a corresponding result object:
+
+.. code-block:: cpp
+
+    // Instance Segmentation
+    DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image);
+
+    // Keypoint Detection
     DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
     
-    //Image Classification
+    // Image Classification
     DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
     
-    //Object Detection
+    // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
     
-    //Unsupervised Defect Segmentation
+    // Anomaly Detection (used for version .6 and earlier, renamed to Unsupervised Defect Detection)
     DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
     
-    //Supervised Defect Segmentation
+    // Semantic Segmentation (used for version .6 and earlier, renamed to Supervised Defect Detection)
     DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
     
-    //OCR
+    // Unsupervised Defect Detection
+    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    
+    // Supervised Defect Detection
+    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    
+    // OCR
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 
-    //Positioning (Only Available in Industrial Version)
+    // Positioning Model (available only in the industrial version)
     DaoAI::DeepLearning::Vision::PositioningResult prediction = model.inference(daoai_image);
 
-    //Presence Checking (Only Available in Industrial Version)
+    // Presence Checking (available only in the industrial version)
     DaoAI::DeepLearning::Vision::PresenceCheckingResult prediction = model.inference(daoai_image);
 
+Post-processing Parameters
+---------------------------
 
-Example of Returned Results
-------------------------------
+The model prediction function can accept post-processing parameters:
 
-Below is an example of the results returned by the instance segmentation model.
+    - ``DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD``:
 
-This result shows the predicted results, including number of detections, bounding box, labels, and masks.
+        The confidence threshold, which filters out results with a confidence lower than the set value.
 
-This information can be used for further processing or analysis of the prediction results.
+    - ``DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD``:
+
+        The IOU threshold, which filters out results with an IOU lower than the set value.
+
+    - ``DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD``:
+
+        The sensitivity threshold, used in unsupervised defect segmentation (anomaly detection) models to control the sensitivity to defects. A higher sensitivity will result in more defects being detected, but may also lead to false positives.
+
+.. code-block:: cpp
+
+    DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image, {{DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD, 0.4}, {DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD, 0.5} });
+
+Example of Return Results
+--------------------------
+
+Below is an example of the result returned by the ``toJSONString()`` method after prediction with the instance segmentation model.
+
+This result shows the number of predictions, label names, confidence, bounding boxes, and polygon masks.
 
 .. code-block:: json
 
     {
-        "Number of detecions": 1,
+        "Number of detections": 1,
         "Detections": [
             {
                 "Label": "zheng",
@@ -170,12 +195,11 @@ This information can be used for further processing or analysis of the predictio
         "ImageWidth": 1920
     }
 
-The ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` object also provides the .masks[i].toPolygons() method to obtain polygon objects.
+The ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` object can also use the ``.masks[i].toPolygons()`` method to get the polygon object.
 
-Alternatively, you can use the ``.masks[i].toImage()`` method to get the image of the polygon mask, which you can then write out using OpenCV.
+Alternatively, use the ``.masks[i].toImage()`` method to get the polygon mask image, which you can then write using OpenCV.
 
-.. code-block:: C++
+.. code-block:: cpp
 
-    DaoAI::DeepLearning::Image image = prediction.maskss[0].toImage();
-    cv::imwrite("mask.png", cv::Mat(image.rows,image.cols, CV_8UC1, image.getData()));
-
+    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
+    cv::imwrite("mask.png", cv::Mat(image.rows, image.cols, CV_8UC1, image.getData()));

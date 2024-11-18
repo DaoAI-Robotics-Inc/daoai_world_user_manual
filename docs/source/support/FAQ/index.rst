@@ -38,25 +38,44 @@ Python Linux/Jetson SDK Runtime Error ImportError: libgthread-2.0.so.0: cannot o
 
 
 
-DW_SDK Error licensemanger_cli.exe is not rcognized as an internal or external command
-----------------------------------------------------------------------------------------------------------------------------
+License Error
+-----------------
 
-    If you encounter the following error when running a DL SDK project, it means that ``licensemanager_cli.exe`` and ``machine.lic`` are not in the correct location:
+    If you encounter the following error when running a DL SDK project, it indicates that ``licensemanager_cli.exe`` is not in the correct location.
 
     .. image:: images/licensemanager_notfound.png
         :align: center
 
-    You need to open the project's settings in Visual Studio, navigate to the Debugging settings, and check the ``Working Directory`` path, which defaults to the project's folder. Copy ``licensemanger_cli.exe`` and ``license.lic`` file to this directory.
+    First, check if restarting your computer resolves the issue.
 
-    .. image:: images/working_dir.png
+    Check Step 1
+        
+        If you have previously installed an older version of DWSDK, DaoAI Vision Pilot, or DaoAI Inspectra, these applications may have installed an older version of the License Manager. Due to environment configuration conflicts, the system might be using the outdated License Manager.
+
+    Solution 1
+
+        Search for ``license_manager`` in your system drive and delete any other ``licensemanager_cli.exe`` or ``licensemanager_gui.exe`` files. Keep only the versions located in the ``bin`` folder of the DWSDK installation directory. 
+    
+    Check Step 2
+        
+        Ensure that ``licensemanager_cli.exe`` and ``licensemanager_gui.exe`` exist in the DWSDK installation directory (e.g., ``C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin``).
+
+        Check whether the system environment variables include the correct path pointing to ``C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin`` and that it is at the top of the list. If the path uses ``%DWSDK_PATH%/bin``, verify that ``%DWSDK_PATH%`` correctly points to ``C:\\Program Files\\DaoAI World SDK\\DWSDK``.
+
+    Solution 2
+
+        Modify the incorrect system environment variable paths to ensure that the ``path`` includes ``C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin``.
+    
+    Check Step 3
+
+        Delete the DaoAI folder located in the Windows ``%temp%`` directory, then rerun the SDK program.
+
+    .. image:: images/temp.png
         :align: center
 
-    .. image:: images/move.png
-        :align: center
+    Solution 3 
 
-    If you're using the built exe, place both ``licensemanger_cli.exe`` and ``license.lic`` in the same directory as the executable.
-
-    Re-running the project should resolve the issue. If you don't have a valid license file, please see the next section.
+        The model you are using might be corrupted. Retrain the model and export it again, ensuring not to use the corrupted model.
 
 
 Uploaded images appear completely black in the annotation page
