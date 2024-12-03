@@ -125,6 +125,34 @@ Python Windows 代码示例
     with open("outputAnnotation.json", "w") as f:
         f.write(prediction.toAnnotationJSONString()) #输出标注格式的json结果
 
+后处理
+***********************
+
+模型的预测 可以接受后处理参数：
+
+    - dlsdk.PostProcessType.CONFIDENCE_THRESHOLD 
+        
+        置信度阈值，会过滤掉结果中置信度低于设定值的结果
+        
+    - dlsdk.PostProcessType.IOU_THRESHOLD 
+        
+        IOU阈值，会过滤掉结果中IOU低于设定值的结果
+
+    - dlsdk.PostProcessType.SENSITIVITY_THRESHOLD 
+        
+        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95, dlsdk.PostProcessType.IOU_THRESHOLD: 0.5})
+
+您也可以通过其它方法来获取结果信息
+
+.. code-block:: python
+
+    print(prediction.boxes)
+    print(prediction.class_ids) 
+    print(prediction.class_labels)
 
 获取预测结果
 ~~~~~~~~~~~~~~~~
@@ -173,33 +201,3 @@ Mask 是预测结果中目标物体的外轮廓信息，可以通过以下方式
 
     result.save("output.png")
 
-后处理
-***********************
-
-模型的预测 可以接受后处理参数：
-
-    - dlsdk.PostProcessType.CONFIDENCE_THRESHOLD 
-        
-        置信度阈值，会过滤掉结果中置信度低于设定值的结果
-        
-    - dlsdk.PostProcessType.IOU_THRESHOLD 
-        
-        IOU阈值，会过滤掉结果中IOU低于设定值的结果
-
-    - dlsdk.PostProcessType.SENSITIVITY_THRESHOLD 
-        
-        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
-
-.. code-block:: python
-
-    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95, dlsdk.PostProcessType.IOU_THRESHOLD: 0.5})
-
-
-
-您也可以通过其它方法来获取结果信息
-
-.. code-block:: python
-
-    print(prediction.boxes)
-    print(prediction.class_ids) 
-    print(prediction.class_labels)
