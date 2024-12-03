@@ -3,6 +3,9 @@ C++ Code Example
 
 This chapter provides detailed explanations of the C++ code examples included in the DaoAI World SDK.
 
+.. contents::
+    :local:
+
 Importing Libraries
 ------------------------
 
@@ -157,6 +160,58 @@ The model prediction function can accept post-processing parameters:
 
     DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image, {{DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD, 0.4}, {DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD, 0.5} });
 
+Retrieving Prediction Results
+-----------------------------
+
+Box (Bounding Box)
+~~~~~~~~~~~~~~~~~~
+
+The `Box` represents the bounding box of the model's prediction. It can be accessed as follows:
+
+.. code-block:: cpp
+
+    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
+
+    prediction.boxes[0].x1();  // Top-left corner X-coordinate
+    prediction.boxes[0].y1();  // Top-left corner Y-coordinate
+    prediction.boxes[0].x2();  // Bottom-right corner X-coordinate
+    prediction.boxes[0].y2();  // Bottom-right corner Y-coordinate
+
+Mask (Contour)
+~~~~~~~~~~~~~~
+
+The `Mask` provides the contour of the target object in the prediction. You can extract the vertices of the polygonal region as follows:
+
+.. code-block:: cpp
+
+    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
+
+    prediction.masks[0].toPolygons()[0].points[0].x;  // X-coordinate of the vertex
+    prediction.masks[0].toPolygons()[0].points[0].y;  // Y-coordinate of the vertex
+
+- **`masks[0]`**: Extracts the mask of the first target object.
+- **`toPolygons()`**: Converts the mask into a polygonal contour.
+- **`points[0]`**: Retrieves the coordinates of the first vertex.
+
+By connecting all the vertices sequentially, the complete contour of the target object is formed. This approach is useful for applications like target detection and region analysis.
+
+Visualization Output
+~~~~~~~~~~~~~~~~~~~~
+
+Save the predicted mask as a single-channel grayscale image using OpenCV:
+
+.. code-block:: cpp
+
+    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
+    cv::imwrite("mask.png", cv::Mat(image.rows, image.cols, CV_8UC1, image.getData()));
+
+Generate and save a visualization image that overlays the prediction results on the original image:
+
+.. code-block:: cpp
+
+    DaoAI::DeepLearning::Image result = DaoAI::DeepLearning::Utils::visualize(daoai_image, prediction);
+    result.save(root + "daoai_output.png");
+    
 Example of Return Results
 --------------------------
 

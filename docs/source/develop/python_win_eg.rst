@@ -3,6 +3,9 @@ Python Windows Code Example
 
 You can use the provided `Python example code <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ which includes image reading, model loading, model prediction, and output.
 
+.. contents::
+    :local:
+
 You will need a valid DaoAI license to run the code. If you do not have a license, please refer to :ref:`software license`.
 
 Then, run the following command to execute the Python script:
@@ -145,3 +148,51 @@ You can also retrieve result information using other methods:
     print(prediction.boxes)
     print(prediction.class_ids)
     print(prediction.class_labels)
+
+
+Retrieving Prediction Results
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Box (Bounding Box)
+````````````````````````````
+
+The `Box` represents the bounding box of the predicted results from the model. You can retrieve it as follows:
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image)
+
+    prediction.boxes[0].x1()  # Top-left corner X-coordinate
+    prediction.boxes[0].y1()  # Top-left corner Y-coordinate
+    prediction.boxes[0].x2()  # Bottom-right corner X-coordinate
+    prediction.boxes[0].y2()  # Bottom-right corner Y-coordinate
+
+Mask (Contour)
+````````````````````````````
+
+`Mask` provides the contour information of the target object in the prediction. You can extract the vertices of the polygonal region as follows:
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image)
+
+    prediction.masks[0].toPolygons()[0].points[0].x  # X-coordinate of the vertex
+    prediction.masks[0].toPolygons()[0].points[0].y  # Y-coordinate of the vertex
+
+- **`masks[0]`**: Extracts the mask of the first target object.
+- **`toPolygons()`**: Converts the mask into polygonal contours.
+- **`points[0]`**: Retrieves the first vertex of the polygon.
+
+By connecting all the vertices sequentially, you can form the complete contour of the target object. This is useful for applications requiring detailed boundary information, such as region analysis or fine-grained annotations.
+
+Visualization Output
+````````````````````````````
+
+Generate and save a visualization image that overlays the prediction results on the original image:
+
+.. code-block:: python
+
+    result = dlsdk.visualize(daoai_image, prediction)
+
+    result.save("output.png")
+
