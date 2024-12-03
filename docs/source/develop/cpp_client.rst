@@ -1,7 +1,9 @@
 C++ Inference Client 示例项目
 ====================================
 
-
+.. contents::
+    :local:
+    
 本章会详细介绍DaoAI World SDK中包含的C++ Inference Client 代码示例。
 
 引入库

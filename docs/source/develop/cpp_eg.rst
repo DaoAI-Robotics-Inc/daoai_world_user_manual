@@ -3,6 +3,9 @@ C++ 代码示例
 
 本章会详细介绍DaoAI World SDK中包含的C++代码示例。
 
+.. contents::
+    :local:
+
 引入库
 --------------
 
@@ -160,7 +163,61 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image, {{DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD, 0.4}, {DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD, 0.5} });
 
 
-返回结果示例
+
+获取预测结果
+------------------
+
+Box（边界框）
+~~~~~~~~~~~~~~~~~~~~~
+
+    Box 是模型预测结果中的边界框，可通过以下方式获取：
+
+.. code-block:: C++
+
+    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
+
+    prediction.boxes[0].x1();  // 左上角 x 坐标
+    prediction.boxes[0].y1();  // 左上角 y 坐标
+    prediction.boxes[0].x2();  // 右下角 x 坐标
+    prediction.boxes[0].y2();  // 右下角 y 坐标
+
+Mask（掩码）
+~~~~~~~~~~~~~~~~
+
+Mask 是预测结果中目标物体的外轮廓信息，可以通过以下方式提取多边形区域的顶点：
+
+.. code-block:: C++
+
+    DaoAI::DeepLearning::Vision::KeypointDetectionResult prediction = model.inference(daoai_image);
+
+    prediction.masks[0].toPolygons()[0].points[0].x  // 顶点的 X 坐标
+    prediction.masks[0].toPolygons()[0].points[0].y  // 顶点的 Y 坐标
+
+
+- **`masks[0]`**：提取第一个目标物体的掩码。  
+- **`toPolygons()`**：将掩码转换为多边形外轮廓。  
+- **`points[0]`**：获取多边形的第一个顶点坐标。  
+
+通过顺序连接多边形的所有顶点，可以形成完整的轮廓区域，用于目标检测、区域分析等应用场景。
+
+可视化输出
+~~~~~~~~~~~~
+
+将预测的掩码图保存为单通道灰度图，可以使用opencv库。
+
+.. code-block:: C++
+
+    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
+    cv::imwrite("mask.png", cv::Mat(image.rows,image.cols, CV_8UC1, image.getData()));
+
+生成并保存预测结果与原图叠加的可视化图像：
+
+.. code-block:: C++
+
+    DaoAI::DeepLearning::Image result = DaoAI::DeepLearning::Utils::visualize(daoai_image, prediction);
+    result.save(root + "daoai_output.png");
+
+输出为Json格式
 ------------------
 
 以下是实例分割模型预测后 调用 toJSONString() 方法所返回的结果示例。
@@ -197,14 +254,4 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
         "ImageHeight": 1200,
         "ImageWidth": 1920
     }
-
-
-``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` 对象 还可以使用 .masks[i].toPolygons() 方法来获取多边形对象。
-
-或者使用 .masks[i].toImage() 方法 来获取多边形掩膜的图像，您可以使用 openCV 来讲图片写出。
-
-.. code-block:: C++
-
-    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
-    cv::imwrite("mask.png", cv::Mat(image.rows,image.cols, CV_8UC1, image.getData()));
 

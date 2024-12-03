@@ -3,6 +3,10 @@ Python Windows 代码示例
 
 您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ 里面包含了图片的读取，模型的读取，以及模型的预测和输出。
 
+.. contents::
+    :local:
+
+    
 您需要有效的DaoAI 许可证才可以运行，如果您没有许可证，请参考 :ref:`软件许可证` 。
 
 然后运行以下命令就可以运行python脚本
@@ -103,8 +107,9 @@ Python Windows 代码示例
     daoai_image = dlsdk.Image.from_numpy(img, dlsdk.Image.Type.BGR) #创建 DaoAI Image 
 
 
+
 使用深度学习模型进行预测
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 模型预测，并输出结果为Json文件
@@ -119,6 +124,54 @@ Python Windows 代码示例
 
     with open("outputAnnotation.json", "w") as f:
         f.write(prediction.toAnnotationJSONString()) #输出标注格式的json结果
+
+
+获取预测结果
+~~~~~~~~~~~~~~~~
+
+Box（边界框）
+``````````````````````````````
+
+    Box 是模型预测结果中的边界框，可通过以下方式获取：
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image)
+
+    prediction.boxes[0].x1();  // 左上角 x 坐标
+    prediction.boxes[0].y1();  // 左上角 y 坐标
+    prediction.boxes[0].x2();  // 右下角 x 坐标
+    prediction.boxes[0].y2();  // 右下角 y 坐标
+
+Mask（掩码）
+``````````````````````````````
+
+Mask 是预测结果中目标物体的外轮廓信息，可以通过以下方式提取多边形区域的顶点：
+
+.. code-block:: python
+
+    prediction = model.inference(daoai_image)
+
+    prediction.masks[0].toPolygons()[0].points[0].x  // 顶点的 X 坐标
+    prediction.masks[0].toPolygons()[0].points[0].y  // 顶点的 Y 坐标
+
+
+- **`masks[0]`**：提取第一个目标物体的掩码。  
+- **`toPolygons()`**：将掩码转换为多边形外轮廓。  
+- **`points[0]`**：获取多边形的第一个顶点坐标。  
+
+通过顺序连接多边形的所有顶点，可以形成完整的轮廓区域，用于目标检测、区域分析等应用场景。
+
+可视化输出
+~~~~~~~~~~~~
+
+生成并保存预测结果与原图叠加的可视化图像：
+
+.. code-block:: python
+
+    result = dlsdk.visualize(daoai_image, prediction)
+
+    result.save("output.png")
 
 后处理
 ***********************
