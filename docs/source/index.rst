@@ -30,7 +30,7 @@ DAOAI WORLD USER MANUAL
 
 .. toctree::
    :maxdepth: 2
-   :caption: Develop
+   :caption: Development
 
    develop/index
 

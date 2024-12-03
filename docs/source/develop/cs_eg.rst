@@ -3,6 +3,9 @@ C# Code Example
 
 This chapter provides a detailed explanation of the C# code examples included in the DaoAI World SDK.
 
+.. contents::
+    :local:
+
 Importing Libraries
 -------------------
 
@@ -153,6 +156,56 @@ The model's predictions can accept post-processing parameters:
     post_params[DaoAI.DeepLearningCLI.PostProcessType.IOU_THRESHOLD] = 0.5; // Filters out results with IOU lower than the set value
 
     Console.WriteLine(model.inference(img, post_params));
+
+Retrieving Prediction Results
+-----------------------------
+
+Box (Bounding Box)
+~~~~~~~~~~~~~~~~~~
+
+The `Box` represents the bounding box of the predicted results from the model. You can retrieve it as follows:
+
+.. code-block:: csharp
+
+    // Retrieve prediction results
+    DaoAI.DeepLearningCLI.Vision.KeypointDetectionResult prediction = model.inference(daoaiImage);
+
+    // Access bounding box coordinates
+    double x1 = prediction.boxes[0].x1();  // Top-left corner X-coordinate
+    double y1 = prediction.boxes[0].y1();  // Top-left corner Y-coordinate
+    double x2 = prediction.boxes[0].x2();  // Bottom-right corner X-coordinate
+    double y2 = prediction.boxes[0].y2();  // Bottom-right corner Y-coordinate
+
+Mask (Contour)
+~~~~~~~~~~~~~~
+
+`Mask` provides the contour information of the target object in the prediction. You can extract the vertices of the polygonal region as follows:
+
+.. code-block:: csharp
+
+    // Retrieve prediction results
+    DaoAI.DeepLearningCLI.Vision.KeypointDetectionResult prediction = model.inference(daoaiImage);
+
+    // Extract the first vertex of the polygonal region
+    double x = prediction.masks[0].toPolygons()[0].points[0].X; // X-coordinate of the vertex
+    double y = prediction.masks[0].toPolygons()[0].points[0].Y; // Y-coordinate of the vertex
+
+- **`masks[0]`**: Extracts the mask of the first target object.  
+- **`toPolygons()`**: Converts the mask into polygonal contours.  
+- **`points[0]`**: Retrieves the first vertex of the polygon.  
+
+By connecting all the vertices sequentially, you can form the complete contour of the target object. This method is suitable for scenarios that require detailed boundary information, such as region analysis or fine-grained annotations.
+
+Visualization Output
+~~~~~~~~~~~~~~~~~~~~
+
+Generate and save a visualization image that overlays the prediction results on the original image:
+
+.. code-block:: csharp
+
+    DaoAI.DeepLearningCLI.Image result = DaoAI.DeepLearningCLI.Utils.Visualize(img, prediction);
+    result.save(rootDirectory + "daoai_output.png");
+
 
 Example of Returned Results
 ----------------------------

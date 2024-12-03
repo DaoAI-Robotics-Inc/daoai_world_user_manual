@@ -3,6 +3,9 @@ C++ Inference Client Example Project
 
 This chapter provides a detailed introduction to the C++ Inference Client code examples included in the DaoAI World SDK.
 
+.. contents::
+    :local:
+
 Importing Libraries
 --------------------
 

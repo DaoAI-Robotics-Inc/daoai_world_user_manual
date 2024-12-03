@@ -1,4 +1,4 @@
-Develope
+Development
 =============
 
 This chapter will provide a detailed introduction to the usage of DWSDK.
