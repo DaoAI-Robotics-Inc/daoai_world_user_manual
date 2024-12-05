@@ -98,12 +98,6 @@ Note that each detection task corresponds to a specific object:
     // Object detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
 
-    // Anomaly detection (used for versions prior to .6, renamed to Unsupervised Defect Detection in .7)
-    DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
-    
-    // Semantic segmentation (used for versions prior to .6, renamed to Supervised Defect Detection in .7)
-    DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
-
     // Unsupervised defect detection
     DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     

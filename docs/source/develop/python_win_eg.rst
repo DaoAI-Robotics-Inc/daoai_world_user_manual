@@ -67,12 +67,6 @@ Note that each detection task corresponds to a specific object:
     
     # Object Detection
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
-    
-    # Anomaly Detection (for versions before .6, renamed to Unsupervised Defect Detection in .7)
-    model = dlsdk.AnomalyDetection(model_path, device=dlsdk.DeviceType.GPU)
-    
-    # Semantic Segmentation (for versions before .6, renamed to Supervised Defect Detection in .7)
-    model = dlsdk.SemanticSegmentation(model_path, device=dlsdk.DeviceType.GPU)
 
     # Unsupervised Defect Segmentation
     model = dlsdk.UnsupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)

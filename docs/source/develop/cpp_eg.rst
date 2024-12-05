@@ -63,12 +63,6 @@ Note that each detection task has a corresponding object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
-    // Anomaly Detection (used for version .6 and earlier, renamed to Unsupervised Defect Detection after version .7)
-    DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
-
-    // Semantic Segmentation (used for version .6 and earlier, renamed to Supervised Defect Detection after version .7)
-    DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
-
     // Unsupervised Defect Detection
     DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
 
@@ -117,13 +111,7 @@ Note that each detection task returns a corresponding result object:
     
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
-    
-    // Anomaly Detection (used for version .6 and earlier, renamed to Unsupervised Defect Detection)
-    DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
-    
-    // Semantic Segmentation (used for version .6 and earlier, renamed to Supervised Defect Detection)
-    DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
-    
+
     // Unsupervised Defect Detection
     DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
     
