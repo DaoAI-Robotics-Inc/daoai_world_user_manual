@@ -71,27 +71,6 @@ The **C++** and **C#** SDK installation packages will contain both the SDK and S
     .. image:: images/install_folder.png
         :scale: 100%
 
-Open the `DLSDK Example.sln` project using Visual Studio.
-
-    .. image:: images/example_path.png
-        :scale: 100%
-
-    .. image:: images/vs.png
-        :scale: 60%
-
-The project consists of both C++ and C# projects. Right-click on the properties and select the start-up project to choose whether to run the C++ or C# project.
-
-    .. image:: images/start_up.png
-        :scale: 70%
-
-Then set the startup configuration to Release x64, and click `Local Windows Debugger` to run the project.
-
-    .. image:: images/run_0.png
-        :scale: 60%
-
-    .. image:: images/run_1.png
-        :scale: 60%
-
 Using DW_SDK requires a valid software license. For more details, see :ref:`Software License`.
 
 .. |br| raw:: html

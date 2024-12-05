@@ -105,12 +105,6 @@ Each detection task corresponds to a specific model object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
-    // Anomaly Detection (prior to version 0.7)
-    DaoAI::DeepLearning::Vision::AnomalyDetection model(model_path);
-
-    // Semantic Segmentation (prior to version 0.7)
-    DaoAI::DeepLearning::Vision::SemanticSegmentation model(model_path);
-
     // Unsupervised Defect Detection
     DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
 
