@@ -11,204 +11,271 @@
 
    * - 模型类型
      - 模式类型
+     - 硬件
      - 运行时间
    * - 实例分割 - 极快
      - DaoAI World 服务器
-     - 138ms
+     - RTX 4090 
+     - 26ms
    * - 实例分割 - 快
      - DaoAI World 服务器
-     - 158ms
+     - RTX 4090 
+     - 33ms
    * - 实例分割 - 准确
      - DaoAI World 服务器
-     - 142ms
+     - RTX 4090 
+     - 38ms
    * - 实例分割 - 旋转准确
      - DaoAI World 服务器
-     - 338ms
+     - RTX 4090 
+     - 107ms
    * - 实例分割 - 极快
      - SDK - GPU 模式
+     - RTX 3060
      - 58ms
    * - 实例分割 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 75ms
    * - 实例分割 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 73ms
    * - 实例分割 - 旋转准确
      - SDK - GPU 模式
+     - RTX 3060
      - 260ms
    * - 实例分割 - 极快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 522ms
    * - 实例分割 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 903ms
    * - 实例分割 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1262ms
    * - 实例分割 - 旋转准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 13325ms
    * - 关键点检测 - 极快
      - DaoAI World 服务器
-     - 150ms
+     - RTX 4090 
+     - 32ms
    * - 关键点检测 - 快
      - DaoAI World 服务器
-     - 174ms
+     - RTX 4090 
+     - 36ms
    * - 关键点检测 - 准确
      - DaoAI World 服务器
-     - 173ms
+     - RTX 4090 
+     - 48ms
    * - 关键点检测 - 旋转准确
      - DaoAI World 服务器
-     - 382ms
+     - RTX 4090 
+     - 125ms
    * - 关键点检测 - 极快
      - SDK - GPU 模式
+     - RTX 3060
      - 60ms
    * - 关键点检测 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 82ms
    * - 关键点检测 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 100ms
    * - 关键点检测 - 旋转准确
      - SDK - GPU 模式
+     - RTX 3060
      - 282ms
    * - 关键点检测 - 极快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 525ms
    * - 关键点检测 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 915ms
    * - 关键点检测 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1599ms
    * - 关键点检测 - 旋转准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 11344ms
    * - 物体检测 - 极快
      - DaoAI World 服务器
-     - 95ms
+     - RTX 4090 
+     - 22ms
    * - 物体检测 - 快
      - DaoAI World 服务器
-     - 125ms
+     - RTX 4090 
+     - 35ms
    * - 物体检测 - 准确
      - DaoAI World 服务器
-     - 118ms
+     - RTX 4090 
+     - 40ms
    * - 物体检测 - 旋转准确
      - DaoAI World 服务器
-     - 300ms
+     - RTX 4090 
+     - 103ms
    * - 物体检测 - 极快
      - SDK - GPU 模式
+     - RTX 3060
      - 57ms
    * - 物体检测 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 86ms
    * - 物体检测 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 82ms
    * - 物体检测 - 旋转准确
      - SDK - GPU 模式
+     - RTX 3060
      - 273ms
    * - 物体检测 - 极快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 597ms
    * - 物体检测 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1104ms
    * - 物体检测 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1653ms
    * - 物体检测 - 旋转准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 16363ms
    * - 图像分类 - 快
      - DaoAI World 服务器
-     - 35ms
+     - RTX 4090 
+     - 10ms
    * - 图像分类 - 准确
      - DaoAI World 服务器
-     - 48ms
+     - RTX 4090 
+     - 22ms
    * - 图像分类 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 14ms
    * - 图像分类 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 27ms
    * - 图像分类 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 101ms
    * - 图像分类 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 405ms
    * - 非监督缺陷检测 - 准确
      - DaoAI World 服务器
-     - 50ms
+     - RTX 4090 
+     - 36ms
    * - 非监督缺陷检测 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 23ms
    * - 非监督缺陷检测 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 92ms
    * - 监督缺陷检测 - 快
      - DaoAI World 服务器
-     - 69ms
+     - RTX 4090 
+     - 24ms
    * - 监督缺陷检测 - 准确
      - DaoAI World 服务器
-     - 141ms
+     - RTX 4090 
+     - 76ms
    * - 监督缺陷检测 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 41ms
    * - 监督缺陷检测 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 99ms
    * - 监督缺陷检测 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 472ms
    * - 监督缺陷检测 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1110ms
    * - OCR - 准确
      - DaoAI World 服务器
-     - 56ms
+     - RTX 4090 
+     - 49ms
    * - OCR - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 178ms
    * - OCR - 准确 
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 159ms   
    * - 定位 - 快
      - DaoAI World 服务器
-     - 54ms
+     - RTX 4090 
+     - 18ms
    * - 定位 - 准确
      - DaoAI World 服务器
-     - 70ms
+     - RTX 4090 
+     - 30ms
    * - 定位 - 旋转准确
      - DaoAI World 服务器
-     - 243ms
+     - RTX 4090 
+     - 101ms
    * - 定位 - 快
      - SDK - GPU 模式
+     - RTX 3060
      - 29ms
    * - 定位 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 43ms
    * - 定位 - 旋转准确 
      - SDK - GPU 模式
+     - RTX 3060
      - 226ms
    * - 定位 - 快
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 337ms
    * - 定位 - 准确
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 780ms
    * - 定位 - 旋转准确 
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 15038ms
    * - 缺漏装检测 - 准确
      - DaoAI World 服务器
-     - 131ms
+     - RTX 4090 
+     - 17ms
    * - 缺漏装检测 - 准确
      - SDK - GPU 模式
+     - RTX 3060
      - 86ms
    * - 缺漏装检测 - 准确 
      - SDK - CPU 模式
+     - Intel(R) Core(TM) i7-10700K
      - 1099ms
 
 

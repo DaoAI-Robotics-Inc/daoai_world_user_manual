@@ -6,7 +6,7 @@ SDK版本
 
 SDK 和 DaoAI World 一样，分为 **工业版** 和 **企业版**。
 
-两个版本的区别在于， **工业版** 可以支持工业版特有的两种类型的模型： :ref:`漏错装检测` 和 :ref:`定位模型` 。
+两个版本的区别在于， **工业版** 可以支持工业版特有的两种类型的模型： :ref:`错漏装检测` 和 :ref:`定位模型` 。
 
 其他方面，两个版本并无不同，在模型的使用和性能上是一样的。
 
@@ -69,36 +69,12 @@ DW_SDK 安装包会自动建立 DW_SDK 所需的系统环境变量： ``DWSDK_PA
     .. image:: images/dlsk_installer_dwsdk_path.png
             :scale: 80%  
 
-
     **C++** 和 **C#** 的SDK安装包在安装后的安装目录下的 DWSDK 文件夹内包含有SDK以及SDK的示例项目。
 
         .. image:: images/install_folder.png
             :scale: 100%
 
-    使用Visual Studio打开DLSDK Example.sln项目。
-
-        .. image:: images/example_path.png
-            :scale: 100%
-
-        .. image:: images/vs.png
-            :scale: 60%
-
-    项目分为C++项目，和C#项目，右键点击properties, 然后选择启动项目，来选择运行C++或者C#项目。
-
-        .. image:: images/start_up.png
-            :scale: 70%
-
-    然后选择启动设置为release x64, 然后点击Local Windows Debugger 就可以运行项目了。
-
-        .. image:: images/run_0.png
-            :scale: 60%
-            
-        .. image:: images/run_1.png
-            :scale: 60%
-
     使用DW_SDK需要有效的使用许可证，详情请见 :ref:`软件许可证`
-
-
 
 .. |br| raw:: html
 

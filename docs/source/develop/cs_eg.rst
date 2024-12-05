@@ -99,12 +99,6 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
 
-    //异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
-    DaoAI.DeepLearningCLI.Vision.AnomalyDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
-    
-    //语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
-    DaoAI.DeepLearningCLI.Vision.SemanticSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
-
     //非监督缺陷检测
     DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
     
