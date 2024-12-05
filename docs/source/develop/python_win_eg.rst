@@ -70,12 +70,6 @@ Python Windows 代码示例
     
     #目标检测
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
-    
-    #异常检测(适用于.6版本以前的类型名称，.7后更名为 非监督缺陷检测)
-    model = dlsdk.AnomalyDetection(model_path, device=dlsdk.DeviceType.GPU)
-    
-    #语义分割(适用于.6版本以前的类型名称，.7后更名为 监督缺陷检测)
-    model = dlsdk.SemanticSegmentation(model_path, device=dlsdk.DeviceType.GPU)
 
     #非监督缺陷检测
     model = dlsdk.UnsupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
@@ -146,6 +140,8 @@ Python Windows 代码示例
 
     prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95, dlsdk.PostProcessType.IOU_THRESHOLD: 0.5})
 
+
+
 您也可以通过其它方法来获取结果信息
 
 .. code-block:: python
@@ -153,7 +149,7 @@ Python Windows 代码示例
     print(prediction.boxes)
     print(prediction.class_ids) 
     print(prediction.class_labels)
-
+    
 获取预测结果
 ~~~~~~~~~~~~~~~~
 
