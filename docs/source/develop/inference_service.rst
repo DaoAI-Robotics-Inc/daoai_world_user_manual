@@ -1,4 +1,4 @@
-DWSDK Local Inference Service
+C++ Local HTTP Inference
 -----------------------------
 
 The local inference service allows you to perform model inference via local HTTP requests and obtain results.

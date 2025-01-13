@@ -34,7 +34,7 @@ If you encounter the following error when running a DW SDK project, it indicates
 
 #### Solution 2:
    Correct any erroneous system environment variable configurations and ensure the path includes:
-   ``C:\Program Files\DaoAI World SDK\DWSDK\bin``
+   ``C:\Program Files\DaoAI World SDK\DWSDK\bin`` and ``C:\Program Files\DaoAI World SDK\DWSDK\3rdparty`` and is at the top of the path
 
 ### Check 3:
    Delete the DaoAI folder in the Windows ``%temp%`` directory and re-run the SDK program.

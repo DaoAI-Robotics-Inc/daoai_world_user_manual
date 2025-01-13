@@ -1,5 +1,5 @@
-DaoAI World Server Inference Service
------------------------------------
+DaoAI World Cloud Inference Service
+---------------------------------------------
 
 When connected to the internet, you can send HTTP requests to the DaoAI World server for inference. Below is the example code:
 

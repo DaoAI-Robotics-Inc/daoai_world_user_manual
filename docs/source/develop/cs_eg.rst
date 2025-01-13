@@ -7,7 +7,7 @@ This chapter provides a detailed explanation of the C# code examples included in
     :local:
 
 Importing Libraries
--------------------
+------------------------
 
 In the C# example, the following libraries are imported, with ``DaoAI.DeepLearningCLI`` being the library used to import the DaoAI World SDK.
 
@@ -21,6 +21,22 @@ In the C# example, the following libraries are imported, with ``DaoAI.DeepLearni
     using System.Threading.Tasks;
     using DaoAI.DeepLearningCLI;
 
+Setting Environment Variables
+-----------------------------------
+
+In most cases, the system environment variables required for DW SDK are pre-configured during install. However, in rare cases, you might encounter other paths containing conflicting dynamic link libraries.
+
+You can use DW SDK without modifying the system environment variables. Simply set the environment variables at the beginning of your code:
+
+.. code-block:: csharp
+
+    Environment.SetEnvironmentVariable(
+        "PATH",
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\bin;" +
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\3rd_party;" +
+        Environment.GetEnvironmentVariable("PATH"),
+        EnvironmentVariableTarget.Process
+    );
 
 Reading an Image
 ----------------
