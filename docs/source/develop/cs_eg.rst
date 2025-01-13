@@ -21,6 +21,23 @@ C# 代码示例
     using System.Threading.Tasks;
     using DaoAI.DeepLearningCLI;
 
+设置环境变量
+--------------
+
+通常来说，您在使用DW SDK的时候，系统环境变量是已经配置好的。但在少部分情况下，您可能会有包含冲突的动态链接库的路径。
+
+您可以在不更改系统环境变量的前提下正常使用DW SDK。 只需要在代码的开始设置环境变量即可。
+
+.. code-block:: C#
+
+    Environment.SetEnvironmentVariable(
+        "PATH",
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\bin;" +
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\3rd_party;" +
+        Environment.GetEnvironmentVariable("PATH"),
+        EnvironmentVariableTarget.Process
+    );
+
 
 读取图片
 -----------

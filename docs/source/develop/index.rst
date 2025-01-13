@@ -5,7 +5,7 @@
 
 DWSDK 提供了多种形式的 SDK 供开发者选择，根据实际需求可以灵活使用以下几种类型：
 
-1. 本地 SDK
+1. :ref:`本地 SDK`
     本地 SDK 提供了 `C++ <./cppsetup.html>`_ 、 `C# <./cssetup.html>`_ 和 `Python <./pysetup.html>`_  等多种语言接口，直接运行在本地环境中。它利用 DWSDK 提供的核心库，允许开发者将推理功能与本地项目深度集成。
 
     优点：
@@ -18,11 +18,11 @@ DWSDK 提供了多种形式的 SDK 供开发者选择，根据实际需求可以
         - **离线场景**：没有网络支持的场景，如工业设备、嵌入式设备中的边缘计算任务。
         - **自主可控性**：对硬件、操作系统和依赖库有严格控制要求的项目，如高安全性工业应用。
 
-2. C++ 本地推理服务
-    `C++ 本地推理服务 <./inference_service.html>`_ 是在本地环境中运行的一种特殊实现，利用 HTTP API 与 DWSDK 进行交互完成推理。
+2. :ref:`C++ 本地HTTP推理`
+    `C++ 本地HTTP推理 <./inference_service.html>`_ 是在本地 SDK 环境中运行的一种特殊实现，利用 HTTP API 与 DWSDK 进行交互完成推理。
 
     优点：
-        - **解耦第三方依赖**：本地推理服务通过 HTTP API 调用 DWSDK，可以避免项目与 DWSDK 的直接第三方依赖（如 OpenCV）冲突。开发者可以自由配置项目的依赖项而不影响其他模块的功能。
+        - **解耦第三方依赖**：本地HTTP推理通过 HTTP API 调用 DWSDK，可以避免项目与 DWSDK 的直接第三方依赖（如 OpenCV）冲突。开发者可以自由配置项目的依赖项而不影响其他模块的功能。
         - **轻量化部署**：实现项目的独立性，仅需运行服务即可实现推理功能。
         - **更高的可维护性**：HTTP API 调用模式使得服务的升级和维护更加简单，便于开发者快速适配不同版本的 SDK。
 
@@ -30,8 +30,8 @@ DWSDK 提供了多种形式的 SDK 供开发者选择，根据实际需求可以
         - 项目对依赖项的兼容性要求较高，或需要最大化减少与 DWSDK 的依赖冲突时。
         - 在需要对 DWSDK 进行隔离、独立部署和管理的场景中尤为适用。
 
-3. C++ 服务器推理服务
-    `C++ 服务器推理服务 <./dw_http_inference_client.html>`_ 通过调用 HTTP API 访问 DaoAI World 云服务器，实现推理功能。通过上传图片至云端，利用服务器上部署的模型进行推理。
+3. :ref:`DaoAI World 云端推理服务`
+    `Python 云端推理服务 <./dw_http_inference_client.html>`_ 通过调用 HTTP API 访问 DaoAI World 云服务器，实现推理功能。通过上传图片至云端，利用服务器上部署的模型进行推理。
 
     优点：
         - **零本地硬件需求**：推理完全依赖云端资源，本地设备无需高性能硬件支持。
@@ -49,12 +49,9 @@ DWSDK 提供了多种形式的 SDK 供开发者选择，根据实际需求可以
     :maxdepth: 1 
     :hidden:
     
-    install
-    license
-    cppsetup
-    cssetup
-    pysetup
+    local_sdk
     inference_service
     dw_http_inference_client
+    redistribution
     appendix
     faq
