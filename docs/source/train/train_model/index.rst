@@ -458,3 +458,13 @@ The answer depends on the project requirements: Are there strict time requiremen
 
 #. When the project has strict requirements on recognition time and allows very short recognition times, you should choose the fast mode.
 #. When the project has high accuracy requirements and allows very little tolerance, you should choose the accurate mode.
+
+
+Training Status
+------------------------------------
+
+On the **Training Status** page, you can view the history and current status of all training tasks. The page displays detailed information for each training task, including training progress, status, start time, and completion time, making it easier to track and manage the model training process.
+
+.. image:: images/train_stat.png
+    :scale: 80%
+    :align: center
