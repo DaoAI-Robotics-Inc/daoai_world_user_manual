@@ -295,6 +295,11 @@ SDK接口文档
 代码示例
 ~~~~~~~~~~~~~~~~~
 
+我们还提供了 GitHub 上的代码示例，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
+
 .. toctree::
     :maxdepth: 1
     

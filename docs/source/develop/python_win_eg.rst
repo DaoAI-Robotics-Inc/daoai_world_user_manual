@@ -3,6 +3,10 @@ Python Windows 代码示例
 
 您可以使用我们给的 `Python示例代码 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ 里面包含了图片的读取，模型的读取，以及模型的预测和输出。
 
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
 .. contents::
     :local:
 

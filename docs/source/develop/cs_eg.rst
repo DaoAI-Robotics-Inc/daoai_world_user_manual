@@ -5,7 +5,11 @@ C# 代码示例
 
 .. contents::
     :local:
-    
+
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
 引入库
 --------------
 
