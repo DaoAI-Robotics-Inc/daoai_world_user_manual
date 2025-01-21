@@ -3,6 +3,10 @@ C# Code Example
 
 This chapter provides a detailed explanation of the C# code examples included in the DaoAI World SDK.
 
+You can also explore our GitHub repository, which includes example projects in C++, C#, and Python to help users get started quickly and easily.
+
+Link: DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>_
+
 .. contents::
     :local:
 

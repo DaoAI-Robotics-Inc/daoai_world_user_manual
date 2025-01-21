@@ -3,6 +3,10 @@ Python Windows Code Example
 
 You can use the provided `Python example code <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/Elcb0srODHNGpDZYQu58mZsBeoD1173XVKj0YIvUalUGPA?e=OoBkUN>`_ which includes image reading, model loading, model prediction, and output.
 
+You can also explore our GitHub repository, which includes example projects in C++, C#, and Python to help users get started quickly and easily.
+
+Link: DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>_
+
 .. contents::
     :local:
 
