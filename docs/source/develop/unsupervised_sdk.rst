@@ -232,7 +232,7 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
             ComponentMemory component;
             try
             {
-                component = model.createComponentMemory("screw", good_images, bad_images, masks);
+                component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
                 component.save(data_path + "component_1.pth");
                 model.setBatchSize(1);
             }
@@ -315,10 +315,12 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 
    .. code-block:: cpp
 
-      ComponentMemory component = model.createComponentMemory("screw", good_images, bad_images, masks);
+      ComponentMemory component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
       component.save(data_path + "component_1.pth");
 
    **功能**：使用提供的样本数据训练模型，并保存训练后的模型组件。
+
+    结尾的 true 参数，意味着在训练结束后将模型加载至内存使用，默认为false, 则不会加载进内存，如果设为了false,则需要调用 addComponentMemory(file_path)  来加载训练好的模型，再进行推理。
 
 6. **推理并输出结果**
 
