@@ -26,7 +26,7 @@ Installation
 ************
 
     First, download the `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
-    Windows C++ C# SDK package (version 2.22.7.0) ZIP file.
+    Windows C++ C# SDK package (version 2.24.8.0) ZIP file.
 
     Please note that the installation package is available for both **Enterprise Edition** and **Industrial Edition**. Be sure to download the SDK version that matches your usage to ensure it works properly.
 

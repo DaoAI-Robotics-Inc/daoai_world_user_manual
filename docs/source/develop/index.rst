@@ -43,6 +43,25 @@ DWSDK offers multiple types of SDKs for developers, allowing flexible use based 
         - Lightweight clients or resource-constrained devices (e.g., embedded systems).
         - Large-scale inference tasks requiring distributed inference using cloud computing resources.
 
+4. :ref:`DaoAI Unsupervised Defect Detection SDK`
+   The DaoAI Unsupervised Defect Detection SDK offers the following features:
+
+   - **Load Pretrained Models for Inference**:
+       - Supports pixel-level and image-level inference.
+
+   - **Train Custom Models**:
+       - Uses user-provided image data (primarily good samples) to train a dedicated defect detection model.
+
+   Advantages:
+       - **High Adaptability**: Supports various data formats and hardware environments.
+       - **Powerful Anomaly Detection**: Efficiently captures abnormal patterns using unsupervised learning methods.
+       - **Easy Integration**: Seamlessly integrates with local projects, offering flexible interface support.
+
+   Use Cases:
+       - Industrial production lines requiring defect detection for specific products.
+       - R&D projects needing flexible model parameter adjustments to adapt to diverse data.
+       - Scenarios with high privacy requirements, avoiding the need to upload data to the cloud.
+
 With these three types of SDKs and services, developers can choose the most suitable tools and methods to achieve efficient and flexible inference application development.
 
 .. toctree::
@@ -52,6 +71,7 @@ With these three types of SDKs and services, developers can choose the most suit
     local_sdk
     inference_service
     dw_http_inference_client
+    unsupervised_sdk
     redistribution
     appendix
     faq
