@@ -167,33 +167,180 @@ Code Explanation
 
    **Function**: Catches any exceptions and outputs error messages.
 
-Second Part: Training Custom Models for Inference
--------------------------------------------------
+Part 2: Self-training the Model and Inference
+--------------------------------------------
 
-The following code demonstrates how to train a custom model using user-provided sample data and perform inference:
+The following code demonstrates how to use the user's provided sample data to self-train a model and perform inference:
 
 .. code-block:: cpp
 
-    // Code from main function here...
+    #include <anomaly_fast/anomaly_fast.h>
+    #include <anomaly_fast/models/unsupervised_defect_segmentation.h>
+    #include <iostream>
+    #include <fstream>
+    #include <opencv2/opencv.hpp>
+
+    using namespace DaoAI::AnomalyFast;
+
+    int main()
+    {
+        try {
+            // Initialize Anomaly Fast library
+            initialize();
+
+            // Configure the model and data path
+            std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
+            std::string data_path = "C:/Users/daoai/test_vision/ano/";  // Change to your own data directory
+
+            // Load images
+            std::vector<Image> good_images;
+            for (auto& file : std::filesystem::directory_iterator(data_path + "good"))
+            {
+                if (file.path().extension() == ".png")
+                {
+                    good_images.push_back(Image(file.path().string()));
+                }
+            }
+
+            std::vector<Image> bad_images;
+            std::vector<Image> masks;
+            for (auto& file : std::filesystem::directory_iterator(data_path + "bad"))
+            {
+                if (file.path().extension() == ".png")
+                {
+                    Image image(file.path().string());
+                    bad_images.push_back(image);
+
+                    // Create a binary mask
+                    cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
+                    int centerX = image.width / 2;
+                    int centerY = image.height / 2;
+                    int radius = static_cast<int>(image.width * 0.25);
+                    cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
+
+                    Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+                    masks.push_back(mask.clone());
+                }
+            }
+
+            // Construct the model
+            UnsupervisedDefectSegmentation model(DeviceType::GPU);
+            model.setDetectionLevel(DetectionLevel::PIXEL);
+
+            ComponentMemory component;
+            try
+            {
+                component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
+                component.save(data_path + "component_1.pth");
+                model.setBatchSize(1);
+            }
+            catch (std::exception& e)
+            {
+                std::cout << e.what() << "\n";
+            }
+
+            UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+
+            std::cout << "Anomaly score: " << result.confidence << std::endl;
+            std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
+            return 0;
+        }
+        catch (const std::exception& e) {
+            std::cout << "Caught an exception: " << e.what() << std::endl;
+            return -1;
+        }
+    }
+
+Code Function: The code uses the user's provided sample data to train the model and perform inference using the trained model.
 
 Code Explanation
-^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
-1. **Initialize Anomaly Fast Library**: Same as above.
+1. **Initialize Anomaly Fast Library**
 
-2. **Set Model and Data Paths**: Configures paths for training data and components.
+   .. code-block:: cpp
 
-3. **Load "Good" Sample Images**: Reads and stores "good" sample images for training.
+      initialize();
 
-4. **Load "Bad" Sample Images and Masks**: Reads "bad" samples and generates corresponding binary masks.
+   **Function**: Similar to before, this initializes the Anomaly Fast library.
 
-5. **Train Model and Save Components**: Trains the model and saves the trained components.
+2. **Set Model and Data Paths**
 
-6. **Perform Inference and Output Results**: Uses the trained model for inference.
+   .. code-block:: cpp
 
-7. **Exception Handling**: Captures any errors during execution.
+      std::string root_directory = "C:/Users/daoai/test_vision/";
+      std::string data_path = "C:/Users/daoai/test_vision/ano/";
+
+   **Function**: Sets the paths where the model files and sample data are stored.
+
+3. **Load “Good” Sample Images**
+
+   .. code-block:: cpp
+
+      for (auto& file : std::filesystem::directory_iterator(data_path + "good")) {
+          if (file.path().extension() == ".png") {
+              good_images.push_back(Image(file.path().string()));
+          }
+      }
+
+   **Function**: Loads the "good" sample images into memory for model training.
+
+4. **Load “Bad” Sample Images and Masks**
+
+   .. code-block:: cpp
+
+      for (auto& file : std::filesystem::directory_iterator(data_path + "bad")) {
+          if (file.path().extension() == ".png") {
+              Image image(file.path().string());
+              bad_images.push_back(image);
+
+              // Create a binary mask
+              cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
+              int centerX = image.width / 2;
+              int centerY = image.height / 2;
+              int radius = static_cast<int>(image.width * 0.25);
+              cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
+
+              Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+              masks.push_back(mask.clone());
+          }
+      }
+
+   **Function**: Loads the "bad" sample images and generates corresponding binary masks for the training process.
+
+5. **Construct and Train the Model**
+
+   .. code-block:: cpp
+
+      ComponentMemory component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
+      component.save(data_path + "component_1.pth");
+
+   **Function**: Trains the model using the provided sample data and saves the trained model component.
+
+   The `true` argument at the end indicates that the model will be loaded into memory after training. If set to `false`, the model will not be loaded into memory, and `addComponentMemory(file_path)` will be needed to load the trained model for inference.
+
+6. **Inference and Output Results**
+
+   .. code-block:: cpp
+
+      UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+      std::cout << "Anomaly score: " << result.confidence << std::endl;
+      std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
+
+   **Function**: Performs inference using the trained model on a test image and outputs the anomaly score and the result in JSON format.
+
+7. **Exception Handling**
+
+   .. code-block:: cpp
+
+      catch (const std::exception& e) {
+          std::cout << "Caught an exception: " << e.what() << std::endl;
+          return -1;
+      }
+
+   **Function**: Catches any exceptions that may occur and prints the error message.
 
 Summary
 -------
 
-Using the DaoAI Unsupervised Defect Detection SDK, users can easily load pretrained models for efficient inference or train custom models using their own data to meet specific requirements.
+Using DaoAI’s unsupervised defect detection SDK, users can easily load pre-trained models for efficient inference or train their own models using custom data to meet specific needs.
