@@ -75,8 +75,7 @@ Python Windows 代码示例
     #目标检测
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
 
-    #非监督缺陷检测
-    model = dlsdk.UnsupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+    #非监督缺陷检测 需要用 DaoAI 非监督 SDK
     
     #监督缺陷检测
     model = dlsdk.SupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
