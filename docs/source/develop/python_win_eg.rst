@@ -72,8 +72,7 @@ Note that each detection task corresponds to a specific object:
     # Object Detection
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
 
-    # Unsupervised Defect Segmentation
-    model = dlsdk.UnsupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+    # Unsupervised Defect Segmentation, only available in DaoAI Unsupervised SDK
     
     # Supervised Defect Segmentation
     model = dlsdk.SupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)

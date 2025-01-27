@@ -118,8 +118,7 @@ Note that each detection task corresponds to a specific object:
     // Object detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
 
-    // Unsupervised defect detection
-    DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
+    // Unsupervised defect detection, only available in DaoAI Unsupervised SDK
     
     // Supervised defect detection
     DaoAI.DeepLearningCLI.Vision.SupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);

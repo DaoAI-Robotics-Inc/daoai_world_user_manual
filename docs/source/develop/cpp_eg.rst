@@ -67,8 +67,7 @@ Note that each detection task has a corresponding object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
-    // Unsupervised Defect Detection
-    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+    // Unsupervised Defect Detection, only available in DaoAI Unsupervised SDK
 
     // Supervised Defect Detection
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
@@ -116,8 +115,7 @@ Note that each detection task returns a corresponding result object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
 
-    // Unsupervised Defect Detection
-    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    // Unsupervised Defect Detection, only available in DaoAI Unsupervised SDK
     
     // Supervised Defect Detection
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
