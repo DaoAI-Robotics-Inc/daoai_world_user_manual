@@ -3,6 +3,8 @@ DaoAI 非监督缺陷检测SDK
 
 DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加载预训练模型进行推理，或者通过用户提供的图像数据，自主训练模型并执行缺陷检测。
 
+DaoAI 非监督缺陷检测SDK 支持 **C++**
+
 安装和准备工作
 ----------------
 
@@ -35,17 +37,17 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 
 .. code-block:: cpp
 
-    #include <anomaly_fast/anomaly_fast.h>
-    #include <anomaly_fast/models/unsupervised_defect_segmentation.h>
-    #include <iostream>
-    #include <fstream>
+   #include <daoai_unsupervised/daoai_unsupervised.h>
+   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <iostream>
+   #include <fstream>
 
-    using namespace DaoAI::AnomalyFast;
+   using namespace DaoAI::Unsupervised;
 
     int main2()
     {
         try {
-            // Initialize Anomaly Fast library
+            // Initialize Unsupervised library
             initialize();
 
             // Configurate the model and data path
@@ -90,13 +92,13 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 代码说明
 ^^^^^^^^^
 
-1. **初始化 Anomaly Fast 库**
+1. **初始化 Unsupervised 库**
 
    .. code-block:: cpp
 
       initialize();
 
-   **功能**：初始化 Anomaly Fast 库，为后续模型加载和推理操作做好准备。
+   **功能**：初始化 Unsupervised 库，为后续模型加载和推理操作做好准备。
 
 2. **配置模型路径和数据路径**
 
@@ -174,20 +176,22 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 
 以下代码展示了如何使用用户提供的样本数据，自主训练模型并进行推理：
 
+第二部分使用了opencv库来绘制掩膜，请确保安装了opencv库。
+
 .. code-block:: cpp
 
-    #include <anomaly_fast/anomaly_fast.h>
-    #include <anomaly_fast/models/unsupervised_defect_segmentation.h>
-    #include <iostream>
-    #include <fstream>
-    #include <opencv2/opencv.hpp>
+   #include <daoai_unsupervised/daoai_unsupervised.h>
+   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <iostream>
+   #include <fstream>
+   #include <opencv2/opencv.hpp>
 
-    using namespace DaoAI::AnomalyFast;
+   using namespace DaoAI::Unsupervised;
 
     int main()
     {
         try {
-            // Initialize Anomaly Fast library
+            // Initialize Unsupervised library
             initialize();
 
             // Configurate the model and data path
@@ -220,7 +224,7 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
                     int radius = static_cast<int>(image.width * 0.25);
                     cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
 
-                    Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+                    Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
                     masks.push_back(mask.clone());
                 }
             }
@@ -259,13 +263,13 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 代码说明
 ^^^^^^^^^
 
-1. **初始化 Anomaly Fast 库**
+1. **初始化 Unsupervised 库**
 
    .. code-block:: cpp
 
       initialize();
 
-   **功能**：与前面相同，用于初始化 Anomaly Fast 库。
+   **功能**：与前面相同，用于初始化 Unsupervised 库。
 
 2. **设置模型和数据路径**
 
@@ -304,7 +308,7 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
               int radius = static_cast<int>(image.width * 0.25);
               cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
 
-              Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+              Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
               masks.push_back(mask.clone());
           }
       }
