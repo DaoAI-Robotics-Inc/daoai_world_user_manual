@@ -307,6 +307,7 @@ SDK接口文档
     cs_eg
     python_win_eg
     cpp_client
+    auto_seg_eg
     .. python_eg
 
 
