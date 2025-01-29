@@ -95,6 +95,10 @@ Here, a deep copy of the image is made, and the image object is initialized usin
 Loading a Deep Learning Model
 -----------------------------
 
+.. note::
+
+    - On first run, model loading and data initialization may take longer. Subsequent runs (after the first image load/inference) will be faster
+    
 .. code-block:: C#
 
         String data_path = "..\\..\\..\\..\\Data\\"; 

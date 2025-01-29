@@ -43,6 +43,10 @@ Loading a Deep Learning Model
 
 First, you need to load the model. The deep learning model output by DaoAI World is typically in `.dwm` format. We need to create a ``DaoAI::DeepLearning::Vision::InstanceSegmentation`` object and use the constructor method to load the `.dwm` file output by DaoAI World.
 
+.. note::
+
+    - On first run, model loading and data initialization may take longer. Subsequent runs (after the first image load/inference) will be faster
+    
 .. code-block:: cpp
 
     std::string root = "../"; // change to your own path

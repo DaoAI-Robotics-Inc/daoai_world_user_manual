@@ -103,6 +103,10 @@ To read images, you can use OpenCV. If you do not have it installed, you can run
 Running Deep Learning Model Predictions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+    - On first run, model loading and data initialization may take longer. Subsequent runs (after the first image load/inference) will be faster
+    
 Make model predictions and output results as a JSON file.
 
 .. code-block:: python

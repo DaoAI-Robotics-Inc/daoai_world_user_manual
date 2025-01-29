@@ -234,4 +234,5 @@ Link: DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-
     cs_eg
     python_win_eg
     cpp_client
+    auto_seg_eg
     .. python_eg
