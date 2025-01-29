@@ -45,7 +45,8 @@ DWSDK offers multiple types of SDKs for developers, allowing flexible use based 
 
 4. :ref:`DaoAI Unsupervised Defect Detection SDK`
    The DaoAI Unsupervised Defect Detection SDK is specially designed for .8 versions Unsupervised Defect Segmentation models，which is standard sdk will not support in .8 version.
-   The DaoAI Unsupervised Defect Detection SDK offers the following features:
+   The DaoAI Unsupervised Defect Detection SDK is only available in C++ 
+   It offers the following features:
 
    - **Load Pretrained Models for Inference**:
        - Supports pixel-level and image-level inference.

@@ -1,5 +1,5 @@
-C++ Intelligent Segmentation Example Project
-=============================
+C++ Auto Segmentation Example Project
+===============================================
 
 Overview
 --------
@@ -7,6 +7,8 @@ Overview
 This software provides an interactive image viewer that allows users to draw bounding boxes and click points to perform automatic segmentation based on a deep learning model. The segmentation results are saved as a JSON file and displayed in the window with a masked version of the image.
 
 The program uses the `DaoAI AutoSegmentation` model to perform inference based on the bounding boxes drawn by the user and the points clicked. The segmentation result is blended with the original image to provide a visual representation of the mask.
+
+The Auto Segmentation feature is available also in **C#** and **Python** using DaoAI World Standard SDK.
 
 Prerequisites
 -------------
@@ -43,6 +45,7 @@ Usage
     - Memory usage is approximately 1GB.
 
 2. **Interacting with the Image**:
+   
    - **Left-Click Drag**: Click and drag the mouse to draw a bounding box to segment the object inside the box.
    - **Left-Click**: Click on the image to choose a point for inclusion in the segmentation mask.
    - **Right-Click**: Click on the image to choose a point for exclusion from the segmentation mask.

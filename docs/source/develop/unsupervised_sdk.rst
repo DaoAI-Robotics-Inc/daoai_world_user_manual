@@ -3,6 +3,8 @@ DaoAI Unsupervised Defect Detection SDK
 
 The DaoAI Unsupervised Defect Detection SDK provides a comprehensive set of tools to help users load pretrained models for inference or train custom models using user-provided image data for defect detection.
 
+DaoAI Unsupervised Defect Detection SDK is only available in C++
+
 Installation and Preparation
 ----------------------------
 
@@ -34,57 +36,57 @@ The following code shows how to load a pretrained model and perform inference on
 
 .. code-block:: cpp
 
-    #include <anomaly_fast/anomaly_fast.h>
-    #include <anomaly_fast/models/unsupervised_defect_segmentation.h>
-    #include <iostream>
-    #include <fstream>
+   #include <daoai_unsupervised/daoai_unsupervised.h>
+   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <iostream>
+   #include <fstream>
 
-    using namespace DaoAI::AnomalyFast;
+   using namespace DaoAI::Unsupervised;
 
-    int main2()
-    {
-        try {
-            // Initialize Anomaly Fast library
-            initialize();
+   int main()
+   {
+      try {
+         // Initialize Anomaly Fast library
+         initialize();
 
-            // Configure the model and data path
-            std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
+         // Configure the model and data path
+         std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
 
-            // Construct the model on the specified device
-            UnsupervisedDefectSegmentation model(DeviceType::GPU);
-            model.addComponentArchive(root_directory + "unsup_img_whole.dwm");
-            std::cout << model.getBatchSize() << std::endl;
+         // Construct the model on the specified device
+         UnsupervisedDefectSegmentation model(DeviceType::GPU);
+         model.addComponentArchive(root_directory + "unsup_img_whole.dwm");
+         std::cout << model.getBatchSize() << std::endl;
 
-            // Set batch size
-            model.setBatchSize(1);
+         // Set batch size
+         model.setBatchSize(1);
 
-            std::string img_path = root_directory + "unsup_img_whole (1).png";  // Change to your own directory
-            Image img(img_path);
+         std::string img_path = root_directory + "unsup_img_whole (1).png";  // Change to your own directory
+         Image img(img_path);
 
-            UnsupervisedDefectSegmentationResult result = model.inference(img);
+         UnsupervisedDefectSegmentationResult result = model.inference(img);
 
-            // Print the result
-            std::cout << "Anomaly score: " << result.confidence << std::endl;
-            std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n\n";
+         // Print the result
+         std::cout << "Anomaly score: " << result.confidence << std::endl;
+         std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n\n";
 
-            // Save the result to a file
-            std::string file_path = root_directory + "output.json";
-            std::ofstream output_file(file_path);
-            if (output_file.is_open()) {
-                output_file << result.toAnnotationJSONString();
-                output_file.close();
-                std::cout << "JSON result saved to: " << file_path << std::endl;
-            } else {
-                std::cerr << "Failed to open the file: " << file_path << std::endl;
-            }
+         // Save the result to a file
+         std::string file_path = root_directory + "output.json";
+         std::ofstream output_file(file_path);
+         if (output_file.is_open()) {
+               output_file << result.toAnnotationJSONString();
+               output_file.close();
+               std::cout << "JSON result saved to: " << file_path << std::endl;
+         } else {
+               std::cerr << "Failed to open the file: " << file_path << std::endl;
+         }
 
-            return 0;
-        }
-        catch (const std::exception& e) {
-            std::cout << "Caught an exception: " << e.what() << std::endl;
-            return -1;
-        }
-    }
+         return 0;
+      }
+      catch (const std::exception& e) {
+         std::cout << "Caught an exception: " << e.what() << std::endl;
+         return -1;
+      }
+   }
 
 Code Explanation
 ^^^^^^^^^^^^^^^^
@@ -174,82 +176,82 @@ The following code demonstrates how to use the user's provided sample data to se
 
 .. code-block:: cpp
 
-    #include <anomaly_fast/anomaly_fast.h>
-    #include <anomaly_fast/models/unsupervised_defect_segmentation.h>
-    #include <iostream>
-    #include <fstream>
-    #include <opencv2/opencv.hpp>
+   #include <daoai_unsupervised/daoai_unsupervised.h>
+   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <iostream>
+   #include <fstream>
+   #include <opencv2/opencv.hpp>
 
-    using namespace DaoAI::AnomalyFast;
+   using namespace DaoAI::Unsupervised;
 
-    int main()
-    {
-        try {
-            // Initialize Anomaly Fast library
-            initialize();
+   int main()
+   {
+      try {
+         // Initialize Anomaly Fast library
+         initialize();
 
-            // Configure the model and data path
-            std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
-            std::string data_path = "C:/Users/daoai/test_vision/ano/";  // Change to your own data directory
+         // Configure the model and data path
+         std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
+         std::string data_path = "C:/Users/daoai/test_vision/ano/";  // Change to your own data directory
 
-            // Load images
-            std::vector<Image> good_images;
-            for (auto& file : std::filesystem::directory_iterator(data_path + "good"))
-            {
-                if (file.path().extension() == ".png")
-                {
-                    good_images.push_back(Image(file.path().string()));
-                }
-            }
+         // Load images
+         std::vector<Image> good_images;
+         for (auto& file : std::filesystem::directory_iterator(data_path + "good"))
+         {
+               if (file.path().extension() == ".png")
+               {
+                  good_images.push_back(Image(file.path().string()));
+               }
+         }
 
-            std::vector<Image> bad_images;
-            std::vector<Image> masks;
-            for (auto& file : std::filesystem::directory_iterator(data_path + "bad"))
-            {
-                if (file.path().extension() == ".png")
-                {
-                    Image image(file.path().string());
-                    bad_images.push_back(image);
+         std::vector<Image> bad_images;
+         std::vector<Image> masks;
+         for (auto& file : std::filesystem::directory_iterator(data_path + "bad"))
+         {
+               if (file.path().extension() == ".png")
+               {
+                  Image image(file.path().string());
+                  bad_images.push_back(image);
 
-                    // Create a binary mask
-                    cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
-                    int centerX = image.width / 2;
-                    int centerY = image.height / 2;
-                    int radius = static_cast<int>(image.width * 0.25);
-                    cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
+                  // Create a binary mask
+                  cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
+                  int centerX = image.width / 2;
+                  int centerY = image.height / 2;
+                  int radius = static_cast<int>(image.width * 0.25);
+                  cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
 
-                    Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
-                    masks.push_back(mask.clone());
-                }
-            }
+                  Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+                  masks.push_back(mask.clone());
+               }
+         }
 
-            // Construct the model
-            UnsupervisedDefectSegmentation model(DeviceType::GPU);
-            model.setDetectionLevel(DetectionLevel::PIXEL);
+         // Construct the model
+         UnsupervisedDefectSegmentation model(DeviceType::GPU);
+         model.setDetectionLevel(DetectionLevel::PIXEL);
 
-            ComponentMemory component;
-            try
-            {
-                component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
-                component.save(data_path + "component_1.pth");
-                model.setBatchSize(1);
-            }
-            catch (std::exception& e)
-            {
-                std::cout << e.what() << "\n";
-            }
+         ComponentMemory component;
+         try
+         {
+               component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
+               component.save(data_path + "component_1.pth");
+               model.setBatchSize(1);
+         }
+         catch (std::exception& e)
+         {
+               std::cout << e.what() << "\n";
+         }
 
-            UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+         UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
 
-            std::cout << "Anomaly score: " << result.confidence << std::endl;
-            std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
-            return 0;
-        }
-        catch (const std::exception& e) {
-            std::cout << "Caught an exception: " << e.what() << std::endl;
-            return -1;
-        }
-    }
+         std::cout << "Anomaly score: " << result.confidence << std::endl;
+         std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
+         return 0;
+      }
+      catch (const std::exception& e) {
+         std::cout << "Caught an exception: " << e.what() << std::endl;
+         return -1;
+      }
+   }
 
 Code Function: The code uses the user's provided sample data to train the model and perform inference using the trained model.
 
