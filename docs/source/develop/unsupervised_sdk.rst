@@ -46,7 +46,7 @@ The following code shows how to load a pretrained model and perform inference on
    int main()
    {
       try {
-         // Initialize Anomaly Fast library
+         // Initialize Unsupervised library
          initialize();
 
          // Configure the model and data path
@@ -91,13 +91,13 @@ The following code shows how to load a pretrained model and perform inference on
 Code Explanation
 ^^^^^^^^^^^^^^^^
 
-1. **Initialize the Anomaly Fast Library**
+1. **Initialize the Unsupervised Library**
 
    .. code-block:: cpp
 
       initialize();
 
-   **Function**: Initializes the Anomaly Fast library to prepare for model loading and inference operations.
+   **Function**: Initializes the Unsupervised library to prepare for model loading and inference operations.
 
 2. **Configure Model and Data Paths**
 
@@ -187,7 +187,7 @@ The following code demonstrates how to use the user's provided sample data to se
    int main()
    {
       try {
-         // Initialize Anomaly Fast library
+         // Initialize Unsupervised library
          initialize();
 
          // Configure the model and data path
@@ -220,7 +220,7 @@ The following code demonstrates how to use the user's provided sample data to se
                   int radius = static_cast<int>(image.width * 0.25);
                   cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
 
-                  Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+                  Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
                   masks.push_back(mask.clone());
                }
          }
@@ -258,13 +258,13 @@ Code Function: The code uses the user's provided sample data to train the model 
 Code Explanation
 ^^^^^^^^^
 
-1. **Initialize Anomaly Fast Library**
+1. **Initialize Unsupervised Library**
 
    .. code-block:: cpp
 
       initialize();
 
-   **Function**: Similar to before, this initializes the Anomaly Fast library.
+   **Function**: Similar to before, this initializes the Unsupervised library.
 
 2. **Set Model and Data Paths**
 
@@ -303,7 +303,7 @@ Code Explanation
               int radius = static_cast<int>(image.width * 0.25);
               cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
 
-              Image mask(maskMat.rows, maskMat.cols, DaoAI::AnomalyFast::Image::Type::GRAYSCALE, maskMat.data);
+              Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
               masks.push_back(mask.clone());
           }
       }
