@@ -13,7 +13,6 @@
     kp/index
     class/index
     obj/index
-    rot_obj/index
     ocr/index
     playground/index
 

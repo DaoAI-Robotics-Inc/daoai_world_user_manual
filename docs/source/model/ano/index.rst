@@ -118,7 +118,7 @@
 练习
 --------
 
-从以下链接下载练习数据 anomaly_detection.zip： 
+从以下链接下载练习数据 unsupervised_data.zip： 
 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_
 
 解压后，您将获得 11 张图片及其标注文件（.json）。  
