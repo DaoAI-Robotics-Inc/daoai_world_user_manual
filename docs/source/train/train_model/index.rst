@@ -331,11 +331,6 @@ available Training modes by model
      - √  
      - √ 
      -  
-   * - Unsupervised Defect Segmentation
-     -   
-     - 
-     - √  
-     -     
    * - Object Detection
      - √  
      - √  
@@ -372,6 +367,22 @@ available Training modes by model
      - √
      - √
 
+
+Unsupervised defect detection offers three training methods: **Default, Normal, and High Precision**.
+
+- **Default Mode**:  
+  Uses a single resized image for training. While this method is fast, it may result in information loss.  
+  Recommended for small images or cases where the defect area is large.
+
+- **Normal Mode**:  
+  Splits the image into **512×512** patches for training.  
+  This method takes longer but preserves all information.
+
+- **High Precision Mode**:  
+  Further divides the image into **256×256** patches, providing finer detail at the cost of increased training time.
+
+These modes apply only to **pixel-level, whole-image training**.  
+For **pixel-level (region-based) and image-level (both region-based and whole-image)** training, only **Default Mode** is available.
 
 
 Live Training Graphs

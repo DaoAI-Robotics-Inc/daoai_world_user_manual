@@ -88,12 +88,7 @@ Deploying Models in Other Applications
         :width: 800
         :align: center
 
-    The exported model files support both ``.dwm`` and ``.zip`` formats.
-
-    Models exported from DaoAI World can also be used in other DaoAI platform software, such as **DaoAI InspecTRA** and **DaoAI VisionPilot**.
-
-    - ``.dwm`` format is supported in DaoAI World version **2.24.6.0** and later. The corresponding versions for DaoAI InspecTRA and DaoAI VisionPilot are **2.24.6.0** and **2.24.5.0**, respectively.
-    - ``.zip`` format is available in DaoAI World version **2.24.5.0** and earlier. The corresponding versions for DaoAI InspecTRA and DaoAI VisionPilot are **2.24.5.0** and **2.24.4.3**, respectively.
+    The exported model files support ``.dwm`` format.
 
 
 Model Deploy
@@ -117,9 +112,8 @@ Click on ``Switch Model`` to switch from different versions, different version h
     :scale: 80%
     :align: center
 
-Inference result return as format of **dictionary**, you can read the detailed document from :ref:`Hosted Image Inference`.
 
-Click on ``View Documentation`` will redirect to DWSDK chapter of this document.
+Click on ``View Documentation`` will redirect to DWSDK chapter of this document. You can also read the detailed document from :ref:`Development Features`.
 
 .. image:: Images/open_sdk_doc.png
     :scale: 80%
