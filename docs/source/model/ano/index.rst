@@ -117,7 +117,7 @@ Notes
 Practice
 --------
 
-Download the practice data `anomaly_detection.zip` from the following link:  
+Download the practice data `unsupervised_data.zip` from the following link:  
 `Practice Data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_  
 
 After extraction, you will obtain 11 images and their annotation files (.json).  
