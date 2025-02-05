@@ -24,13 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "DaoAI World SDK C++", "index.html", [
+  [ "DaoAI World C++ SDK", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
@@ -59,7 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_p_i___e_x_p_o_r_t_8h.html",
-"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html#a5907a75fa89485fd73aa80b33b7d82cf"
+"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_image_embedding.html#aa2a7eec2d7ddcf5fbfad2ef4d8a0242e",
+"namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#adec0992a60f8058694faba96f336ca79"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

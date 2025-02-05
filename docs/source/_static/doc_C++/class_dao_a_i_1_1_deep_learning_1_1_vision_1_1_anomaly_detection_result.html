@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DaoAI World SDK C++: DaoAI::DeepLearning::Vision::AnomalyDetectionResult Class Reference</title>
+<title>DaoAI World C++ SDK: DaoAI::DeepLearning::Vision::AnomalyDetectionResult Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World SDK C++<span id="projectnumber">&#160;Enterprise 2.24.7.0</span>
+   <div id="projectname">DaoAI World C++ SDK<span id="projectnumber">&#160;enterprise 2.24.8.0</span>
    </div>
   </td>
  </tr>
@@ -127,6 +127,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1ff43aa2229f97a2f7e37fd30f7d324c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e520bad90b2448e80d0445d76f5fde" id="r_ad7e520bad90b2448e80d0445d76f5fde"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e520bad90b2448e80d0445d76f5fde">confidence</a> = -1</td></tr>
 <tr class="separator:ad7e520bad90b2448e80d0445d76f5fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398b76cfe29b5f90b8dc3550455a5181" id="r_a398b76cfe29b5f90b8dc3550455a5181"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398b76cfe29b5f90b8dc3550455a5181">flags</a></td></tr>
+<tr class="separator:a398b76cfe29b5f90b8dc3550455a5181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_dao_a_i_1_1_deep_learning_1_1_prediction"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_dao_a_i_1_1_deep_learning_1_1_prediction')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_prediction.html">DaoAI::DeepLearning::Prediction</a></td></tr>
 <tr class="memitem:ad364eff10e7dbbe8be473d35925445fb inherit pub_attribs_class_dao_a_i_1_1_deep_learning_1_1_prediction" id="r_ad364eff10e7dbbe8be473d35925445fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_prediction.html#ad364eff10e7dbbe8be473d35925445fb">image_width</a></td></tr>
 <tr class="separator:ad364eff10e7dbbe8be473d35925445fb inherit pub_attribs_class_dao_a_i_1_1_deep_learning_1_1_prediction"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +178,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>@ brief: Convert from prediction object to annotation json string that matches the annotation format from <a class="el" href="namespace_dao_a_i.html">DaoAI</a> World. </p>
 
-<p>Reimplemented from <a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_prediction.html#a143ccf7f292bb2dfdbcf43ab321a8cf0">DaoAI::DeepLearning::Prediction</a>.</p>
+<p>Reimplemented from <a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_prediction.html#a52d83dd3a8cc64c4c06743c3a2c68a05">DaoAI::DeepLearning::Prediction</a>.</p>
 
 </div>
 </div>
@@ -206,8 +208,6 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_prediction.html#aa6b4d7bb0c1134e0f05b562f6766331a">DaoAI::DeepLearning::Prediction</a>.</p>
 
-<p>Reimplemented in <a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#a0d86d3eb770331914ab9bd9d226ab4d7">DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -219,6 +219,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double DaoAI::DeepLearning::Vision::AnomalyDetectionResult::confidence = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a398b76cfe29b5f90b8dc3550455a5181" name="a398b76cfe29b5f90b8dc3550455a5181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398b76cfe29b5f90b8dc3550455a5181">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, bool&gt; DaoAI::DeepLearning::Vision::AnomalyDetectionResult::flags</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,7 +282,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Daoai/Desktop/Khoa/bp/daoai_system/apps/daoai_dl_sdk/daoai_dl_sdk/include/export/<a class="el" href="prediction_8h_source.html">prediction.h</a></li>
+<li>include/export/<a class="el" href="prediction_8h_source.html">prediction.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

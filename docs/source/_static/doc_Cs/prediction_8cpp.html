@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Deep World C# SDK: C:/Users/Daoai/Desktop/Khoa/bp/daoai_system/apps/daoai_dl_sdk/dl_sdk_net/prediction.cpp File Reference</title>
+<title>DaoAI World C# SDK: prediction.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Deep World C# SDK<span id="projectnumber">&#160;2.24.6.0</span>
+   <div id="projectname">DaoAI World C# SDK<span id="projectnumber">&#160;industrial 2.24.8.0</span>
    </div>
   </td>
  </tr>
@@ -103,6 +104,7 @@ $(function(){initNavTree('prediction_8cpp.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="prediction_8h_source.html">prediction.h</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -117,8 +119,32 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a5dd90f36bc1bacf788d915e853a65cb2" id="r_a5dd90f36bc1bacf788d915e853a65cb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dd90f36bc1bacf788d915e853a65cb2">DEFINE_TOJSONSTRING_FOR_MODEL</a>(ModelResultName)</td></tr>
 <tr class="separator:a5dd90f36bc1bacf788d915e853a65cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad450f384eb1b344e2042db49e74fdd80" id="r_ad450f384eb1b344e2042db49e74fdd80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad450f384eb1b344e2042db49e74fdd80">DEFINE_TOANNOTATIONJSONSTRING_FOR_MODEL</a>(ModelResultName)</td></tr>
+<tr class="separator:ad450f384eb1b344e2042db49e74fdd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad450f384eb1b344e2042db49e74fdd80" name="ad450f384eb1b344e2042db49e74fdd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad450f384eb1b344e2042db49e74fdd80">&#9670;&#160;</a></span>DEFINE_TOANNOTATIONJSONSTRING_FOR_MODEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_TOANNOTATIONJSONSTRING_FOR_MODEL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ModelResultName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">String^ ModelResultName::toAnnotationJSONString()\</div>
+<div class="line">{\</div>
+<div class="line">    <span class="keyword">auto</span> json_string = m_Instance-&gt;toAnnotationJSONString();\</div>
+<div class="line">    <span class="keywordflow">return</span> gcnew String(json_string.c_str(), 0, json_string.length(), System::Text::Encoding::UTF8); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a5dd90f36bc1bacf788d915e853a65cb2" name="a5dd90f36bc1bacf788d915e853a65cb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dd90f36bc1bacf788d915e853a65cb2">&#9670;&#160;</a></span>DEFINE_TOJSONSTRING_FOR_MODEL</h2>
 
@@ -135,7 +161,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">String^ ModelResultName::toJSONString()\</div>
 <div class="line">{\</div>
-<div class="line">    <span class="keywordflow">return</span> gcnew String(m_Instance-&gt;toJSONString().c_str());\</div>
+<div class="line">    <span class="keyword">auto</span> json_string = m_Instance-&gt;toJSONString();\</div>
+<div class="line">    <span class="keywordflow">return</span> gcnew String(json_string.c_str(), 0, json_string.length(), System::Text::Encoding::UTF8); \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -145,7 +172,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_1962586159cfe41e2a913c76c8ba2bee.html">bp</a></li><li class="navelem"><a class="el" href="dir_75ade644b969d1b658328d0c054cf286.html">daoai_system</a></li><li class="navelem"><a class="el" href="dir_90b79f3dcf5b1858b074d8e0d79b79f5.html">apps</a></li><li class="navelem"><a class="el" href="dir_6ecb5c5b1aa9d0849bb7c7fe1da6a37c.html">daoai_dl_sdk</a></li><li class="navelem"><a class="el" href="dir_dc5aa9968bf7e48b60a09cf86b173461.html">dl_sdk_net</a></li><li class="navelem"><a class="el" href="prediction_8cpp.html">prediction.cpp</a></li>
+    <li class="navelem"><a class="el" href="prediction_8cpp.html">prediction.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>

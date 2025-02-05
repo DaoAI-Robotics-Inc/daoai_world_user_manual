@@ -3,8 +3,6 @@ var annotated_dup =
     [ "DaoAI", "namespace_dao_a_i.html", [
       [ "DeepLearningCLI", "namespace_dao_a_i_1_1_deep_learning_c_l_i.html", [
         [ "Vision", "namespace_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision.html", [
-          [ "AnomalyDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_anomaly_detection.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_anomaly_detection" ],
-          [ "AnomalyDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_anomaly_detection_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_anomaly_detection_result" ],
           [ "Classification", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification" ],
           [ "ClassificationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification_result" ],
           [ "Flag", "struct_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_flag.html", "struct_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_flag" ],
@@ -20,16 +18,13 @@ var annotated_dup =
           [ "PositioningResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_positioning_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_positioning_result" ],
           [ "PresenceChecking", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking" ],
           [ "PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking_result" ],
-          [ "SemanticSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation" ],
-          [ "SemanticSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation_result" ],
           [ "SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation" ],
-          [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation_result" ],
-          [ "UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation" ],
-          [ "UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result" ]
+          [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation_result" ]
         ] ],
         [ "Application", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_application.html", null ],
         [ "Box", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box" ],
         [ "Image", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image" ],
+        [ "ManagedObject", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object" ],
         [ "Mask", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask" ],
         [ "ModelInfo", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info" ],
         [ "Point", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point" ],

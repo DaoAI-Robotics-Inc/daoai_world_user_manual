@@ -218,7 +218,7 @@ For more detailed SDK, function interfaces, and data structures, please refer to
 
 `C# SDK Interface Documentation <../_static/doc_Cs/index.html>`_
 
-`C++ Inference Client Interface Documentation <../_static/doc_C_client/index.html>`_
+`C++ Inference Client Interface Documentation <../_static/docs_C++_client/index.html>`_
 
 Code Examples
 ~~~~~~~~~~~~~
