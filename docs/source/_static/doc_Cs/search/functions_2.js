@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['classification_0',['Classification',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification.html#a596b68f22de26c984de982ab2ee81bf6',1,'DaoAI::DeepLearningCLI::Vision::Classification::Classification(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification.html#ac9a7c449699cf023bc564b294469aae5',1,'DaoAI::DeepLearningCLI::Vision::Classification::Classification(String^ model_file_path, DeviceType device, int device_idx)']]],
-  ['classificationresult_3a_3aclassificationresult_1',['ClassificationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_classification_result.html#a061cd25efbdf7b4dbaa6160b0941efc0',1,'DaoAI::DeepLearningCLI::Vision::ClassificationResult']]],
-  ['clone_2',['clone',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html#ae5874d3e0d2f3d4b2292404c0e3bdb58',1,'DaoAI::DeepLearningCLI::Image']]]
+  ['box_0',['Box',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#abb2701f9f081816bc983c76f089328a8',1,'DaoAI::DeepLearningCLI::Box::Box(Point^ p1, Point^ p2, float angle)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a49d37d4708bf4e27219571eda91f98e5',1,'DaoAI::DeepLearningCLI::Box::Box(float a1, float a2, float a3, float a4, float angle, Type type)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a27d6c807e0113081d60fc21de11b2a7a',1,'DaoAI::DeepLearningCLI::Box::Box(const DaoAI::DeepLearning::Box &amp;box)']]]
 ];

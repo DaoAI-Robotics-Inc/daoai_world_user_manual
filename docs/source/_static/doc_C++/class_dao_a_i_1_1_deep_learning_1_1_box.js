@@ -4,8 +4,9 @@ var class_dao_a_i_1_1_deep_learning_1_1_box =
       [ "XYXY", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a51412c9a48c1e1be95157f555389b3e1aca89e792ebf5d88964f1cb66ce6ddf61", null ],
       [ "XYWH", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a51412c9a48c1e1be95157f555389b3e1af8f448c9a0f9d364d18932c53e8cdc16", null ]
     ] ],
-    [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a4e0376a0840aab475217cbcfa0da253b", null ],
-    [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a272c4df1ffe8023784b7e352cf4cdcce", null ],
+    [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a6dc8657b7fc9f12a6de6f48ac4f93c8e", null ],
+    [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#ababfb43797cb8a0c9ff14c1a94366cb4", null ],
+    [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#acce9255603bbe02de10dfc99925eec83", null ],
     [ "~Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html#afb74510dc4d0c51236aa92939a71d7b3", null ],
     [ "angle", "class_dao_a_i_1_1_deep_learning_1_1_box.html#ab7d32632e940cc4fc17d067d2bb0eb93", null ],
     [ "area", "class_dao_a_i_1_1_deep_learning_1_1_box.html#a67998d7f24d09a69dd1b8a59e7755fdd", null ],
