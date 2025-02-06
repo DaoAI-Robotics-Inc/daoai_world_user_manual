@@ -5,6 +5,10 @@ The DaoAI Unsupervised Defect Detection SDK provides a comprehensive set of tool
 
 DaoAI Unsupervised Defect Detection SDK is only available in C++
 
+You can also explore our GitHub repository, which contains the C++ example for unsupervised defect segmentation.
+
+Link: DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>_
+
 Installation and Preparation
 ----------------------------
 
