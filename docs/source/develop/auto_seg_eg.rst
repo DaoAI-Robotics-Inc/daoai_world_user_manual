@@ -11,6 +11,11 @@ C++ 智能分割示例项目
 
 智能分割功能 属于常规本地SDK的功能，同样也支持 **C#** 和 **Python**
 
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
+
 前置条件
 ----------
 - **OpenCV 库 v15**：用于显示和与图像进行交互。

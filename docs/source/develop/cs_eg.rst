@@ -142,14 +142,13 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 使用深度学习模型进行预测
 --------------------------
 
-这里定义了 置信度阈值(CONFIDENT_THRESHOLD)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
+这里定义了 置信度阈值(setConfidenceThreshold)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
 
 .. code-block:: C#
 
-    Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object> post_params = new Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object>();
-    post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENT_THRESHOLD] = 0.5;
+    model.setConfidenceThreshold(0.5f);
 
-    Console.WriteLine(model.inference(img, post_params).toJSONString());
+    Console.WriteLine(model.inference(img).toJSONString());
 
 后处理参数
 ~~~~~~~~~~~~~~

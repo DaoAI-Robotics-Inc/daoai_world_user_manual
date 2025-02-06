@@ -5,6 +5,10 @@ DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加�
 
 DaoAI 非监督缺陷检测SDK 支持 **C++**
 
+您也可以查看我们的 GitHub repo，其中包含 C++ 的非监督缺陷检测SDK示例代码。
+
+链接： `DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
 安装和准备工作
 ----------------
 
