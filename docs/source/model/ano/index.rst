@@ -94,19 +94,22 @@ Annotation methods vary depending on the model detection mode, as described belo
 Notes
 ------------
 
-1. **Data Consistency**  
+1. **Dataset Size Limit**  
+   The maximum number of images supported for training is **300 images**.
+
+2. **Data Consistency**  
    Normal images should not include any defect annotations, as this may lead to training failures or suboptimal results.
 
-2. **Multiple Defects Support**  
+3. **Multiple Defects Support**  
    If an object has multiple defects, you can annotate each defect with a separate region.
 
-3. **Data Ratio**  
+4. **Data Ratio**  
    - **Normal Data Priority**: The number of normal images in the training set should be greater than or equal to the number of defect-free images.  
 
-4. **Default Configuration**  
+5. **Default Configuration**  
    The unsupervised defect segmentation model does not apply any data augmentation options by default during training.
 
-5. **Built-in Image Splitting for Training**  
+6. **Built-in Image Splitting for Training**  
    During whole image detection, the training mode can be set to **Normal** or **High Precision**. High precision mode splits images into 512×512 or 256×256 resolutions for training, increasing detection time but significantly improving model accuracy.
 
 .. note::  
