@@ -41,12 +41,12 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
 .. code-block:: cpp
 
-   #include <daoai_unsupervised/daoai_unsupervised.h>
-   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <dlsdk/utils.h>
+   #include <dlsdk/model.h>
    #include <iostream>
    #include <fstream>
 
-   using namespace DaoAI::Unsupervised;
+   using namespace DaoAI::DeepLearning;
 
     int main2()
     {
@@ -58,7 +58,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
             std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
 
             // Construct the model on speficied device
-            UnsupervisedDefectSegmentation model(DeviceType::GPU);
+            Vision::UnsupervisedDefectSegmentation model(DeviceType::GPU);
             model.addComponentArchive(root_directory + "unsup_img_whole.dwm");
             std::cout << model.getBatchSize() << std::endl;
 
@@ -68,7 +68,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
             std::string img_path = root_directory + "unsup_img_whole (1).png";  // Change to your own directory
             Image img(img_path);
 
-            UnsupervisedDefectSegmentationResult result = model.inference(img);
+            Vision::UnsupervisedDefectSegmentationResult result = model.inference(img);
 
             // Print the result
             std::cout << "Anomaly score: " << result.confidence << std::endl;
@@ -116,7 +116,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
    .. code-block:: cpp
 
-      UnsupervisedDefectSegmentation model(DeviceType::GPU);
+      Vision::UnsupervisedDefectSegmentation model(DeviceType::GPU);
       model.addComponentArchive(root_directory + "unsup_img_whole.dwm");
 
    **功能**：加载预训练的模型组件，支持 GPU 设备以提升推理效率。
@@ -142,7 +142,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
    .. code-block:: cpp
 
-      UnsupervisedDefectSegmentationResult result = model.inference(img);
+      Vision::UnsupervisedDefectSegmentationResult result = model.inference(img);
       std::cout << "Anomaly score: " << result.confidence << std::endl;
       std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n\n";
 
@@ -184,13 +184,13 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
 .. code-block:: cpp
 
-   #include <daoai_unsupervised/daoai_unsupervised.h>
-   #include <daoai_unsupervised/models/unsupervised_defect_segmentation.h>
+   #include <dlsdk/utils.h>
+   #include <dlsdk/model.h>
    #include <iostream>
    #include <fstream>
    #include <opencv2/opencv.hpp>
 
-   using namespace DaoAI::Unsupervised;
+   using namespace DaoAI::DeepLearning;
 
     int main()
     {
@@ -234,7 +234,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
             }
 
             // Construct the model
-            UnsupervisedDefectSegmentation model(DeviceType::GPU);
+            Vision::UnsupervisedDefectSegmentation model(DeviceType::GPU);
             model.setDetectionLevel(DetectionLevel::PIXEL);
 
             ComponentMemory component;
@@ -249,7 +249,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
                 std::cout << e.what() << "\n";
             }
 
-            UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+            Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
 
             std::cout << "Anomaly score: " << result.confidence << std::endl;
             std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
@@ -334,7 +334,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
    .. code-block:: cpp
 
-      UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+      Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
       std::cout << "Anomaly score: " << result.confidence << std::endl;
       std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
 
