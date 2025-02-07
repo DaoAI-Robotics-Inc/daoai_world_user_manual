@@ -3,6 +3,19 @@
 
 本章将详细介绍 DWSDK 的使用方法及其相关功能。
 
+讲解视频：
+
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="http://docs.welinkirt.com/static/videos/dw_sdk_v8.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
+
 DWSDK 提供了多种形式的 SDK 供开发者选择，根据实际需求可以灵活使用以下几种类型：
 
 1. :ref:`本地 SDK`

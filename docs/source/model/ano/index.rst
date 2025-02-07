@@ -21,6 +21,16 @@
 适用场景
 ---------------------
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="http://docs.welinkirt.com/static/videos/dw_unsupervised_v8.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
 **非监督缺陷分割** 适用于以下场景：
 
 1. **单一物体**：数据集中仅包含一种物体，且该物体的位置需要保持相对固定。
