@@ -12,6 +12,7 @@ var model_8h =
     [ "DaoAI::DeepLearning::Vision::AutoSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_auto_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_auto_segmentation" ],
     [ "DaoAI::DeepLearning::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking" ],
     [ "DaoAI::DeepLearning::Vision::Positioning", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning" ],
+    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation" ],
     [ "ModelType", "model_8h.html#aa796b5dd9fd99802b9317668d5522aad", [
       [ "Object_Detection", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada39e93aa4109b28fd3ccabc09db52abf1", null ],
       [ "Instance_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada705442cc4cab10ee321c7aba460d5791", null ],
@@ -21,7 +22,8 @@ var model_8h =
       [ "Supervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ],
       [ "Auto_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada2fef7371e924c69253a5d5d3e25b8a55", null ],
       [ "Presence_Checking", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb", null ],
-      [ "Positioning", "model_8h.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ]
+      [ "Positioning", "model_8h.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ],
+      [ "Unsupervised_Defect_Segmentation", "model_8h.html#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7", null ]
     ] ],
     [ "clearGPUMemory", "model_8h.html#aadaf51e4e61bf852ff7e019379c38494", null ],
     [ "getNumCUDADevices", "model_8h.html#a896fbfda602c571948b2f709387388f9", null ],

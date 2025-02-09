@@ -5,6 +5,7 @@ var class_dao_a_i_1_1_deep_learning_1_1_mask =
     [ "Mask", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#a21dad539ecfda17e40a6f138d42b62ee", null ],
     [ "~Mask", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#ac652044945b647251d5429156738c17a", null ],
     [ "area", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#a185971c91273655dde869a9c6c56a3af", null ],
+    [ "empty", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#ad93569c71f52447a12285ce44611009a", null ],
     [ "merge", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#a34160ad9cc1468dd159a6ca36eeb5023", null ],
     [ "toImage", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#a5549f257c63191e3d6306307e52a7ee7", null ],
     [ "toPolygons", "class_dao_a_i_1_1_deep_learning_1_1_mask.html#a4ef1cd0cc4ae1bc1de072509a6111c79", null ],

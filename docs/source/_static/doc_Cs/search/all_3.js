@@ -7,5 +7,7 @@ var searchData=
   ['clone_4',['clone',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html#ae5874d3e0d2f3d4b2292404c0e3bdb58',1,'DaoAI::DeepLearningCLI::Image']]],
   ['common_2ecpp_5',['common.cpp',['../common_8cpp.html',1,'']]],
   ['common_2eh_6',['common.h',['../common_8h.html',1,'']]],
-  ['cpu_7',['CPU',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d',1,'DaoAI::DeepLearningCLI']]]
+  ['componentmemory_7',['ComponentMemory',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_component_memory.html',1,'DaoAI::DeepLearningCLI::Vision::ComponentMemory'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_component_memory.html#a91b0e9f185e1dbfc0a923c17376d5143',1,'DaoAI::DeepLearningCLI::Vision::ComponentMemory::ComponentMemory(String^ file_path)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_component_memory.html#a4c4fd0d4ecba907f063c5348e1e5869a',1,'DaoAI::DeepLearningCLI::Vision::ComponentMemory::ComponentMemory(const DaoAI::DeepLearning::ComponentMemory &amp;component_memory)']]],
+  ['cpu_8',['CPU',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d',1,'DaoAI::DeepLearningCLI']]],
+  ['createcomponentmemory_9',['createComponentMemory',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#aed045e359e0b9eb8c7509383945fc297',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation']]]
 ];

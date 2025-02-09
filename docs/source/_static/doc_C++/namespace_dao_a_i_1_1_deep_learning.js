@@ -12,10 +12,12 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aec2b11b39427ea89b06a08c5dd5c1c43", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aea757b23951f1f6b465a55c62dd6c372", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a9425aa53bac9d692f3d034966ed37860", null ],
-      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ]
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aca92562e9df1600359d3984b71bd89fe", null ]
     ] ],
     [ "Vision", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html", "namespace_dao_a_i_1_1_deep_learning_1_1_vision" ],
     [ "Box", "class_dao_a_i_1_1_deep_learning_1_1_box.html", "class_dao_a_i_1_1_deep_learning_1_1_box" ],
+    [ "ComponentMemory", "class_dao_a_i_1_1_deep_learning_1_1_component_memory.html", "class_dao_a_i_1_1_deep_learning_1_1_component_memory" ],
     [ "Image", "class_dao_a_i_1_1_deep_learning_1_1_image.html", "class_dao_a_i_1_1_deep_learning_1_1_image" ],
     [ "Mask", "class_dao_a_i_1_1_deep_learning_1_1_mask.html", "class_dao_a_i_1_1_deep_learning_1_1_mask" ],
     [ "Model", "class_dao_a_i_1_1_deep_learning_1_1_model.html", "class_dao_a_i_1_1_deep_learning_1_1_model" ],
@@ -23,6 +25,10 @@ var namespace_dao_a_i_1_1_deep_learning =
     [ "Point", "class_dao_a_i_1_1_deep_learning_1_1_point.html", "class_dao_a_i_1_1_deep_learning_1_1_point" ],
     [ "Polygon", "class_dao_a_i_1_1_deep_learning_1_1_polygon.html", "class_dao_a_i_1_1_deep_learning_1_1_polygon" ],
     [ "Prediction", "class_dao_a_i_1_1_deep_learning_1_1_prediction.html", "class_dao_a_i_1_1_deep_learning_1_1_prediction" ],
+    [ "DetectionLevel", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25", [
+      [ "PIXEL", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25a06e536f5c0819e7aa379dcd35556f441", null ],
+      [ "IMAGE", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25a23a12f67f614b5518c7f1c2465bf95e3", null ]
+    ] ],
     [ "DeviceType", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926", [
       [ "CPU", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926a2b55387dd066c5bac646ac61543d152d", null ],
       [ "GPU", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926a52f9ec21735243ad9917cda3ca077d32", null ]
@@ -36,7 +42,8 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "Supervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ],
       [ "Auto_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada2fef7371e924c69253a5d5d3e25b8a55", null ],
       [ "Presence_Checking", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb", null ],
-      [ "Positioning", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ]
+      [ "Positioning", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ],
+      [ "Unsupervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7", null ]
     ] ],
     [ "clearGPUMemory", "namespace_dao_a_i_1_1_deep_learning.html#aadaf51e4e61bf852ff7e019379c38494", null ],
     [ "getNumCUDADevices", "namespace_dao_a_i_1_1_deep_learning.html#a896fbfda602c571948b2f709387388f9", null ],

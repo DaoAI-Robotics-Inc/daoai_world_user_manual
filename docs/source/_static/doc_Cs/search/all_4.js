@@ -8,6 +8,7 @@ var searchData=
   ['define_5ftoannotationjsonstring_5ffor_5fmodel_5',['DEFINE_TOANNOTATIONJSONSTRING_FOR_MODEL',['../prediction_8cpp.html#ad450f384eb1b344e2042db49e74fdd80',1,'prediction.cpp']]],
   ['define_5ftojsonstring_5ffor_5fmodel_6',['DEFINE_TOJSONSTRING_FOR_MODEL',['../prediction_8cpp.html#a5dd90f36bc1bacf788d915e853a65cb2',1,'prediction.cpp']]],
   ['define_5fvisualize_7',['DEFINE_VISUALIZE',['../utils_8cpp.html#afc7baf81e0fe9c255d47c153bba604d2',1,'utils.cpp']]],
-  ['device_8',['device',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html#ad3f6b38b9d9c66ea63433bfd6529a9bd',1,'DaoAI::DeepLearningCLI::ModelInfo']]],
-  ['devicetype_9',['DeviceType',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f',1,'DaoAI::DeepLearningCLI']]]
+  ['detectionlevel_8',['DetectionLevel',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#afb41ee781755c2332e0c212f20e92915',1,'DaoAI::DeepLearningCLI']]],
+  ['device_9',['device',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html#ad3f6b38b9d9c66ea63433bfd6529a9bd',1,'DaoAI::DeepLearningCLI::ModelInfo']]],
+  ['devicetype_10',['DeviceType',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f',1,'DaoAI::DeepLearningCLI']]]
 ];

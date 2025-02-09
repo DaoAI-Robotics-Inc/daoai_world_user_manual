@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World C++ SDK<span id="projectnumber">&#160;industrial 2.24.8.0</span>
+   <div id="projectname">DaoAI World C++ SDK<span id="projectnumber">&#160;INDUSTRIAL 2024.8.0</span>
    </div>
   </td>
  </tr>
@@ -117,6 +117,8 @@ Namespaces</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_box.html">Box</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_component_memory.html">ComponentMemory</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_image.html">Image</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_1_1_mask.html">Mask</a></td></tr>
@@ -138,6 +140,10 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a9323d6e6a20db12d824c396d5f000926a52f9ec21735243ad9917cda3ca077d32">GPU</a>
  }</td></tr>
 <tr class="separator:a9323d6e6a20db12d824c396d5f000926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad659ebfe714287f6d002e0eac8a7db25" id="r_ad659ebfe714287f6d002e0eac8a7db25"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad659ebfe714287f6d002e0eac8a7db25">DetectionLevel</a> { <a class="el" href="#ad659ebfe714287f6d002e0eac8a7db25a06e536f5c0819e7aa379dcd35556f441">PIXEL</a>
+, <a class="el" href="#ad659ebfe714287f6d002e0eac8a7db25a23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>
+ }</td></tr>
+<tr class="separator:ad659ebfe714287f6d002e0eac8a7db25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa796b5dd9fd99802b9317668d5522aad" id="r_aa796b5dd9fd99802b9317668d5522aad"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa796b5dd9fd99802b9317668d5522aad">ModelType</a> { <br />
 &#160;&#160;<a class="el" href="#aa796b5dd9fd99802b9317668d5522aada39e93aa4109b28fd3ccabc09db52abf1">Object_Detection</a>
 , <a class="el" href="#aa796b5dd9fd99802b9317668d5522aada705442cc4cab10ee321c7aba460d5791">Instance_Segmentation</a>
@@ -150,6 +156,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb">Presence_Checking</a>
 , <br />
 &#160;&#160;<a class="el" href="#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977">Positioning</a>
+, <a class="el" href="#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7">Unsupervised_Defect_Segmentation</a>
 <br />
  }</td></tr>
 <tr class="separator:aa796b5dd9fd99802b9317668d5522aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +171,32 @@ Functions</h2></td></tr>
 <tr class="separator:a896fbfda602c571948b2f709387388f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad659ebfe714287f6d002e0eac8a7db25" name="ad659ebfe714287f6d002e0eac8a7db25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad659ebfe714287f6d002e0eac8a7db25">&#9670;&#160;</a></span>DetectionLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad659ebfe714287f6d002e0eac8a7db25">DaoAI::DeepLearning::DetectionLevel</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad659ebfe714287f6d002e0eac8a7db25a06e536f5c0819e7aa379dcd35556f441" name="ad659ebfe714287f6d002e0eac8a7db25a06e536f5c0819e7aa379dcd35556f441"></a>PIXEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad659ebfe714287f6d002e0eac8a7db25a23a12f67f614b5518c7f1c2465bf95e3" name="ad659ebfe714287f6d002e0eac8a7db25a23a12f67f614b5518c7f1c2465bf95e3"></a>IMAGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a9323d6e6a20db12d824c396d5f000926" name="a9323d6e6a20db12d824c396d5f000926"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9323d6e6a20db12d824c396d5f000926">&#9670;&#160;</a></span>DeviceType</h2>
 
@@ -219,6 +252,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa796b5dd9fd99802b9317668d5522aada2fef7371e924c69253a5d5d3e25b8a55" name="aa796b5dd9fd99802b9317668d5522aada2fef7371e924c69253a5d5d3e25b8a55"></a>Auto_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb" name="aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb"></a>Presence_Checking&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977" name="aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977"></a>Positioning&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7" name="aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7"></a>Unsupervised_Defect_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

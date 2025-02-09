@@ -11,8 +11,10 @@ var class_dao_a_i_1_1_deep_learning_1_1_image =
     [ "Image", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a735f9758161cdf4c3f0d568edbe3db66", null ],
     [ "~Image", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a6fae2b734fd3e23a36d2e6ccfc9da0df", null ],
     [ "clone", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a0db43928c320de4066e9a94b919ea39e", null ],
+    [ "empty", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a3290fc8bb1bbbc0397b4a37a208f23cd", null ],
     [ "getData", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a020af8206d6aa82f8e08ef55aeba1784", null ],
     [ "save", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a949d3222502eedbf0b8fd8f7c82eb196", null ],
+    [ "toType", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a6b5c10b0e642f1401e9664eeee1628be", null ],
     [ "height", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a8cb0bd2fc1e6565221fab29bde444de9", null ],
     [ "type", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a28c7b86fe20394cb56d40f3a1864641d", null ],
     [ "width", "class_dao_a_i_1_1_deep_learning_1_1_image.html#a9581a1de1b1ad8b11d0c9d8274ac36f4", null ]

@@ -19,5 +19,7 @@ var namespace_dao_a_i_1_1_deep_learning_1_1_vision =
     [ "PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking" ],
     [ "PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result" ],
     [ "SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation" ],
-    [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result" ]
+    [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result" ],
+    [ "UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation" ],
+    [ "UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result" ]
 ];

@@ -11,5 +11,7 @@ var prediction_8h =
     [ "DaoAI::DeepLearning::Vision::AutoSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_auto_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_auto_segmentation_result" ],
     [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result" ],
     [ "DaoAI::DeepLearning::Vision::PositioningResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result" ],
-    [ "DaoAI::DeepLearning::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result" ]
+    [ "DaoAI::DeepLearning::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result" ],
+    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result" ],
+    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult::Region", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result_1_1_region.html", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result_1_1_region" ]
 ];

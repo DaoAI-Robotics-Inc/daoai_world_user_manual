@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['managedobject_0',['ManagedObject',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html#a4839edaf8664c43852ff1652ea32432c',1,'DaoAI::DeepLearningCLI::ManagedObject::ManagedObject(T *instance)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html#abddc1df6725a5894cec6a89b04eb94d5',1,'DaoAI::DeepLearningCLI::ManagedObject::ManagedObject()']]],
-  ['mask_1',['Mask',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#adbc0dc3d359443419fcbf93c1491435e',1,'DaoAI::DeepLearningCLI::Mask::Mask(Image^ image)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a77a441c83d6b48c4b22fd94cf717198c',1,'DaoAI::DeepLearningCLI::Mask::Mask(DaoAI::DeepLearning::Mask mask)']]],
-  ['merge_2',['merge',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a2eb701c06a40a604f3e753d92782506f',1,'DaoAI::DeepLearningCLI::Mask']]]
+  ['listcomponentmemory_0',['listComponentMemory',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#abe42c4644ab55dcbfd6c3727df0fce4c',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation']]],
+  ['load_1',['load',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_component_memory.html#a51ad5bb688090eab00809f9a3e6631bb',1,'DaoAI::DeepLearningCLI::Vision::ComponentMemory']]]
 ];

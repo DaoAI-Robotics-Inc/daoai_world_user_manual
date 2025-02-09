@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#ab13a446bf2adc7d5ac3b86c8bd1898ea',1,'DaoAI::DeepLearning::Point']]]
+  ['x_0',['x',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a8eafd599b94aa29ba1a1960ea6861504',1,'DaoAI::DeepLearning::Point']]]
 ];
