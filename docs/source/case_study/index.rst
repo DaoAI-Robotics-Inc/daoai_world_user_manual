@@ -7,10 +7,6 @@
    :maxdepth: 1
    
    high-resolu
-   assembly_inspect
-   drink-pick
-   lens_inspect
-   meter_reading
-   pcb_anomaly
    pcb_inspect
-   smoke_detector
+   tool_classification
+   Fine_defect_detection
