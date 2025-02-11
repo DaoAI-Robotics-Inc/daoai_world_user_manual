@@ -27,7 +27,7 @@
         检查系统环境变量中 是否有路径正确指向了 C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin 并且置顶， 如果是 %DWSDK_PATH%/bin  需要检查 %DWSDK_PATH% 是否正确指向C:\\Program Files\\DaoAI World SDK\\DWSDK
 
     解决方案 2
-        修改系统环境变量中的错误指向，确保path中包含（C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin）
+        修改系统环境变量中的错误指向，确保path中包含（C:\\Program Files\\DaoAI World SDK\\DWSDK\\bin）（C:\\Program Files\\DaoAI World SDK\\DWSDK\\3rdparty） 并且置顶。
     
     检查步骤 3
         删除 Windows %temp% 目录下的 DaoAI 文件夹，然后重新运行SDK程序。

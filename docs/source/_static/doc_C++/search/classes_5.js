@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['keypointdetection_0',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html',1,'DaoAI::DeepLearning::Vision']]],
-  ['keypointdetectionresult_1',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html',1,'DaoAI::DeepLearning::Vision']]]
+  ['image_0',['Image',['../class_dao_a_i_1_1_deep_learning_1_1_image.html',1,'DaoAI::DeepLearning']]],
+  ['imageembedding_1',['ImageEmbedding',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_image_embedding.html',1,'DaoAI::DeepLearning::Vision']]],
+  ['instancesegmentation_2',['InstanceSegmentation',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation.html',1,'DaoAI::DeepLearning::Vision']]],
+  ['instancesegmentationresult_3',['InstanceSegmentationResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation_result.html',1,'DaoAI::DeepLearning::Vision']]]
 ];

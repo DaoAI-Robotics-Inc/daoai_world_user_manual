@@ -5,7 +5,11 @@ C# 代码示例
 
 .. contents::
     :local:
-    
+
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
 引入库
 --------------
 
@@ -20,6 +24,23 @@ C# 代码示例
     using System.Drawing;
     using System.Threading.Tasks;
     using DaoAI.DeepLearningCLI;
+
+设置环境变量
+--------------
+
+通常来说，您在使用DW SDK的时候，系统环境变量是已经配置好的。但在少部分情况下，您可能会有包含冲突的动态链接库的路径。
+
+您可以在不更改系统环境变量的前提下正常使用DW SDK。 只需要在代码的开始设置环境变量即可。
+
+.. code-block:: C#
+
+    Environment.SetEnvironmentVariable(
+        "PATH",
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\bin;" +
+        Environment.GetEnvironmentVariable("DWSDK_PATH") + @"\3rd_party;" +
+        Environment.GetEnvironmentVariable("PATH"),
+        EnvironmentVariableTarget.Process
+    );
 
 
 读取图片
@@ -75,6 +96,10 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 加载深度学习模型
 -------------------
 
+.. note::
+    
+    - 在第一次运行时，需要加载模型等数据到内存，这通常需要更久的时间。在程序的后续运行中，也就是从第二次图片加载，推理时，运行时间就会稳定在更快速的时间。
+    
 .. code-block:: C#
 
         String data_path = "..\\..\\..\\..\\Data\\";
@@ -99,8 +124,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
 
-    //非监督缺陷检测
-    DaoAI.DeepLearningCLI.Vision.UnsupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.AnomalyDetection(model_path);
+    //非监督缺陷检测 需要用 DaoAI 非监督 SDK
     
     //监督缺陷检测
     DaoAI.DeepLearningCLI.Vision.SupervisedDefectSegmentation model(model_path) = new DaoAI.DeepLearningCLI.Vision.SemanticSegmentation(model_path);
@@ -118,14 +142,13 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 使用深度学习模型进行预测
 --------------------------
 
-这里定义了 置信度阈值(CONFIDENT_THRESHOLD)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
+这里定义了 置信度阈值(setConfidenceThreshold)为 0.5, 并调用 model.inferece() 函数来使用模型进行推理，再使用 .toJSONString()方法 打印为 json
 
 .. code-block:: C#
 
-    Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object> post_params = new Dictionary<DaoAI.DeepLearningCLI.PostProcessType, object>();
-    post_params[DaoAI.DeepLearningCLI.PostProcessType.CONFIDENT_THRESHOLD] = 0.5;
+    model.setConfidenceThreshold(0.5f);
 
-    Console.WriteLine(model.inference(img, post_params).toJSONString());
+    Console.WriteLine(model.inference(img).toJSONString());
 
 后处理参数
 ~~~~~~~~~~~~~~

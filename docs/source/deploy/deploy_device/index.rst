@@ -87,12 +87,7 @@
         :width: 800
         :align: center
 
-    导出的模型文件支持 ``.dwm`` 格式，以及 ``.zip`` 格式,
-
-    DaoAI Wold的模型还可以在DaoAI平台的其他软件中使用，如 **DaoAI InspecTRA** ， 和 **DaoAI VisionPilot** 。
-
-    - ``.dwm`` 格式在 DaoAI World 2.24.6.0 及之后的版本中支持，对应的 DaoAI InspecTRA 版本为 2.24.6.0，DaoAI VisionPilot 版本为 2.24.5.0。
-    - ``.zip`` 格式在 DaoAI World 2.24.5.0 及之前的版本中可用，对应的 DaoAI InspecTRA 版本为 2.24.5.0，DaoAI VisionPilot 版本为 2.24.4.3。
+    导出的模型文件支持 ``.dwm`` 格式。
 
 
 模型部署
@@ -116,9 +111,7 @@
     :scale: 80%
     :align: center
 
-推理返回的结果格式为 **字典**，更详细的信息可以查看 :ref:`服务器图像推理`
-
-点击 ``查看文档`` 可以直接跳转至本文档关于SDK的章节。
+点击 ``查看文档`` 可以直接跳转至本文档关于SDK的章节。详情请阅读 :ref:`开发功能`
 
 .. image:: Images/open_sdk_doc.png
     :scale: 80%

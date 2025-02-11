@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#adbc0dc3d359443419fcbf93c1491435e',1,'DaoAI::DeepLearningCLI::Mask::Mask(Image^ image)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a77a441c83d6b48c4b22fd94cf717198c',1,'DaoAI::DeepLearningCLI::Mask::Mask(DaoAI::DeepLearning::Mask mask)']]],
-  ['merge_1',['merge',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html#a2eb701c06a40a604f3e753d92782506f',1,'DaoAI::DeepLearningCLI::Mask']]]
+  ['keypointdetection_0',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection.html#a83058508dc96ef2370ccd44a409805b0',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetection::KeypointDetection(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection.html#a1537938e5981c6a38d0ac07bc1879edf',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetection::KeypointDetection(String^ model_file_path, DeviceType device, int device_idx)']]],
+  ['keypointdetectionresult_3a_3akeypointdetectionresult_1',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result.html#ae5b772682198cd1d79c3af9144b5ca2f',1,'DaoAI::DeepLearningCLI::Vision::KeypointDetectionResult']]]
 ];

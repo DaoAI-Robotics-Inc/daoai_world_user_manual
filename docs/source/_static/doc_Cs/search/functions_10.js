@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#ab9f1fcf62b63bcebab8107866be9c1b0',1,'DaoAI::DeepLearningCLI::Box']]],
-  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a1460224b64648c689076d3a6e4635ebb',1,'DaoAI::DeepLearningCLI::Box']]]
+  ['unsuperviseddefectsegmentation_0',['UnsupervisedDefectSegmentation',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#a90757abc25e621f03c5f88a4f6bd4c28',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation']]],
+  ['unsuperviseddefectsegmentationresult_3a_3aunsuperviseddefectsegmentationresult_1',['UnsupervisedDefectSegmentationResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#aa1e36f57c4a77f5029bfc644bc476723',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentationResult']]]
 ];

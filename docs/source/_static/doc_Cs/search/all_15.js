@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['y_0',['y',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#ab13a446bf2adc7d5ac3b86c8bd1898ea',1,'DaoAI::DeepLearning::Point']]],
-  ['y1_1',['y1',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ade7b9dfd8525342d6d9c3ca753ea6b72',1,'DaoAI::DeepLearning::Box']]],
-  ['y2_2',['y2',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#ac4dcc803022a9184cc87e7b492e5a640',1,'DaoAI::DeepLearning::Box']]]
+  ['x1_0',['x1',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#ab9f1fcf62b63bcebab8107866be9c1b0',1,'DaoAI::DeepLearningCLI::Box']]],
+  ['x2_1',['x2',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#a1460224b64648c689076d3a6e4635ebb',1,'DaoAI::DeepLearningCLI::Box']]],
+  ['xywh_2',['XYWH',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#aace00626dbe2780e1919423e9a681841af8f448c9a0f9d364d18932c53e8cdc16',1,'DaoAI::DeepLearningCLI::Box']]],
+  ['xyxy_3',['XYXY',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_box.html#aace00626dbe2780e1919423e9a681841aca89e792ebf5d88964f1cb66ce6ddf61',1,'DaoAI::DeepLearningCLI::Box']]]
 ];

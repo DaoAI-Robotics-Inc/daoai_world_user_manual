@@ -1,4 +1,4 @@
-DW_SDK Windows安装包
+安装
 -------------------------
 
 SDK版本
@@ -28,7 +28,7 @@ DaoAI World SDK 支持CPU模式和GPU模式。尽管您没有GPU 也可以使用
 ***************
 
     首先需要下载 `DaoAI World SDK <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EhJ2c8mQ3yZKuXUno9Vg1ucBCuvQzJZCyAhXnjbQnf7UNg?e=U1N81x>`_
-    Windows C++ C# SDK 目录下的 2.22.7.0 安装包zip
+    Windows C++ C# SDK 目录下的 2.24.8.0 安装包zip
     
     请注意，安装包分为 **企业版** 和 **工业版** ，请下载您使用版本对应的SDK，以确保可以正常使用。
 

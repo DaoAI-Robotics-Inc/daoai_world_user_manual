@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['objectdetection_0',['ObjectDetection',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html#a7a9aeeb8a1b871c1e2f4ed295faf0a13',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetection::ObjectDetection(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html#ab079bb78f83d377d6eabab1461236ed8',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetection::ObjectDetection(String^ model_file_path, DeviceType device, int device_idx)']]],
-  ['objectdetectionresult_1',['ObjectDetectionResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection_result.html#a403acb5232c0930c188e02ee4e8b150a',1,'DaoAI::DeepLearningCLI::Vision::ObjectDetectionResult']]],
-  ['ocr_2',['OCR',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ab4b386128343a1b2de012ae0b0f58093',1,'DaoAI::DeepLearningCLI::Vision::OCR::OCR(String^ model_config_path, String^ model_weight_path, DeviceType device, int device_idx)'],['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ae4f07f1d762a483f3e38b2d6e1b5ce3b',1,'DaoAI::DeepLearningCLI::Vision::OCR::OCR(String^ model_file_path, DeviceType device, int device_idx)']]],
-  ['ocrresult_3a_3aocrresult_3',['OCRResult',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r_result.html#a01c633d035b69fb8fc2b949ab64be439',1,'DaoAI::DeepLearningCLI::Vision::OCRResult']]],
-  ['operator_2b_4',['operator+',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point.html#accbe6e10e742ca6af8c7181b1298d259',1,'DaoAI::DeepLearningCLI::Point']]],
-  ['operator_2d_5',['operator-',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_point.html#a6f542632b8f1f84a7a3bdd731a903305',1,'DaoAI::DeepLearningCLI::Point']]]
+  ['listcomponentmemory_0',['listComponentMemory',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_unsupervised_defect_segmentation.html#abe42c4644ab55dcbfd6c3727df0fce4c',1,'DaoAI::DeepLearningCLI::Vision::UnsupervisedDefectSegmentation']]],
+  ['load_1',['load',['../class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_component_memory.html#a51ad5bb688090eab00809f9a3e6631bb',1,'DaoAI::DeepLearningCLI::Vision::ComponentMemory']]]
 ];

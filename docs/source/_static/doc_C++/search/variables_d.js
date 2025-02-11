@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#a8eafd599b94aa29ba1a1960ea6861504',1,'DaoAI::DeepLearning::Point']]]
+  ['region_5fdefects_0',['region_defects',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#a08f3a391e906cd7aa15654277245e482',1,'DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult']]]
 ];

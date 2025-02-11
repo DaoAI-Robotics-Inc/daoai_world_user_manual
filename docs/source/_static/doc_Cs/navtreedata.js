@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "DaoAI World SDK C#", "index.html", [
+  [ "DaoAI World C# SDK", "index.html", [
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
@@ -44,15 +44,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_semantic_segmentation.html#a966fbec2671547d128d9fe73d4059310"
+"_assembly_info_8cpp.html",
+"class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ab4b386128343a1b2de012ae0b0f58093"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

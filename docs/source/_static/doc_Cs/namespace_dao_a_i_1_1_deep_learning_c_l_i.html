@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DaoAI World SDK C#: DaoAI::DeepLearningCLI Namespace Reference</title>
+<title>DaoAI World C# SDK: DaoAI::DeepLearningCLI Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World SDK C#<span id="projectnumber">&#160;Industrial 2.24.7.0</span>
+   <div id="projectname">DaoAI World C# SDK<span id="projectnumber">&#160;INDUSTRIAL 2024.8.0</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_image.html">Image</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html">ManagedObject</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_mask.html">Mask</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dao_a_i_1_1_deep_learning_c_l_i_1_1_model_info.html">ModelInfo</a></td></tr>
@@ -137,28 +139,52 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a370904a938e581395098283a828f5801">Keypoint_Detection</a> = DaoAI::DeepLearning::ModelType::Keypoint_Detection
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a5c9335b28e6277ddbe0137f04e5e58a7">Classification</a> = DaoAI::DeepLearning::ModelType::Classification
 , <br />
-&#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec">Anomaly_Detection</a> = DaoAI::DeepLearning::ModelType::Anomaly_Detection
-, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b">Semantic_Segmentation</a> = DaoAI::DeepLearning::ModelType::Semantic_Segmentation
-, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5">OCR</a> = DaoAI::DeepLearning::ModelType::OCR
+&#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5">OCR</a> = DaoAI::DeepLearning::ModelType::OCR
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1">Supervised_Defect_Segmentation</a> = DaoAI::DeepLearning::ModelType::Supervised_Defect_Segmentation
+, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a2fef7371e924c69253a5d5d3e25b8a55">Auto_Segmentation</a> = DaoAI::DeepLearning::ModelType::Auto_Segmentation
+, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb">Presence_Checking</a> = DaoAI::DeepLearning::ModelType::Presence_Checking
 , <br />
-&#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb">Presence_Checking</a> = DaoAI::DeepLearning::ModelType::Presence_Checking
-, <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977">Positioning</a> = DaoAI::DeepLearning::ModelType::Positioning
+&#160;&#160;<a class="el" href="#ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977">Positioning</a> = DaoAI::DeepLearning::ModelType::Positioning
 , <a class="el" href="#ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7">Unsupervised_Defect_Segmentation</a> = DaoAI::DeepLearning::ModelType::Unsupervised_Defect_Segmentation
 <br />
  }</td></tr>
 <tr class="separator:ad531f22ebdafd9782f133a8e83c45390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9e3db505401ba56043c29cb62a4605" id="r_a5e9e3db505401ba56043c29cb62a4605"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e9e3db505401ba56043c29cb62a4605">PostProcessType</a> : int { <a class="el" href="#a5e9e3db505401ba56043c29cb62a4605ac3a2dfbf113ef3314922cb1f319a08ec">CONFIDENCE_THRESHOLD</a> = DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD
-, <a class="el" href="#a5e9e3db505401ba56043c29cb62a4605a63c68c0acad0909b215215789895c482">IOU_THRESHOLD</a> = DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD
-, <a class="el" href="#a5e9e3db505401ba56043c29cb62a4605a038f452f272c046433d7a25e51e678b8">SENSITIVITY_THRESHOLD</a> = DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD
- }</td></tr>
-<tr class="separator:a5e9e3db505401ba56043c29cb62a4605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bda3e48a4f6a79b2cd4d6b4eb6eda9f" id="r_a1bda3e48a4f6a79b2cd4d6b4eb6eda9f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">DeviceType</a> { <a class="el" href="#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa2b55387dd066c5bac646ac61543d152d">CPU</a> = DaoAI::DeepLearning::DeviceType::CPU
 , <a class="el" href="#a1bda3e48a4f6a79b2cd4d6b4eb6eda9fa52f9ec21735243ad9917cda3ca077d32">GPU</a> = DaoAI::DeepLearning::DeviceType::GPU
  }</td></tr>
 <tr class="separator:a1bda3e48a4f6a79b2cd4d6b4eb6eda9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb41ee781755c2332e0c212f20e92915" id="r_afb41ee781755c2332e0c212f20e92915"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb41ee781755c2332e0c212f20e92915">DetectionLevel</a> { <a class="el" href="#afb41ee781755c2332e0c212f20e92915a06e536f5c0819e7aa379dcd35556f441">PIXEL</a> = DaoAI::DeepLearning::DetectionLevel::PIXEL
+, <a class="el" href="#afb41ee781755c2332e0c212f20e92915a23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a> = DaoAI::DeepLearning::DetectionLevel::IMAGE
+ }</td></tr>
+<tr class="separator:afb41ee781755c2332e0c212f20e92915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="afb41ee781755c2332e0c212f20e92915" name="afb41ee781755c2332e0c212f20e92915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb41ee781755c2332e0c212f20e92915">&#9670;&#160;</a></span>DetectionLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#afb41ee781755c2332e0c212f20e92915">DaoAI::DeepLearningCLI::DetectionLevel</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb41ee781755c2332e0c212f20e92915a06e536f5c0819e7aa379dcd35556f441" name="afb41ee781755c2332e0c212f20e92915a06e536f5c0819e7aa379dcd35556f441"></a>PIXEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afb41ee781755c2332e0c212f20e92915a23a12f67f614b5518c7f1c2465bf95e3" name="afb41ee781755c2332e0c212f20e92915a23a12f67f614b5518c7f1c2465bf95e3"></a>IMAGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a1bda3e48a4f6a79b2cd4d6b4eb6eda9f" name="a1bda3e48a4f6a79b2cd4d6b4eb6eda9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1bda3e48a4f6a79b2cd4d6b4eb6eda9f">&#9670;&#160;</a></span>DeviceType</h2>
 
@@ -209,40 +235,12 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a705442cc4cab10ee321c7aba460d5791" name="ad531f22ebdafd9782f133a8e83c45390a705442cc4cab10ee321c7aba460d5791"></a>Instance_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a370904a938e581395098283a828f5801" name="ad531f22ebdafd9782f133a8e83c45390a370904a938e581395098283a828f5801"></a>Keypoint_Detection&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a5c9335b28e6277ddbe0137f04e5e58a7" name="ad531f22ebdafd9782f133a8e83c45390a5c9335b28e6277ddbe0137f04e5e58a7"></a>Classification&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec" name="ad531f22ebdafd9782f133a8e83c45390a5a563e0f98eac28aaed38f93538af6ec"></a>Anomaly_Detection&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b" name="ad531f22ebdafd9782f133a8e83c45390a22f3e26abf5215326c2ba0a72c45216b"></a>Semantic_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5" name="ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5"></a>OCR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1" name="ad531f22ebdafd9782f133a8e83c45390a98c8be3b636bd025b24b0641b33a6fa1"></a>Supervised_Defect_Segmentation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a2fef7371e924c69253a5d5d3e25b8a55" name="ad531f22ebdafd9782f133a8e83c45390a2fef7371e924c69253a5d5d3e25b8a55"></a>Auto_Segmentation&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb" name="ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb"></a>Presence_Checking&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977" name="ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977"></a>Positioning&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7" name="ad531f22ebdafd9782f133a8e83c45390a255bb9e3cfee93e698711fba45bf7ab7"></a>Unsupervised_Defect_Segmentation&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a5e9e3db505401ba56043c29cb62a4605" name="a5e9e3db505401ba56043c29cb62a4605"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e9e3db505401ba56043c29cb62a4605">&#9670;&#160;</a></span>PostProcessType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="#a5e9e3db505401ba56043c29cb62a4605">DaoAI::DeepLearningCLI::PostProcessType</a> : int</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e9e3db505401ba56043c29cb62a4605ac3a2dfbf113ef3314922cb1f319a08ec" name="a5e9e3db505401ba56043c29cb62a4605ac3a2dfbf113ef3314922cb1f319a08ec"></a>CONFIDENCE_THRESHOLD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5e9e3db505401ba56043c29cb62a4605a63c68c0acad0909b215215789895c482" name="a5e9e3db505401ba56043c29cb62a4605a63c68c0acad0909b215215789895c482"></a>IOU_THRESHOLD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5e9e3db505401ba56043c29cb62a4605a038f452f272c046433d7a25e51e678b8" name="a5e9e3db505401ba56043c29cb62a4605a038f452f272c046433d7a25e51e678b8"></a>SENSITIVITY_THRESHOLD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

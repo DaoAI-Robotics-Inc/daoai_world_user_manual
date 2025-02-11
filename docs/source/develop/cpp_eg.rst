@@ -6,6 +6,10 @@ C++ 代码示例
 .. contents::
     :local:
 
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
+
 引入库
 --------------
 
@@ -65,8 +69,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
-    //非监督缺陷检测
-    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation model(model_path);
+    //非监督缺陷检测 需要用 DaoAI 非监督 SDK
     
     //监督缺陷检测
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
@@ -84,6 +87,10 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 使用深度学习模型进行预测
 --------------------------
+
+.. note::
+    
+    - 在第一次运行时，需要加载模型等数据到内存，这通常需要更久的时间。在程序的后续运行中，也就是从第二次图片加载，推理时，运行时间就会稳定在更快速的时间。
 
 .. code-block:: C++
 
@@ -114,8 +121,7 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
 
-    //非监督缺陷检测
-    DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
+    //非监督缺陷检测 需要用 DaoAI 非监督 SDK
     
     //监督缺陷检测
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
@@ -134,22 +140,18 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
 
 模型的预测 可以接受后处理参数：
 
-    - DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD:
+    - model.setConfidenceThreshold();
 
-        置信度阈值，会过滤掉结果中置信度低于设定值的结果
+        置信度阈值，会过滤掉结果中置信度低于设定值的结果 范围 0-1
 
-    - DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD:
+    - model.setIOUThreshold();
 
-        IOU阈值，会过滤掉结果中IOU低于设定值的结果
+        IOU阈值，会过滤掉结果中IOU低于设定值的结果 范围 0-1
 
-    - DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD:
-    
-        非监督缺陷分割（异常检测）模型中使用敏感度，控制模型对于缺陷的敏感度，越高则模型会检测出越多的缺陷，但是容易误检
 
 .. code-block:: C++
 
 		DaoAI::DeepLearning::Vision::InstanceSegmentationResult prediction = model.inference(daoai_image, {{DaoAI::DeepLearning::PostProcessType::CONFIDENCE_THRESHOLD, 0.4}, {DaoAI::DeepLearning::PostProcessType::IOU_THRESHOLD, 0.5} });
-
 
 
 获取预测结果

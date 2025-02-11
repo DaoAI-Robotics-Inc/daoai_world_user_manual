@@ -1,12 +1,12 @@
-DWSDK 本地推理服务 （Inference Service）
+C++  本地HTTP推理
 --------------------------------------------
 
-本地推理服务可以让您通过本地的HTTP请求来执行模型的推理并获取结果。
+本地HTTP推理可以让您通过本地SDK，使用HTTP请求来执行模型的推理并获取结果。
 
     .. image:: images/inf_service.png
         :scale: 100%
 
-在安装目录下，您可以找到 inference_service.exe 以及 inference_service_gui.exe.
+在 DW SDK 安装目录下，您可以找到 inference_service.exe 以及 inference_service_gui.exe.
 
 其中双击运行inference_service.exe 即可在后台启动推理服务，您可以在右下角任务图标中找到。而 inference_service_gui.exe 则会打开该服务的图形操作界面 （需要首先运行 inference_service.exe ）。
 

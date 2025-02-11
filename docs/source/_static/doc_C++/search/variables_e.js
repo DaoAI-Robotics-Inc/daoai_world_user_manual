@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../class_dao_a_i_1_1_deep_learning_1_1_point.html#ab13a446bf2adc7d5ac3b86c8bd1898ea',1,'DaoAI::DeepLearning::Point']]]
+  ['shape_0',['shape',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_image_embedding.html#aa2a7eec2d7ddcf5fbfad2ef4d8a0242e',1,'DaoAI::DeepLearning::Vision::ImageEmbedding']]]
 ];
