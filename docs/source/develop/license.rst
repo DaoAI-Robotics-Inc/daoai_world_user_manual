@@ -83,3 +83,20 @@ DW_SDK 需要拥有 `DaoAI` 官方授权的软件许可证才能使用，请联�
 .. |br| raw:: html
 
       <br>
+
+非监督模型授权
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+非监督模型需要我们提供的 USB 加密狗，使用时需要插到部署的机器上即可。
+
+插上加密狗后，运行sdk时，您会看到 Unsupervised Model SDK license: OK 
+
+    .. image:: images/unsupervised_key.png
+        :scale: 80%  
+
+如果没有加密狗 或者没有正确授权的加密狗，则会看到 Unsupervised Model SDK license: Invalid
+
+或者 弹窗报错。
+
+    .. image:: images/ldk_failed.png
+        :scale: 80%  
