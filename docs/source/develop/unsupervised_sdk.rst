@@ -48,7 +48,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
    using namespace DaoAI::DeepLearning;
 
-    int main2()
+    int main()
     {
         try {
             // Initialize Unsupervised library
@@ -182,174 +182,52 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 
 第二部分使用了opencv库来绘制掩膜，请确保安装了opencv库。
 
-.. code-block:: cpp
-
-   #include <dlsdk/utils.h>
-   #include <dlsdk/model.h>
-   #include <iostream>
-   #include <fstream>
-   #include <opencv2/opencv.hpp>
-
-   using namespace DaoAI::DeepLearning;
-
-    int main()
-    {
-        try {
-            // Initialize Unsupervised library
-            initialize();
-
-            // Configurate the model and data path
-            std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
-            std::string data_path = "C:/Users/daoai/test_vision/ano/";  // Change to your own data directory
-
-            // Load images
-            std::vector<Image> good_images;
-            for (auto& file : std::filesystem::directory_iterator(data_path + "good"))
-            {
-                if (file.path().extension() == ".png")
-                {
-                    good_images.push_back(Image(file.path().string()));
-                }
-            }
-
-            std::vector<Image> bad_images;
-            std::vector<Image> masks;
-            for (auto& file : std::filesystem::directory_iterator(data_path + "bad"))
-            {
-                if (file.path().extension() == ".png")
-                {
-                    Image image(file.path().string());
-                    bad_images.push_back(image);
-
-                    // Create a binary mask
-                    cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
-                    int centerX = image.width / 2;
-                    int centerY = image.height / 2;
-                    int radius = static_cast<int>(image.width * 0.25);
-                    cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
-
-                    Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
-                    masks.push_back(mask.clone());
-                }
-            }
-
-            // Construct the model
-            Vision::UnsupervisedDefectSegmentation model(DeviceType::GPU);
-            model.setDetectionLevel(DetectionLevel::PIXEL);
-
-            ComponentMemory component;
-            try
-            {
-                component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
-                component.save(data_path + "component_1.pth");
-                model.setBatchSize(1);
-            }
-            catch (std::exception& e)
-            {
-                std::cout << e.what() << "\n";
-            }
-
-            Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
-
-            std::cout << "Anomaly score: " << result.confidence << std::endl;
-            std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
-            return 0;
-        }
-        catch (const std::exception& e) {
-            std::cout << "Caught an exception: " << e.what() << std::endl;
-            return -1;
-        }
-    }
-
+代码请参考 github 仓库 `非监督像素级示例代码  <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo/blob/2.24.8.0/cpp_demos/DW_SDK_Cpp_Example/DW%20UnsupervisedDefectSegmentation/main.cpp>`_
 
 代码功能：通过用户提供的样本数据训练模型，并使用训练后的模型进行推理。
 
-代码说明
-^^^^^^^^^
+使用方法
+^^^^^^^^^^^
 
-1. **初始化 Unsupervised 库**
+1. **启动应用程序**  或在 visual studio 中开始调试
 
-   .. code-block:: cpp
+2. **提供图像文件夹路径**  
+   输入包含图像的文件夹路径（支持 `.png`、`.jpg`、`.jpeg` 格式）。
 
-      initialize();
+3. **交互式标注界面**  
+   使用 GUI 进行图像标注：
 
-   **功能**：与前面相同，用于初始化 Unsupervised 库。
+- **按键操作**：
 
-2. **设置模型和数据路径**
+  - `n`: 切换到下一张图像
+  - `p`: 返回到上一张图像
+  - `g`: 将图像标记为 GOOD（良品）
+  - `b`: 将图像标记为 BAD（不良品，允许多边形标注）
+  - `r`: 重置多边形标注
+  - `f`: 完成多边形（将最后一个点与第一个点连接）
+  - `q`: 退出标注工具
 
-   .. code-block:: cpp
+- **鼠标操作**：
 
-      std::string root_directory = "C:/Users/daoai/test_vision/";
-      std::string data_path = "C:/Users/daoai/test_vision/ano/";
+  - **左键点击**: 在图像上添加多边形标注点（针对不良品图像）
+  - **鼠标滚轮**: 放大/缩小图像
 
-   **功能**：设置存储模型文件和样本数据的路径。
+4. **保存标注结果**  
+   退出标注界面后，工具将自动执行以下操作：
 
-3. **加载“好”样本图像**
+- 将 GOOD（良品）图像复制到 `out/good` 目录。
+- 将 BAD（不良品）图像复制到 `out/bad` 目录。
+- 生成 BAD 图像的二进制掩码，并保存在 `out/masks` 目录中。
 
-   .. code-block:: cpp
+5. **加载标注结果进行训练**  
+   工具将从 `out` 目录中重新加载已标注的图像和掩码，准备训练数据。
 
-      for (auto& file : std::filesystem::directory_iterator(data_path + "good")) {
-          if (file.path().extension() == ".png") {
-              good_images.push_back(Image(file.path().string()));
-          }
-      }
+6. **构建训练组件**  
+   工具利用 DaoAI 的 **UnsupervisedDefectSegmentation** （无监督缺陷分割）模型，根据标注数据创建训练组件。
 
-   **功能**：加载“好”样本图像到内存中，用于模型训练。
+7. **模型推理**  
+   使用训练组件对新的图像数据进行推理，并输出缺陷检测结果。
 
-4. **加载“坏”样本图像和掩码**
-
-   .. code-block:: cpp
-
-      for (auto& file : std::filesystem::directory_iterator(data_path + "bad")) {
-          if (file.path().extension() == ".png") {
-              Image image(file.path().string());
-              bad_images.push_back(image);
-
-              // 创建二值掩码
-              cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
-              int centerX = image.width / 2;
-              int centerY = image.height / 2;
-              int radius = static_cast<int>(image.width * 0.25);
-              cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
-
-              Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
-              masks.push_back(mask.clone());
-          }
-      }
-
-   **功能**：加载“坏”样本图像，同时生成相应的二值掩码，用于训练过程。
-
-5. **构建模型并训练**
-
-   .. code-block:: cpp
-
-      ComponentMemory component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
-      component.save(data_path + "component_1.pth");
-
-   **功能**：使用提供的样本数据训练模型，并保存训练后的模型组件。
-
-    结尾的 true 参数，意味着在训练结束后将模型加载至内存使用，默认为false, 则不会加载进内存，如果设为了false,则需要调用 addComponentMemory(file_path)  来加载训练好的模型，再进行推理。
-
-6. **推理并输出结果**
-
-   .. code-block:: cpp
-
-      Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
-      std::cout << "Anomaly score: " << result.confidence << std::endl;
-      std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
-
-   **功能**：使用训练后的模型对测试图像进行推理，输出异常分数和 JSON 格式的结果。
-
-7. **异常处理**
-
-   .. code-block:: cpp
-
-      catch (const std::exception& e) {
-          std::cout << "Caught an exception: " << e.what() << std::endl;
-          return -1;
-      }
-
-   **功能**：捕获可能出现的异常并打印错误信息。
 
 总结
 ----

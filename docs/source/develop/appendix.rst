@@ -1347,6 +1347,7 @@ SDK接口文档
     python_win_eg
     cpp_client
     auto_seg_eg
+    batch_inference
     .. python_eg
 
 
