@@ -9,10 +9,31 @@ body {
     text-shadow: 1px 1px black; */
 }
 
-h1 {
-    /* font-family: Luminari, fantasy, sans-serif;  */
+
+
+.float-right {
+    float: right;
+    margin: 0 0 1em 1em; /* 调整外边距以避免文字紧贴图片 */
 }
 
-img {
-    /* max-width: 60%; */
+.float-left {
+    float: left;
+    margin: 00 50em 50em;
+}
+
+.float-center {
+    float: center;
+    margin: 0 0 20em 20em; /* 调整外边距以避免文字紧贴图片 */
+}
+
+.shadow img {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3); 
+    display: block; 
+}
+
+.rotate-image {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg); /* For IE 9 */
+    -webkit-transform: rotate(-90deg); /* For Safari */
+    display: block; 
 }
