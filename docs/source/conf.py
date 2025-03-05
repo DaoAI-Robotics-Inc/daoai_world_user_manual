@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DaoAI World用户手册'
-copyright = '2021-2024 DaoAI Robotics Inc.'
+copyright = '2021-2025 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
 release = '2025.1'
