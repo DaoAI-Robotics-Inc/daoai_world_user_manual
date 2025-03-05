@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mask_0',['Mask',['../class_dao_a_i_1_1_deep_learning_1_1_mask.html',1,'DaoAI::DeepLearning']]],
-  ['model_1',['Model',['../class_dao_a_i_1_1_deep_learning_1_1_model.html',1,'DaoAI::DeepLearning']]]
+  ['superviseddefectsegmentation_0',['SupervisedDefectSegmentation',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html',1,'DaoAI::DeepLearning::Vision']]]
 ];

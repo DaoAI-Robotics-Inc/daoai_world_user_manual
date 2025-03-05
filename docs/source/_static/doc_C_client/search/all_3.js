@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['daoai_0',['DaoAI',['../namespace_dao_a_i.html',1,'']]],
-  ['daoai_3a_3adeeplearning_1',['DeepLearning',['../namespace_dao_a_i_1_1_deep_learning.html',1,'DaoAI']]],
-  ['daoai_3a_3adeeplearning_3a_3avision_2',['Vision',['../namespace_dao_a_i_1_1_deep_learning_1_1_vision.html',1,'DaoAI::DeepLearning']]],
-  ['daoai_5fapi_3',['DAOAI_API',['../_a_p_i___e_x_p_o_r_t_8h.html#a59f837c0dd7bcaca6ae91d0bbc447d12',1,'API_EXPORT.h']]],
-  ['data_4',['data',['../class_dao_a_i_1_1_deep_learning_1_1_box.html#a4a2c3fb4c4369433f5dab298ddf9dfea',1,'DaoAI::DeepLearning::Box']]],
-  ['decision_5',['decision',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html#a8e38caf0de92f753a41aa3ca2cfd625f',1,'DaoAI::DeepLearning::Vision::ObjectDetectionResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html#a1dfbee344fd2d95405a9d187cfdfbf5b',1,'DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning_result.html#a23b857eaff041ad22af585e5a57b54af',1,'DaoAI::DeepLearning::Vision::PositioningResult::decision'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#abdb7f5c2c226bef4742b6739a2241d52',1,'DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult::decision']]],
-  ['devicetype_6',['DeviceType',['../namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926',1,'DaoAI::DeepLearning']]]
+  ['keypointdetection_0',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html',1,'DaoAI::DeepLearning::Vision::KeypointDetection'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html#ac2db1a3210bc5124ed33da01e749e065',1,'DaoAI::DeepLearning::Vision::KeypointDetection::KeypointDetection()']]]
 ];

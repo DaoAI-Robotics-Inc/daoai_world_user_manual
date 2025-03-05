@@ -24,13 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "DaoAI World Inference Client", "index.html", [
+  [ "DaoAI World Inference Client C++", "index.html", [
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
-      ] ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -38,16 +34,14 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Related Symbols", "functions_rela.html", null ]
+        [ "Functions", "functions_func.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -56,8 +50,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_p_i___e_x_p_o_r_t_8h.html",
-"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html#a6580eb07f2e2e71fe9cfd82b712dd345"
+"_source_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

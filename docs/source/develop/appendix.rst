@@ -1331,6 +1331,10 @@ SDK接口文档
 
 `C++ Inference Client 接口文档 <../_static/doc_C_client/index.html>`_
 
+`C# Inference Client 接口文档 <../_static/doc_Cs_client/index.html>`_
+
+
+
 代码示例
 ~~~~~~~~~~~~~~~~~
 
@@ -1346,6 +1350,7 @@ SDK接口文档
     cs_eg
     python_win_eg
     cpp_client
+    cs_client
     auto_seg_eg
     batch_inference
     .. python_eg

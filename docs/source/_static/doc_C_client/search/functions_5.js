@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keypointdetection_0',['KeypointDetection',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html#ac2db1a3210bc5124ed33da01e749e065',1,'DaoAI::DeepLearning::Vision::KeypointDetection']]],
-  ['keypointdetectionresult_1',['KeypointDetectionResult',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html#a594086aef920f449686f7f3f60fcd737',1,'DaoAI::DeepLearning::Vision::KeypointDetectionResult::KeypointDetectionResult()'],['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection_result.html#a9ec73cb3ceb6dd03c714ebd7097319c3',1,'DaoAI::DeepLearning::Vision::KeypointDetectionResult::KeypointDetectionResult(const std::string &amp;json_result)']]]
+  ['positioning_0',['Positioning',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning.html#a6ead3beb346758f8d978cb82b18982e3',1,'DaoAI::DeepLearning::Vision::Positioning']]],
+  ['presencechecking_1',['PresenceChecking',['../class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html#a38583e2932861ad392be57ab983c0397',1,'DaoAI::DeepLearning::Vision::PresenceChecking']]]
 ];

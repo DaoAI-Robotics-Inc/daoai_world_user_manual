@@ -1,4 +1,4 @@
-C++  本地HTTP推理
+本地HTTP推理
 --------------------------------------------
 
 本地HTTP推理可以让您通过本地SDK，使用HTTP请求来执行模型的推理并获取结果。
@@ -68,15 +68,23 @@ C++  本地HTTP推理
 示例项目
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-C++ Inference Client 通过和 Inference Service 交互， 极简化了环境配置的依赖。
+Inference Client 通过和 Inference Service 交互， 极简化了环境配置的依赖。
 
-比起 Windows C++ SDK 需要使用许多的dll依赖， C++ Inference Client 只需要1个。避免了在项目想要引入其它依赖时（如 Opencv）的dll版本冲突。
+比起 Windows SDK 需要使用许多的dll依赖， Inference Client 只需要1个。避免了在项目想要引入其它依赖时（如 Opencv）的dll版本冲突。
 
-C++ Inference Client 提供了与 Windows C++ SDK 相同的接口
+Inference Client 提供了与 Windows SDK 相似的接口。
 
-您可以在安装目录下的 "C:\\Program Files\\DaoAI World SDK\\InferenceClient\\InferenceClientExample" 中找到 :ref:`C++ Inference Client 示例项目`
+详情请参考:
+
+:ref:`C++ Inference Client 示例项目`
+:ref:`C# Inference Client 示例项目`
+
+您也可以查看我们的 GitHub repo，其中包含 C++、C# 和 Python 的示例项目，方便用户快速上手和参考。
+
+链接： `DaoAI World SDK Desktop Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
 
 SDK 接口文档
 ~~~~~~~~~~~~~~
 
-`C++ Inference Client 接口文档 <../_static/doc_C_client/index.html>`_
+`Inference Client C++接口文档 <../_static/doc_C_client/index.html>`_
+`Inference Client C#接口文档 <../_static/doc_Cs_client/index.html>`_
