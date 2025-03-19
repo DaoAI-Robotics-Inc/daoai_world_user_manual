@@ -16,7 +16,7 @@ OCR项目单行字符标注案例
 
     - 重新数据标注，确保密集字符行被正确标注为一个长框，以提高OCR识别的准确性。
 
-    .. image:: images/ocr1.png
+    .. image:: images/ocr单行.png
         :scale: 100%
 
 
