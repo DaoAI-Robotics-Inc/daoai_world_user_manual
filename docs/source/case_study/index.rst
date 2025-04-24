@@ -10,3 +10,4 @@
    pcb_inspect
    tool_classification
    Fine_defect_detection
+   OCR
