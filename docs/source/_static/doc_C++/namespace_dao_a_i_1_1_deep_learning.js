@@ -25,10 +25,6 @@ var namespace_dao_a_i_1_1_deep_learning =
     [ "Point", "class_dao_a_i_1_1_deep_learning_1_1_point.html", "class_dao_a_i_1_1_deep_learning_1_1_point" ],
     [ "Polygon", "class_dao_a_i_1_1_deep_learning_1_1_polygon.html", "class_dao_a_i_1_1_deep_learning_1_1_polygon" ],
     [ "Prediction", "class_dao_a_i_1_1_deep_learning_1_1_prediction.html", "class_dao_a_i_1_1_deep_learning_1_1_prediction" ],
-    [ "DetectionLevel", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25", [
-      [ "PIXEL", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25a06e536f5c0819e7aa379dcd35556f441", null ],
-      [ "IMAGE", "namespace_dao_a_i_1_1_deep_learning.html#ad659ebfe714287f6d002e0eac8a7db25a23a12f67f614b5518c7f1c2465bf95e3", null ]
-    ] ],
     [ "DeviceType", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926", [
       [ "CPU", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926a2b55387dd066c5bac646ac61543d152d", null ],
       [ "GPU", "namespace_dao_a_i_1_1_deep_learning.html#a9323d6e6a20db12d824c396d5f000926a52f9ec21735243ad9917cda3ca077d32", null ]
@@ -47,5 +43,5 @@ var namespace_dao_a_i_1_1_deep_learning =
     ] ],
     [ "clearGPUMemory", "namespace_dao_a_i_1_1_deep_learning.html#aadaf51e4e61bf852ff7e019379c38494", null ],
     [ "getNumCUDADevices", "namespace_dao_a_i_1_1_deep_learning.html#a896fbfda602c571948b2f709387388f9", null ],
-    [ "initialize", "namespace_dao_a_i_1_1_deep_learning.html#ac2d1d680a7a849ce0e26fb7fdc5ec6a2", null ]
+    [ "initialize", "namespace_dao_a_i_1_1_deep_learning.html#acb99fb1fea7ac563f56894012a740d8d", null ]
 ];

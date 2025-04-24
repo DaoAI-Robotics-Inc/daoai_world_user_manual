@@ -27,5 +27,5 @@ var model_8h =
     ] ],
     [ "clearGPUMemory", "model_8h.html#aadaf51e4e61bf852ff7e019379c38494", null ],
     [ "getNumCUDADevices", "model_8h.html#a896fbfda602c571948b2f709387388f9", null ],
-    [ "initialize", "model_8h.html#ac2d1d680a7a849ce0e26fb7fdc5ec6a2", null ]
+    [ "initialize", "model_8h.html#acb99fb1fea7ac563f56894012a740d8d", null ]
 ];

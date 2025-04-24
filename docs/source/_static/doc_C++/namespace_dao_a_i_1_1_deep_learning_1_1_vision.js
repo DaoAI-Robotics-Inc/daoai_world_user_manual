@@ -21,5 +21,10 @@ var namespace_dao_a_i_1_1_deep_learning_1_1_vision =
     [ "SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation" ],
     [ "SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result" ],
     [ "UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation" ],
-    [ "UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result" ]
+    [ "UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result" ],
+    [ "DetectionLevel", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html#a857b777acff09b0e6f9f4b6d58837a77", [
+      [ "PIXEL_FAST", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html#a857b777acff09b0e6f9f4b6d58837a77a600c38f5401d4a7ad342fc771bfd9601", null ],
+      [ "PIXEL_ACCURATE", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html#a857b777acff09b0e6f9f4b6d58837a77a04f0f5a17d46b8cd87696970cac4c517", null ],
+      [ "IMAGE", "namespace_dao_a_i_1_1_deep_learning_1_1_vision.html#a857b777acff09b0e6f9f4b6d58837a77a23a12f67f614b5518c7f1c2465bf95e3", null ]
+    ] ]
 ];

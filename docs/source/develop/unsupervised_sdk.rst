@@ -1,11 +1,9 @@
-DaoAI 非监督缺陷检测SDK
+DaoAI 非监督缺陷检测
 ======================================
 
-DaoAI 非监督缺陷检测SDK 提供了一套完整的工具，帮助用户加载预训练模型进行推理，或者通过用户提供的图像数据，自主训练模型并执行缺陷检测。
+DaoAI World SDK 对非监督缺陷检测任务 提供了一套完整的工具，帮助用户加载预训练模型进行推理，或者通过用户提供的图像数据，自主训练模型并执行缺陷检测。
 
-DaoAI 非监督缺陷检测SDK 支持 **C++**
-
-您也可以查看我们的 GitHub repo，其中包含 C++ 的非监督缺陷检测SDK示例代码。
+您也可以查看我们的 GitHub repo，其中包含 C++，C#, 以及Python 的非监督缺陷检测SDK示例代码。
 
 链接： `DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
 
@@ -19,13 +17,13 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
 功能概览
 --------
 
-1. **加载预训练模型并进行推理**（见 main2 函数）
+1. **加载预训练模型并进行推理**（参考 第一部分 函数）
    使用从 DaoAI World 平台下载的预训练模型，SDK 可以执行以下操作：
 
    - 支持像素级和图像级的推理。
    - 提供推理结果，包括异常评分和注释。
 
-2. **自主训练模型并进行推理**（见 main 函数）
+2. **自主训练模型并进行推理**（参考 第二部分）
    用户可以通过提供好的和坏的样本数据，让 SDK 自主训练一个用于缺陷检测的图像级或者像素级的模型。
 
 使用说明
@@ -71,7 +69,7 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
             Vision::UnsupervisedDefectSegmentationResult result = model.inference(img);
 
             // Print the result
-            std::cout << "Anomaly score: " << result.confidence << std::endl;
+            std::cout << "AI Deviation Score: " << result.ai_deviation_score << std::endl;
             std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n\n";
 
             // Save the result to a file
@@ -143,10 +141,20 @@ DaoAI 非监督缺陷检测SDK 支持 **C++**
    .. code-block:: cpp
 
       Vision::UnsupervisedDefectSegmentationResult result = model.inference(img);
-      std::cout << "Anomaly score: " << result.confidence << std::endl;
+      std::cout << "AI Deviation Score: " << result.ai_deviation_score << std::endl;
       std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n\n";
 
-   **功能**：对图像进行推理，输出异常分数（Anomaly score）和 JSON 格式的推理结果。
+   **功能**：对图像进行推理，输出异常分数（AI Deviation Score）和 JSON 格式的推理结果。
+
+   .. note::
+      
+      这里AI Deviation Score 代表模型判断的当前样本的异常值，范围在0-1.
+
+      0 代表标准样本，而接近0的值代表接近与正常样本。
+
+      1 代表异常样本，接近1的值就代表与正常样本相差越多，也就是异常样本。
+
+      模型会基于训练集，合理的设置一个区分阈值，如果您有需要，也可以手动加一个判断语句来自定义一个阈值。
 
 7. **保存推理结果**
 

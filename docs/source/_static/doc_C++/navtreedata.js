@@ -58,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_p_i___e_x_p_o_r_t_8h.html",
-"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_detection.html#a60b628277c2e467186b42e867fae970b",
-"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#a65729701ddd083e6884499b1bbd419be"
+"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_classification_result.html#a305f6c7a7145c3f74f1e379f456c1358",
+"class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html#a0d86d3eb770331914ab9bd9d226ab4d7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

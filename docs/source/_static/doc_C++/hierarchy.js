@@ -16,7 +16,8 @@ var hierarchy =
         [ "DaoAI::DeepLearning::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", null ]
       ] ],
       [ "DaoAI::DeepLearning::Vision::OCR", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html", null ],
-      [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", null ]
+      [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", null ],
+      [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", null ]
     ] ],
     [ "DaoAI::DeepLearning::ModelInfo", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html", null ],
     [ "DaoAI::DeepLearning::Point", "class_dao_a_i_1_1_deep_learning_1_1_point.html", null ],
@@ -33,9 +34,8 @@ var hierarchy =
       [ "DaoAI::DeepLearning::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html", [
         [ "DaoAI::DeepLearning::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", null ]
       ] ],
-      [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", null ]
+      [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", null ],
+      [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", null ]
     ] ],
-    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult::Region", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result_1_1_region.html", null ],
-    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation.html", null ],
-    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", null ]
+    [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult::Region", "struct_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result_1_1_region.html", null ]
 ];

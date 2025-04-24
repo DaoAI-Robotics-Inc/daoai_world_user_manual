@@ -3,6 +3,25 @@
 附录
 ------------
 
+
+SDK版本更新培训视频
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2.25.2.0 版本培训视频:
+**********************
+
+  .. raw:: html
+
+      <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+          <video width="80%" height="auto" controls>
+              <source src="http://docs.welinkirt.com/static/videos/dw_sdk_25-2.mp4" type="video/mp4">
+          </video>
+      </div>
+
+|
+
+
+
 各模型、各模型类型、不同尺寸模型推理的运行时间表
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
