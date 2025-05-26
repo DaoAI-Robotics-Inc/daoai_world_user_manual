@@ -26,10 +26,10 @@ DWSDK C++ 项目配置
         .. image:: images/cpp_env3.png
             :scale: 80%
 
-    Linker的Input菜单里的Additional Dependencies中添加daoai_dl_sdk.lib。
+    Linker的Input菜单里的Additional Dependencies中添加dwsdk_cpp.lib。
 
         .. image:: images/cpp_env4.png
-            :scale: 80%
+            :scale: 40%
 
     Debugging的Environment菜单里的Path 添加 DWSDK_PATH\\bin, DWSDK_PATH\\3rdparty;
 

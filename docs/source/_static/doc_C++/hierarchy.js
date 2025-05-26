@@ -11,9 +11,11 @@ var hierarchy =
       [ "DaoAI::DeepLearning::Vision::Detection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_detection.html", [
         [ "DaoAI::DeepLearning::Vision::InstanceSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_instance_segmentation.html", null ],
         [ "DaoAI::DeepLearning::Vision::KeypointDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_keypoint_detection.html", null ],
+        [ "DaoAI::DeepLearning::Vision::MultilabelDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_multilabel_detection.html", null ],
         [ "DaoAI::DeepLearning::Vision::ObjectDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection.html", null ],
         [ "DaoAI::DeepLearning::Vision::Positioning", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_positioning.html", null ],
-        [ "DaoAI::DeepLearning::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", null ]
+        [ "DaoAI::DeepLearning::Vision::PresenceChecking", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking.html", null ],
+        [ "DaoAI::DeepLearning::Vision::RotatedObjectDetection", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_rotated_object_detection.html", null ]
       ] ],
       [ "DaoAI::DeepLearning::Vision::OCR", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r.html", null ],
       [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation.html", null ],
@@ -32,7 +34,9 @@ var hierarchy =
       ] ],
       [ "DaoAI::DeepLearning::Vision::OCRResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_o_c_r_result.html", null ],
       [ "DaoAI::DeepLearning::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_object_detection_result.html", [
-        [ "DaoAI::DeepLearning::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", null ]
+        [ "DaoAI::DeepLearning::Vision::MultilabelDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_multilabel_detection_result.html", null ],
+        [ "DaoAI::DeepLearning::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_presence_checking_result.html", null ],
+        [ "DaoAI::DeepLearning::Vision::RotatedObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_rotated_object_detection_result.html", null ]
       ] ],
       [ "DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_supervised_defect_segmentation_result.html", null ],
       [ "DaoAI::DeepLearning::Vision::UnsupervisedDefectSegmentationResult", "class_dao_a_i_1_1_deep_learning_1_1_vision_1_1_unsupervised_defect_segmentation_result.html", null ]

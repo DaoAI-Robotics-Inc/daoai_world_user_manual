@@ -37,8 +37,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ]
       ] ]
@@ -56,7 +56,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_assembly_info_8cpp.html",
-"class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r.html#ab4b386128343a1b2de012ae0b0f58093"
+"class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_multilabel_detection.html",
+"functions_func_f.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

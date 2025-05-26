@@ -1,6 +1,8 @@
 var prediction_8h =
 [
     [ "DaoAI::DeepLearningCLI::Vision::ObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection_result" ],
+    [ "DaoAI::DeepLearningCLI::Vision::MultilabelDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_multilabel_detection_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_multilabel_detection_result" ],
+    [ "DaoAI::DeepLearningCLI::Vision::RotatedObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_rotated_object_detection_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_rotated_object_detection_result" ],
     [ "DaoAI::DeepLearningCLI::Vision::InstanceSegmentationResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_instance_segmentation_result" ],
     [ "DaoAI::DeepLearningCLI::Vision::KeypointDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result" ],
     [ "DaoAI::DeepLearningCLI::Vision::OCRResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r_result.html", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_o_c_r_result" ],

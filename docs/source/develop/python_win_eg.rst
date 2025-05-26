@@ -30,14 +30,14 @@ Python Windows 代码示例
 引入库
 ~~~~~~~~~~~~~~~~
 
-您也可以从一个新的python文件开始，那么首先需要导入 dlsdk 库，也就是我们的DaoAI World Python Windows SDK
+您也可以从一个新的python文件开始，那么首先需要导入 dwsdk 库，也就是我们的DaoAI World Python Windows SDK
 
 
 .. code-block:: python
 
     import os
     import sys
-    import dlsdk.dlsdk as dlsdk
+    import dwsdk.dwsdk as dwsdk
 
 以下的库可能也会对您有帮助
 
@@ -58,9 +58,9 @@ Python Windows 代码示例
 .. code-block:: python
 
     #初始化模型
-    dlsdk.initialize()
+    dwsdk.initialize()
     model_path = "./model.dwm"
-    model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.KeypointDetection(model_path, device=dwsdk.DeviceType.GPU)
 
 
 注意，这里每一个检测任务都有对应的对象：
@@ -68,30 +68,36 @@ Python Windows 代码示例
 .. code-block:: python
 
     #实例分割
-    model = dlsdk.InstanceSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.InstanceSegmentation(model_path, device=dwsdk.DeviceType.GPU)
 
     #关键点检测
-    model = dlsdk.KeypointDetection(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.KeypointDetection(model_path, device=dwsdk.DeviceType.GPU)
     
     #图像分类
-    model = dlsdk.Classification(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.Classification(model_path, device=dwsdk.DeviceType.GPU)
     
     #目标检测
-    model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.ObjectDetection(model_path, device=dwsdk.DeviceType.GPU)
 
-    #非监督缺陷检测 需要用 DaoAI 非监督 SDK
+    #旋转目标检测
+    model = dwsdk.RotatedObjectDetection(model_path, device=dwsdk.DeviceType.GPU)
+
+    #混合模型
+    model = dwsdk.MultilabelDetection(model_path, device=dwsdk.DeviceType.GPU)
+
+    #非监督缺陷检测 参考非监督示例代码
     
     #监督缺陷检测
-    model = dlsdk.SupervisedDefectSegmentation(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.SupervisedDefectSegmentation(model_path, device=dwsdk.DeviceType.GPU)
 
     #OCR
-    model = dlsdk.OCR(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.OCR(model_path, device=dwsdk.DeviceType.GPU)
 
     #定位模型 (只在工业版支持)
-    model = dlsdk.Positioning(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.Positioning(model_path, device=dwsdk.DeviceType.GPU)
 
     #漏错装检测 (只在工业版支持)
-    model = dlsdk.PresenceChecking(model_path, device=dlsdk.DeviceType.GPU)
+    model = dwsdk.PresenceChecking(model_path, device=dwsdk.DeviceType.GPU)
 
 
 读取图片
@@ -105,7 +111,7 @@ Python Windows 代码示例
     image_path = "./kp1.png" #读取的图片路径
     img = cv2.imread(image_path)
 
-    daoai_image = dlsdk.Image.from_numpy(img, dlsdk.Image.Type.BGR) #创建 DaoAI Image 
+    daoai_image = dwsdk.Image.from_numpy(img, dwsdk.Image.Type.BGR) #创建 DaoAI Image 
 
 
 
@@ -117,8 +123,8 @@ Python Windows 代码示例
 
 .. code-block:: python
 
-    assert isinstance(daoai_image, dlsdk.Image)
-    prediction = model.inference(daoai_image,{dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
+    assert isinstance(daoai_image, dwsdk.Image)
+    prediction = model.inference(daoai_image,{dwsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95})
 
     with open("output.json", "w") as f: 
         f.write(prediction.toJSONString()) #输出常规json结果
@@ -197,7 +203,7 @@ Mask 是预测结果中目标物体的外轮廓信息，可以通过以下方式
 
 .. code-block:: python
 
-    result = dlsdk.visualize(daoai_image, prediction)
+    result = dwsdk.visualize(daoai_image, prediction)
 
     result.save("output.png")
 

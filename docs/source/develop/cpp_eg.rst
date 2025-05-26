@@ -13,12 +13,12 @@ C++ 代码示例
 引入库
 --------------
 
-在C++示例中，我们使用了以下几个头文件，其中 ``dlsdk/model.h`` 是用于引入DaoAI World SDK的库。
+在C++示例中，我们使用了以下几个头文件，其中 ``dwsdk/model.h`` 是用于引入DaoAI World SDK的库。
 
 .. code-block:: C++
 
-    #include <dlsdk/model.h>
-    #include <dlsdk/prediction.h>
+    #include <dwsdk/model.h>
+    #include <dwsdk/prediction.h>
     #include <string>
     #include <fstream>
 
@@ -68,9 +68,15 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
-
-    //非监督缺陷检测 需要用 DaoAI 非监督 SDK
     
+    //旋转目标检测
+    DaoAI::DeepLearning::Vision::RotatedObjectDetection model(model_path);
+
+    //混合模型
+    DaoAI::DeepLearning::Vision::MultilabelDetection model(model_path);
+
+    //非监督缺陷检测 参考非监督示例代码
+
     //监督缺陷检测
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation model(model_path);
 
@@ -121,7 +127,13 @@ DaoAI World SDK 的模型预测函数需要将图片表示为一维数组（1D a
     //目标检测
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
 
-    //非监督缺陷检测 需要用 DaoAI 非监督 SDK
+    //旋转目标检测
+    DaoAI::DeepLearning::Vision::RotatedObjectDetectionResult prediction = model.inference(daoai_image);
+
+    //混合模型
+    DaoAI::DeepLearning::Vision::MultilabelDetectionResult prediction = model.inference(daoai_image);
+
+    //非监督缺陷检测 参考非监督示例代码
     
     //监督缺陷检测
     DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);

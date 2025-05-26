@@ -8,10 +8,12 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a54f088eb5c0acab9f9511f9c11f2e0ba", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a1951386ea5dab9b6ba18a80f797e014b", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aeaa36f07bb1714e3c712531a129742a6", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ae822ccc7eb75352b1a7e4ee9ca307e92", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a8e8c92b667ae147f381ce41f3b84e8e0", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aec2b11b39427ea89b06a08c5dd5c1c43", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aea757b23951f1f6b465a55c62dd6c372", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a9425aa53bac9d692f3d034966ed37860", null ],
+      [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#a4ac874becd9b4614f4b871a7cb2b870b", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#ad1cd71680d637b46b993110a495e35e5", null ],
       [ "visualize", "namespace_dao_a_i_1_1_deep_learning_1_1_utils.html#aca92562e9df1600359d3984b71bd89fe", null ]
     ] ],
@@ -37,6 +39,8 @@ var namespace_dao_a_i_1_1_deep_learning =
       [ "OCR", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaf529c51ee65a122778f148485732aee5", null ],
       [ "Supervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada98c8be3b636bd025b24b0641b33a6fa1", null ],
       [ "Auto_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada2fef7371e924c69253a5d5d3e25b8a55", null ],
+      [ "Multilabel_Detection", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadae4e7f8b2f803f307841c8fd35ede86c4", null ],
+      [ "Rotated_Object_Detection", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadadcdaf420f1d12f0fcce9f92c01b07cb1", null ],
       [ "Presence_Checking", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada43becb93987f006cd2262a44eff0cddb", null ],
       [ "Positioning", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aadaa52fce78b8f3903d4789878f2635a977", null ],
       [ "Unsupervised_Defect_Segmentation", "namespace_dao_a_i_1_1_deep_learning.html#aa796b5dd9fd99802b9317668d5522aada255bb9e3cfee93e698711fba45bf7ab7", null ]

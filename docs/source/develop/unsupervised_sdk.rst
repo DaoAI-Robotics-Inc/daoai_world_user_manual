@@ -39,8 +39,8 @@ DaoAI World SDK 对非监督缺陷检测任务 提供了一套完整的工具，
 
 .. code-block:: cpp
 
-   #include <dlsdk/utils.h>
-   #include <dlsdk/model.h>
+   #include <dwsdk/utils.h>
+   #include <dwsdk/model.h>
    #include <iostream>
    #include <fstream>
 

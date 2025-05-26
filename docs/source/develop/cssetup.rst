@@ -9,10 +9,10 @@ DWSDK C# 项目配置
         .. image:: images/add_ref.png
             :scale: 100%
 
-    点击浏览，然后浏览解压目录下的bin文件夹内的 ``dl_sdk_net.dll`` 文件，勾选后，点击OK。
+    点击浏览，然后浏览解压目录下的bin文件夹内的 ``dwsdk_net.dll`` 文件，勾选后，点击OK。
         
         .. image:: images/browse_dll.png
-            :scale: 100%
+            :scale: 50%
 
     点击assembly，然后搜索 ``system.drawing`` 勾选后，点击OK。
         

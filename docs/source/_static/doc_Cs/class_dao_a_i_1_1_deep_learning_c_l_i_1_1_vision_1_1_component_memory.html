@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="dwsdk.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">DaoAI World C# SDK<span id="projectnumber">&#160;INDUSTRIAL 2024.8.0</span>
+   <div id="projectname">DaoAI World C# SDK<span id="projectnumber">&#160;INDUSTRIAL 2025.3.0</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c4fd0d4ecba907f063c5348e1e5869a" id="r_a4c4fd0d4ecba907f063c5348e1e5869a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c4fd0d4ecba907f063c5348e1e5869a">ComponentMemory</a> (const DaoAI::DeepLearning::ComponentMemory &amp;component_memory)</td></tr>
 <tr class="memdesc:a4c4fd0d4ecba907f063c5348e1e5869a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a component memory object from a DaoAI::DeepLearning::ComponentMemory object.  <br /></td></tr>
 <tr class="separator:a4c4fd0d4ecba907f063c5348e1e5869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ee93875a5e500b41f5ad1af5442a85" id="r_a35ee93875a5e500b41f5ad1af5442a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35ee93875a5e500b41f5ad1af5442a85">setImageThreshold</a> (float value)</td></tr>
+<tr class="memdesc:a35ee93875a5e500b41f5ad1af5442a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the image threshold  <br /></td></tr>
+<tr class="separator:a35ee93875a5e500b41f5ad1af5442a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144a415e26d71b0c188b9136172f2687" id="r_a144a415e26d71b0c188b9136172f2687"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a144a415e26d71b0c188b9136172f2687">getImageThreshold</a> ()</td></tr>
+<tr class="memdesc:a144a415e26d71b0c188b9136172f2687"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the image threshold  <br /></td></tr>
+<tr class="separator:a144a415e26d71b0c188b9136172f2687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411861a077c0b2b203efebf211dab875" id="r_a411861a077c0b2b203efebf211dab875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411861a077c0b2b203efebf211dab875">setPixelThreshold</a> (float value)</td></tr>
+<tr class="memdesc:a411861a077c0b2b203efebf211dab875"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the pixel threshold  <br /></td></tr>
+<tr class="separator:a411861a077c0b2b203efebf211dab875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd136ff072e5d7d514bcea9733ad97a" id="r_a8bd136ff072e5d7d514bcea9733ad97a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd136ff072e5d7d514bcea9733ad97a">getPixelThreshold</a> ()</td></tr>
+<tr class="memdesc:a8bd136ff072e5d7d514bcea9733ad97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the pixel threshold  <br /></td></tr>
+<tr class="separator:a8bd136ff072e5d7d514bcea9733ad97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64cacecda3b2c74ea0f637fb26671f6" id="r_ae64cacecda3b2c74ea0f637fb26671f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae64cacecda3b2c74ea0f637fb26671f6">save</a> (String^ file_path)</td></tr>
 <tr class="memdesc:ae64cacecda3b2c74ea0f637fb26671f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the component memory to a file.  <br /></td></tr>
 <tr class="separator:ae64cacecda3b2c74ea0f637fb26671f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +203,46 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a144a415e26d71b0c188b9136172f2687" name="a144a415e26d71b0c188b9136172f2687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144a415e26d71b0c188b9136172f2687">&#9670;&#160;</a></span>getImageThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Vision::ComponentMemory::getImageThreshold </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the image threshold </p>
+<dl class="section return"><dt>Returns</dt><dd>The image threshold value </dd></dl>
+
+</div>
+</div>
+<a id="a8bd136ff072e5d7d514bcea9733ad97a" name="a8bd136ff072e5d7d514bcea9733ad97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd136ff072e5d7d514bcea9733ad97a">&#9670;&#160;</a></span>getPixelThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float DaoAI::DeepLearningCLI::Vision::ComponentMemory::getPixelThreshold </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the pixel threshold </p>
+<dl class="section return"><dt>Returns</dt><dd>The pixel threshold value </dd></dl>
+
+</div>
+</div>
 <a id="a51ad5bb688090eab00809f9a3e6631bb" name="a51ad5bb688090eab00809f9a3e6631bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51ad5bb688090eab00809f9a3e6631bb">&#9670;&#160;</a></span>load()</h2>
 
@@ -235,6 +287,56 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_path</td><td>The path to the file to save the component memory to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35ee93875a5e500b41f5ad1af5442a85" name="a35ee93875a5e500b41f5ad1af5442a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ee93875a5e500b41f5ad1af5442a85">&#9670;&#160;</a></span>setImageThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DaoAI::DeepLearningCLI::Vision::ComponentMemory::setImageThreshold </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the image threshold </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The image threshold value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a411861a077c0b2b203efebf211dab875" name="a411861a077c0b2b203efebf211dab875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411861a077c0b2b203efebf211dab875">&#9670;&#160;</a></span>setPixelThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DaoAI::DeepLearningCLI::Vision::ComponentMemory::setPixelThreshold </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the pixel threshold </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The pixel threshold value </td></tr>
   </table>
   </dd>
 </dl>

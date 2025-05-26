@@ -5,5 +5,6 @@ var struct_dao_a_i_1_1_deep_learning_1_1_model_info =
     [ "extra_infos", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#a147162761052024100d5cbe37a8e4dc1", null ],
     [ "keypoint_labels", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#a05cbc82c8b52f81afbe8e69a69770568", null ],
     [ "model_type", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#a7979b01a67c07af05c8ed28473e0249d", null ],
+    [ "num_attributes", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#a553ded36fe35601f86a20bca1ed43593", null ],
     [ "num_keypoints", "struct_dao_a_i_1_1_deep_learning_1_1_model_info.html#a46c531397e25f157ec116bac15664050", null ]
 ];

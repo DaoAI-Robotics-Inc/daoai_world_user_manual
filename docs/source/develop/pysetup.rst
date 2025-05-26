@@ -32,7 +32,7 @@ Python Windows SDK wheel 只支持Windows环境
 
 .. code-block:: python
 
-    import dlsdk.dlsdk as dlsdk
+    import dwsdk.dwsdk as dwsdk
 
 您需要有有效的DaoAI 许可证才可以正常使用，如果您没有许可证，请参考 :ref:`软件许可证`
 

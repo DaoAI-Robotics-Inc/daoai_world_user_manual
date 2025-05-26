@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pixel_0',['PIXEL',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#afb41ee781755c2332e0c212f20e92915a06e536f5c0819e7aa379dcd35556f441',1,'DaoAI::DeepLearningCLI']]],
-  ['positioning_1',['Positioning',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390aa52fce78b8f3903d4789878f2635a977',1,'DaoAI::DeepLearningCLI']]],
-  ['presence_5fchecking_2',['Presence_Checking',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390a43becb93987f006cd2262a44eff0cddb',1,'DaoAI::DeepLearningCLI']]]
+  ['object_5fdetection_0',['Object_Detection',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390a39e93aa4109b28fd3ccabc09db52abf1',1,'DaoAI::DeepLearningCLI']]],
+  ['ocr_1',['OCR',['../namespace_dao_a_i_1_1_deep_learning_c_l_i.html#ad531f22ebdafd9782f133a8e83c45390af529c51ee65a122778f148485732aee5',1,'DaoAI::DeepLearningCLI']]]
 ];

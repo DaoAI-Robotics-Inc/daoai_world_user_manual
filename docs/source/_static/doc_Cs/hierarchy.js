@@ -50,6 +50,12 @@ var hierarchy =
     [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::KeypointDetectionResult >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
       [ "DaoAI::DeepLearningCLI::Vision::KeypointDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_keypoint_detection_result.html", null ]
     ] ],
+    [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::MultilabelDetection >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
+      [ "DaoAI::DeepLearningCLI::Vision::MultilabelDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_multilabel_detection.html", null ]
+    ] ],
+    [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::MultilabelDetectionResult >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
+      [ "DaoAI::DeepLearningCLI::Vision::MultilabelDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_multilabel_detection_result.html", null ]
+    ] ],
     [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::ObjectDetection >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
       [ "DaoAI::DeepLearningCLI::Vision::ObjectDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_object_detection.html", null ]
     ] ],
@@ -73,6 +79,12 @@ var hierarchy =
     ] ],
     [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::PresenceCheckingResult >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
       [ "DaoAI::DeepLearningCLI::Vision::PresenceCheckingResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_presence_checking_result.html", null ]
+    ] ],
+    [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::RotatedObjectDetection >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
+      [ "DaoAI::DeepLearningCLI::Vision::RotatedObjectDetection", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_rotated_object_detection.html", null ]
+    ] ],
+    [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::RotatedObjectDetectionResult >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
+      [ "DaoAI::DeepLearningCLI::Vision::RotatedObjectDetectionResult", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_rotated_object_detection_result.html", null ]
     ] ],
     [ "DaoAI::DeepLearningCLI::ManagedObject< DaoAI::DeepLearning::Vision::SupervisedDefectSegmentation >", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_managed_object.html", [
       [ "DaoAI::DeepLearningCLI::Vision::SupervisedDefectSegmentation", "class_dao_a_i_1_1_deep_learning_c_l_i_1_1_vision_1_1_supervised_defect_segmentation.html", null ]
