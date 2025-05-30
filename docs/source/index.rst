@@ -30,6 +30,12 @@ DAOAI WORLD 用户手册
 
 .. toctree::
    :maxdepth: 2
+   :caption: 天眼系统
+
+   heavens_eye_system/index
+
+.. toctree::
+   :maxdepth: 2
    :caption: 开发
 
    develop/index

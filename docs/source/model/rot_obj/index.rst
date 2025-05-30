@@ -28,11 +28,11 @@
 标注方法
 ----------------
 
-如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
-    .. image:: Images/suppor_anno.png
-        :scale: 80%
+.. 如果有已经训练过的模型，可以使用辅助标注工具，让深度学习模型来帮助您标注，然后您再检查以及纠正标注。
+..     .. image:: Images/suppor_anno.png
+..         :scale: 80%
 
-首先使用矩形标注工具标出边界框，然后移动鼠标旋转框。
+首先使用矩形标注工具标出边界框，然后使用鼠标旋转框。
     .. image:: Images/rot_objAnno0.png
         :scale: 80%
 
@@ -51,6 +51,6 @@
 练习
 --------
 
-从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 rotated_object.zip
+从 `练习数据 <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ 中下载 rotated_object_detection.zip
 
 解压缩后您将得到11张图片和标注文件（.json）, 请您只上传图片到DaoAI World进行标注练习。之后可以一同上传图片和标注文件，对比结果。
