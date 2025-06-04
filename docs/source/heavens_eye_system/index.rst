@@ -3,6 +3,17 @@
 
 天眼系统是一款高性能的视频流智能检测平台，支持同时接入 **16 路** 实时视频流。系统内置可视化工作流引擎，用户只需拖拽组件即可自由组装检测管道，灵活选择和组合多种深度学习模型与业务逻辑。无论是对人脸进行身份识别，还是对场景中各类目标进行检测、分类或分割，天眼系统都能快速部署，一键上线。
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+        <video width="80%" height="auto" controls>
+            <source src="http://daoai-robotics-1305756387.file.myqcloud.com/videos/heavens_eye_demo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+|
+
+
 **核心功能** ：
 
 - **多路并发**  
