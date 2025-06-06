@@ -1,124 +1,210 @@
-DaoAI World Offline Server Setup Instructions
-==================================================================
+DaoAI World Deployment and Usage Guide
+===========================
 
-This section is designed to help users access the DaoAI World offline version via a local area network (LAN). By modifying the client's ``hosts`` file, you can directly access DaoAI World services through a browser.
+This guide will help you connect the power and network to the server upon receipt, and access the DaoAI World application from both the local browser and other devices on the same LAN by checking the local IP address.
 
-Preparations
-------------------
+There are 5 steps to deploying the DaoAI World server:
 
-Before starting, ensure that:
+- :ref:`1. Server Preparation`
+- :ref:`2. Power On and Login to the OS`
+- :ref:`3. Check Local IP Address`
+- :ref:`4. Access from Other Devices in LAN`
+- :ref:`5. Access via Local Ubuntu Desktop Browser`
 
-- The DaoAI World server is up and connected to the LAN.
+1. Server Preparation
+---------------------
 
-- The client device is on the same LAN subnet as the server.
+1.1 Check Accessories
+~~~~~~~~~~~~~~~~~~~~~
 
-- You have permission to modify the hosts file on the client device.
+- Confirm the following accessories are included:
+  - Server main unit
+  - Power cable
+  - Network cable
+  - Relevant manuals
 
-Server Setup
---------------
+- Ensure the server is intact and undamaged.
 
-The DaoAI World offline server comes with dual network ports and supports two access methods:
+1.2 Connect Power and Network
+~~~~~~~~~~~~~~~~~~~~~
 
-1. **DHCP Auto-Assigned IP Address** : The server can obtain an IP address automatically via the network. You can consult with the network administrator to find out the server's current IP address and use it to access the server.
+- Plug the power cable into the server's power port and connect it to a power outlet.
+- Use a network cable to connect the server's Ethernet port to the LAN switch or router. Make sure the Ethernet port light is on.
 
-2. **Static IP Address**: The server also has a fixed IP address of 192.168.1.10. You can directly use this IP for access.
+.. figure:: images/服务器外观.png
+    :scale: 50%
+    :alt: Server Appearance Diagram
+    :name: server-appearance-diagram
+    :figclass: shadow
 
-Client Setup
---------------
+    Figure: Server appearance and power/network connection diagram
 
-To access DaoAI World services via a domain name on the client device, you need to modify the local ``hosts`` file to map a specific domain name to the server's IP address.
+.. note::
+    A blinking Ethernet light indicates a working network connection.
 
-.. warning::
+1.3 Other Preparations
+~~~~~~~~~~~~~~~~~~~~~
 
-    DHCP Access: You need to know the IP address assigned to the DaoAI World server on the LAN. |br|
-    Example Setup: The following instructions use a DaoAI World offline server with IP ``192.168.10.61`` as an example. |br|
-    Static IP Access: You can replace the IP address in the following instructions with ``192.168.1.10`` |br|
+- Ensure the LAN switch or router is functioning properly.
+- If remote support is needed, record the server's serial number and contact Welinkirt technical support.
 
-Modifying the ``hosts`` file (Windows)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: images/局域网拓扑连接示意图.png
+    :scale: 30%
+    :alt: LAN Topology Diagram
+    :name: network-topology-connection-diagram
+    :figclass: shadow
 
-1. Open Notepad with administrator privileges:
-    - Click the Start menu and search for "Notepad"
-    - Right-click "Notepad" and select **"Run as administrator"**
+    Figure: LAN topology and connection diagram
 
-2. Open the ``hosts`` file:
-    - In Notepad, click **"File"** -> **"Open"** .
-    - Navigate to ``C:\Windows\System32\drivers\etc\hosts`` .
-    - Ensure the file type is set to **"All Files"** , then select the ``hosts`` file and open it.
+2. Power On and Login to the OS
+------------------------------------
 
-3. Add domain mapping:
-    - At the end of the file, add the following lines:
+2.1 Power On
+-----------------
 
-    .. code-block::
+- Press the power button on the server to start it.
 
-        1 192.168.10.61 offline.we.link
-        2 192.168.10.61 dw.offline.we.link
-        3 192.168.10.61 api.offline.we.link
-        4 192.168.10.61 s3.offline.we.link
-        5 192.168.10.61 admin.offline.we.link
+2.2 Log in to Ubuntu Desktop
+~~~~~~~~~~~~~~~~~~~~~
 
-4. Save and close the file:
-    - Click **"File"** -> **"Save"**, then close Notepad.
+- If a monitor and keyboard are connected to the server: enter admin account credentials to log in.
+  Default username: `dwuser`
+  Default password: `dwuser`
 
-Modifying the ``hosts`` file (Linux/MacOS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- If no monitor is connected, you can access the server via SSH (requires knowing the server's IP address on the LAN).
 
-1. Open the terminal:
-    - On MacOS, use "Spotlight" to search for "Terminal."
-    - On Linux, press ``Ctrl+Alt+T`` to open the terminal.
+.. figure:: images/Ubuntu登录界面示意图.png
+    :scale: 50%
+    :alt: Ubuntu Login Interface
+    :name: ubuntu-login-screenshot
+    :figclass: shadow
 
-2. Edit the ``hosts`` file:
-    - Enter the following command to open the ``hosts`` file using the ``nano`` editor:
+    Figure: Ubuntu login interface
 
-    .. code-block::
+3. Check Local IP Address
+------------------------------------
 
-        sudo nano /etc/hosts
+3.1 Method 1: Use Ubuntu Terminal
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    - Enter the system password if prompted.
+- Press `Ctrl + Alt + T` to open the terminal.
+- Enter the following command: `ifconfig`
+- Find the IP address under the `eno1` network interface, e.g.: `inet 192.168.10.61/24`
+- This IP address will be used to access DaoAI World in the next step.
 
-3. Add domain mapping:
-    - At the end of the file, add the following content:
+3.2 Method 2: Check via LAN Router
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. code-block::
+- Log into your LAN router management interface to find the IP address assigned to the server.
+- For example, enter `192.168.1.1` in your browser to access the router admin page.
+- In the DHCP client list, find the device named `welinkirt` and check its IP address.
 
-        192.168.10.61 offline.we.link
-        192.168.10.61 dw.offline.we.link
-        192.168.10.61 api.offline.we.link
-        192.168.10.61 s3.offline.we.link
-        192.168.10.61 admin.offline.we.link
+.. figure:: images/查看ip.png
+    :scale: 50%
+    :figclass: shadow
+    :alt: Router Management Interface
+    :name: router-management-page
 
-4. Save and close the file:
-    - Press ``Ctrl+X`` to close the nano editor.
-    - Press ``Y`` to confirm saving the changes.
-    - Press ``Enter`` to return to the terminal.
-
-
-Accessing DaoAI World Services
----------------------------------------
-
-After completing the configuration, you can access DaoAI World services by entering the following URL in your browser:
-
-    - `<http://dw.offline.we.link>`_
-
-Troubleshooting
-----------------------
-
-
-If you cannot access DaoAI World services, check the following:
-
-1. **Network Connection** : Ensure both the server and the client are connected to the same LAN.
-2. **IP Address** : Ensure the server's IP address matches the one configured in the ``hosts`` file.
-3. **Domain Resolution** : Use the ``ping`` command to check if the domain is correctly resolving to the server's IP address. For example:
-
-.. code-block::
-
-    ping dw.offline.we.link
-
-4. **Cache Issues** : If domain resolution is incorrect, try clearing your browser cache or restarting the device.
+    Figure: Router management interface
 
 
-If you continue to experience issues, please contact DaoAI technical support for assistance.
+4. Access from Other Devices in LAN
+------------------------------------------------------
 
-.. |br| raw:: html
+4.1 Ensure Devices Are on the Same Network
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      <br>
+Make sure your computer, mobile phone, and other devices are connected to the same LAN as the DaoAI World server.
+
+4.2 Access DaoAI World via Browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- On a device connected to the LAN, open a browser and enter the server's IP address, e.g., http://192.168.10.61
+- If successful, you will see the DaoAI World login page.
+
+.. figure:: images/DW登录界面示意.png
+    :scale: 30%
+    :class: float-figure
+    :alt: DaoAI World Login Page
+    :name: daoai-world-login-page-screenshot
+    :figclass: shadow
+
+    Figure: DaoAI World login page
+
+4.3 Log In and Use DaoAI World
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Use the default DaoAI World credentials to log in:
+   - Default username: `dwuser`
+   - Default password: `dwuser123`
+
+- After logging in, you can perform operations such as training workflows, data management, and model management.
+
+5. Access via Local Ubuntu Desktop Browser
+------------------------------------------------------
+
+5.1 Open Browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On the Ubuntu desktop, click the application menu in the bottom left corner and open a browser (e.g., Chrome).
+
+5.2 Enter Server Address
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the browser’s address bar, type: `127.0.0.1`
+You will be taken to the DaoAI World login page.
+
+6. Troubleshooting
+------------------------------------------------------
+
+6.1 Login Page Loads, but Login Fails
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If login appears unresponsive, follow the steps below for troubleshooting:
+
+1. **Press F12 on the browser page to open Developer Tools**
+
+   .. figure:: images/F12.png
+      :scale: 30%
+      :alt: Developer Tools Screenshot
+      :figclass: shadow
+      :name: f12-screenshot
+
+      Figure: Press F12 to open developer tools.
+
+2. **Open the "Network" tab and find the request labeled "Login"**
+
+   .. figure:: images/login_error.png
+      :scale: 30%
+      :alt: Login request failure screenshot
+      :figclass: shadow
+      :name: login-error-screenshot
+
+      Figure: Information about the "Login" request in the Network tab.
+
+3. **Check the request details and confirm whether the IP address is correct**
+
+   .. figure:: images/login_info.png
+      :scale: 50%
+      :alt: Login request info screenshot
+      :name: login-info-screenshot
+      :figclass: shadow
+
+      Figure: Detailed information of the login request. The request URL should match the LAN IP address shown in your browser.
+
+**Note:**
+- Make sure the login request URL matches your current LAN access address.
+- If the IP address appears as `172.xxx.xxx.xxx`, possible causes include:
+  - **Network issue**: Your device is not in the same LAN as the DW server.
+  - **Server not started**: The server may be powered off.
+  - **Service not running**: The backend service of the DW platform did not start properly. Contact technical support.
+
+**Solutions:**
+- Try restarting the DW offline server. The backend address will update automatically.
+- In the F12 "Network" tab, select "Disable cache" and refresh the page, then try logging in again.
+- Double-check your network connectivity. If problems persist, contact technical support.
+
+6.2 How to Set a Static IP for My Server?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need to assign a static IP address to your server for long-term use, you can configure a static IP reservation in your router settings.

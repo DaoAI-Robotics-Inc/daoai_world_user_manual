@@ -23,7 +23,7 @@ Use Case Scenarios
 
 **Rotated Object Detection** is suitable for determining whether an object appears in a scene, the number of times the object appears, and the object's rotation state.
 
-Object Detection can be used to identify the number of occurrences and approximate locations of one or more objects in a scene. While object detection can identify multiple objects simultaneously, it does not provide precise locations. For precise locations, you may use Instance Segmentation or Keypoint Detection models.
+**Object Detection** can identify one or more objects in a scene and provide their general locations. While object detection supports multi-object recognition, it does not return exact positions. If precise location is needed, use **Instance Segmentation** or **Keypoint Detection** models.
 
 Annotation Methods
 ----------------------
@@ -43,9 +43,11 @@ Repeat the annotation for all objects in the scene. If there are no objects in t
 Notes
 --------------
 
-1. **Rotated Object Detection** models only support rectangular annotations, so the annotated areas can slightly overlap but should not be completely overlapping.
+1. The **Rotated Object Detection** model only supports rectangular annotations. The annotated areas may slightly overlap but should not completely overlap.
 
-2. Similar to other annotation models, avoid annotating objects that are largely covered by other objects. Choose the most visible or topmost objects for annotation.
+2. Annotations must not extend beyond the image boundaries.
+
+3. As with other annotation models, avoid annotating objects that are largely occluded. Only annotate the topmost or most visible object.
 
 Practice
 ----------------

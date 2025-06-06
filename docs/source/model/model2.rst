@@ -13,6 +13,8 @@ Select a Model
     kp/index
     class/index
     obj/index
+    rot_obj/index
+    mix_model/index
     ocr/index
     playground/index
 
@@ -27,6 +29,8 @@ DaoAI World supports the following models:
     - :ref:`Keypoint Detection`
     - :ref:`Image Classification`
     - :ref:`Object Detection`
+    - :ref:`Rotated Object Detection`
+    - :ref:`Mixed Model`
     - :ref:`OCR`
 
 **How to Choose a Model?** Different models have their own unique features and best-use cases. Here are some points to help you select the right model:
@@ -52,6 +56,16 @@ DaoAI World supports the following models:
     - :ref:`Image Classification` : Detects the **category** of an image. Use this model when you need to classify images. Example scenarios: classifying product models, checking if specific screw holes are installed correctly, diagnosing diseases from X-rays.
         
         .. image:: images/class.png
+            :scale: 100%
+
+    - :ref:`Rotated Object Detection` : Detects the **type** and **rotated bounding box** of objects. Use this model when objects in your image are often rotated or not aligned with the axes. Example scenarios: detecting electronic components at arbitrary angles, rotated packaging on a conveyor belt, identifying tilted labels.
+
+        .. image:: images/rot_obj.png
+            :scale: 100%
+
+    - :ref:`Mixed Model` : Performs both detection and classification of multiple object types in a single image. Use this model when you need to locate and classify various types of objects simultaneously. Example scenarios: intelligent surveillance to detect pedestrians, safety gear detection in smart factories, inspecting the quality of sunflower seeds, rice, or solder joints on chips.
+
+        .. image:: images/mix_model.png
             :scale: 100%
 
 - Detecting anomalies or surface defects on objects:

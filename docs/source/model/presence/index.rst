@@ -73,7 +73,9 @@ Note
 ------------
 
 1. When annotating **Presence Detection** , you should annotate the golden image and setup the layout first.
+
 2. The annotation region for the **Presence Detection** must not exceed the image boundaries.
+
 3. As with other annotation models, avoid annotating objects that are heavily obscured. Instead, focus on annotating the topmost or most visible objects.
 
 Practice

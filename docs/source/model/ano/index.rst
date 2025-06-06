@@ -21,101 +21,91 @@ After completing model training, refer to the video in the :ref:`Training` secti
 Use Cases
 ---------------------
 
+    .. raw:: html
+
+        <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
+            <video width="80%" height="auto" controls>
+                <source src="http://docs.welinkirt.com/static/videos/dw_unsupervised_v8.mp4" type="video/mp4">
+            </video>
+        </div>
+
+|
+
 **Unsupervised Defect Segmentation** is suitable for the following scenarios:
 
 1. **Single Object**: The dataset contains only one type of object, and its position must remain relatively fixed.
 2. **Defect Detection**: The object can be in either a normal or abnormal (NG) state, enabling the detection of changes such as damage or deformation.
 
+
 Model Detection Modes
 ------------------------------------------
 
-The new **Unsupervised Defect Segmentation** model supports four detection modes, which can be selected based on specific requirements:
+**Unsupervised Defect Segmentation** supports two detection modes. Choose the appropriate one based on your use case:
 
-1. **Image-Level - Whole Image Detection**  
-   - Analyzes the entire image to determine if defects are present.
-   - Suitable for scenarios where precise localization is not required.
+1. **Image-Level**
+   - Analyzes specific regions within the image to determine whether defects exist in those target areas.
 
-2. **Image-Level - Region Detection**  
-   - Analyzes specific regions of the image to determine if defects exist within the target areas.
-   - Suitable for scenarios with fixed target regions.
-
-3. **Pixel-Level - Whole Image Detection**  
-   - Analyzes each pixel in the image and highlights abnormal regions.
-   - Suitable for scenarios requiring precise localization of defect areas.
-
-4. **Pixel-Level - Region Detection**  
-   - Analyzes each pixel within specific regions of the image and highlights abnormal areas.
-   - Suitable for scenarios requiring precise annotation of target areas.
+2. **Pixel-Level**
+   - Analyzes each pixel within specific regions of the image to locate and segment abnormal areas.
 
 Annotation Methods
-----------------
+---------------------
 
-Annotation methods vary depending on the model detection mode, as described below:  
+In unsupervised defect segmentation projects, each detection mode requires a different annotation approach, as described below:
 
-1. **Image-Level - Whole Image Detection**  
-   Annotate each image as either **OK** (normal) or **NG** (abnormal).  
+1. **Image-Level**
+   First, define a reference image and draw detection regions on it. Save the result as a template.
+   Since unsupervised detection assumes fixed object positions, all images should use the same layout of detection regions to cover the target parts.
 
-   .. image:: Images/img_whole_anno.png  
-        :scale: 60%  
+    .. image:: Images/img_region_anno.png
+        :scale: 60%
 
-   Supports batch selection of images for unified annotation as **OK** or **NG**.  
+   During annotation, click on each detection region and label it as either **OK** or **NG**.
 
-   .. image:: Images/batch_annotate.png  
-        :scale: 60%  
+    .. image:: Images/img_region_anno2.png
+        :scale: 60%
 
-2. **Image-Level - Region Detection**  
-   First, define a reference image and select the detection region by drawing a bounding box, then save it as a template. Since unsupervised detection requires objects to remain relatively fixed, the detection regions in all images must cover the same parts.  
+2. **Pixel-Level**
+   Again, start by defining a reference image and selecting the detection regions, then save the result as a template.
 
-   .. image:: Images/img_region_anno.png  
-        :scale: 60%  
+    .. image:: Images/pixel_region_anno.png
+        :scale: 60%
 
-   Annotate by clicking on the detection regions and marking them as **OK** or **NG**.  
+   Use the intelligent annotation tool or polygon tool to outline the defects within the detection region.
+   If the image has no defects, label it as defect-free.
 
-   .. image:: Images/img_region_anno.png  
-        :scale: 60%  
-
-3. **Pixel-Level - Whole Image Detection**  
-   Use intelligent annotation tools or polygon tools to outline the defect regions.  
-
-   .. image:: Images/pixel_whole_anno.png  
-        :scale: 60%  
-
-4. **Pixel-Level - Region Detection**  
-   First, define a reference image and select the detection region by drawing a bounding box, then save it as a template.  
-
-   .. image:: Images/pixel_region_anno.png  
-        :scale: 60%  
-
-   Use intelligent annotation tools or polygon tools to outline the defect regions within the detection area. If there are no defects, mark the image as defect-free.  
-
-   .. image:: Images/pixel_region_anno2.png  
-        :scale: 60%  
+    .. image:: Images/pixel_region_anno2.png
+        :scale: 60%
 
 Notes
 ------------
 
-1. **Dataset Size Limit**  
-   The maximum number of images supported for training is **300 images**.
+1. **Training with Normal Samples Only**
+   Only normal samples are used during training. In fact, only one reference image is used to train the model. The rest of the normal samples help the model determine a reasonable threshold for what is considered "normal."
 
-2. **Data Consistency**  
-   Normal images should not include any defect annotations, as this may lead to training failures or suboptimal results.
+.. note::
 
-3. **Multiple Defects Support**  
-   If an object has multiple defects, you can annotate each defect with a separate region.
+   During prediction, the model generates an AI Deviation Score ranging from 0 to 1.
+   - A score of `0` means the sample is identical to the reference image.
+   - A score close to `0` indicates high similarity to the normal sample.
+   - A score of `1` means the sample is completely abnormal.
+   - The model automatically sets a threshold based on the training set.
+     Samples below the threshold are considered **normal**, while those above are considered **abnormal**.
 
-4. **Data Ratio**  
-   - **Normal Data Priority**: The number of normal images in the training set should be greater than or equal to the number of defect-free images.  
+2. **Data Consistency**
+   Detection regions in normal images must not contain any defects. Otherwise, the training may fail or yield poor results.
 
-5. **Default Configuration**  
-   The unsupervised defect segmentation model does not apply any data augmentation options by default during training.
+3. **Multiple Defects Support**
+   If an object has multiple defects, you may annotate each defect area separately.
 
-6. **Built-in Image Splitting for Training**  
-   During whole image detection, the training mode can be set to **Normal** or **High Precision**. High precision mode splits images into 512×512 or 256×256 resolutions for training, increasing detection time but significantly improving model accuracy.
+4. **No Default Augmentation**
+   No data augmentation is applied by default during training with the unsupervised defect segmentation model.
 
-.. note::  
-
-    - The quality of defect-free data is crucial for unsupervised models; ensure that normal data is accurately annotated.  
-    - Model performance depends on a reasonable ratio of normal and abnormal images.  
+5. **Training Modes**
+   There are two training modes: **Fast** and **Accurate**.
+   - Fast mode compresses each detection region to 256×256.
+   - Accurate mode compresses each region to 512×512 for training.
+   If your image resolution is very high, it is recommended to split it into smaller detection regions to reduce resolution per region.
 
 Practice
 --------

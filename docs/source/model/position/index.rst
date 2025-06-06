@@ -59,13 +59,24 @@ Notes
 ------------
 
 1. Use descriptive labels when naming the tags. Descriptive labels significantly reduce the likelihood of annotation errors and facilitate the practical application of the model. Non-descriptive labels are loosely connected to the annotated object, increasing the chance of mistakes and making it harder to quickly determine the accuracy of model predictions.
+
 2. Each tag group in positioning detection must include a polygon and one or more keypoints. If there are no keypoints in a tag group, the training task may fail.
+
 3. For each annotated polygon, there should be at least 3 keypoints associated with that label. When choosing keypoints, select ones that are representative of the object and easy to identify. Geometric features like circular points, corners, or the center of an object are ideal choices. In general, look for geometric or texture features, or any other shape or pattern characteristics. Avoid selecting flat points with no special features or feature points that are too close to the polygon's edges. Also, avoid using keypoints that form a straight line, as this can reduce the ability to recognize tilt angles.
+
 4. Do not annotate objects whose keypoints are obscured by other objects, as the missing keypoints in the tag-keypoint combination will cause the training to crash.
+
 5. Similar to segmentation, only annotate the top-layer keypoint-tag set in each image and avoid annotating objects that are obscured by other objects.
+
 6. Positioning model must have a set golden image; otherwise, it cannot be trained properly.
+
 7. Positioning model project allows only one golden image. Setting a new golden image will overwrite the existing one.
 
+.. note::
+
+    1. For anomaly detection projects, during training, ensure that the number of images assigned to the training set is less than or equal to the total number of undamaged (normal) images in the dataset. Otherwise, training may fail. Additionally, if there are too few damaged images in the dataset, the training results may also be suboptimal.
+
+    2. Unlike other projects, anomaly detection does **not** apply any data augmentation options by default.
 
 Practice
 ----------

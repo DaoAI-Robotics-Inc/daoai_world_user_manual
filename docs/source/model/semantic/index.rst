@@ -33,6 +33,10 @@ The primary use cases for **Supervised Defect Segmentation** are:
 Annotation Methods
 ------------------------
 
+If you have a pre-trained model, you can use the assisted annotation tool to help label, then review and correct them.
+    .. image:: Images/suppor_anno.png
+        :scale: 100%
+
 If the object has no defects, label it as good.
 
     .. image:: Images/sem_anno0.png
