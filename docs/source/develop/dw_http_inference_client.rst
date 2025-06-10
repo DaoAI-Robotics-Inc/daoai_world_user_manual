@@ -47,7 +47,7 @@ You can use any of the trained models for inference. You need to import the ``In
     trained_model_uid="XXXXXXXXXXXXXXXXXXX",
     )
 
-You can find the model's ``API Key`` and ``trained_model_uid`` by clicking :ref:`Model Deployment` in your trained project.
+You can find the model's ``API Key`` and ``trained_model_uid`` by clicking :ref:`Model Deploy` in your trained project.
 
 .. note::
     Different versions of the model have different ``trained_model_uid``, so be sure to check carefully.

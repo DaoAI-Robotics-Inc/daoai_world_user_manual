@@ -1,5 +1,5 @@
 Supervised Defect Segmentation: Tool Classification
---------------------------
+---------------------------------------------------
 
 In this case, we need to classify various tools in the image and output different labels.
 
@@ -47,7 +47,7 @@ Test Results:
 From the results, we see that although the instance segmentation model can classify the tools, the masks it generates are noticeably incomplete.
 
 Supervised Defect Segmentation Model Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/监督训练.png
 

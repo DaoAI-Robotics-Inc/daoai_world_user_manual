@@ -1,5 +1,5 @@
 Guide to Creating and Editing Workflows
-==================================
+=======================================
 
 Heaven's Eye uses visual workflows to manage video stream analysis tasks. This document will guide you through creating, editing, and using workflows.
 
@@ -99,7 +99,7 @@ Model Modules
         :scale: 70%
 
 .. note::
-After creation, the system will automatically enter the workflow editing interface.
+    After creation, the system will automatically enter the workflow editing interface.
 
 Logic and Branching
 ~~~~~~~~~~~~~~~~~~~~~~~~

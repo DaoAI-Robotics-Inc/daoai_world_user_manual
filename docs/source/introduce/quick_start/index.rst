@@ -142,6 +142,7 @@ Data Annotation
         Select the **Smart Polygon Tool** , then move the cursor over the object you want to label.  |br|
         Observe the tool's suggested boundary around the object. If you're satisfied with the current boundary, click the left mouse button to confirm the polygon outline.  |br|
         You can also use the right mouse button to select the parts where you want to exclude from the boundary.
+
             .. image:: images/annotated.png
                 :width: 800
                 :align: center

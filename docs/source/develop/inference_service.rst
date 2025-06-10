@@ -11,7 +11,7 @@ In the installation directory, you will find `inference_service.exe` and `infere
 Double-click `inference_service.exe` to start the inference service in the background. You can find it in the system tray. `inference_service_gui.exe` will open the graphical user interface (GUI) for the service (ensure `inference_service.exe` is running first).
 
 Using the Graphical Interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can register and remove your models using the graphical interface.
 
@@ -23,7 +23,7 @@ Click ``Add Model`` to register a model, input the model name, select the model 
 To delete a model, select a model and click ``Delete Model``.
 
 Using HTTP Requests
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 You can manage your models and execute model inference via HTTP requests sent to `localhost:5000`.
 

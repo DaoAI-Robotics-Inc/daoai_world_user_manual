@@ -30,7 +30,7 @@ DAOAI WORLD USER MANUAL
 
 .. toctree::
    :maxdepth: 2
-   :caption: 天眼系统
+   :caption: Heaven’s Eye System
 
    heavens_eye_system/index
 

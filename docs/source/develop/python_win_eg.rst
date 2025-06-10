@@ -151,10 +151,10 @@ You can also retrieve result information using other methods:
 
 
 Retrieving Prediction Results
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+******************************
 
 Box (Bounding Box)
-````````````````````````````
+^^^^^^^^^^^^^^^^^^^^
 
 The `Box` represents the bounding box of the predicted results from the model. You can retrieve it as follows:
 
@@ -168,7 +168,7 @@ The `Box` represents the bounding box of the predicted results from the model. Y
     prediction.boxes[0].y2()  # Bottom-right corner Y-coordinate
 
 Mask (Contour)
-````````````````````````````
+^^^^^^^^^^^^^^^^^^^^
 
 `Mask` provides the contour information of the target object in the prediction. You can extract the vertices of the polygonal region as follows:
 
@@ -186,7 +186,7 @@ Mask (Contour)
 By connecting all the vertices sequentially, you can form the complete contour of the target object. This is useful for applications requiring detailed boundary information, such as region analysis or fine-grained annotations.
 
 Visualization Output
-````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^
 
 Generate and save a visualization image that overlays the prediction results on the original image:
 

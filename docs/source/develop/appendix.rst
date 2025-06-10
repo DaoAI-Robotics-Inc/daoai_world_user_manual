@@ -3,12 +3,12 @@
 Appendix
 ------------
 
-each model, each model type, Inference Time Table for Models of Different Sizes
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inference Time Table for Models of Different Sizes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Instance Segmentation Model
-****************
+********************************
 
 .. list-table::
    :header-rows: 1
@@ -244,7 +244,7 @@ Instance Segmentation Model
 
 
 Keypoint Detection Model
-*****************
+******************************
 
 
 .. list-table::
@@ -482,7 +482,7 @@ Keypoint Detection Model
 
 
 Object Detection Model
-*****************
+***********************
 
 
 .. list-table::
@@ -664,7 +664,7 @@ Object Detection Model
 
 
 Classification Model
-*****************
+**********************
 
 
 .. list-table::
@@ -752,7 +752,7 @@ Classification Model
 
 
 Unsupervised Defect Segmentation Model
-****************
+******************************************
 
 .. list-table::
    :header-rows: 1
@@ -821,7 +821,7 @@ Unsupervised Defect Segmentation Model
 
 
 Supervised Defect Segmentation Model
-*****************
+*******************************************
 
 
 .. list-table::
@@ -1015,7 +1015,7 @@ OCRModel
 
 
 Localization Model
-****************
+*****************************
 
 .. list-table::
    :header-rows: 1
@@ -1195,7 +1195,7 @@ Localization Model
 
 
 Presence Detection Model
-****************
+*****************************
 
 .. list-table::
    :header-rows: 1
@@ -1321,7 +1321,7 @@ Presence Detection Model
 
 
 SDKAPI Documentation
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 More detailedSDK, Function Interfaces, data structures, etc., Please refer toSDKDocumentation:
 

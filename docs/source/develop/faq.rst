@@ -87,7 +87,7 @@ Install OpenCV for headless environments using the following command:
     pip install opencv-python-headless
 
 Python Linux/Jetson SDK Error: ImportError: libgthread-2.0.so.0: cannot open shared object file
-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 
 If you encounter the following error:
 

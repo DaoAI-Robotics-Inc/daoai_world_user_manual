@@ -1,5 +1,5 @@
 Supervised Defect Segmentation: Fine Defect Detection
---------------------------
+-----------------------------------------------------
 
 In this case, we aim to detect very small defects within the images.
 
@@ -8,14 +8,14 @@ In this case, we aim to detect very small defects within the images.
 
 
 Accurate Supervised Defect Segmentation Model Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/细小准确训练.png
 
 - The accurate supervised defect segmentation model was trained, validated, and tested on a dataset of 53 images.
 
 Test results for the accurate supervised defect segmentation model:
-**********************
+*******************************************************************
 
 .. image:: images/准确检测OK.png
 
@@ -24,7 +24,7 @@ Test results for the accurate supervised defect segmentation model:
 From the test results, we can see that the accurate supervised defect segmentation model struggles to detect very small defects.
 
 Fast Supervised Defect Segmentation Model Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/细小快速训练.png
 
@@ -34,7 +34,7 @@ Fast Supervised Defect Segmentation Model Test
   Additionally, a preprocessing step was applied to resize images to 1536 pixels.
 
 Test results for the fast supervised defect segmentation model:
-**********************
+***************************************************************
 
 .. image:: images/快速检测OK.png
 

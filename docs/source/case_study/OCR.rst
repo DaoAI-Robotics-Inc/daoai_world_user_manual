@@ -1,5 +1,5 @@
 OCR Project: Single-Line Character Annotation Example
-----------------------------
+-----------------------------------------------------
 
 - When performing OCR data annotation, correctly marking character boxes is crucial for improving recognition accuracy. This is especially important when characters in a single line are closely spaced.
 

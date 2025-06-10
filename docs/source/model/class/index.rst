@@ -48,7 +48,7 @@ Notes
 
 3. Preprocessing techniques can be used to define the region of interest to minimize the influence of other objects in the image.
 
-练习
+Practice
 --------
 
 Download  `practice data <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/nrd_daoai_com/EkNGNFG9C1ZCkejjwLZ4WOsBUQuhkn6apK4MSej2z1DfQA?e=ZOoc8v>`_ with image_classification.zip

@@ -1,5 +1,5 @@
 Register Face Identity
-=================
+======================
 
 On the DaoAI World settings page, you can click on the **Face Identity Library**.
 
