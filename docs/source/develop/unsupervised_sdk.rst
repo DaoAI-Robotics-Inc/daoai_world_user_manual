@@ -183,7 +183,7 @@ Code Explanation
    **Function**: Catches any exceptions and outputs error messages.
 
 Part 2: Self-training the Model and Inference
---------------------------------------------
+---------------------------------------------
 
 The following code demonstrates how to train a model with user-provided sample data and perform inference:
 

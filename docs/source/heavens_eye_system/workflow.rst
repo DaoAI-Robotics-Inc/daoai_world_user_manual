@@ -1,5 +1,5 @@
 Guide to Creating and Editing Workflows
-==================================
+=======================================
 
 Heaven's Eye uses visual workflows to manage video stream analysis tasks. This document will guide you through creating, editing, and using workflows.
 
@@ -82,10 +82,10 @@ Model Modules
 1. :ref:`Object Detection` Module: Select a trained model from a DaoAI platform project. This module performs object detection inference on video stream frames.
 
 .. image:: images/add_model.png
-    :scale: 60%
+    :scale: 50%
 
 .. image:: images/import_model.png
-    :scale: 60%
+    :scale: 50%
 
 2. :ref:`Mixed Model` Module: Select a trained model from a DaoAI platform project. This module performs both object detection and classification on video frames.
 
@@ -99,7 +99,7 @@ Model Modules
         :scale: 70%
 
 .. note::
-After creation, the system will automatically enter the workflow editing interface.
+    After creation, the system will automatically enter the workflow editing interface.
 
 Logic and Branching
 ~~~~~~~~~~~~~~~~~~~~~~~~

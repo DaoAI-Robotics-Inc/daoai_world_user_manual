@@ -26,7 +26,7 @@ Use Case Scenarios
 
 For example, product numbers, dates, names, and other information can be quickly extracted using an **OCR** model.
 
-In most cases, users do not need to train the model themselves; they can simply download the pre-trained model from :ref:`playground` and use it for most scenarios. 
+In most cases, users do not need to train the model themselves; they can simply download the pre-trained model from :ref:`Model Experience` and use it for most scenarios.
 Additional training should only be considered if the performance is not satisfactory.
 
 Pre-trained OCR models can be found and downloaded from the model experience section.

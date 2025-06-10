@@ -6,7 +6,7 @@ SDK Version
 
 Like DaoAI World, the SDK is available in two versions: **Industrial Edition** and **Enterprise Edition**.
 
-The difference between the two versions is that the **Industrial Edition** supports two types of models unique to industrial applications: :ref:`Defect Detection` and :ref:`Localization Models`.
+The difference between the two versions is that the **Industrial Edition** supports two types of models unique to industrial applications: :ref:`Presence Detection` and :ref:`Positioning`.
 
 Other than that, both versions are identical in terms of model usage and performance.
 
@@ -59,7 +59,7 @@ Installation
         :scale: 80%
 
 System Environment Variables
-***************************
+****************************
 
 The DW_SDK installation package will automatically create the system environment variable ``DWSDK_PATH`` required for DW_SDK. You can directly reference this variable when using DW_SDK.
 

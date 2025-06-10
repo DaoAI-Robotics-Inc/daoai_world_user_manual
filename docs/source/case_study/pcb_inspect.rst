@@ -1,5 +1,5 @@
 Unsupervised Defect Segmentation: PCB Component Damage/Missing
-----------------------------------------------------
+--------------------------------------------------------------
 
 In this project, we need to verify whether the PCB board has been correctly assembled by checking if 2 capacitors are installed.
 

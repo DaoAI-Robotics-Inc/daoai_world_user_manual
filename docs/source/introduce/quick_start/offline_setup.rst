@@ -1,5 +1,5 @@
 DaoAI World Deployment and Usage Guide
-===========================
+======================================
 
 This guide will help you connect the power and network to the server upon receipt, and access the DaoAI World application from both the local browser and other devices on the same LAN by checking the local IP address.
 
@@ -26,7 +26,7 @@ There are 5 steps to deploying the DaoAI World server:
 - Ensure the server is intact and undamaged.
 
 1.2 Connect Power and Network
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Plug the power cable into the server's power port and connect it to a power outlet.
 - Use a network cable to connect the server's Ethernet port to the LAN switch or router. Make sure the Ethernet port light is on.
@@ -43,7 +43,7 @@ There are 5 steps to deploying the DaoAI World server:
     A blinking Ethernet light indicates a working network connection.
 
 1.3 Other Preparations
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 - Ensure the LAN switch or router is functioning properly.
 - If remote support is needed, record the server's serial number and contact Welinkirt technical support.
@@ -65,7 +65,7 @@ There are 5 steps to deploying the DaoAI World server:
 - Press the power button on the server to start it.
 
 2.2 Log in to Ubuntu Desktop
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - If a monitor and keyboard are connected to the server: enter admin account credentials to log in.
   Default username: `dwuser`
@@ -85,7 +85,7 @@ There are 5 steps to deploying the DaoAI World server:
 ------------------------------------
 
 3.1 Method 1: Use Ubuntu Terminal
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Press `Ctrl + Alt + T` to open the terminal.
 - Enter the following command: `ifconfig`
@@ -93,7 +93,7 @@ There are 5 steps to deploying the DaoAI World server:
 - This IP address will be used to access DaoAI World in the next step.
 
 3.2 Method 2: Check via LAN Router
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Log into your LAN router management interface to find the IP address assigned to the server.
 - For example, enter `192.168.1.1` in your browser to access the router admin page.
@@ -193,16 +193,16 @@ If login appears unresponsive, follow the steps below for troubleshooting:
       Figure: Detailed information of the login request. The request URL should match the LAN IP address shown in your browser.
 
 **Note:**
-- Make sure the login request URL matches your current LAN access address.
-- If the IP address appears as `172.xxx.xxx.xxx`, possible causes include:
-  - **Network issue**: Your device is not in the same LAN as the DW server.
-  - **Server not started**: The server may be powered off.
-  - **Service not running**: The backend service of the DW platform did not start properly. Contact technical support.
+    - Make sure the login request URL matches your current LAN access address.
+    - If the IP address appears as `172.xxx.xxx.xxx`, possible causes include:
+    - **Network issue**: Your device is not in the same LAN as the DW server.
+    - **Server not started**: The server may be powered off.
+    - **Service not running**: The backend service of the DW platform did not start properly. Contact technical support.
 
 **Solutions:**
-- Try restarting the DW offline server. The backend address will update automatically.
-- In the F12 "Network" tab, select "Disable cache" and refresh the page, then try logging in again.
-- Double-check your network connectivity. If problems persist, contact technical support.
+    - Try restarting the DW offline server. The backend address will update automatically.
+    - In the F12 "Network" tab, select "Disable cache" and refresh the page, then try logging in again.
+    - Double-check your network connectivity. If problems persist, contact technical support.
 
 6.2 How to Set a Static IP for My Server?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -161,6 +161,7 @@ The model prediction function can accept post-processing parameters:
     - ``DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD``:
 
         The sensitivity threshold, used in unsupervised defect segmentation (anomaly detection) models to control the sensitivity to defects. A higher sensitivity will result in more defects being detected, but may also lead to false positives.
+
 Post-Processing Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -153,7 +153,7 @@ Annotation Tool
                 * Undo the last action.
 
             #. **Redo**
-                * Shortcut: ``Ctrl+Shift+Z ``
+                * Shortcut: ``Ctrl+Shift+Z``
                 * Redo the last action.
                 
             #. **Mark Null**

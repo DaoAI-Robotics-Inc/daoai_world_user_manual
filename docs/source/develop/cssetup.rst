@@ -1,5 +1,5 @@
 DWSDK C# Project Configuration
------------------------------
+------------------------------
 
 Project Configuration
 ~~~~~~~~~~~~~~~~~~~~~
@@ -26,6 +26,6 @@ Example Project
 For using the project, refer to the :ref:`C# Code Example` provided.
 
 SDK Interface Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Detailed interface documentation can be found in the `C# SDK Documentation <../_static/doc_Cs/index.html>`_.

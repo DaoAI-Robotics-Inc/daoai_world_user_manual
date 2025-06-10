@@ -1,5 +1,5 @@
 DWSDK Python Windows Environment Configuration
---------------------------------------------
+----------------------------------------------
 
 Project Configuration
 ~~~~~~~~~~~~~~~~~~~~~

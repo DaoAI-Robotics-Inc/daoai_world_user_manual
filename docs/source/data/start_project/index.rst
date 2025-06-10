@@ -2,10 +2,10 @@ Create a Project
 ==============================
 
 
-In **DaoAI World**, a project should include images that need to be annotated. |br|
-All images requiring the same type of annotation should be grouped within the same project. |br|
-Once images have been annotated, they can be used to create a training set that includes time and annotation content. |br|
-This set can then be expanded and processed using your chosen configurations. |br|
+In **DaoAI World**, a project should include images that need to be annotated.
+All images requiring the same type of annotation should be grouped within the same project.
+Once images have been annotated, they can be used to create a training set that includes time and annotation content.
+This set can then be expanded and processed using your chosen configurations.
 
 
 Creating a Project
@@ -28,8 +28,8 @@ Creating a Project
             :width: 800
             :align: center
 
-    Here, depending on the dataset you have, you can choose to add category label information for the data,  |br|
-    or click Skip and Create an Empty Project to use a dataset with existing category labels,  |br|
+    Here, depending on the dataset you have, you can choose to add category label information for the data,
+    or click Skip and Create an Empty Project to use a dataset with existing category labels,
     or add category label information later. 
 
     After completing the category information setup, click **Create Project** to finalize the project creation.
@@ -111,8 +111,3 @@ You can add the already annotated data from the demo project to your dataset, or
 
 .. image:: images/demo_copied.png
     :align: center
-|
-
-.. |br| raw:: html
-
-      <br>

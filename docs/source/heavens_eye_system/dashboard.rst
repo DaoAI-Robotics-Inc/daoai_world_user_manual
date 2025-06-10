@@ -102,9 +102,6 @@ The DaoAI Heaven’s Eye system supports recording employee photos through the �
         :alt: Face Recognition Library
         :align: left
         :width: 90%
-        :alt: Face Recognition Page
-        :align: left
-        :width: 90%
 
         Figure 4: DaoAI Heaven’s Eye System – Face Recognition Library Overview
 

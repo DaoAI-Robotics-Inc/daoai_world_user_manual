@@ -85,12 +85,12 @@ Notes
 
 .. note::
 
-   During prediction, the model generates an AI Deviation Score ranging from 0 to 1.
-   - A score of `0` means the sample is identical to the reference image.
-   - A score close to `0` indicates high similarity to the normal sample.
-   - A score of `1` means the sample is completely abnormal.
-   - The model automatically sets a threshold based on the training set.
-     Samples below the threshold are considered **normal**, while those above are considered **abnormal**.
+    During prediction, the model generates an AI Deviation Score ranging from 0 to 1.
+    - A score of `0` means the sample is identical to the reference image.
+    - A score close to `0` indicates high similarity to the normal sample.
+    - A score of `1` means the sample is completely abnormal.
+    - The model automatically sets a threshold based on the training set.
+    Samples below the threshold are considered **normal**, while those above are considered **abnormal**.
 
 2. **Data Consistency**
    Detection regions in normal images must not contain any defects. Otherwise, the training may fail or yield poor results.

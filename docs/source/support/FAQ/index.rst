@@ -5,7 +5,7 @@ Frequently Asked Questions
     :local:
 
 C# SDK Fails to Load via Reflection?
--------------------------
+------------------------------------
 
 If the C# SDK fails to load via reflection, first ensure that system thread resources are sufficient.
 Excessive concurrent threads may exhaust the thread pool, causing the reflection mechanism to fail.
