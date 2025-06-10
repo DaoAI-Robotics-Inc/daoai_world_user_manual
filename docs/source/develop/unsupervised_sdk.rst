@@ -3,11 +3,9 @@ DaoAI Unsupervised Defect Detection SDK
 
 The DaoAI Unsupervised Defect Detection SDK provides a comprehensive set of tools to help users load pretrained models for inference or train custom models using user-provided image data for defect detection.
 
-DaoAI Unsupervised Defect Detection SDK is only available in C++
-
 You can also explore our GitHub repository, which contains the C++ example for unsupervised defect segmentation.
 
-Link: DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>_
+Link: `DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
 
 Installation and Preparation
 ----------------------------
@@ -147,6 +145,17 @@ Code Explanation
 
    **Function**: Performs inference on the image and outputs the anomaly score and results in JSON format.
 
+   .. note::
+
+      The AI Deviation Score represents how anomalous the model considers the current sample, ranging from 0 to 1.
+
+      A score of 0 indicates a standard (normal) sample, and values close to 0 indicate high similarity to normal samples.
+
+      A score of 1 indicates an anomalous sample, and values close to 1 suggest greater deviation from normal samples.
+
+      The model will automatically set a reasonable threshold based on the training set.
+      If needed, you can also manually add a condition to define a custom threshold.
+
 7. **Save Inference Results**
 
    .. code-block:: cpp
@@ -176,177 +185,57 @@ Code Explanation
 Part 2: Self-training the Model and Inference
 --------------------------------------------
 
-The following code demonstrates how to use the user's provided sample data to self-train a model and perform inference:
+The following code demonstrates how to train a model with user-provided sample data and perform inference:
 
-.. code-block:: cpp
+This part uses the OpenCV library to draw masks. Please make sure OpenCV is installed.
 
-   #include <dlsdk/utils.h>
-   #include <dlsdk/model.h>
-   #include <iostream>
-   #include <fstream>
-   #include <opencv2/opencv.hpp>
+Refer to the GitHub repository for the code: `Unsupervised Pixel-level Example Code <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo/blob/2.24.8.0/cpp_demos/DW_SDK_Cpp_Example/DW%20UnsupervisedDefectSegmentation/main.cpp>`_
 
-   using namespace DaoAI::DeepLearning;
+Function: Train a model using sample data provided by the user, and perform inference using the trained model.
 
-   int main()
-   {
-      try {
-         // Initialize Unsupervised library
-         initialize();
+Usage
+^^^^^
 
-         // Configure the model and data path
-         std::string root_directory = "C:/Users/daoai/test_vision/";  // Change to your own directory
-         std::string data_path = "C:/Users/daoai/test_vision/ano/";  // Change to your own data directory
+1. **Launch the application** or start debugging in Visual Studio
 
-         // Load images
-         std::vector<Image> good_images;
-         for (auto& file : std::filesystem::directory_iterator(data_path + "good"))
-         {
-               if (file.path().extension() == ".png")
-               {
-                  good_images.push_back(Image(file.path().string()));
-               }
-         }
+2. **Provide image folder path**
+   Enter the folder path containing the images (supports `.png`, `.jpg`, `.jpeg` formats).
 
-         std::vector<Image> bad_images;
-         std::vector<Image> masks;
-         for (auto& file : std::filesystem::directory_iterator(data_path + "bad"))
-         {
-               if (file.path().extension() == ".png")
-               {
-                  Image image(file.path().string());
-                  bad_images.push_back(image);
+3. **Interactive annotation interface**
+   Use the GUI to annotate the images:
 
-                  // Create a binary mask
-                  cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
-                  int centerX = image.width / 2;
-                  int centerY = image.height / 2;
-                  int radius = static_cast<int>(image.width * 0.25);
-                  cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
+- **Keyboard controls**:
 
-                  Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
-                  masks.push_back(mask.clone());
-               }
-         }
+  - `n`: Switch to the next image
+  - `p`: Go back to the previous image
+  - `g`: Mark the image as GOOD
+  - `b`: Mark the image as BAD (allows polygon annotation)
+  - `r`: Reset the polygon
+  - `f`: Complete the polygon (connect the last point to the first)
+  - `q`: Exit the annotation tool
 
-         // Construct the model
-         Vision::UnsupervisedDefectSegmentation model(DeviceType::GPU);
-         model.setDetectionLevel(DetectionLevel::PIXEL);
+- **Mouse controls**:
 
-         ComponentMemory component;
-         try
-         {
-               component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
-               component.save(data_path + "component_1.pth");
-               model.setBatchSize(1);
-         }
-         catch (std::exception& e)
-         {
-               std::cout << e.what() << "\n";
-         }
+  - **Left click**: Add a polygon point on the image (for BAD images)
+  - **Mouse wheel**: Zoom in/out
 
-         Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
+4. **Save annotation results**
+   After exiting the annotation interface, the tool automatically performs the following actions:
 
-         std::cout << "Anomaly score: " << result.confidence << std::endl;
-         std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
-         return 0;
-      }
-      catch (const std::exception& e) {
-         std::cout << "Caught an exception: " << e.what() << std::endl;
-         return -1;
-      }
-   }
+- Copy GOOD images to the `out/good` directory.
+- Copy BAD images to the `out/bad` directory.
+- Generate binary masks for BAD images and save them in the `out/masks` directory.
 
-Code Function: The code uses the user's provided sample data to train the model and perform inference using the trained model.
+5. **Load annotations for training**
+   The tool reloads the annotated images and masks from the `out` directory to prepare training data.
 
-Code Explanation
-^^^^^^^^^
+6. **Build training component**
+   The tool uses DaoAI's **UnsupervisedDefectSegmentation** model to build a training component based on the annotations.
 
-1. **Initialize Unsupervised Library**
-
-   .. code-block:: cpp
-
-      initialize();
-
-   **Function**: Similar to before, this initializes the Unsupervised library.
-
-2. **Set Model and Data Paths**
-
-   .. code-block:: cpp
-
-      std::string root_directory = "C:/Users/daoai/test_vision/";
-      std::string data_path = "C:/Users/daoai/test_vision/ano/";
-
-   **Function**: Sets the paths where the model files and sample data are stored.
-
-3. **Load “Good” Sample Images**
-
-   .. code-block:: cpp
-
-      for (auto& file : std::filesystem::directory_iterator(data_path + "good")) {
-          if (file.path().extension() == ".png") {
-              good_images.push_back(Image(file.path().string()));
-          }
-      }
-
-   **Function**: Loads the "good" sample images into memory for model training.
-
-4. **Load “Bad” Sample Images and Masks**
-
-   .. code-block:: cpp
-
-      for (auto& file : std::filesystem::directory_iterator(data_path + "bad")) {
-          if (file.path().extension() == ".png") {
-              Image image(file.path().string());
-              bad_images.push_back(image);
-
-              // Create a binary mask
-              cv::Mat maskMat = cv::Mat::zeros(image.height, image.width, CV_8UC1);
-              int centerX = image.width / 2;
-              int centerY = image.height / 2;
-              int radius = static_cast<int>(image.width * 0.25);
-              cv::circle(maskMat, cv::Point(centerX, centerY), radius, cv::Scalar(255), -1);
-
-              Image mask(maskMat.rows, maskMat.cols, DaoAI::Unsupervised::Image::Type::GRAYSCALE, maskMat.data);
-              masks.push_back(mask.clone());
-          }
-      }
-
-   **Function**: Loads the "bad" sample images and generates corresponding binary masks for the training process.
-
-5. **Construct and Train the Model**
-
-   .. code-block:: cpp
-
-      ComponentMemory component = model.createComponentMemory("screw", good_images, bad_images, masks, true);
-      component.save(data_path + "component_1.pth");
-
-   **Function**: Trains the model using the provided sample data and saves the trained model component.
-
-   The `true` argument at the end indicates that the model will be loaded into memory after training. If set to `false`, the model will not be loaded into memory, and `addComponentMemory(file_path)` will be needed to load the trained model for inference.
-
-6. **Inference and Output Results**
-
-   .. code-block:: cpp
-
-      Vision::UnsupervisedDefectSegmentationResult result = model.inference(bad_images[0]);
-      std::cout << "Anomaly score: " << result.confidence << std::endl;
-      std::cout << "JSON result: " << result.toAnnotationJSONString() << "\n";
-
-   **Function**: Performs inference using the trained model on a test image and outputs the anomaly score and the result in JSON format.
-
-7. **Exception Handling**
-
-   .. code-block:: cpp
-
-      catch (const std::exception& e) {
-          std::cout << "Caught an exception: " << e.what() << std::endl;
-          return -1;
-      }
-
-   **Function**: Catches any exceptions that may occur and prints the error message.
+7. **Model inference**
+   Use the training component to perform inference on new image data and output defect detection results.
 
 Summary
 -------
 
-Using DaoAI’s unsupervised defect detection SDK, users can easily load pre-trained models for efficient inference or train their own models using custom data to meet specific needs.
+With the DaoAI Unsupervised Defect Detection SDK, users can easily load pretrained models for efficient inference or use their own data for custom training to meet specific needs.

@@ -142,11 +142,15 @@ Each detection task returns a specific result object:
     // Image Classification
     DaoAI::DeepLearning::Vision::ClassificationResult prediction = model.inference(daoai_image);
     
-    // Unsupervised Defect Detection, only available in DaoAI Unsupervised SDK
-    
-    // Supervised Defect Detection
-    DaoAI::DeepLearning::Vision::SupervisedDefectSegmentationResult prediction = model.inference(daoai_image);
-    
+    // Object Detection
+    DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
+
+    // Anomaly Detection
+    DaoAI::DeepLearning::Vision::AnomalyDetectionResult prediction = model.inference(daoai_image);
+
+    // Semantic Segmentation
+    DaoAI::DeepLearning::Vision::SemanticSegmentationResult prediction = model.inference(daoai_image);
+
     // OCR (Optical Character Recognition)
     DaoAI::DeepLearning::Vision::OCRResult prediction = model.inference(daoai_image);
 

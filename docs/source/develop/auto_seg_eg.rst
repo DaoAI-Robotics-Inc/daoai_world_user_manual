@@ -4,11 +4,15 @@ C++ Auto Segmentation Example Project
 Overview
 --------
 
-This software provides an interactive image viewer that allows users to draw bounding boxes and click points to perform automatic segmentation based on a deep learning model. The segmentation results are saved as a JSON file and displayed in the window with a masked version of the image.
+This software provides an interactive image viewer that allows users to draw bounding boxes and click points on the image to perform automatic segmentation based on deep learning models. The segmentation results are saved as JSON files and displayed in the window with visual masks overlaid on the original image.
 
-The program uses the `DaoAI AutoSegmentation` model to perform inference based on the bounding boxes drawn by the user and the points clicked. The segmentation result is blended with the original image to provide a visual representation of the mask.
+The program uses the `DaoAI AutoSegmentation` model, which performs inference based on the user-drawn bounding boxes and clicked points. The segmentation results are blended with the original image to provide a visual representation of the mask.
 
-The Auto Segmentation feature is available also in **C#** and **Python** using DaoAI World Standard SDK.
+The smart segmentation feature is part of the standard local SDK and supports both **C#** and **Python**.
+
+You can also check our GitHub repo, which includes example projects in C++, C#, and Python for easy reference and quick start.
+
+Link: `DaoAI World SDK Demo <https://github.com/DaoAI-Robotics-Inc/DaoAI-World-SDK-Desktop-Demo>`_
 
 Prerequisites
 -------------

@@ -122,6 +122,12 @@ Note that each detection task corresponds to a specific object:
     // Object detection
     DaoAI.DeepLearningCLI.Vision.ObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.ObjectDetection(model_path);
 
+    //Rotated Object detection
+    DaoAI.DeepLearningCLI.Vision.RotatedObjectDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.RotatedObjectDetection(model_path);
+
+    //Mixed Model
+    DaoAI.DeepLearningCLI.Vision.MultilabelDetection model(model_path) = new DaoAI.DeepLearningCLI.Vision.MultilabelDetection(model_path);
+
     // Unsupervised defect detection, only available in DaoAI Unsupervised SDK
     
     // Supervised defect detection

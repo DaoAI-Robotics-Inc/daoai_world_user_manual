@@ -72,6 +72,12 @@ Note that each detection task corresponds to a specific object:
     # Object Detection
     model = dlsdk.ObjectDetection(model_path, device=dlsdk.DeviceType.GPU)
 
+    #Rotated Object Detection
+    model = dwsdk.RotatedObjectDetection(model_path, device=dwsdk.DeviceType.GPU)
+
+    #Mixed Model
+    model = dwsdk.MultilabelDetection(model_path, device=dwsdk.DeviceType.GPU)
+
     # Unsupervised Defect Segmentation, only available in DaoAI Unsupervised SDK
     
     # Supervised Defect Segmentation
@@ -103,10 +109,7 @@ To read images, you can use OpenCV. If you do not have it installed, you can run
 Running Deep Learning Model Predictions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
 
-    - On first run, model loading and data initialization may take longer. Subsequent runs (after the first image load/inference) will be faster
-    
 Make model predictions and output results as a JSON file.
 
 .. code-block:: python
@@ -123,24 +126,20 @@ Make model predictions and output results as a JSON file.
 Post-Processing
 ***************
 
-Model predictions can accept post-processing parameters:
+The model's predictions can accept post-processing parameters:
 
-    - dlsdk.PostProcessType.CONFIDENCE_THRESHOLD 
-      
-      Confidence threshold, which will filter out results with a confidence below the set value.
-      
-    - dlsdk.PostProcessType.IOU_THRESHOLD 
-      
-      IOU threshold, which will filter out results with IOU below the set value.
+    - model.setConfidenceThreshold()
 
-    - dlsdk.PostProcessType.SENSITIVITY_THRESHOLD 
-      
-      Used in unsupervised defect segmentation (anomaly detection), it controls the model's sensitivity to defects. The higher the value, the more defects the model will detect, but it may also increase false positives.
+        Confidence threshold, which filters out results with confidence lower than the specified value.
+
+    - model.setIOUThreshold()
+
+        IOU (Intersection over Union) threshold, which filters out results with IOU lower than the specified value.
 
 .. code-block:: python
 
-    prediction = model.inference(daoai_image, {dlsdk.PostProcessType.CONFIDENCE_THRESHOLD: 0.95, dlsdk.PostProcessType.IOU_THRESHOLD: 0.5})
-
+    model.setConfidenceThreshold(0.5)
+    prediction = model.inference(daoai_image)
 
 You can also retrieve result information using other methods:
 

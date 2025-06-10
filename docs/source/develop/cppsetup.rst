@@ -26,7 +26,7 @@ In the Linker settings, under the General menu, add the bin folder path from the
 .. image:: images/cpp_env3.png
     :scale: 80%
 
-In the Linker **Input** menu, add `daoai_dl_sdk.lib` to **Additional Dependencies**.
+In the Linker **Input** menu, add `dwsdk_cpp.lib` to **Additional Dependencies**.
 
 .. image:: images/cpp_env4.png
     :scale: 80%

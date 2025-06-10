@@ -71,6 +71,12 @@ Note that each detection task has a corresponding object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetection model(model_path);
 
+    // Rotated Object Detection
+    DaoAI::DeepLearning::Vision::RotatedObjectDetection model(model_path);
+
+    // Mixed Model
+    DaoAI::DeepLearning::Vision::MultilabelDetection model(model_path);
+
     // Unsupervised Defect Detection, only available in DaoAI Unsupervised SDK
 
     // Supervised Defect Detection
@@ -119,6 +125,12 @@ Note that each detection task returns a corresponding result object:
     // Object Detection
     DaoAI::DeepLearning::Vision::ObjectDetectionResult prediction = model.inference(daoai_image);
 
+    // Rotated Object Detection
+    DaoAI::DeepLearning::Vision::RotatedObjectDetectionResult prediction = model.inference(daoai_image);
+
+    // Mixed Model
+    DaoAI::DeepLearning::Vision::MultilabelDetectionResult prediction = model.inference(daoai_image);
+
     // Unsupervised Defect Detection, only available in DaoAI Unsupervised SDK
     
     // Supervised Defect Detection
@@ -149,6 +161,20 @@ The model prediction function can accept post-processing parameters:
     - ``DaoAI::DeepLearning::PostProcessType::SENSITIVITY_THRESHOLD``:
 
         The sensitivity threshold, used in unsupervised defect segmentation (anomaly detection) models to control the sensitivity to defects. A higher sensitivity will result in more defects being detected, but may also lead to false positives.
+Post-Processing Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model predictions support the following post-processing parameters:
+
+    - `model.setConfidenceThreshold();`
+
+          Confidence threshold. Filters out results with confidence scores below the specified value.
+          **Range:** 0–1
+
+    - `model.setIOUThreshold();`
+
+          IoU (Intersection over Union) threshold. Filters out results with IoU scores below the specified value.
+          **Range:** 0–1
 
 .. code-block:: cpp
 
@@ -206,12 +232,12 @@ Generate and save a visualization image that overlays the prediction results on 
     DaoAI::DeepLearning::Image result = DaoAI::DeepLearning::Utils::visualize(daoai_image, prediction);
     result.save(root + "daoai_output.png");
     
-Example of Return Results
---------------------------
+Output in JSON Format
+----------------------
 
-Below is an example of the result returned by the ``toJSONString()`` method after prediction with the instance segmentation model.
+The following is an example of the result returned by calling the `toJSONString()` method after performing inference with an instance segmentation model.
 
-This result shows the number of predictions, label names, confidence, bounding boxes, and polygon masks.
+The result includes the number of predictions, label names, confidence scores, bounding boxes, and polygon masks.
 
 .. code-block:: json
 
@@ -243,12 +269,3 @@ This result shows the number of predictions, label names, confidence, bounding b
         "ImageHeight": 1200,
         "ImageWidth": 1920
     }
-
-The ``DaoAI::DeepLearning::Vision::InstanceSegmentationResult`` object can also use the ``.masks[i].toPolygons()`` method to get the polygon object.
-
-Alternatively, use the ``.masks[i].toImage()`` method to get the polygon mask image, which you can then write using OpenCV.
-
-.. code-block:: cpp
-
-    DaoAI::DeepLearning::Image image = prediction.masks[0].toImage();
-    cv::imwrite("mask.png", cv::Mat(image.rows, image.cols, CV_8UC1, image.getData()));

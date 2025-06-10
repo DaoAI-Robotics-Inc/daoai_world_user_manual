@@ -9,7 +9,7 @@ Project Configuration
     .. image:: images/add_ref.png
         :scale: 100%
 
-2. Click "Browse," then navigate to the `bin` folder in the extracted directory, select the ``dl_sdk_net.dll`` file, check it, and click OK.
+2. Click "Browse," then navigate to the `bin` folder in the extracted directory, select the ``dwsdk_net.dll`` file, check it, and click OK.
 
     .. image:: images/browse_dll.png
         :scale: 100%

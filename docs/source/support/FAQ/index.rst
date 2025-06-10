@@ -4,6 +4,15 @@ Frequently Asked Questions
 .. contents::
     :local:
 
+C# SDK Fails to Load via Reflection?
+-------------------------
+
+If the C# SDK fails to load via reflection, first ensure that system thread resources are sufficient.
+Excessive concurrent threads may exhaust the thread pool, causing the reflection mechanism to fail.
+It is recommended to control the number of threads appropriately or adjust the .NET thread pool settings to ensure stable and reliable reflection-based loading.
+
+
+
 Uploaded images appear completely black in the annotation page
 ---------------------------------------------------------------
 
@@ -80,6 +89,8 @@ Model inference fails due to different image resolutions
     If the model fails during inference, check whether the resolution used during inference matches the resolution of the training data.
 
     In general, models can tolerate some changes in resolution. However, if an ROI preprocessing step is involved, the ROI will be based on the original image resolution.
+
+    However, if an ROI preprocessing step is added, the ROI will be cropped based on the **original image resolution**.
 
     If you use a much lower resolution image for inference than the one used during training, the entire image may be cropped by the ROI, leading to inference failure.
 
