@@ -102,3 +102,32 @@ Model inference fails due to different image resolutions
 
 
     Ensure you use images with the same resolution as the training set when testing and inferring.
+
+
+Why does model inference slow down after a long idle interval?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On certain systems, when the model's ``inference()`` function is called continuously, the execution is fast (e.g., under 70 milliseconds). However, if there's a long delay (e.g., 5–10 seconds) between inference calls, the inference time can significantly increase (e.g., over 300 milliseconds).
+
+This slowdown is caused by the GPU entering a low-power state due to inactivity.
+
+To resolve this issue, apply the following settings:
+
+1. **NVIDIA Control Panel:**
+   - Open `NVIDIA Control Panel` → `Manage 3D Settings`.
+   - Locate the setting `Power management mode` and change it to **Prefer maximum performance**.
+
+2. **System Power Options:**
+   - Open `Control Panel → Power Options`.
+   - Select the **High performance** power plan.
+
+Example settings are shown below:
+
+.. image:: images/nv_power.png
+   :width: 600px
+
+.. image:: images/ctrlpanel_power.png
+   :width: 600px
+
+These settings will prevent the GPU from entering low-power states, ensuring consistent inference performance even after idle periods.
+
