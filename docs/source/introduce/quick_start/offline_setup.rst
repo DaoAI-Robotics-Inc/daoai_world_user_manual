@@ -123,7 +123,7 @@ Make sure your computer, mobile phone, and other devices are connected to the sa
 - If successful, you will see the DaoAI World login page.
 
 .. figure:: images/DW登录界面示意.png
-    :scale: 30%
+    :scale: 80%
     :class: float-figure
     :alt: DaoAI World Login Page
     :name: daoai-world-login-page-screenshot
@@ -165,7 +165,7 @@ If login appears unresponsive, follow the steps below for troubleshooting:
 1. **Press F12 on the browser page to open Developer Tools**
 
    .. figure:: images/F12.png
-      :scale: 30%
+      :scale: 80%
       :alt: Developer Tools Screenshot
       :figclass: shadow
       :name: f12-screenshot
@@ -175,7 +175,7 @@ If login appears unresponsive, follow the steps below for troubleshooting:
 2. **Open the "Network" tab and find the request labeled "Login"**
 
    .. figure:: images/login_error.png
-      :scale: 30%
+      :scale: 80%
       :alt: Login request failure screenshot
       :figclass: shadow
       :name: login-error-screenshot
@@ -185,7 +185,7 @@ If login appears unresponsive, follow the steps below for troubleshooting:
 3. **Check the request details and confirm whether the IP address is correct**
 
    .. figure:: images/login_info.png
-      :scale: 50%
+      :scale: 80%
       :alt: Login request info screenshot
       :name: login-info-screenshot
       :figclass: shadow
