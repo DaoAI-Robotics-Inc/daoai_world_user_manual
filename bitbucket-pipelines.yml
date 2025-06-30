@@ -4,7 +4,7 @@ pipelines:
         name: Sync to GitHub
         image: alpine/git
         script:
-          - git config --global user.email "tzhang@daoai.com"
-          - git config --global user.name "Tom Zhang"
-          - git remote add github https://tzhangmc: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@github.com/DaoAI-Robotics-Inc/daoai_world_user_manual.git
-          - git push github latest
+          - git clone --bare git@bitbucket.org/daoairobotics/daoai_world_user_manual.git
+          - cd daoai_world_user_manual.git
+          - git push --mirror git@github.com/DaoAI-Robotics-Inc/daoai_world_user_manual.git
+          - 
