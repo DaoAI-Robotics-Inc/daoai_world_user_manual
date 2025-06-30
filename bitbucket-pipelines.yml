@@ -4,7 +4,7 @@ pipelines:
         name: Sync to GitHub
         image: alpine/git
         script:
-          - git clone --bare git@bitbucket.org/daoairobotics/daoai_world_user_manual.git
+          - git clone --bare git@bitbucket.org:daoairobotics/daoai_world_user_manual.git
           - cd daoai_world_user_manual.git
-          - git push --mirror git@github.com/DaoAI-Robotics-Inc/daoai_world_user_manual.git
+          - git push --mirror git@github.com:DaoAI-Robotics-Inc/daoai_world_user_manual.git
           - 
