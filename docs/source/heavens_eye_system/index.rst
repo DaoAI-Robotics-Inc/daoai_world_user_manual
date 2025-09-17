@@ -50,6 +50,7 @@
     :hidden:
 
     workflow
+    test_workflow
     faceID
     deployment
     dashboard
