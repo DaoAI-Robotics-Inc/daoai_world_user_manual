@@ -213,6 +213,7 @@ DaoAI World支持上传单张图片(png, jpg, jpeg, bmp)、或者上传一整个
         :align: center
     
     训练开始后，您可以查看实时的模型训练。需要的训练时间也显示在图表上方。
+    
     .. image:: images/training_2.png
         :width: 800
         :align: center
